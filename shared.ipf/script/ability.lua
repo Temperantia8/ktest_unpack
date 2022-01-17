@@ -3447,3 +3447,110 @@ end
 function SCR_ABIL_Doppelsoeldner37_INACTIVE(self, ability)
     RemoveBuff(self, "DeedsOfValor");
 end
+
+function SCR_ABIL_Hakkapeliter9_ACTIVE(self, ability)
+    AddBuff(self, self, "Hakkapeliter9_Buff");
+end
+
+function SCR_ABIL_Hakkapeliter9_INACTIVE(self, ability)
+    RemoveBuff(self, "Hakkapeliter9_Buff")
+end
+
+function SCR_ABIL_Hakkapeliter1_ACTIVE(self, ability)
+    SetExProp(self, "IS_Hakkapeliter1_Abil", 1)
+    SetExProp(self, "IS_Hakkapeliter1_Value", 0)
+    Invalidate(self, "HR")
+    Invalidate(self, "Gun_Atk")
+end
+
+function SCR_ABIL_Hakkapeliter1_INACTIVE(self, ability)
+    SetExProp(self, "IS_Hakkapeliter1_Abil", 0)
+    SetExProp(self, "IS_Hakkapeliter1_Value", 0)
+    Invalidate(self, "HR")
+    Invalidate(self, "Gun_Atk")
+end
+
+function SCR_ABIL_Hakkapeliter8_ACTIVE(self, ability)
+    local instSkill = AddInstSkill(self, 'Hakkapeliter_SaberBlock', 1)
+    ChangeLHandAttack(self, "Hakkapeliter_SaberBlock")
+    
+    InvalidateStates(self)
+end
+
+function SCR_ABIL_Hakkapeliter8_INACTIVE(self, ability)
+    ChangeLHandAttack(self, "None")
+
+    InvalidateStates(self)
+end
+
+function SCR_ABIL_AllCHANGE_Melee_Cleric_ACTIVE(self, ability)
+    RunScript("SCR_ABIL_ALLCHANGE_CLERIC", self)
+end
+
+function SCR_ABIL_AllCHANGE_Melee_Cleric_INACTIVE(self, ability)
+    RunScript("SCR_ABIL_ALLCHANGE_CLERIC", self)
+end
+
+function SCR_ABIL_AllCHANGE_Magic_Cleric_ACTIVE(self, ability)
+    RunScript("SCR_ABIL_ALLCHANGE_CLERIC", self)
+end
+
+function SCR_ABIL_AllCHANGE_Magic_Cleric_INACTIVE(self, ability)
+    RunScript("SCR_ABIL_ALLCHANGE_CLERIC", self)
+end
+
+function SCR_ABIL_ALLCHANGE_CLERIC(self)
+    sleep(1000)
+    if IS_REAL_PC(self) == 'YES' then
+        local sklList, cnt = GetPCSkillList(self);
+        for i = 1, cnt do
+            local skill = sklList[i]
+            local getcls = GetClass("Skill", skill.ClassName)
+            local ClassType = TryGetProp(getcls, "ClassType");
+            local AttackType = TryGetProp(getcls, "AttackType");
+            local Attribute = TryGetProp(getcls, "Attribute");
+            
+            local abilCleric24 = GetAbility(self, "Cleric24") -- 물리
+            local abilCleric36 = GetAbility(self, "Cleric36") -- 마법
+            if abilCleric24 ~= nil and TryGetProp(abilCleric24, "ActiveState", 0) == 1 then
+                ClassType = 'Melee';
+                AttackType = 'Strike';
+                Attribute = "Melee";
+            elseif abilCleric36 ~= nil and TryGetProp(abilCleric36, "ActiveState", 0) == 1 then
+                ClassType = 'Magic';
+                AttackType = 'Magic';
+                Attribute = "Holy";
+            end
+
+            local ClassID = TryGetProp(skill, "ClassID")
+            if TryGetProp(skill, "ValueType") == "Attack" then
+                if (ClassID >= 40000 and ClassID <= 49999) or 
+                (
+                    TryGetProp(skill, "ClassName") == "Mon_pcskill_boss_werewolf_Skill_1" or
+                    TryGetProp(skill, "ClassName") == "Mon_pcskill_boss_werewolf_Skill_3" or
+                    TryGetProp(skill, "ClassName") == "Mon_pcskill_boss_werewolf_Skill_4" or
+                    TryGetProp(skill, "ClassName") == "Mon_pcskill_boss_werewolf_Skill_5"
+                )
+                then
+                    skill.ClassType = ClassType
+                    skill.AttackType = AttackType
+                    skill.Attribute = Attribute
+                end
+            end
+        end
+
+        local job_list = GetJobHistoryString(self)
+        local job_table = SCR_STRING_CUT(job_list, ';')
+
+        if #job_table < 1 then return end
+
+        for j = 1, #job_table do
+            local jobporpname = "CHANGE_STAT_"..job_table[j]
+            SetExProp(self, jobporpname, 1)
+        end
+        Invalidate(self, "STR");
+        Invalidate(self, "INT");
+        Invalidate(self, "MNA");
+        Invalidate(self, "DEX");
+    end
+end

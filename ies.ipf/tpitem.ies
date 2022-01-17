@@ -1,9 +1,7 @@
 ClassID,Price,JobGrade,Itemdate,AccountLimitCount,BonusItemCnt,AccountLimitWeeklyCount,ClassName,Category,SubCategory,ItemClassName,Job,SellStartTime,SellEndTime,WarningMsg,BonusItemName,BonusOnlySeasonServer,AccountLimitWeeklyCountProperty,ItemSocial
-1,271,0,210506,3,0,0,"ClassName1","TP_Premium","TP_Package","202112package_A","","2021-12-23 09:00:00","2022-01-06 06:00:00","NO","","NO","",""
-2,253,0,210505,3,0,0,"ClassName2","TP_Premium","TP_Package","202112package_B","","2021-12-23 09:00:00","2022-01-06 06:00:00","NO","","NO","",""
-3,93,0,210504,5,0,0,"ClassName3","TP_Premium","TP_Package","202112package_C","","2021-12-23 09:00:00","2022-01-06 06:00:00","NO","","NO","",""
-4,722,0,210503,1,0,0,"ClassName4","TP_Premium","TP_Package","202112package_All","","2021-12-23 09:00:00","2022-01-06 06:00:00","NO","","NO","",""
-5,113,0,210502,2,0,0,"ClassName5","TP_Premium","TP_Package","202112package_HairCostume","","2021-12-23 09:00:00","2022-01-06 06:00:00","NO","","NO","",""
+1,82,0,210506,2,0,0,"ClassName1","TP_Premium","TP_Package","202201package_A","","2022-01-20 09:00:00","2022-02-03 06:00:00","NO","","NO","",""
+2,107,0,210505,2,0,0,"ClassName2","TP_Premium","TP_Package","202201package_B","","2022-01-20 09:00:00","2022-02-03 06:00:00","NO","","NO","",""
+3,313,0,210504,3,0,0,"ClassName3","TP_Premium","TP_Package","202201package_C","","2022-01-20 09:00:00","2022-02-03 06:00:00","NO","","NO","",""
 51,49,0,210430,0,0,1,"ClassName51","TP_Premium","TP_Package","Dungeon_Key01_NoTrade_500ea","","","","NO","","NO","AccountLimitWeeklyCountProperty_1",""
 52,43,0,210429,0,0,2,"ClassName52","TP_Premium","TP_Package","GoddessCard_Reinforce_package","","","","NO","","NO","AccountLimitWeeklyCountProperty_2",""
 53,38,0,210428,0,0,2,"ClassName53","TP_Premium","TP_Package","coin_package","","","","NO","","NO","AccountLimitWeeklyCountProperty_3",""

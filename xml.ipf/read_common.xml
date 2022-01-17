@@ -371,4 +371,5 @@
 	<ReadXml Name="monster_earring_raid"/>
 	<ReadXml Name="achieve_guidequest"/>
 	<ReadXml Name="monster_obj_interaction"/>
+	<ReadXml Name="ecs_system"/>
 </Category>

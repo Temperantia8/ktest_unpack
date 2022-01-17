@@ -14117,6 +14117,16 @@
                 <Str_Arg Str="F_spread_out008_smoke2_green" Arg="0.40000001"/>
                 <Str Str="BOT"/>
             </ToolScp>
+            <ToolScp Scp="S_AI_EFFECT" Client="NO" UseSleep="NO">
+                <Num Num="0"/>
+                <Str_Arg Str="F_spread_out008_smoke2_green" Arg="0.40000001"/>
+                <Str Str="BOT"/>
+            </ToolScp>
+            <ToolScp Scp="S_AI_EFFECT" Client="NO" UseSleep="NO">
+                <Num Num="0"/>
+                <Str_Arg Str="F_spread_out008_smoke2_green" Arg="0.40000001"/>
+                <Str Str="BOT"/>
+            </ToolScp>
             <ToolScp Scp="SAI_R_MOVE" Client="NO" UseSleep="NO"/>
             <ToolScp Scp="SAI_R_MOVE" Client="NO" UseSleep="NO"/>
             <ToolScp Scp="SAI_R_MOVE" Client="NO" UseSleep="NO"/>
@@ -14150,6 +14160,16 @@
                 <Str_Arg Str="F_spread_out008_smoke2_mint" Arg="0.40000001"/>
                 <Str Str="BOT"/>
             </ToolScp>
+            <ToolScp Scp="S_AI_EFFECT" Client="NO" UseSleep="NO">
+                <Num Num="0"/>
+                <Str_Arg Str="F_spread_out008_smoke2_mint" Arg="0.40000001"/>
+                <Str Str="BOT"/>
+            </ToolScp>
+            <ToolScp Scp="S_AI_EFFECT" Client="NO" UseSleep="NO">
+                <Num Num="0"/>
+                <Str_Arg Str="F_spread_out008_smoke2_mint" Arg="0.40000001"/>
+                <Str Str="BOT"/>
+            </ToolScp>
             <ToolScp Scp="SAI_R_MOVE" Client="NO" UseSleep="NO"/>
             <ToolScp Scp="SAI_R_MOVE" Client="NO" UseSleep="NO"/>
             <ToolScp Scp="SAI_R_MOVE" Client="NO" UseSleep="NO"/>
@@ -14177,6 +14197,16 @@
         <List>
             <ToolScp Scp="SAI_FUNC_DIRECT" Client="NO" UseSleep="NO">
                 <Str Str="SCR_MAPLE_25_3_JOB_SHADOWMANCER_SHADOW_TIME_COUNT"/>
+            </ToolScp>
+            <ToolScp Scp="S_AI_EFFECT" Client="NO" UseSleep="NO">
+                <Num Num="0"/>
+                <Str_Arg Str="F_spread_out008_smoke_violet" Arg="0.40000001"/>
+                <Str Str="BOT"/>
+            </ToolScp>
+            <ToolScp Scp="S_AI_EFFECT" Client="NO" UseSleep="NO">
+                <Num Num="0"/>
+                <Str_Arg Str="F_spread_out008_smoke_violet" Arg="0.40000001"/>
+                <Str Str="BOT"/>
             </ToolScp>
             <ToolScp Scp="S_AI_EFFECT" Client="NO" UseSleep="NO">
                 <Num Num="0"/>

@@ -1567,18 +1567,18 @@ function CHECK_GEAR_SCORE_FOR_GUILD_EVENT_BLOCKADE(pc, event_id)
 	end
 
 	-- 점령 길드 체크
-	local is_occupation_guild = false;
-	local class_cnt = GetClassCount("guild_colony");
-    for i = 0, class_cnt - 1 do
-        local index = GetClassByIndex("guild_colony", i);
-        local city_map_name = TryGetProp(index, "TaxApplyCity");
-        if city_map_name ~= nil and city_map_name ~= "None" then
-            local occupation_guild = GetColonyCityLordGuildID(city_map_name);
-            if occupation_guild == guild_id then
-                is_occupation_guild = true;
-            end
-        end
-	end
+	local is_occupation_guild = true;
+	-- local class_cnt = GetClassCount("guild_colony");
+    -- for i = 0, class_cnt - 1 do
+    --     local index = GetClassByIndex("guild_colony", i);
+    --     local city_map_name = TryGetProp(index, "TaxApplyCity");
+    --     if city_map_name ~= nil and city_map_name ~= "None" then
+    --         local occupation_guild = GetColonyCityLordGuildID(city_map_name);
+    --         if occupation_guild == guild_id then
+    --             is_occupation_guild = true;
+    --         end
+    --     end
+	-- end
 	
 	-- 보루타 or 길티네 봉쇄전 장비 체크 : 6부위 가디스 장비 장착 여부 체크.
 	if is_occupation_guild == true then

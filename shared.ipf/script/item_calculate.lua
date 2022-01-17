@@ -511,15 +511,18 @@ function GET_BASIC_ATK(item)
     end
 
     if grade == 6 then
-        if classType ~= 'Neck' and classType ~= 'Ring' then
-            itemATK = 13128
+        local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
+        if cls ~= nil then
+            itemATK = TryGetProp(cls, 'BasicAtk', 0)
+            if classType == 'Neck' or classType == 'Ring' then
+                itemATK = TryGetProp(cls, 'BasicAccAtk', 0)
+            end
+
             if classType == 'Trinket' then
                 itemATK = itemATK * 0.15
             elseif TryGetProp(item, 'EquipGroup', 'None') == 'THWeapon' then
                 itemATK = itemATK * 1.15
             end
-        else
-            itemATK = 934
         end
     end
 
@@ -622,15 +625,18 @@ function GET_BASIC_MATK(item)
     end
     
     if grade == 6 then
-        if classType ~= 'Neck' and classType ~= 'Ring' then
-            itemATK = 13128
+        local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
+        if cls ~= nil then
+            itemATK = TryGetProp(cls, 'BasicAtk', 0)
+            if classType == 'Neck' or classType == 'Ring' then
+                itemATK = TryGetProp(cls, 'BasicAccAtk', 0)
+            end
+
             if classType == 'Trinket' then
                 itemATK = itemATK * 0.15
             elseif TryGetProp(item, 'EquipGroup', 'None') == 'THWeapon' then
                 itemATK = itemATK * 1.15
             end
-        else
-            itemATK = 934
         end
     end
     
@@ -874,16 +880,19 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
         
             basicDef = basicDef * armorMaterialRatio[equipMaterial]
         else
-            if TryGetProp(item, "EquipGroup", "None") == "SubWeapon" then
-                -- 방패
-                basicDef = 13128
-            else
-                -- 상,하,장,신
-                basicDef = 13670 * 0.25
-
-                local armorMaterialRatio = GetClassByNameFromList(itemGradeClass,'armorMaterial_'..basicProp)
-
-                basicDef = basicDef * armorMaterialRatio[equipMaterial]
+            local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
+            if cls ~= nil then
+                if TryGetProp(item, "EquipGroup", "None") == "SubWeapon" then
+                    -- 방패
+                    basicDef = TryGetProp(cls, 'BasicAtk', 0)
+                else
+                    -- 상,하,장,신
+                    basicDef = TryGetProp(cls, 'BasicDef', 0) * 0.25
+    
+                    local armorMaterialRatio = GetClassByNameFromList(itemGradeClass,'armorMaterial_'..basicProp)
+    
+                    basicDef = basicDef * armorMaterialRatio[equipMaterial]
+                end
             end
             upgradeRatio = upgradeRatio + GET_UPGRADE_ADD_DEF_RATIO(item, ignoreReinfAndTranscend) / 100;
         end

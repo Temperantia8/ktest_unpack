@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by imc (imc) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by MintPC (Mi) -->
 <skinset name="Base">
 	<skinlist category="frames">
@@ -4879,6 +4879,28 @@
 			<img name="bottomcore" imgrect="745 1605 20 10"/>
 			<img name="bottomright" imgrect="766 1605 20 10"/>
 		</skin>
+		<skin name="item_show_tootip" texture="\skin\normal_item_tootip.tga">
+			<img name="topleft" imgrect="0 249 50 1"/>
+			<img name="topcore" imgrect="51 249 50 1"/>
+			<img name="topright" imgrect="102 249 50 1"/>
+			<img name="bodyleft" imgrect="0 251 50 62"/>
+			<img name="bodycore" imgrect="51 251 50 62"/>
+			<img name="bodyright" imgrect="102 251 50 62"/>
+			<img name="bottomleft" imgrect="0 314 50 1"/>
+			<img name="bottomcore" imgrect="51 314 50 1"/>
+			<img name="bottomright" imgrect="102 314 50 1"/>
+		</skin>
+		<skin name="event_recently_notice" texture="\skin\normal_item_tootip.tga">
+			<img name="topleft" imgrect="153 249 50 23"/>
+			<img name="topcore" imgrect="204 249 50 23"/>
+			<img name="topright" imgrect="255 249 50 23"/>
+			<img name="bodyleft" imgrect="153 273 50 3"/>
+			<img name="bodycore" imgrect="204 273 50 3"/>
+			<img name="bodyright" imgrect="255 273 50 3"/>
+			<img name="bottomleft" imgrect="153 277 50 23"/>
+			<img name="bottomcore" imgrect="204 277 50 23"/>
+			<img name="bottomright" imgrect="255 277 50 23"/>
+		</skin>
 	</skinlist>
 	<skinlist category="testje2_buttons">
 		<skin name="test_brown_btn" texture="\skin\housing.tga">
@@ -8786,6 +8808,8 @@
 		<image name="Collar_Event_Kokuma_skin" file="\skin\Collar_skin.tga" imgrect="155 93 30 30" CMM_Caption="고구마 칭호"/>
 		<image name="Collar_skunk01" file="\skin\Collar_skin.tga" imgrect="186 93 30 30" CMM_Caption="스컹크01"/>
 		<image name="Collar_skunk02" file="\skin\Collar_skin.tga" imgrect="217 93 30 30" CMM_Caption="스컹크02"/>
+		<image name="Collar_2022newyear_1" file="\skin\Collar_skin.tga" imgrect="0 124 30 30" CMM_Caption="2022신년칭호_반짝"/>
+		<image name="Collar_2022newyear_2" file="\skin\Collar_skin.tga" imgrect="31 124 30 30" CMM_Caption="2022신년칭호_흑호"/>
 	</imagelist>
 	<imagelist category="testse_image">
 		<image name="indun_soulcrystal_bg" file="\skin\indun_skin.tga" imgrect="614 552 84 86" CMM_Caption="소울크리스탈 횟수제한 UI"/>
@@ -9571,6 +9595,7 @@
 		<image name="alchemy_neutralization_toxicity" file="\skin\alchemy.tga" imgrect="766 1616 20 30" CMM_Caption="독성 포션 아이콘"/>
 		<image name="alchemy_question_obstacle" file="\skin\alchemy.tga" imgrect="774 1564 24 24" CMM_Caption="장애물"/>
 		<image name="receive_complete_eng" file="\skin\attendance_sheet_skin.tga" imgrect="232 872 69 84" CMM_Caption="수령완료 마크_영문버전"/>
+		<image name="event_recently_notice_inform" file="\skin\normal_item_tootip.tga" imgrect="306 249 22 22" CMM_Caption="이벤트 현황 알림 표시"/>
 	</imagelist>
 	<imagelist category="yiseul_image">
 		<image name="AbillityReset_skin" file="\skin\paid_skin_title.tga" imgrect="0 330 316 165" CMM_Caption="특성 초기화"/>
@@ -10593,6 +10618,9 @@
 		<image name="ps_searchUIBtn" file="\skin\party_search.tga" imgrect="194 322 52 53" CMM_Caption="파티창_파티찾기 버튼 "/>
 		<image name="ps_searchUIBtn_cursoron" file="\skin\party_search.tga" imgrect="247 322 52 53"/>
 		<image name="ps_searchUIBtn_clicked" file="\skin\party_search.tga" imgrect="300 322 52 53"/>
+		<image name="growup_btn_small" file="\skin\button_small.tga" imgrect="0 340 58 60" CMM_Caption="성장지원 숏컷 버튼"/>
+		<image name="growup_btn_small_cursoron" file="\skin\button_small.tga" imgrect="59 340 58 60"/>
+		<image name="growup_btn_small_clicked" file="\skin\button_small.tga" imgrect="118 340 58 60"/>
 	</imagelist>
 	<imagelist category="worldmap_image">
 		<image name="worldmap2_mainmap" file="\skin\worldmap\worldmap2_mainmap.jpg" imgrect="0 0 1920 1080" CMM_Caption="월드맵배경"/>
@@ -13703,6 +13731,8 @@
 		<image name="icon_boss_RevivalPaulius_rage_build" file="\icon\buff_icon5.tga" imgrect="384 1792 128 128" CMM_Caption="격노"/>
 		<image name="icon_interaction_protection" file="\icon\buff_icon5.tga" imgrect="512 1792 128 128" CMM_Caption="탑승자 보호"/>
 		<image name="icon_ObjectInteractionRideBuff" file="\icon\buff_icon5.tga" imgrect="640 1792 128 128" CMM_Caption="탑승"/>
+		<image name="icon_2022_newyear_buff" file="\icon\buff_icon5.tga" imgrect="0 1920 128 128" CMM_Caption="2022 신년 버프"/>
+		<image name="icon_buff_ridepet_YellowTiger" file="\icon\buff_icon5.tga" imgrect="128 1920 128 128" CMM_Caption="황호 버프"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>
@@ -14431,6 +14461,9 @@
 		<image name="plate_achieve_epicraid_silver" file="\skin\user_title_skin.tga" imgrect="860 959 214 34" CMM_Caption="에픽레이드_은"/>
 		<image name="plate_achieve_epicraid_gold" file="\skin\user_title_skin.tga" imgrect="860 994 214 34" CMM_Caption="에픽레이드_금"/>
 		<image name="plate_achieve_epicraid_firstclear" file="\skin\user_title_skin.tga" imgrect="1075 889 214 36" CMM_Caption="에픽레이드_퍼클"/>
+		<image name="plate_achieve_contest_Event_4th" file="\skin\user_title_skin.tga" imgrect="1075 926 214 34" CMM_Caption="일본 일러스트 공모전 칭호_4th"/>
+		<image name="plate_achieve_2022_newyear" file="\skin\user_title_skin.tga" imgrect="215 959 214 34" CMM_Caption="2022 설날 칭호"/>
+		<image name="plate_achieve_Hakkapeliter" file="\skin\user_title_skin.tga" imgrect="430 959 214 34" CMM_Caption="하카펠 칭호"/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>
@@ -14574,6 +14607,7 @@
 		<image name="ridepet_PolarReindeer" file="\icon\ridepet.tga" imgrect="320 0 80 80" CMM_Caption="북극순록"/>
 		<image name="ridepet_ep13raincoat" file="\icon\ridepet.tga" imgrect="400 0 80 80" CMM_Caption="금붕어"/>
 		<image name="ridepet_noblepopo" file="\icon\ridepet.tga" imgrect="480 0 80 80" CMM_Caption="노블포포"/>
+		<image name="ridepet_YellowTiger" file="\icon\ridepet.tga" imgrect="560 0 80 80" CMM_Caption="황호"/>
 	</imagelist>
 	<effectimagelist category="effectlist">
 		<image name="blue_orb" file="\icon\blue_orb.tga" imgrect="0 0 256 256"/>

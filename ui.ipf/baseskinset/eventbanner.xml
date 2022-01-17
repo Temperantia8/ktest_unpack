@@ -3,6 +3,16 @@
 <!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by MintPC (Mi) -->
 <skinset name="Base">
 	<imagelist category="eventbanner">
+		<image name="event2201goddesscube" file="\event_banner\event2201goddesscube.jpg" imgrect="0 0 480 180"/>
+		<image name="event202201_Seollal" file="\event_banner\event202201_Seollal.png" imgrect="0 0 480 180"/>
+		<image name="event2112_new_year" file="\event_banner\event2112_new_year.png" imgrect="0 0 480 180"/>
+		<image name="event2201_Burning" file="\event_banner\event2201_Burning.jpg" imgrect="0 0 480 180"/>
+		<image name="event2201_VaivoraReward" file="\event_banner\event2201_VaivoraReward.jpg" imgrect="0 0 480 180"/>
+		<image name="211223_STAMP" file="\event_banner\211223_STAMP.jpg" imgrect="0 0 480 180"/>
+		<image name="211223_Christmas_package" file="\event_banner\211223_Christmas_package.png" imgrect="0 0 480 180"/>
+		<image name="211223_6th_event_part2" file="\event_banner\211223_6th_event_part2.png" imgrect="0 0 480 180"/>
+		<image name="211223_Nexon_cpq" file="\event_banner\211223_Nexon_cpq.jpg" imgrect="0 0 480 180"/>
+		<image name="211223_hot_week" file="\event_banner\211223_hot_week.jpg" imgrect="0 0 480 180"/>
 		<image name="211209_reward_tp" file="\event_banner\211209_reward_tp.jpg" imgrect="0 0 480 180"/>
 		<image name="event2112goddesscube_regather" file="\event_banner\event2112goddesscube_regather.jpg" imgrect="0 0 480 180"/>
 		<image name="event_6th_Update" file="\event_banner\event_6th_Update.jpg" imgrect="0 0 480 180"/>

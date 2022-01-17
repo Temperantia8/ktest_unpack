@@ -5,6 +5,7 @@ local _archeology_map_list = nil
 local _archeology_reward_list = nil  -- { lv : list }
 max_archeology_map_count = 3
 max_archeology_point = 3
+local _max_archeology_try_count = 70
 
 local function make_archeology_map_list()
     if _archeology_map_list ~= nil then
@@ -47,6 +48,9 @@ make_archeology_map_list()
 shared_archeology.get_archeology_map_list = function()
     return _archeology_map_list
 end
+shared_archeology.get_max_archeology_try_count = function()
+    return _max_archeology_try_count
+end
 -- 임무 비용
 shared_archeology.get_cost = function(lv)
     if lv == 470 then
@@ -58,3 +62,4 @@ end
 shared_archeology.get_reward_list = function(lv)
     return _archeology_reward_list[lv]
 end
+
