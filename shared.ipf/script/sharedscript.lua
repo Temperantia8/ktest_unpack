@@ -3913,3 +3913,11 @@ function GET_ITEM_EXPIRE_TIME(item)
         return 'None'
     end
 end
+
+function IS_BOUNTY_BATTLE_BUFF_APPLIED(pc)
+    if IsBuffApplied(pc, 'BountyHunt_Battle_BUFF') == "YES" then
+        return 1;
+    end
+
+    return 0;
+end

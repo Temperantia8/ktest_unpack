@@ -394,3 +394,23 @@ item_goddess_craft.is_able_to_unlock_vasilisa = function(scrollObj, itemObj)
     
     return true, 'None'
 end
+-- 아크 스크롤 추출
+item_goddess_craft.is_able_to_decompose_ark = function(scrollObj, itemObj)
+	if TryGetProp(itemObj, 'CharacterBelonging', 0) == 0 then		
+		return false, 'OnlyFromCabinetItemUsable'
+	end
+
+	if TryGetProp(scrollObj, 'StringArg', 'None') ~= 'ark_decomposition_scroll' then
+		return false, 'NotValidItem'
+	end
+
+	if TryGetProp(itemObj, 'GroupName', 'None') ~= 'Ark' then
+		return false, 'NotValidItem'
+	end
+
+	if TryGetProp(itemObj, 'ArkLevel', 0) ~= 10 then
+		return false, 'NotValidItem'
+	end
+    
+    return true, 'None'
+end

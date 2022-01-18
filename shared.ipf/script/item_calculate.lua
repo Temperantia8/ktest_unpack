@@ -112,7 +112,8 @@ function GET_COMMON_PROP_LIST()
         'Magic_Melee_Atk',
         'Magic_Fire_Atk',
         'Magic_Lightning_Atk',
-        'ALLSTAT'
+        'ALLSTAT',
+        'Magic_Holy_Atk',
     };
 end
 
