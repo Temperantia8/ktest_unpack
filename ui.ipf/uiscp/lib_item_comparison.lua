@@ -3,7 +3,7 @@
 function GET_EQUIP_TOOLTIP_PROP_LIST(invitem)
 
 	local groupName = invitem.GroupName;
-	if groupName == 'Weapon' or groupName == 'SubWeapon' then
+	if groupName == 'Weapon' or groupName == 'SubWeapon' or groupName == 'Arcane' then
 		return GET_ATK_PROP_LIST();
 	
 	elseif groupName == "PetWeapon" then
