@@ -5488,6 +5488,14 @@
 			<button name="question" rect="0 0 44 44" margin="0 28 60 0" layout_gravity="right top" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" hittest="true" image="testquesten_button" oversound="button_over" LBtnUpScp="ON_EVENT_STAMP_TOUR_HELP_CLICK"/>
 		</controls>
 	</controlset>
+	<controlset name="expand_skill_tooltip" hittest="true" width="300" height="70" skin="earth_T_shop_skin" stateskin="false" enabledrag="true">
+		<controls>
+			<richtext name="name" margin="0 20 0 0" rect="0 0 300 30" format="{@st100white_24}{s22}{ol}%s" param1="rtxt" layout_gravity="center top" fixwidth="true" hittest="false" fontname="brown_16" textalign="center center"/>
+			<richtext name="desc" margin="0 80 0 0" rect="0 0 300 30" format="{@st69_100}{s17}%s" param1="xtxt" layout_gravity="center top" fixwidth="true" hittest="false" fontname="brown_16" textalign="center center"/>
+			<labelline name="labelline2" margin="0 60 0 0" rect="0 0 280 3" skin="labelline_def_3" layout_gravity="center top"/>
+			<groupbox name="property_gbox" rect="0 0 410 0" layout_gravity="right top" margin="300 200 0 0" skin="bg" hittest="false" draw="false" updateparent="true" scrollbar="false"/>
+		</controls>
+	</controlset>
 	<!-- content_status_board -->
 	<controlset name="content_status_board_battle_attribute" toggle="false" hittest="true" hittestset="false" width="470" height="130" skin="">
 		<controls>

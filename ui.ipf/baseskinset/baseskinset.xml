@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by imc (imc) -->
 <!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by MintPC (Mi) -->
 <skinset name="Base">
 	<skinlist category="frames">
@@ -13733,6 +13733,8 @@
 		<image name="icon_boss_RevivalPaulius_rage_build" file="\icon\buff_icon5.tga" imgrect="384 1792 128 128" CMM_Caption="격노"/>
 		<image name="icon_interaction_protection" file="\icon\buff_icon5.tga" imgrect="512 1792 128 128" CMM_Caption="탑승자 보호"/>
 		<image name="icon_ObjectInteractionRideBuff" file="\icon\buff_icon5.tga" imgrect="640 1792 128 128" CMM_Caption="탑승"/>
+		<image name="icon_wizard_ElectricShock" file="\icon\buff_icon5.tga" imgrect="768 1792 128 128" CMM_Caption="전류"/>
+		<image name="icon_wizard_Spark" file="\icon\buff_icon5.tga" imgrect="896 1792 128 128" CMM_Caption="스파크"/>
 		<image name="icon_2022_newyear_buff" file="\icon\buff_icon5.tga" imgrect="0 1920 128 128" CMM_Caption="2022 신년 버프"/>
 		<image name="icon_buff_ridepet_YellowTiger" file="\icon\buff_icon5.tga" imgrect="128 1920 128 128" CMM_Caption="황호 버프"/>
 		<image name="icon_buff_ridepet_BlackmistTiger" file="\icon\buff_icon5.tga" imgrect="256 1920 128 128" CMM_Caption="검은안개 호랑이 버프"/>
@@ -14469,6 +14471,9 @@
 		<image name="plate_achieve_2022_newyear" file="\skin\user_title_skin.tga" imgrect="215 959 214 34" CMM_Caption="2022 설날 칭호"/>
 		<image name="plate_achieve_Hakkapeliter" file="\skin\user_title_skin.tga" imgrect="430 959 214 34" CMM_Caption="하카펠리테르 칭호"/>
 		<image name="plate_achieve_hakkapeliter_weekraid" file="\skin\user_title_skin.tga" imgrect="645 959 214 34" CMM_Caption="하카펠리테르 주보레 칭호"/>
+		<image name="plate_achieve_weeklyrank_19" file="\skin\user_title_skin.tga" imgrect="0 996 214 34" CMM_Caption="서큐버스 주보레 칭호"/>
+		<image name="plate_achieve_Keraunos" file="\skin\user_title_skin.tga" imgrect="0 1031 214 34" CMM_Caption="케라우노스 칭호"/>
+		<image name="plate_achieve_Keraunos_weekraid" file="\skin\user_title_skin.tga" imgrect="645 994 214 34" CMM_Caption="케라우노스 주보레 칭호"/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>

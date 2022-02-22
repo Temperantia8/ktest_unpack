@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by imc (imc) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by MintPC (Mi) -->
 <skinset name="Base">
 	<imagelist category="eventbanner">
+		<image name="event2202goddesscube" file="\event_banner\event2202goddesscube.jpg" imgrect="0 0 480 180"/>
+		<image name="event2202_valentine" file="\event_banner\event2202_valentine.jpg" imgrect="0 0 480 180"/>
+		<image name="event2202_reconstruction" file="\event_banner\event2202_reconstruction.jpg" imgrect="0 0 480 180"/>
 		<image name="event2202_Burning" file="\event_banner\event2202_Burning.jpg" imgrect="0 0 480 180"/>
 		<image name="event2202_VaivoraReward" file="\event_banner\event2202_VaivoraReward.jpg" imgrect="0 0 480 180"/>
 		<image name="event220120_SeollalPackage" file="\event_banner\event220120_SeollalPackage.jpg" imgrect="0 0 480 180"/>

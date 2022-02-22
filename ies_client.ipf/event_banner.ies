@@ -1,4 +1,7 @@
 ClassID,StartTimeYYYYMM,StartTimeDDHHMM,NewTimeYYYYMM,NewTimeDDHHMM,EndTimeYYYYMM,EndTimeDDHHMM,DeadlineTimeYYYYMM,DeadlineTimeDDHHMM,ExchangeTimeYYYYMM,ExchangeTimeDDHHMM,ClassName,Name,ImagePath,url,UserCommand1,UserCommand2,UserCommand3,ShowType
+996330,202202,100900,202202,150000,202203,240900,202203,190000,0,0,"event2202goddesscube","축복받은 여신의 큐브 - 2월","event2202goddesscube","https://tos.nexon.com/News/Update/view?n4ArticleSN=2661","","","",""
+996340,202202,100900,202202,150000,202202,170900,202202,120000,0,0,"event2202_valentine","발렌타인데이","event2202_valentine","https://tos.nexon.com/news/events/view?n4ArticleSN=374","","","",""
+996350,202202,100900,202202,150000,202203,100900,202203,50000,0,0,"event2202_reconstruction","왕국 재건단의 보급품","event2202_reconstruction","https://tos.nexon.com/news/events/view?n4ArticleSN=375","","","",""
 996360,202202,10000,202202,60000,202203,10000,202202,260000,0,0,"event2202_Burning","주말 앤 버닝 - 2월","event2202_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=372","","","",""
 996370,202202,10000,202202,60000,202203,10000,202202,260000,0,0,"event2202_VaivoraReward","바이보라 출석 - 2월","event2202_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=373","","","",""
 996380,202201,200900,202201,250000,202202,30900,202201,300000,0,0,"event220120_SeollalPackage","설 특판 패키지","event220120_SeollalPackage","https://tos.nexon.com/News/Update/view?n4ArticleSN=2645","","","",""
