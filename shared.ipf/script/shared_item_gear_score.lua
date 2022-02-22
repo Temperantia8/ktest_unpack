@@ -202,8 +202,11 @@ function GET_GEAR_SCORE(item, pc)
 
 
     if type == 'SEAL' then
-        reinforce = GET_CURRENT_SEAL_LEVEL(item)        
-        local ret = ((0.7 *(100*reinforce))+((1100*grade)+(1*use_lv)) * 0.3)*0.26        
+        reinforce = GET_CURRENT_SEAL_LEVEL(item)
+        if use_lv == 380 then
+            grade = math.min(grade, 5)
+        end
+        local ret = ((0.7 *(100*reinforce))+((1100*grade)+(1*use_lv)) * 0.3)*0.26
         return math.floor(ret + 0.5)
     elseif type == 'RELIC' then        
         return 0
@@ -466,21 +469,6 @@ function GET_PLAYER_GEAR_SCORE(pc)
         end
         score = score + add
 
-        if score > 8200 and IsServerSection() == 1 then
-            local log_list = {}
-            table.insert(log_list, 'Type')
-            table.insert(log_list, 'Error')
-            table.insert(log_list, 'missing_count')
-            table.insert(log_list, tostring(missing_count))
-            table.insert(log_list, 'add_value')
-            table.insert(log_list, tostring(add))
-            table.insert(log_list, 'before_score')
-            table.insert(log_list, tostring(before_score))
-            table.insert(log_list, 'result_score')
-            table.insert(log_list, tostring(score))
-
-            CustomMongoLog_WithList(pc, 'GearScore', log_list)
-        end
         return math.floor(score + 0.5)
     end
 end

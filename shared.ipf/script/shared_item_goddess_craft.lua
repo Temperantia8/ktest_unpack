@@ -414,3 +414,31 @@ item_goddess_craft.is_able_to_decompose_ark = function(scrollObj, itemObj)
     
     return true, 'None'
 end
+-- 가디스 액세서리 귀속 해제
+item_goddess_craft.is_able_to_unlock_acc = function(scrollObj, itemObj)
+	if TryGetProp(itemObj, 'CharacterBelonging', 0) == 0 then		
+		return false, 'OnlyUseBelongingItem'
+	end
+
+
+	if TryGetProp(scrollObj, 'StringArg', 'None') ~= 'unlock_acc_belonging' then
+		return false, 'NotValidItem'
+	end
+
+	if TryGetProp(itemObj, 'ItemGrade', 0) ~= 6 then
+		return false, 'NotValidItem'
+	end
+
+	local scroll_lv = TryGetProp(scrollObj, 'NumberArg1', 0)
+	local item_lv = TryGetProp(itemObj, 'UseLv', 0)
+	local class_type = TryGetProp(itemObj, 'ClassType', 'None')
+	if class_type ~= 'Neck' and class_type ~= 'Ring' then
+		return false , 'NotValidItem'
+	end
+	
+	if scroll_lv < item_lv then
+		return false, 'NotValidItem'
+	end
+    
+    return true, 'None'
+end

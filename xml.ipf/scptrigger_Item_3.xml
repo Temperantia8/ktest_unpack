@@ -1612,6 +1612,29 @@
 			</Trigger>
 		</TriggerList>
 	</SpcItem>
+		<SpcItem Name="TSF04_129_9_Lv2">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
 	<SpcItem Name="TSF04_129_9_Lv2">
 		<TriggerList Act="UnEquip">
 			<Trigger>
@@ -1658,7 +1681,53 @@
 			</Trigger>
 		</TriggerList>
 	</SpcItem>
+	<SpcItem Name="TSF04_129_10_Lv2">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
 	<SpcItem Name="TBW04_126_5_Lv2">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="TSF04_129_11_Lv2">
 		<TriggerList Act="UnEquip">
 			<Trigger>
 				<ExecList>
@@ -3292,6 +3361,29 @@
 			</Trigger>
 		</TriggerList>
 	</SpcItem>
+		<SpcItem Name="TSF04_129_9_Lv3">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
 
 <SpcItem Name="TBW04_126_4_Lv3">
 		<TriggerList Act="UnEquip">
@@ -3316,7 +3408,53 @@
 			</Trigger>
 		</TriggerList>
 	</SpcItem>
+	<SpcItem Name="TSF04_129_10_Lv3">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
 	<SpcItem Name="TBW04_126_5_Lv3">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="TSF04_129_11_Lv3">
 		<TriggerList Act="UnEquip">
 			<Trigger>
 				<ExecList>
@@ -6803,6 +6941,52 @@
 			</Trigger>
 		</TriggerList>
 	</SpcItem>
+		<SpcItem Name="TSF04_129_9_Lv4">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="TSF04_129_10_Lv4">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
 	<SpcItem Name="EP13_GabijaEarring">
 		<TriggerList Act="UnEquip">
 			<Trigger>
@@ -6951,6 +7135,29 @@
 		</TriggerList>
 	</SpcItem>
 	<SpcItem Name="DAG04_123_9_Lv4">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_vibora" Client="NO" UseSleep="NO"/>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="SkillUsed">
+			<Trigger>
+				<CondList>
+					<ToolScp Scp="skillused_vibora" Client="NO" UseSleep="NO"/>
+				</CondList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="TSF04_129_11_Lv4">
 		<TriggerList Act="UnEquip">
 			<Trigger>
 				<ExecList>
