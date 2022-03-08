@@ -94,14 +94,14 @@ end
    
 function MGAME_MSG_ICON(actor, msgStr, icon,  sec)
 	-- EVENT_2101_SUPPLY
-	local objList, objCount = SelectBaseObject(actor, 1000, 'NEUTRAL');
-	for i = 1 , objCount do
-		local _obj = objList[i];
-		local obj = GetBaseObjectIES(_obj);
-		if IS_EVENT_2101_SUPPLY_CONTENT_NPC(obj.ClassName) == true then
-			return;
-		end
-	end
+	-- local objList, objCount = SelectBaseObject(actor, 1000, 'NEUTRAL');
+	-- for i = 1 , objCount do
+	-- 	local _obj = objList[i];
+	-- 	local obj = GetBaseObjectIES(_obj);
+	-- 	if IS_EVENT_2101_SUPPLY_CONTENT_NPC(obj.ClassName) == true then
+	-- 		return;
+	-- 	end
+	-- end
 
     local msg_int = "NOTICE_Dm_"..icon
 	addon.BroadMsg(msg_int, msgStr, sec);

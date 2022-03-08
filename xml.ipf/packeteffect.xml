@@ -10914,6 +10914,12 @@
         <Effect Name="InitializeBlockade"/>
         <Effect Name="I_archer_pistol_atk_smoke3_dark"/>
         <Effect Name="EARRING_RAID_Extreme"/>
+        <Effect Name="EarringRaidWindmill"/>
+        <Effect Name="EarringRaidMottle"/>
+		<Effect Name="F_line024_dark_loop"/>
+		<Effect Name="F_spread_out017_circle_black"/>
+		<Effect Name="EarringRaidSwordDance"/>
+		<Effect Name="EarringRaidIsolation"/>
 	</Category>
 	<Category ID="19">
 		<Effect Name="I_fallen_statue_atk002_mash"/>
@@ -26041,7 +26047,13 @@
         <Effect Name="None##0.05"/>
         <Effect Name="F_DelmoreCastleGate_skl4_explosion002#Dummy_root"/>
         <Effect Name="F_DelmoreCastleGate_skl4_explosion002#Dummy_root"/>
-    </Category>
+		<Effect Name="F_ground226"/>
+		<Effect Name="F_ground227"/>
+		<Effect Name="I_sawblade002"/>
+		<Effect Name="E_laser004"/>
+		<Effect Name="I_crack002"/>
+    <Effect Name="F_laser006"/>
+	</Category>
     <Category ID="170">
         <Effect Name="Linker_blue3"/>
         <Effect Name="Linker_cable_blue"/>

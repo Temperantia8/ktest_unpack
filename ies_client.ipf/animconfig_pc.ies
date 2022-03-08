@@ -1556,3 +1556,4 @@ ClassID,BlendIn,BlendOut,Priority,OffsetValue,ClassName,Main,Loop,Freeze,Additiv
 1600,0,0,4,0,"SKL_STATIC","YES","NO","YES","NO","YES","NO","NO","","NO","Attack"
 1601,0,0,4,0,"SKL_BLOODEXPLOSHION","YES","NO","YES","NO","YES","NO","NO","","NO","Attack"
 1602,0,0,4,0,"SKL_BLOODPOOL","YES","NO","YES","NO","YES","NO","NO","","NO","Stand"
+1603,0,0,4,0,"SKL_BLOODTRANSFUSION","NO","NO","YES","NO","YES","NO","NO","","YES","Attack"

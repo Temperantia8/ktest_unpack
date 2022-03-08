@@ -35,7 +35,7 @@ ClassID,JobChangePoint,ClassName,Name,EngName,CtrlType,BaseClass,RewardDay_Start
 2017,0,"Char2_17","[룬캐스터]","RuneCaster","Wizard","","","","","","","","",""
 2019,0,"Char2_19","[섀도우맨서]","Shadowmancer","Wizard","","","","","","","","",""
 2020,0,"Char2_20","[음양사]","Onmyoji","Wizard","","","","","","","","",""
-2021,0,"Char2_21","[도사]","Daoshi","Wizard","","","","","","","","",""
+2021,1000,"Char2_21","[도사]","Daoshi","Wizard","","","","Premium_SkillReset_14d","Premium_Abillitypoint_14d","","","",""
 2022,0,"Char2_22","[보코르]","Bokor","Wizard","","","","","","","","",""
 2023,0,"Char2_23","[테라맨서]","TerraMancer","Wizard","","","","","","","","",""
 2024,0,"Char2_24","[케라우노스]","Keraunos","Wizard","","","","","","","","",""

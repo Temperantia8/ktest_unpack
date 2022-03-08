@@ -1619,3 +1619,18 @@ function MAKE_ITEM_RESTRICT_INFO(frame, cls, ypos)
     ctrlSet:Resize(textWidth, text:GetHeight());
     return textWidth, ypos + ctrlSet:GetHeight();
 end
+
+-- tribulation tooltip
+function UPDATE_TRIBULATION_TOOLTIP(frame, mgame_name, index)
+    if frame == nil or mgame_name == nil or index == nil then return; end
+    local title = session.TribulationSystem.GetSelectedTribulationToolTip(mgame_name, index);
+    local name = GET_CHILD_RECURSIVELY(frame, "name");
+    if name ~= nil then
+        name:SetText("{@st41}"..title);
+    end
+    local desc = session.TribulationSystem.GetSelectedTribulationDesc(mgame_name, index);
+    local comment = GET_CHILD_RECURSIVELY(frame, "comment");
+    if comment ~= nil then
+        comment:SetText("{@st59}"..desc);
+    end
+end

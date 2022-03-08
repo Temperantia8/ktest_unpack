@@ -501,4 +501,10 @@
 			<groupbox name="ability_desc" margin="500 0 0 50" rect="0 0 500 50" hittest="false" skin="test_skill_skin2" draw="true" updateparent="true" scrollbar="false" layout_gravity="left top"/>
 		</controls>
 	</tooltip>
+	<tooltip name="tribulation_icon" x="0" y="0" fixwidth="true" width="200" height="100" moveable="true" frameskin="downbox" UpdateScp="UPDATE_TRIBULATION_TOOLTIP">
+		<controls>
+			<richtext name="name" rect="5 12 160 20" fixwidth="false" updateparent="true"/>
+			<richtext name="comment" rect="5 45 160 100" fixwidth="false" updateparent="true"/>
+		</controls>
+	</tooltip>
 </tooltipset>

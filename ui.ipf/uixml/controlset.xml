@@ -6013,7 +6013,7 @@
 		<userconfig QUEST_CTRL_HEIGHT="32" QUEST_CTRL_TITLE_HEIGHT="32" OPENED_CTRL_IMAGE="btn_plus" CLOSED_CTRL_IMAGE="btn_minus" CLEAR_COLORTONE="FF777777" NORMAL_SKIN="relabeling_episode_title" NORMAL_REWARD_BOX="compen_btn" CLEAR_REWARD_BOX="compen_open" LOCK_REWARD_BOX="compen_unacted"/>
 		<controls>
 			<groupbox name="relicTitleGbox" rect="0 0 510 70" margin="0 0 0 0" layout_gravity="left top" skin="relabeling_episode_title" draw="true" hittestbox="true" resizebyparent="false" scrollbar="false"/>
-		<richtext name="categoryNameTxt" parent="relicTitleGbox" rect="0 0 245 24" margin="35 0 0 0" layout_gravity="left center" format="{@st42b}{s18}{ds}%s" param1="name" param1_def="카테고리" fixwidth="true" resizebytext="true" hittest="true" fontname="white_24_ol"/>
+			<richtext name="categoryNameTxt" parent="relicTitleGbox" rect="0 0 245 24" margin="35 0 0 0" layout_gravity="left center" format="{@st42b}{s18}{ds}%s" param1="name" param1_def="카테고리" fixwidth="true" resizebytext="true" hittest="true" fontname="white_24_ol"/>
 			<richtext name="totalProgressTxt" parent="relicTitleGbox" rect="0 0 85 24" margin="0 0 100 0" layout_gravity="right center" textalign="right center" format="{@st42b}{s16}{ds}%s" param1="name" param1_def="진행도" fixwidth="true" resizebytext="true" hittest="true" fontname="white_24_ol"/>
 			<picture name="rewardBtn" parent="relicTitleGbox" rect="0 0 36 30" margin="0 20 45 0" layout_gravity="right top" image="compen_btn" stretch="true" LBtnUpScp="CLICK_RELIC_CATEGORY_REWARD" texttooltip="{@st59}보상 정보 확인{/}"/>
 			<groupbox name="rewardStepBox" parent="relicTitleGbox" rect="0 0 25 24" margin="0 10 35 0" layout_gravity="right top" skin="digitnotice_bg"/>
@@ -6533,6 +6533,96 @@
 			<picture name="clear_bg" rect="0 0 541 250" margin="0 0 0 0" layout_gravity="center center" image="christmas_mission_list_shadow" stretch="true" draw="false" hittest="false"/>
 			<picture name="clear_Pic" rect="0 0 161 161" margin="0 0 20 15" layout_gravity="left bottom" image="christmas_mission_list_stamp" stretch="true" hittest="false"/>
 			<picture name="comingsoon_Pic" rect="0 0 474 114" margin="0 0 0 0" layout_gravity="center center" image="coming_soon_notice" stretch="true" hittest="false"/>
+		</controls>
+	</controlset>
+	<controlset name="squad_info_ctrl" hittest="true" width="450" height="150">
+		<controls>
+			<button name="squad_btn" margin="0 0 0 0" rect="0 0 450 150" movepop="false" dropsound="icon_get_down" picksound="icon_pick_up" LBtnUpArgNum="0" LBtnUpScp="PARTY_SQUAD_CREATE" layout_gravity="center top"/>
+			<richtext name="squad_name" parent="squad_btn" rect="0 0 450 60" margin="0 0 0 0" layout_gravity="center center" caption="{@st42}{s20}스쿼드 이름" drawbackground="false" fixwidth="true" fontname="white_16_ol" slideshow="false" spacey="0" textalign="center center" hittest="false"/>
+			<picture name="slot_bg_image" parent="squad_btn" rect="0 0 64 64" margin="0 0 0 0" layout_gravity="center center" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" hittest="false" image="plus_button_plusimag" stretch="true" oversound="button_over"/>
+		</controls>
+	</controlset>
+	<controlset name="squad_member_info" toggle="false" hittest="true" width="346" height="98" skin="pilgrim_group_invite" stateskin="false" draw="true" hittestset="true">
+		<controls>
+			<picture name="jobportrait_bg1" rect="0 0 50 50" hittest="true" margin="10 25 0 5" layout_gravity="left bottom" stretch="false"/>
+			<picture name="jobportrait1" parent="jobportrait_bg1" rect="0 0 50 50" hittest="true" margin="-2 0 0 0" layout_gravity="left top" stretch="true"/>
+			<picture name="jobportrait_bg2" rect="0 0 50 50" hittest="true" margin="60 25 0 5" layout_gravity="left bottom" stretch="false"/>
+			<picture name="jobportrait2" parent="jobportrait_bg2" rect="0 0 50 50" hittest="true" margin="-2 0 0 0" layout_gravity="left top" stretch="true"/>
+			<picture name="jobportrait_bg3" rect="0 0 50 50" hittest="true" margin="110 25 0 5" layout_gravity="left bottom" stretch="false"/>
+			<picture name="jobportrait3" parent="jobportrait_bg3" rect="0 0 50 50" hittest="true" margin="-2 0 0 0" layout_gravity="left top" stretch="true"/>
+			<picture name="leader_img" rect="0 0 24 18" hittest="false" margin="15 8 0 0" layout_gravity="left top" image="party_leader_mark" stretch="true"/>
+			<richtext name="name_text" rect="0 0 150 30" margin="60 9 0 0" spacey="0" fontname="white_16_ol" layout_gravity="left top" hittest="false" textalign="left center" format="{@ps2}{s16}%s" param1="name" param1_def="460 캐릭터이름"/>
+			<button name="infoPic" rect="0 0 26 26" margin="0 0 6 15" layout_gravity="right bottom" LBtnUpScp="GET_PARTICIPANT_INFO" image="ps_infoBtn" oversound="button_cursor_over_3" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" stretch="true" hittest="true"/>
+		</controls>
+	</controlset>
+	<controlset name="squad_member_add" toggle="false" hittest="true" width="346" height="98" skin="" stateskin="false" draw="false" hittestset="true">
+		<controls>
+			<button name="squad_btn" margin="0 0 0 0" rect="0 0 346 98" movepop="false" dropsound="icon_get_down" picksound="icon_pick_up" skin="pilgrim_group_invite" LBtnUpArgNum="0" LBtnUpScp="SQUAD_MANAGER_INVITE_MEMBER" layout_gravity="center top"/>
+			<picture name="slot_bg_image" parent="squad_btn" rect="0 0 50 50" margin="0 0 0 0" layout_gravity="center center" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" hittest="false" image="pilgrim_group_invite_plus" stretch="true" oversound="button_over"/>
+		</controls>
+	</controlset>
+	<controlset name="contentslist_ctrl" toggle="false" hittest="true" width="220" height="35" skin="bg_active" stateskin="false" draw="true" hittestset="true">
+		<controls>
+			<button name="btn" margin="0 0 0 0" rect="0 0 220 35" movepop="false" dropsound="icon_get_down" picksound="icon_pick_up" LBtnUpArgNum="0" skin="pilgrim_content_list_btn" LBtnUpScp="SQUAD_MANAGER_CONTENTS_SELECT_BTN" layout_gravity="center top"/>
+			<richtext name="contents_name" layout_gravity="center center" rect="0 0 200 30" margin="0 1 0 0" format="{@ps1_1}{s13}%s" param1="value" param1_def="name" fixwidth="true" hittest="false" fontname="white_16_ol" textalign="center center"/>
+		</controls>
+	</controlset>
+	<controlset name="squad_rank_info" hittest="true" hittestset="true" skin="ps_frame2" stateskin="false" draw="true" width="963" height="81">
+		<controls>
+			<picture name="rank_icon" rect="0 0 72 54" margin="28 0 0 0" layout_gravity="left center" stretch="true" hittest="false" image="hero_icon_gradeLow"/>
+			<richtext name="rank_text" rect="0 0 24 24" margin="0 0 0 0" parent="rank_icon" layout_gravity="center center" format="{@42b}{s17}%s" param1="rank" param1_def="0" fontname="white_16_ol" fixwidth="false" resizebytext="true" hittest="false" textalign="center center"/>
+			<richtext name="rank_group_text" rect="0 0 300 24" margin="125 0 0 0" layout_gravity="left center" format="{@42b}{s17}%s" param1="name" param1_def="그룹명" fontname="white_16_ol" fixwidth="true" resizebytext="false" hittest="false" textalign="center center"/>
+			<richtext name="rank_time_text" rect="0 0 300 24" margin="60 0 0 0" layout_gravity="center center" format="{@42b}{s17}%s" param1="time" param1_def="00 : 00" fontname="white_16_ol" fixwidth="true" resizebytext="false" hittest="false" textalign="center center"/>
+			<richtext name="rank_score_text" rect="0 0 150 24" margin="0 0 95 0" layout_gravity="right center" format="{@42b}{s17}%s" param1="score" param1_def="14" fontname="white_16_ol" fixwidth="true" resizebytext="false" hittest="false" textalign="center center"/>
+		</controls>
+	</controlset>
+	<controlset name="tribulation_category" toggle="false" hittest="true" width="80" height="80" skin="None" stateskin="false" draw="false" hittestset="true">
+		<controls>
+			<picture name="pic_category" rect="0 0 80 80" margin="0 0 0 0" layout_gravity="left top" image="None" stretch="true" oversound="button_over"/>
+			<picture name="pic_category_icon" parent="pic_category" rect="0 0 54 54" margin="0 0 0 0" layout_gravity="center center" image="None" stretch="true" hittestbox="true" LBtnUpScp="ON_PILGRIM_TRIBULATION_CATEGORY_SELECT_ICON"/>
+		</controls>
+	</controlset>
+	<controlset name="tribulation_info" toggle="false" hittest="true" width="380" height="50" skin="tribal_frameList" stateskin="false" draw="true" hittestset="true">
+		<controls>
+			<button name="btn_info" margin="0 0 0 0" rect="0 0 380 50" layout_gravity="left center" skin="worldmap2_btn_square" hittestbox="true" LBtnUpScp="ON_PILGRIM_TRIBULATION_INFO_SELECT"/>
+			<picture name="pic_rank" parent="btn_info" rect="0 0 40 40" margin="10 0 0 0" layout_gravity="left center" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" hittest="false" image="tribal_levelframe_S01" stretch="true" oversound="button_over"/>
+			<picture name="pic_rank_icon" parent="pic_rank" rect="0 0 30 30" margin="0 0 0 0" layout_gravity="center center" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" hittest="false" image="None" stretch="true" oversound="button_over"/>
+			<richtext name="title" parent="btn_info" layout_gravity="left center" rect="0 0 300 50" margin="70 0 0 0" format="{@ps2}{s16}%s" textalign="left center" param1="title" param1_def="제목" fixwidth="true" hittest="false"/>
+		</controls>
+	</controlset>
+	<controlset name="tribulation_squad_member" toggle="false" hittest="true" width="256" height="86" skin="" stateskin="false" draw="false" hittestset="true">
+		<controls>
+			<picture name="jobportrait_bg1" rect="0 0 50 50" hittest="true" margin="10 25 0 0" layout_gravity="left top" stretch="false"/>
+			<picture name="jobportrait1" parent="jobportrait_bg1" rect="0 0 50 50" hittest="true" margin="-2 0 0 0" layout_gravity="left top" stretch="true"/>
+			<picture name="jobportrait_bg2" rect="0 0 50 50" hittest="true" margin="60 25 0 0" layout_gravity="left top" stretch="false"/>
+			<picture name="jobportrait2" parent="jobportrait_bg2" rect="0 0 50 50" hittest="true" margin="-2 0 0 0" layout_gravity="left top" stretch="true"/>
+			<picture name="jobportrait_bg3" rect="0 0 50 50" hittest="true" margin="110 25 0 0" layout_gravity="left top" stretch="false"/>
+			<picture name="jobportrait3" parent="jobportrait_bg3" rect="0 0 50 50" hittest="true" margin="-2 0 0 0" layout_gravity="left top" stretch="true"/>
+			<picture name="leader_img" rect="0 0 24 18" hittest="false" margin="15 3 0 0" layout_gravity="left top" image="party_leader_mark" stretch="true"/>
+			<richtext name="name_text" rect="0 0 150 30" margin="50 4 0 0" spacey="0" fontname="white_16_ol" layout_gravity="left top" hittest="false" textalign="left center" format="{@ps2}{s14}%s" param1="name" param1_def="460 캐릭터이름"/>
+			<button name="infoPic" rect="0 0 26 26" margin="0 42 13 0" layout_gravity="right top" LBtnUpScp="GET_PARTICIPANT_INFO" image="ps_infoBtn" oversound="button_cursor_over_3" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" stretch="true" hittest="true"/>
+			<richtext name="logout_text" rect="0 0 150 30" margin="10 25 0 0" fontname="white_16_ol" layout_gravity="left top" hittest="false" textalign="left center" format="{@ps2}{s14}%s" param1="text" param1_def="로그아웃"/>
+			<groupbox name="labelline" margin="0 0 0 5" rect="0 0 228 3" skin="ps_line2" layout_gravity="center bottom"/>
+		</controls>
+	</controlset>
+	<controlset name="pilgrim_select_info" toggle="false" hittest="true" width="188" height="36" skin="" stateskin="false" draw="true" hittestset="true">
+		<controls>
+			<button name="btn" margin="0 0 0 0" rect="0 0 188 36" layout_gravity="left center" skin="tribal_btn_list" hittestbox="true" LBtnUpScp="ON_PILGRIM_SELECT_INFO"/>
+			<picture name="logo" parent="btn" rect="0 0 22 20" margin="5 0 0 0" layout_gravity="left center" hittest="false" image="tribal_icon_shell_S" stretch="true" oversound="button_over"/>
+			<richtext name="name" parent="btn" layout_gravity="left center" rect="0 0 188 36" margin="30 0 0 0" format="{@ps1_1}{s16}%s" textalign="left center" param1="name" param1_def="순례자" fixwidth="true" hittest="false"/>
+		</controls>
+	</controlset>
+	<controlset name="tribulation_item_induninfo" toggle="false" hittest="true" width="465" height="60" skin="tribal_frameList" stateskin="false" draw="true" hittestset="true">
+		<controls>
+			<button name="btn_info" margin="0 0 0 0" rect="0 0 465 60" layout_gravity="left center" skin="worldmap2_btn_square" hittestbox="true" LBtnUpScp="ON_PILGRIM_TRIBULATION_INDUNINFO_TRIBULATION_INFO_SELECT"/>
+			<picture name="pic_rank" parent="btn_info" rect="0 0 50 50" margin="10 0 0 0" layout_gravity="left center" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" hittest="false" image="tribal_levelframe_S01" stretch="true" oversound="button_over"/>
+			<picture name="pic_rank_icon" parent="pic_rank" rect="0 0 40 40" margin="0 0 0 0" layout_gravity="center center" MouseOffAnim="btn_mouseoff" MouseOnAnim="btn_mouseover" hittest="false" image="None" stretch="true" oversound="button_over"/>
+			<richtext name="title" parent="btn_info" layout_gravity="left center" rect="0 0 340 60" margin="70 0 0 0" format="{@ps2}{s16}%s" textalign="left center" param1="title" param1_def="제목" fixwidth="true" hittest="false"/>
+		</controls>
+	</controlset>
+	<controlset name="tribulation_category_mgame" toggle="false" hittest="true" width="55" height="55" skin="None" stateskin="false" draw="false" hittestset="true">
+		<controls>
+			<picture name="pic_category_icon" rect="0 0 55 55" margin="0 0 0 0" layout_gravity="center center" image="None" stretch="true" hittestbox="true"/>
 		</controls>
 	</controlset>
 </controlsetlist>

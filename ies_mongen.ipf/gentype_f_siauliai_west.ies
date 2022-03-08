@@ -20,7 +20,7 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 28,28,1,30,1,60000,1,2,0,0,0,0,0,"Warp_arrow","클라페다","","","","MON_DUMMY","","","","WS_SIAULST1_KLAPEDA","","NO","YES","NO","Neutral","","","",""
 29,29,1,0,1,60000,1,0,0,0,0,0,0,"Silvertransporter_m","클라페다 경비병","","","","MON_DUMMY","","","SIAUL_WEST_SOLDIER3","","","NO","YES","NO","Neutral","","","",""
 30,30,1,0,200,30000,12,0,0,0,1,0,0,"rootcrystal_01","나무뿌리 수정","","","","MON_TORCH","","","","","","NO","YES","NO","RootCrystal","","","",""
-31,31,1,40,1,60000,1,1,0,0,80,0,0,"npc_sculptor","[딥디르비 마스터]{nl}조각가 테슬라","","","","","","","JOB_DIEVDIRBYS2_NPC","","","NO","YES","NO","Neutral","","","",""
+31,31,1,40,1,60000,1,1,0,0,80,0,0,"npc_sculptor","[딥디르비 마스터]{nl}조각가 테슬라","","","","","","","JOB_DIEVDIRBYS2_NPC","","","NO","YES","NO","Neutral","","","EVENT_2103_WHITEDAY_sculptor_PRESENT_COUNT",""
 32,32,1,40,1,60000,1,1,0,0,0,0,0,"npc_cat","","","","","","","","JOB_DIEVDIRBYS3_3_NPC","","","NO","YES","NO","Neutral","","","",""
 49,49,1,180,1,60000,1,0,0,0,0,0,0,"HiddenTrigger6","SIAUL_WEST_ADD_SUB_01","","","","MON_DUMMY","","","","SIAUL_WEST_ADD_SUB_01","","NO","YES","NO","Neutral","","","",""
 50,50,1,70,1,60000,1,0,0,0,0,0,0,"HiddenTrigger6","SIAUL_WEST_LAIMONAS3_2","","","","MON_DUMMY","","","","SIAUL_WEST_LAIMONAS3_2_TRIGGER","","NO","YES","NO","Neutral","","","",""
