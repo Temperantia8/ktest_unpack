@@ -4009,3 +4009,15 @@ function merge_left(t1, t2)
 
 	return t1
 end
+
+function DELETE_ITEM_OPEN_WARNINGBOX_MSG(itemCls)
+	if itemCls.MarketCategory == 'Premium_Costume' and itemCls.StringArg == 'SilverGacha' then
+		return 1
+	end
+
+	if itemCls.MarketCategory == 'Card_CardLeg' then
+		return 1
+    end
+    
+    return 0
+end

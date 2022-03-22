@@ -3509,6 +3509,10 @@
 		<image name="icon_item_ep13maid_mace" file="\icon\weapon\icon_item_ep13maid_mace.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep13maid_staff" file="\icon\weapon\icon_item_ep13maid_staff.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep13maid_sword" file="\icon\weapon\icon_item_ep13maid_sword.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep13animal_mace" file="\icon\weapon\icon_item_ep13animal_mace.png" imgrect="0 0 256 256" CMM_Caption="2021_3 테마 4종"/>
+		<image name="icon_item_ep13animal_rod" file="\icon\weapon\icon_item_ep13animal_rod.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep13animal_thmace" file="\icon\weapon\icon_item_ep13animal_thmace.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep13animal_thsword" file="\icon\weapon\icon_item_ep13animal_thsword.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="acc_item">
 		<image name="item_necklace_01" file="\icon\acc\item_necklace_1.png" imgrect="0 0 256 256" CMM_Caption="목걸이"/>
@@ -4310,6 +4314,10 @@
 		<image name="icon_item_accessory_6th_glasses" file="\icon\hairacc\icon_item_accessory_6th_glasses.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_accessory_ep13maid01" file="\icon\hairacc\icon_item_accessory_ep13maid01.png" imgrect="0 0 256 256" CMM_Caption="2022 2월 여신의 큐브 2종"/>
 		<image name="icon_item_accessory_ep13maid02" file="\icon\hairacc\icon_item_accessory_ep13maid02.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_accessory_ep13animal01" file="\icon\hairacc\icon_item_accessory_ep13animal01.png" imgrect="0 0 256 256" CMM_Caption="2022 3월 테마 2종"/>
+		<image name="icon_item_accessory_ep13animal02" file="\icon\hairacc\icon_item_accessory_ep13animal02.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_helmet_ep13animal01" file="\icon\hairacc\icon_item_helmet_ep13animal01.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_helmet_ep13animal02" file="\icon\hairacc\icon_item_helmet_ep13animal02.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="collection_item">
 		<image name="icon_collitem_collection" file="\icon\colletion\icon_item_collection.tga" imgrect="0 0 673 419" CMM_Caption="월계수"/>
@@ -6805,6 +6813,9 @@
 		<image name="icon_item_Extreme_RewardCoupon_Delmore_Raid_Yellow" file="\icon\item\icon_item_Extreme_RewardCoupon_Delmore_Raid_Yellow.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_Extreme_RewardCoupon_Delmore_Raid_Gray" file="\icon\item\icon_item_Extreme_RewardCoupon_Delmore_Raid_Gray.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_Extreme_RewardCoupon_Delmore_Raid_Blue" file="\icon\item\icon_item_Extreme_RewardCoupon_Delmore_Raid_Blue.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_Event_2203_ARBOR_DAY_Box" file="\icon\item\icon_item_Event_2203_ARBOR_DAY_Box.png" imgrect="0 0 256 256" CMM_Caption="식목일 상자"/>
+		<image name="icon_item_Event_2203_ARBOR_DAY_Seed" file="\icon\item\icon_item_Event_2203_ARBOR_DAY_Seed.png" imgrect="0 0 256 256" CMM_Caption="식목일 씨앗"/>
+	<image name="icon_item_relicgem_lvup_scroll_lv5" file="\icon\item\icon_item_relicgem_lvup_scroll_lv5.png" imgrect="0 0 256 256" CMM_Caption="성물 스크롤"/>
 	</imagelist>
 	<imagelist category="housing">
 		<image name="icon_item_housing_craft_bronze_1" file="\icon\item\icon_item_housing_craft_bronze_1.png" imgrect="0 0 256 256" CMM_Caption="[하우징 공방] 쿠폰"/>
@@ -9117,13 +9128,24 @@
 		<image name="icon_item_balloon_skin_badge_gabija_pic" file="\icon\payment\icon_item_balloon_skin_badge_gabija_pic.png" imgrect="0 0 256 256" CMM_Caption="가비야 말풍선"/>
 		<image name="icon_item_balloon_skin_badge_paulius" file="\icon\payment\icon_item_balloon_skin_badge_paulius.png" imgrect="0 0 256 256" CMM_Caption="부활자 파울루스 마이크"/>
 		<image name="icon_item_balloon_skin_badge_paulius_pic" file="\icon\payment\icon_item_balloon_skin_badge_paulius_pic.png" imgrect="0 0 256 256" CMM_Caption="부활자 파울루스 말풍선"/>
-		<image name="item_icon_doll_paulius" file="\icon\payment\item_icon_doll_paulius.png" imgrect="0 0 256 256" CMM_Caption="파울루스 인형"/>
+		<image name="icon_item_Doll_paulius" file="\icon\payment\icon_item_Doll_paulius.png" imgrect="0 0 256 256" CMM_Caption="파울루스 인형"/>
+		<image name="icon_item_blessed_cube_01" file="\icon\payment\icon_item_blessed_cube_01.png" imgrect="0 0 256 256" CMM_Caption="여큡 아이콘"/>
+		<image name="icon_item_blessed_cube_10" file="\icon\payment\icon_item_blessed_cube_10.png" imgrect="0 0 256 256" CMM_Caption="여큡 아이콘x10+1"/>
+		<image name="icon_item_selectbox_ep13maid02_tr" file="\icon\payment\icon_item_selectbox_ep13maid02_tr.png" imgrect="0 0 256 256" CMM_Caption="이벤트 코스튬 상자"/>
 		<image name="icon_item_selectbox_6th_greenschool" file="\icon\payment\icon_item_selectbox_6th_greenschool.png" imgrect="0 0 256 256" CMM_Caption="해외 6주년 코스튬"/>
 		<image name="icon_item_selectbox_6th_cardiganschool" file="\icon\payment\icon_item_selectbox_6th_cardiganschool.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_6th_greenschool_m" file="\icon\payment\icon_item_6th_greenschool_m.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_6th_greenschool_f" file="\icon\payment\icon_item_6th_greenschool_f.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_6th_cardiganschool_m" file="\icon\payment\icon_item_6th_cardiganschool_m.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_6th_cardiganschool_f" file="\icon\payment\icon_item_6th_cardiganschool_f.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep13animal01_m" file="\icon\payment\icon_item_ep13animal01_m.png" imgrect="0 0 256 256" CMM_Caption="2022 3월 동물유치원 테마"/>
+		<image name="icon_item_ep13animal01_f" file="\icon\payment\icon_item_ep13animal01_f.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep13animal01_1_m" file="\icon\payment\icon_item_ep13animal01_1_m.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep13animal01_1_f" file="\icon\payment\icon_item_ep13animal01_1_f.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_selectbox_ep13animal01" file="\icon\payment\icon_item_selectbox_ep13animal01.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_selectbox_ep13animal01_1" file="\icon\payment\icon_item_selectbox_ep13animal01_1.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_wing_ep13animal" file="\icon\payment\icon_item_wing_ep13animal.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_wing_delmore" file="\icon\payment\icon_item_wing_delmore.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="seal">
 		<image name="icon_seal_yellow_cc_A1" file="\icon\seal\seal_yellow_cc_A1.tga" imgrect="0 0 80 80"/>

@@ -18228,3 +18228,16 @@ function SCR_GET_Bloodtransfusion_Ratio(skill)
     
     return totalHP
 end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_SkillFactor_Wrath(skill)
+    local value = 0
+    local pc = GetSkillOwner(skill)
+    local skl = GetSkill(pc, "Barbarian_Warcry")
+    if skl ~= nil then
+        local sklLV = TryGetProp(skl, "Level", 1)
+        value = sklLV * 906
+    end
+
+    return value
+end

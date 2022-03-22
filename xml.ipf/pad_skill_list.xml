@@ -9132,6 +9132,11 @@ return value;"/>
 				<Str Str="TB_EARRING_RAID_MOTTLE_PAD_UPDATE"/>
 			</ToolScp>
 		</updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="TB_EARRING_RAID_MOTTLE_PAD_DESTROY"/>
+            </ToolScp>
+        </destroyEvent>
 	</PadSkill>
 	<PadSkill Name="EarringRaidSwordDance" CheckerType="0" Range="80" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
 		<createEvent>
@@ -9165,7 +9170,7 @@ return value;"/>
 				<Num Num="99999"/>
 			</ToolScp>
 		<ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-                <Str_Arg Str="F_laser006" Arg="1"/>
+                <Str_Arg Str="E_laser004" Arg="1"/>
                 <Pos Angle="0" Dist="-5.3786513e-09"/>
                 <Num Num="0"/>
                 <Str_Arg Str="None" Arg="1"/>
@@ -9180,7 +9185,7 @@ return value;"/>
 		<updateEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
 				<Num Num="-100"/>
-				<Num Num="1"/>
+                <Num Num="9999"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
@@ -11855,8 +11860,8 @@ return obj.Level"/>
 				<Num Num="-1000"/>
 				<Num Num="0"/>
 			</ToolScp>
-			<ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
 				<Str Str="SCR_FIELD_PADPATERN_TAKE_DAMAGE"/>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
 			</ToolScp>
 			<ToolScp Scp="PAD_BUFF_CHECK_BUFF_ENEMY" Client="NO" UseSleep="NO">
 				<Str Str="ENEMY"/>
@@ -20313,7 +20318,7 @@ return lv;"/>
 			</ToolScp>
 		</leaveEvent>
 	</PadSkill>
-	<PadSkill Name="Paulius_Energy_Orb_Pad" CheckerType="0" Range="120" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+    <PadSkill Name="Paulius_Energy_Orb_Pad" CheckerType="0" Range="100" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
 				<Num Num="60000"/>
@@ -20321,7 +20326,7 @@ return lv;"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
 			<ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-				<Str_Arg Str="F_ground223_dark_loop" Arg="0.80000001"/>
+                <Str_Arg Str="F_ground223_dark_loop" Arg="0.65"/>
 				<Pos Angle="0" Dist="0"/>
 				<Num Num="0"/>
 				<Str_Arg Str="None" Arg="1"/>
@@ -20334,21 +20339,54 @@ return lv;"/>
 			</ToolScp>
 		</destroyEvent>
 		<enterEvent>
-			<ToolScp Scp="PAD_TGT_BUFF_MON" Client="NO" UseSleep="NO">
-				<Str Str="ENEMY"/>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_REVIVAL_PAULIUS_ENERGY_ORB_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="0.5"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
 				<Num Num="0"/>
 				<Num Num="0"/>
-				<Str Str="PAULIUS_BOUNCE_PAD_STUN_DEBUFF"/>
-				<Num Num="99"/>
+                <Str Str="None"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Paulius_Energy_Orb_Pad_Extreme" CheckerType="0" Dist="50" Angle="0" Range="60" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="120000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground223_dark_loop" Arg="0.40000001"/>
+                <Pos Angle="0" Dist="0"/>
 				<Num Num="0"/>
-				<Num Num="2000"/>
+                <Str_Arg Str="None" Arg="1"/>
 				<Num Num="1"/>
-				<Num Num="100"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_REVIVAL_PAULIUS_ENERGY_ORB_PAD_DESTROY"/>
+            </ToolScp>
+        </destroyEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_REVIVAL_PAULIUS_ENERGY_ORB_PAD_ENTER"/>
 			</ToolScp>
 		</enterEvent>
 		<updateEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="-1000"/>
+                <Num Num="-500"/>
 				<Num Num="1"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
@@ -21363,7 +21401,7 @@ return GET_ABIL_LEVEL(self, &quot;PlagueDoctor6&quot;);"/>
 	<PadSkill Name="Pyromancer_FireWall" CheckerType="1" deadProcess="1" Range="15" InnerRange="15" ApplyFlyMon="1">
 		<createEvent>
 			<ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-				<Str_Arg Str="I_wizard_firewall2" Arg="0.40000001"/>
+                		<Str_Arg Str="F_wizard_firewall_loop" Arg="0.66"/>
 				<Pos Angle="0" Dist="0"/>
 				<Num Num="0"/>
 				<Str_Arg Str="None" Arg="1"/>
@@ -21551,7 +21589,7 @@ return 8100;"/>
 	<PadSkill Name="Pyromancer_MovingFireBall_1" CheckerType="1" deadProcess="1" Range="15" InnerRange="15" UpdateTerm="50" ApplyFlyMon="1">
 		<createEvent>
 			<ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
-				<Str_Arg Str="I_wizard_fireball_cast_fire" Arg="1"/>
+				<Str_Arg Str="I_force011_orange2" Arg="1"/>
 				<Num Num="15"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -21585,7 +21623,7 @@ return 8100;"/>
 	<PadSkill Name="Pyromancer_MovingFireBall_2" CheckerType="1" deadProcess="1" Range="15" InnerRange="15" UpdateTerm="50" ApplyFlyMon="1">
 		<createEvent>
 			<ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
-				<Str_Arg Str="I_wizard_fireball_cast_fire" Arg="1"/>
+				<Str_Arg Str="I_force011_orange2" Arg="1"/>
 				<Num Num="15"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -21619,7 +21657,7 @@ return 8100;"/>
 	<PadSkill Name="Pyromancer_MovingFireBall_3" CheckerType="1" deadProcess="1" Range="15" InnerRange="15" UpdateTerm="50" ApplyFlyMon="1">
 		<createEvent>
 			<ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
-				<Str_Arg Str="I_wizard_fireball_cast_fire" Arg="1"/>
+				<Str_Arg Str="I_force011_orange2" Arg="1"/>
 				<Num Num="15"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -21653,7 +21691,7 @@ return 8100;"/>
 	<PadSkill Name="Pyromancer_MovingFireBall_4" CheckerType="1" deadProcess="1" Range="15" InnerRange="15" UpdateTerm="50" ApplyFlyMon="1">
 		<createEvent>
 			<ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
-				<Str_Arg Str="I_wizard_fireball_cast_fire" Arg="1"/>
+				<Str_Arg Str="I_force011_orange2" Arg="1"/>
 				<Num Num="15"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">

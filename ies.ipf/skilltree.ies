@@ -93,7 +93,7 @@ ClassID,UnlockClassLevel,MaxLevel,ClassName,Type,SkillName
 11608,31,5,"Char1_16_8","Skill","Templer_FlyingColors"
 11701,1,15,"Char1_17_1","Skill","Rancer_Crush"
 11702,1,15,"Char1_17_2","Skill","Rancer_Joust"
-11703,1,15,"Char1_17_3","Skill","Rancer_SpillAttack"
+11703,1,1,"Char1_17_3","Skill","Rancer_SpillAttack"
 11704,1,15,"Char1_17_4","Skill","Rancer_Quintain"
 11705,1,5,"Char1_17_5","Skill","Rancer_Commence"
 11706,16,5,"Char1_17_6","Skill","Rancer_Prevent"

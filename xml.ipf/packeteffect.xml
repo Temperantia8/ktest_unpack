@@ -1295,7 +1295,8 @@
 		<Effect Name="F_ground085_circle"/>
 		<Effect Name="skl12_spear"/>
 		<Effect Name="I_archer_ParthianShaft_force"/>
-	</Category>
+		<Effect Name="ridepet_ep13animal_run"/>
+    </Category>
 	<Category ID="146">
 		<Effect Name="beginner"/>
 		<Effect Name="Phase0"/>
@@ -7281,6 +7282,9 @@
 		<Effect Name="I_warp_arrow_mash_red"/>
 		<Effect Name="E_warp_arrow_red"/>
 		<Effect Name="I_warp_arrow_mash_red2_2"/>
+		<Effect Name="spin"/>
+		<Effect Name="gacha_machine"/>
+		<Effect Name="F_ground040_nosound"/>
 	</Category>
 	<Category ID="28">
 		<Effect Name="F_explosion006_green#Dummy_skl2_shot"/>
@@ -26053,7 +26057,10 @@
 		<Effect Name="E_laser004"/>
 		<Effect Name="I_crack002"/>
     <Effect Name="F_laser006"/>
-	</Category>
+	<Effect Name="I_spread_out015_light_pink"/>
+        <Effect Name="F_buff_basic003_red2"/>
+        <Effect Name="F_fire037_1_red2"/>
+    </Category>
     <Category ID="170">
         <Effect Name="Linker_blue3"/>
         <Effect Name="Linker_cable_blue"/>
