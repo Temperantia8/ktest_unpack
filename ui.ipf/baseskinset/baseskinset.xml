@@ -9287,7 +9287,7 @@
 		<image name="birth_attribute_secret" file="\skin\keynbet.tga" imgrect="352 507 27 27" CMM_Caption="선천 버프 비공개"/>
 		<image name="birth_attribute_berserker" file="\skin\keynbet.tga" imgrect="379 507 27 27" CMM_Caption="버서커형"/>
 		<image name="birth_attribute_avoidance" file="\skin\keynbet.tga" imgrect="406 507 27 27" CMM_Caption="회피형"/>
-		<image name="birth_attribute_cancellation" file="\skin\keynbet.tga" imgrect="433 507 27 27" CMM_Caption="조인트 패널티 해제형"/>
+		<image name="birth_attribute_cancellation" file="\skin\keynbet.tga" imgrect="433 507 27 27" CMM_Caption="조인트 페널티 해제형"/>
 		<image name="birth_attribute_ld_defense" file="\skin\keynbet.tga" imgrect="352 534 27 27" CMM_Caption="원거리 방어형"/>
 		<image name="birth_attribute_explosion" file="\skin\keynbet.tga" imgrect="379 534 27 27" CMM_Caption="폭발형"/>
 		<image name="birth_attribute_absorption" file="\skin\keynbet.tga" imgrect="406 534 27 27" CMM_Caption="디버프 흡수형"/>
@@ -13525,7 +13525,7 @@
 		<image name="icon_nexonpc" file="\icon\buff_icon.tga" imgrect="640 1152 128 128" CMM_Caption="넥슨피시방"/>
 		<image name="icon_expup" file="\icon\buff_icon.tga" imgrect="768 1152 128 128" CMM_Caption="경험의서버프"/>
 		<image name="icon_teamexpup" file="\icon\buff_icon.tga" imgrect="896 1152 128 128" CMM_Caption="팀경험치"/>
-		<image name="icon_fieldboss" file="\icon\buff_icon.tga" imgrect="0 1280 128 128" CMM_Caption="필드보스패널티"/>
+		<image name="icon_fieldboss" file="\icon\buff_icon.tga" imgrect="0 1280 128 128" CMM_Caption="필드보스페널티"/>
 		<image name="icon_GreaterDEF" file="\icon\buff_icon.tga" imgrect="128 1280 128 128" CMM_Caption="광역방어버프"/>
 		<image name="icon_GreaterATK" file="\icon\buff_icon.tga" imgrect="256 1280 128 128" CMM_Caption="광역공격버프"/>
 		<image name="icon_L_Songpyeon" file="\icon\buff_icon.tga" imgrect="384 1280 128 128" CMM_Caption="대왕송편버프"/>
@@ -13553,7 +13553,7 @@
 		<image name="icon_Event_WhitDay_Candy_2" file="\icon\buff_icon.tga" imgrect="128 1664 128 128" CMM_Caption="사탕2"/>
 		<image name="icon_Event_WhitDay_Candy_3" file="\icon\buff_icon.tga" imgrect="256 1664 128 128" CMM_Caption="사탕3"/>
 		<image name="icon_Event_WhitDay_Candy_4" file="\icon\buff_icon.tga" imgrect="384 1664 128 128" CMM_Caption="사탕4"/>
-		<image name="icon_TeamBattleBan" file="\icon\buff_icon.tga" imgrect="512 1664 128 128" CMM_Caption="팀배틀패널티"/>
+		<image name="icon_TeamBattleBan" file="\icon\buff_icon.tga" imgrect="512 1664 128 128" CMM_Caption="팀배틀페널티"/>
 		<image name="icon_WeddingCake" file="\icon\buff_icon.tga" imgrect="640 1664 128 128" CMM_Caption="웨딩케이크버프"/>
 		<image name="icon_Fishing_Fire" file="\icon\buff_icon.tga" imgrect="768 1664 128 128" CMM_Caption="낚시 버프"/>
 		<image name="icon_Weak_Melee" file="\icon\buff_icon.tga" imgrect="896 1664 128 128" CMM_Caption="근접 공격 약점"/>
@@ -13640,7 +13640,7 @@
 		<image name="icon_boruta_echo" file="\icon\buff_icon2.tga" imgrect="896 896 128 128"/>
 		<image name="icon_goldpig_have" file="\icon\buff_icon2.tga" imgrect="0 1024 128 128" CMM_Caption="황금돼지 컴페니언 버프"/>
 		<image name="icon_sweet_potato" file="\icon\buff_icon2.tga" imgrect="128 1024 128 128" CMM_Caption="군고구마 버프"/>
-		<image name="icon_BK_Betrayer_1" file="\icon\buff_icon2.tga" imgrect="256 1024 128 128" CMM_Caption="길드탈퇴 패널티 디버프"/>
+		<image name="icon_BK_Betrayer_1" file="\icon\buff_icon2.tga" imgrect="256 1024 128 128" CMM_Caption="길드탈퇴 페널티 디버프"/>
 		<image name="icon_Event_ep11_reinforce" file="\icon\buff_icon2.tga" imgrect="384 1024 128 128" CMM_Caption="자라나라 나무나무 장비 업글 버프"/>
 		<image name="icon_Event_ep11_Expup" file="\icon\buff_icon2.tga" imgrect="512 1024 128 128" CMM_Caption="자라나라 나무나무 경험치 버프"/>
 		<image name="icon_Event_ep11_flower" file="\icon\buff_icon2.tga" imgrect="640 1024 128 128" CMM_Caption="새싹과 함께한"/>
@@ -13677,7 +13677,7 @@
 		<image name="icon_reappraisal_discount" file="\icon\buff_icon2.tga" imgrect="640 1536 128 128" CMM_Caption="재감정 비용 50% 할인"/>
 		<image name="icon_class_change_pointup" file="\icon\buff_icon2.tga" imgrect="768 1536 128 128" CMM_Caption="클래스 변경 포인트 지급량 500% 증가"/>
 		<image name="icon_even_transcend_discount" file="\icon\buff_icon2.tga" imgrect="896 1536 128 128" CMM_Caption="짝수 단계 초월 비용 50% 할인"/>
-		<image name="icon_penalty_clear_gem" file="\icon\buff_icon2.tga" imgrect="0 1664 128 128" CMM_Caption="젬 사용 패널티 면제"/>
+		<image name="icon_penalty_clear_gem" file="\icon\buff_icon2.tga" imgrect="0 1664 128 128" CMM_Caption="젬 사용 페널티 면제"/>
 		<image name="icon_unique_raid_bonus" file="\icon\buff_icon2.tga" imgrect="128 1664 128 128" CMM_Caption="유니크 레이드 보상 2배,스톤개수 고정"/>
 		<image name="icon_reinforce_discount" file="\icon\buff_icon2.tga" imgrect="256 1664 128 128" CMM_Caption="강화 50% 할인"/>
 		<image name="icon_healhsp_speedup" file="\icon\buff_icon2.tga" imgrect="384 1664 128 128" CMM_Caption="이동 속도증가,HP,SP회복"/>

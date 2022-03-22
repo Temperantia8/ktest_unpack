@@ -660,7 +660,7 @@
 		<image name="icon_warri_armorTouchup" file="\icon\skill\warrior\icon_warri_armorTouchup.png" imgrect="0 0 128 128" CMM_Caption="방어구손질"/>
 		<image name="icon_warri_foodrationing" file="\icon\skill\warrior\icon_warri_foodrationing.png" imgrect="0 0 128 128" CMM_Caption="배식테이블"/>
 		<image name="icon_warri_basecamp" file="\icon\skill\warrior\icon_warri_basecamp.png" imgrect="0 0 128 128" CMM_Caption="거점 텐트"/>
-		<image name="icon_warri_MitigatePenalty" file="\icon\skill\warrior\icon_warri_MitigatePenalty.png" imgrect="0 0 128 128" CMM_Caption="패널티감소"/>
+		<image name="icon_warri_MitigatePenalty" file="\icon\skill\warrior\icon_warri_MitigatePenalty.png" imgrect="0 0 128 128" CMM_Caption="페널티감소"/>
 		<image name="icon_warri_Crescent" file="\icon\skill\warrior\icon_warri_Crescent.png" imgrect="0 0 128 128" CMM_Caption="크레센트"/>
 		<image name="icon_warri_IronHook" file="\icon\skill\warrior\icon_warri_IronHook.png" imgrect="0 0 128 128" CMM_Caption="아이언후크"/>
 		<image name="icon_warri_subweaponcancel" file="\icon\skill\warrior\icon_warri_subweaponcancel.png" imgrect="0 0 128 128" CMM_Caption="서브웨폰 캔슬"/>

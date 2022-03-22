@@ -61,7 +61,7 @@ ClassID,Cost,NumArg,ClassName,MGameName,GroupName,Rank,StrArg,Tooltip,Desc,Icon
 124,1,0.200000,"EarringBossCRTHR_B","EARRING_RAID_Extreme","Monster","B","","보스 치명타 발생 증가","보스의 치명타 발생이 20% 증가합니다.","icon_tribulation_CrtUp"
 125,1,0.100000,"EarringBossCRTHR_C","EARRING_RAID_Extreme","Monster","C","","보스 치명타 발생 증가","보스의 치명타 발생이 10% 증가합니다.","icon_tribulation_CrtUp"
 126,1,0,"DoubleEdgedSword","EARRING_RAID_Extreme","Pattern","N","","양날의 검","가비야의 기운이 근처에 있는 캐릭터에게 주기적으로 피해를 입힙니다.","icon_tribulation_DoubleEdgedSword"
-127,1,0.050000,"UnCleanEnergy","EARRING_RAID_Extreme","Pattern","N","","부정한 기운","가비야의 기운 생성시 부정한 기운이 같이 생성됩니다. 근처의 몬스터는 공격력, 방어력이 증하며, 캐릭터의 공격력, 방어력을 감소 시킵니다.","icon_tribulation_GabijaEnergyDark"
+127,1,0.050000,"UnCleanEnergy","EARRING_RAID_Extreme","Pattern","N","","부정한 기운","가비야의 기운 생성시 부정한 기운이 같이 생성됩니다. 근처의 몬스터는 공격력, 방어력이 증가하며, 캐릭터의 공격력, 방어력을 감소 시킵니다.","icon_tribulation_GabijaEnergyDark"
 128,1,0,"SwordDance","EARRING_RAID_Extreme","Pattern","N","","검무","일정 시간마다 칼날이 지나다닙니다. 해당 칼날에 피격된 캐릭터는 피해와 함께 출혈 디버프가 부여됩니다.","icon_tribulation_SwordDance"
 129,1,30,"Isolation","EARRING_RAID_Extreme","Pattern","N","","고립","일정 시간마다 캐릭터에게 마법진이 생성되며 해당 마법진 안에 있을 경우에 받는 피해량이 증가 됩니다.","icon_tribulation_Isolation"
 130,1,30,"Windmil","EARRING_RAID_Extreme","Pattern","N","","풍차","일정 시간마다 마법진이 생성되어서 천천히 회전합니다. 해당 마법진에 피격당한 캐릭터는 몬스터에게 입히는 피해량이 감소합니다.","icon_tribulation_Windmill"
