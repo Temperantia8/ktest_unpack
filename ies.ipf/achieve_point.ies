@@ -589,7 +589,7 @@ ClassID,ClassName,Name,UseDaily,UseWeekly,Country,StartTime,EndTime,DescTitle
 70002,"Achieve_Ancient_Solo_dungeon_1","어시스터 던전 특정 단계 클리어","NO","NO","","","",""
 70003,"Earring_Raid_Achieve_Solo","여신의 전언 : 불꽃의 기억 (1인) 클리어","NO","NO","","","",""
 70004,"Earring_Raid_Achieve_Nomal","여신의 전언 : 불꽃의 기억 (Nomal) 클리어","NO","NO","","","",""
-70005,"Earring_Raid_Achieve_Hard","여신의 전언 : 불꽃의 기억 (Hard) 클리어","NO","NO","","","",""
+70005,"Earring_Raid_Achieve_Hard","여신의 전언 : 불꽃의 기억 (Hard / Extreme) 클리어","NO","NO","","","",""
 80000,"GuideQuest_1","","NO","NO","","","","성장 업적 : 챕터 1"
 80001,"GuideQuest_1_1","","NO","NO","","","","[캐릭터] 캐릭터 Lv 455 이상 달성"
 80002,"GuideQuest_1_2","","NO","NO","","","","[퀘스트] 에피소드 12-2 클리어 후 에피소드 보상 획득"
