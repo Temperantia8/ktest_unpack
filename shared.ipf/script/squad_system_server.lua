@@ -27,9 +27,18 @@ function TX_CREATE_SQUAD(pc, squad_name, type)
     TxTakeItem(tx, 'Vis', 1000000, 'TX_CREATE_SQUAD')
 
     local ret = TxCommit(tx)
-    print(ret)
+    
     if ret == 'SUCCESS' then
         -- mongo log
+        local log_list = {}
+        table.insert(log_list, 'Type')
+        table.insert(log_list, 'Create')
+        table.insert(log_list, 'Name')
+        table.insert(log_list, squad_name)
+        table.insert(log_list, 'SquadType')
+        table.insert(log_list, tostring(type))
+
+        CustomMongoLog_WithList(pc, 'SquadSystem', log_list) 
     end
 end
 
@@ -52,9 +61,16 @@ function TX_DISBAND_SQUAD(pc, type)
     TxDisbandSquad(tx, pc, type)
 
     local ret = TxCommit(tx)
-    print(ret)
+    
     if ret == 'SUCCESS' then
         -- mongo log
+        local log_list = {}
+        table.insert(log_list, 'Type')
+        table.insert(log_list, 'Disband')        
+        table.insert(log_list, 'SquadType')
+        table.insert(log_list, tostring(type))
+
+        CustomMongoLog_WithList(pc, 'SquadSystem', log_list) 
     end
 end
 

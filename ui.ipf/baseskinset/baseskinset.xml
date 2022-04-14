@@ -10767,13 +10767,31 @@
 		<image name="pilgrim_reward_gain" file="\skin\party_search.tga" imgrect="81 413 34 37" CMM_Caption="순례자 보상 받기 버튼"/>
 		<image name="pilgrim_reward_gain_cursoron" file="\skin\party_search.tga" imgrect="116 413 34 37"/>
 		<image name="pilgrim_reward_gain_clicked" file="\skin\party_search.tga" imgrect="151 413 34 37"/>
+		<image name="swordsman_equipment_cabinet" file="\skin\indun_skin.tga" imgrect="0 1019 96 50" CMM_Caption="장비 보관함_소드맨"/>
+		<image name="swordsman_equipment_cabinet_cursoron" file="\skin\indun_skin.tga" imgrect="97 1019 96 50"/>
+		<image name="swordsman_equipment_cabinet_clicked" file="\skin\indun_skin.tga" imgrect="194 1019 96 50"/>
+		<image name="wizard_equipment_cabinet" file="\skin\indun_skin.tga" imgrect="0 1070 96 50" CMM_Caption="장비 보관함_위자드"/>
+		<image name="wizard_equipment_cabinet_cursoron" file="\skin\indun_skin.tga" imgrect="97 1070 96 50"/>
+		<image name="wizard_equipment_cabinet_clicked" file="\skin\indun_skin.tga" imgrect="194 1070 96 50"/>
+		<image name="archer_equipment_cabinet" file="\skin\indun_skin.tga" imgrect="0 1121 96 50" CMM_Caption="장비 보관함_아처"/>
+		<image name="archer_equipment_cabinet_cursoron" file="\skin\indun_skin.tga" imgrect="97 1121 96 50"/>
+		<image name="archer_equipment_cabinet_clicked" file="\skin\indun_skin.tga" imgrect="194 1121 96 50"/>
+		<image name="cleric_equipment_cabinet" file="\skin\indun_skin.tga" imgrect="291 1019 96 50" CMM_Caption="장비 보관함_클레릭"/>
+		<image name="cleric_equipment_cabinet_cursoron" file="\skin\indun_skin.tga" imgrect="388 1019 96 50"/>
+		<image name="cleric_equipment_cabinet_clicked" file="\skin\indun_skin.tga" imgrect="485 1019 96 50"/>
+		<image name="scout_equipment_cabinet" file="\skin\indun_skin.tga" imgrect="291 1070 96 50" CMM_Caption="장비 보관함_스카우트"/>
+		<image name="scout_equipment_cabinet_cursoron" file="\skin\indun_skin.tga" imgrect="388 1070 96 50"/>
+		<image name="scout_equipment_cabinet_clicked" file="\skin\indun_skin.tga" imgrect="485 1070 96 50"/>
 		<image name="party_category_btn" file="\skin\button_small.tga" imgrect="0 401 54 54" CMM_Caption="파티 카테고리 버튼"/>
 		<image name="party_category_btn_cursoron" file="\skin\button_small.tga" imgrect="55 401 54 54"/>
 		<image name="party_category_btn_clicked" file="\skin\button_small.tga" imgrect="110 401 54 54"/>
 		<image name="party_pilgrim_btn" file="\skin\button_small.tga" imgrect="165 401 50 50" CMM_Caption="순례자 버튼"/>
 		<image name="party_pilgrim_btn_cursoron" file="\skin\button_small.tga" imgrect="216 401 50 50"/>
 		<image name="party_pilgrim_btn_clicked" file="\skin\button_small.tga" imgrect="267 401 50 50"/>
-		</imagelist>
+		<image name="inventory_relic_gem" file="\skin\pip_test2.tga" imgrect="964 199 38 61" CMM_Caption="성물 인벤토리 버튼"/>
+		<image name="inventory_relic_gem_cursoron" file="\skin\pip_test2.tga" imgrect="964 261 38 61"/>
+		<image name="inventory_relic_gem_clicked" file="\skin\pip_test2.tga" imgrect="964 323 38 61"/>
+	</imagelist>
 	<imagelist category="yiseul_button">
 		<image name="pvpmine_shop_btn" file="\skin\pip_test.tga" imgrect="2049 61 66 59" CMM_Caption="용병단 증표 ui 버튼"/>
 		<image name="pvpmine_shop_btn_cursoron" file="\skin\pip_test.tga" imgrect="2049 121 66 59"/>
@@ -14114,7 +14132,7 @@
 		<image name="icon_tribulation_MemoryManipulation" file="\icon\buff_icon6.tga" imgrect="512 256 128 128" CMM_Caption="기억조작"/>
 		<image name="icon_tribulation_PatternCategory" file="\icon\buff_icon6.tga" imgrect="640 256 128 128" CMM_Caption="패턴카테고리"/>
 		<image name="icon_buff_ridepet_ep13animal" file="\icon\buff_icon6.tga" imgrect="768 256 128 128" CMM_Caption="목마 탈 것 버프"/>
-	<image name="icon_Event_2203_ARBOR_DAY_BUFF" file="\icon\buff_icon6.tga" imgrect="896 256 128 128" CMM_Caption="자연의 축복"/>
+		<image name="icon_Event_2203_ARBOR_DAY_BUFF" file="\icon\buff_icon6.tga" imgrect="896 256 128 128" CMM_Caption="자연의 축복"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>
@@ -14334,6 +14352,7 @@
 		<image name="03_goddess_Austeja" file="\skin\goddesscard\03_goddess_Austeja.tga" imgrect="0 0 330 440"/>
 		<image name="04_goddess_Dalia" file="\skin\goddesscard\04_goddess_Dalia.tga" imgrect="0 0 330 440"/>
 		<image name="05_goddess_Vakarine" file="\skin\goddesscard\05_goddess_Vakarine.tga" imgrect="0 0 330 440"/>
+		<image name="goddess_card_fragment_red" file="\skin\goddesscard\goddess_card_fragment_red.tga" imgrect="0 0 330 440"/>
 	</imagelist>
 	<imagelist category="npccard">
 		<image name="001_npc_payawoota" file="\skin\npccard\001_npc_payawoota.tga" imgrect="0 0 330 440"/>
@@ -14851,13 +14870,13 @@
 		<image name="plate_achieve_Keraunos" file="\skin\user_title_skin.tga" imgrect="0 1031 214 34" CMM_Caption="케라우노스 칭호"/>
 		<image name="plate_achieve_gabija_clear_1" file="\skin\user_title_skin.tga" imgrect="215 994 214 34" CMM_Caption="가비야 칭호1"/>
 		<image name="plate_achieve_gabija_clear_2" file="\skin\user_title_skin.tga" imgrect="430 994 214 34" CMM_Caption="가비야 칭호2"/>
-
-<image name="plate_achieve_Keraunos_weekraid" file="\skin\user_title_skin.tga" imgrect="645 994 214 34" CMM_Caption="케라우노스 주보레 칭호"/>
+		<image name="plate_achieve_Keraunos_weekraid" file="\skin\user_title_skin.tga" imgrect="645 994 214 34" CMM_Caption="케라우노스 주보레 칭호"/>
 		<image name="plate_achieve_EVENT_2203_WHITEDAY_CANDYLOVER_TITLE" file="\skin\user_title_skin.tga" imgrect="1075 961 214 34" CMM_Caption="2022_화이트데이 칭호"/>
 		<image name="plate_achieve_Taiwannewyear" file="\skin\user_title_skin.tga" imgrect="1075 996 214 34" CMM_Caption="2022_대만 춘절 칭호"/>
 		<image name="plate_achieve_HocusPocus" file="\skin\user_title_skin.tga" imgrect="215 1029 214 34" CMM_Caption="스팀 몬스터 의인화 팬아트 보상 칭호"/>
-	<image name="plate_achieve_EVENT_2203_ARBOR_DAY_TITLE" file="\skin\user_title_skin.tga" imgrect="431 1029 214 34" CMM_Caption="2022 식목일 칭호"/>
-	<image name="plate_achieve_paulius" file="\skin\user_title_skin.tga" imgrect="646 1029 214 36" CMM_Caption="파울루스 칭호"/>
+		<image name="plate_achieve_EVENT_2203_ARBOR_DAY_TITLE" file="\skin\user_title_skin.tga" imgrect="431 1029 214 34" CMM_Caption="2022 식목일 칭호"/>
+		<image name="plate_achieve_paulius" file="\skin\user_title_skin.tga" imgrect="646 1029 214 36" CMM_Caption="파울루스 칭호"/>
+		<image name="plate_achieve_berksbestie" file="\skin\user_title_skin.tga" imgrect="861 1031 214 34" CMM_Caption="스팀 2022 설날 하우벅 칭호"/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>

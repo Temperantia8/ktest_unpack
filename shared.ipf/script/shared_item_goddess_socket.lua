@@ -306,9 +306,9 @@ item_goddess_socket.check_equipable_aether_gem = function(item, gem, index)
 end
 
 -- 스킬 젬 추출 패널티 제거 케어 기간 입력
-function IS_GEM_EXTRACT_CARE_20211125()
-    local startTimeStr = "2021-12-23 09:00:00"
-    local endTimeStr = "2022-01-06 08:59:59"
+function IS_GEM_EXTRACT_CARE_DATE()
+    local startTimeStr = "2022-04-14 09:00:00"
+    local endTimeStr = "2022-04-28 08:59:59"
 	
 	return date_time.is_between_time(startTimeStr, endTimeStr)
 end
@@ -318,5 +318,5 @@ function IS_GEM_EXTRACT_FREE_CHECK(pc)
 		return true;
 	end
 
-	return IS_GEM_EXTRACT_CARE_20211125();
+	return IS_GEM_EXTRACT_CARE_DATE();
 end

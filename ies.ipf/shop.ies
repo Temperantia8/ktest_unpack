@@ -1010,7 +1010,7 @@ ClassID,SellRate,Count,Price,ShopName,IDSpace,ItemName,Description,NeedProperty
 22467,1,1,1,"Test_Kupole_Relic","Item","misc_Ectonite","",""
 22468,1,1,1,"Test_Kupole_Relic","Item","misc_Relic_Gem","",""
 22501,1,1,1,"Test_Kupole_Boruta","Item","selectbox_Seal_Boruta","",""
-22601,1,1,1,"Test_Kupole_GoddessCard","Item","Goddess_card_Reinforce","",""
+22601,1,1,1,"Test_Kupole_GoddessCard","Item","Goddess_card_Reinforce_2","",""
 22602,1,1,1,"Test_Kupole_GoddessCard","Item","Goddess_card_EP13_Lada","",""
 22603,1,1,1,"Test_Kupole_GoddessCard","Item","Goddess_card_EP13_Saule","",""
 22604,1,1,1,"Test_Kupole_GoddessCard","Item","Goddess_card_EP13_Austeja","",""

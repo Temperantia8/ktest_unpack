@@ -33,7 +33,7 @@ ClassID,Cost,NumArg,ClassName,MGameName,GroupName,Rank,StrArg,Tooltip,Desc,Icon
 32,1,0,"SniperBlockade","Goddess_Raid_Delmore_Extreme","Pattern","N","","저격 봉쇄","전투에서 발리스타를 캐릭터당 1회만 사용 할 수 있으며, 발리스타의 성공 영역 범위가 감소합니다.","icon_tribulation_SniperBlockade"
 33,1,0,"CaptureGaps","Goddess_Raid_Delmore_Extreme","Pattern","N","","빈틈 포착","눈동자 처치 시 모든 캐릭터에게 [투시안] 버프가 부여되며, 특정 조건에서 생성되는 마법진의 범위와 속도, 생성 개수가 변경됩니다.","icon_tribulation_CaptureGaps"
 34,1,0,"WeaknessDetection","Goddess_Raid_Delmore_Extreme","Pattern","N","","약점 간파","캐릭터가 보스 타격 시 [약점 포착] 버프를 획득하며, 해당 버프 200중첩 시 캐릭터는 보스에게 입히는 최종 대미지가 증가합니다.","icon_tribulation_WeaknessDetection"
-35,1,0,"ComtemptTheWeak","Goddess_Raid_Delmore_Extreme","Pattern","N","","약자 멸시","보스의 체력이 50%이상일 때 일정 시간마다 보스의 체력 비율보다 낮은 체력 비율의 캐릭터는 죽음에 이르는 공격을 받습니다.","icon_tribulation_WeakDespise"
+35,1,0,"ComtemptTheWeak","Goddess_Raid_Delmore_Extreme","Pattern","N","","거석 처형","매 초 캐릭터는 피해를 받습니다. 또한 보스의 체력이 50%이상일 때 일정 시간마다 보스의 체력 비율보다 높은 체력 비율의 캐릭터는 죽음에 이르는 공격을 받습니다.","icon_tribulation_WeakDespise"
 36,1,0,"MeteoriteFall","Goddess_Raid_Delmore_Extreme","Pattern","N","","운석 낙하","보스가 한 개의 낙석만 생성시키며, 크루비나 수정 파편의 생성 조건이 변경됩니다.","icon_tribulation_MeteoriteFall"
 101,1,0.400000,"GabiaEnergyTime_A","EARRING_RAID_Extreme","PC","A","","가비야의 기운 유지시간 감소","가비야의 기운 효과 유지시간이 40% 감소합니다.","icon_tribulation_GabijaEnergyTime"
 102,1,0.300000,"GabiaEnergyTime_B","EARRING_RAID_Extreme","PC","B","","가비야의 기운 유지시간 감소","가비야의 기운 효과 유지시간이 30% 감소합니다.","icon_tribulation_GabijaEnergyTime"

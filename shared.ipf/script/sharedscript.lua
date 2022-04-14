@@ -3526,6 +3526,75 @@ function CAN_COMPOSITION_SKILL_GEM(item)
     return true, TryGetProp(item, 'NumberArg1', 0)
 end
 
+-- 연성 가능한 스킬젬인지 확인
+function CAN_UPGRADE_SKILL_GEM(item)
+    if TryGetProp(item, 'StringArg', 'None') ~= 'SkillGem' then                
+        return false, 0
+    end
+
+    local level = TryGetProp(item, 'NumberArg1', 0)    
+    local cls = GetClassByType('item_gem_upgrade', level)    
+    if cls == nil then                        
+        return false, 0
+    end
+
+    return true, TryGetProp(item, 'NumberArg1', 0)
+end
+
+function GET_SKILL_GEM_CLASS_NAME(item)
+    local level = TryGetProp(item, 'NumberArg1', 0)    
+    local class_name = TryGetProp(item, 'ClassName', 'None')
+    if level == 0 then
+        return 'None'
+    elseif level == 1 then
+        local token = StringSplit(class_name, '_')
+        local concate = ''
+        local i = 2
+        for i = 2, #token do
+            if i == #token then
+                concate = concate .. token[i]
+            else
+                concate = concate .. token[i] .. '_'
+            end
+        end
+        return concate
+    else
+        local i = 3
+        for i = 3, #token do
+            if i == #token then
+                concate = concate .. token[i]
+            else
+                concate = concate .. token[i] .. '_'
+            end
+        end
+        return concate
+    end
+end
+
+function EXIST_NEXT_LEVEL_SKILL_GEM(item)
+    local name = GET_SKILL_GEM_CLASS_NAME(item)
+    if name == 'None' then
+        return false
+    end
+
+    local class_name = 'GEM_Lv' .. tostring(TryGetProp(item, 'NumberArg1', 0) + 1) .. '_' .. name        
+    if skill_gem_class_name_list[TryGetProp(item, 'NumberArg1', 0) + 1][class_name] == nil then   
+        return false
+    else
+        return true
+    end
+end
+
+function GET_NEXT_LEVEL_SKILL_GEM_CLASS_NAME(item)
+    local name = GET_SKILL_GEM_CLASS_NAME(item)    
+    if name == '' then
+        return 'None'
+    end
+
+    local class_name = 'GEM_Lv' .. tostring(TryGetProp(item, 'NumberArg1', 0) + 1) .. '_' .. name
+    return class_name
+end
+
 function ENABLE_GUILD_MEMBER_JOIN_AUTO(aObj)
     if USE_GUILD_MEMBER_JOIN_AUTO == 0 then
         return false;
@@ -3544,7 +3613,6 @@ end
 function GET_GUILD_MEMBER_JOIN_AUTO_GUILD_IDX()
     local nation = GetServerNation();
     local groupid = GetServerGroupID();
-
     return GET_AUTO_MEMBER_JOIN_GUILD_IDX(groupid, nation)      
 end
 
@@ -4020,4 +4088,22 @@ function DELETE_ITEM_OPEN_WARNINGBOX_MSG(itemCls)
     end
     
     return 0
+end
+
+function CONTENTS_ALERT_GET_CUTLINE(contentsID)
+    local contents_alert = GetClassByType('contents_alert_table', contentsID)
+    local indunInfoName = TryGetProp(contents_alert, "ShowIndunInfo")
+    local indunName = TryGetProp(contents_alert, "IndunName", "None")
+    local indunCls = GetClass("Indun", indunInfoName)
+    if indunCls == nil then
+        indunCls = GetClass("Indun", indunName)
+    end
+    
+    local gearScore = TryGetProp(indunCls, "GearScore")
+    local level = TryGetProp(indunCls, "Level")
+    if gearScore == 0 then
+        gearScore = TryGetProp(contents_alert, "GearScore")
+    end
+
+    return gearScore, level
 end

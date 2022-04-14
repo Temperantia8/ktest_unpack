@@ -678,4 +678,5 @@
 	<Code Code="ERROR_NEXON_CEM_NO_SERVICE_ID" Team="tos_team" Category="ERROR" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="NEXON_CEM_ACCESS_KEY 및 NEXON_CEM_SECRET_KEY 환경변수가 지정되지 않았습니다"/>
 	<Code Code="ERROR_NEXON_CEM_NO_APIKEY" Team="tos_team" Category="ERROR" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="NEXON_CEM_ACCESS_KEY 및 NEXON_CEM_SECRET_KEY 환경변수가 지정되지 않았습니다"/>
 	<Code Code="ERROR_TRIBULATION_SYSTEM" Team="PROGRAM" Category="ERROR" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="시련 시스템 관련 에러"/>
+	<Code Code="INFO_PARTY_FIND" Team="PROGRAM" Category="INFO" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="파티 찾기 게시판"/>
 </imcErrorCode>

@@ -131,7 +131,7 @@ ClassID,CoinCount_1,CoinCount_2,CoinCount_3,CoinCount_4,CoinCount_5,Probability_
 1002,0,240,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_FIRETOWER_MINI_AUTO","Mythic","대마법사의 타워","","","Event_2103_ARBOR_DAY_coin1","","","","","0"
 1003,0,240,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_THORN_MINI_AUTO","Mythic","공허의 가시숲","","","Event_2103_ARBOR_DAY_coin1","","","","","0"
 1004,0,240,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_CASTLE_MINI_AUTO","Mythic","푸른 요새 던전","","","Event_2103_ARBOR_DAY_coin1","","","","","0"
-1005,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_STARTOWER_MINI_AUTO_HARD","Mythic","쇠락한 르귄가문의 던전","성물 레이드: 자동 매칭(Hard)","","Event_2103_ARBOR_DAY_coin1","","","","","0"
+1005,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_STARTOWER_MINI_AUTO_HARD","Mythic","쇠락한 르귄가문의 던전","성물 레이드: 자동 매칭, 1인(Hard)","","Event_2103_ARBOR_DAY_coin1","","","","","0"
 1006,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_FIRETOWER_MINI_AUTO_HARD","Mythic","대마법사의 타워","","","Event_2103_ARBOR_DAY_coin1","","","","","0"
 1007,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_THORN_MINI_AUTO_HARD","Mythic","공허의 가시숲","","","Event_2103_ARBOR_DAY_coin1","","","","","0"
 1008,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"MYTHIC_CASTLE_MINI_AUTO_HARD","Mythic","푸른 요새 던전","","","Event_2103_ARBOR_DAY_coin1","","","","","0"

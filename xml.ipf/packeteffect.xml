@@ -10924,6 +10924,14 @@
 		<Effect Name="F_spread_out017_circle_black"/>
 		<Effect Name="EarringRaidSwordDance"/>
 		<Effect Name="EarringRaidIsolation"/>
+        <Effect Name="Goddess_Raid_Jellygel_Party"/>
+        <Effect Name="Goddess_Raid_Jellygel_Solo"/>
+        <Effect Name="Goddess_Raid_Jellygel_Auto"/>
+        <Effect Name="Goddess_Raid_Jellygel"/>
+        <Effect Name="MYTHIC_FIRETOWER_MINI_AUTO_SOLO_HARD"/>
+        <Effect Name="MYTHIC_CASTLE_MINI_AUTO_SOLO_HARD"/>
+        <Effect Name="MYTHIC_STARTOWER_MINI_AUTO_SOLO_HARD"/>
+        <Effect Name="LEGEND_RAID_GILTINE_SOLO"/>
 	</Category>
 	<Category ID="19">
 		<Effect Name="I_fallen_statue_atk002_mash"/>
