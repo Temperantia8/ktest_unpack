@@ -123,7 +123,7 @@ goddess_card_reinforce.get_goddess_card_reinfoce_mat_list = function(item)
         return nil
     end
 
-    local now_lv = TryGetProp(item, 'Level', 1)
+    local now_lv = GET_ITEM_LEVEL(item)
     now_lv = math.max(1, now_lv)
 
     local mat_list = {}

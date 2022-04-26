@@ -2099,6 +2099,12 @@ function SCR_Get_RHP(self)
         value = value / 2
     end
     
+    -- HealControl 레이드 체크
+    if IsHealControlMap(self) == 1 then
+        local add_rhp_bm = GET_HEAL_CTRL_RAID_RHP_BM(self, value);
+        value = value + add_rhp_bm;
+    end
+
     if value < 0 then
         value = 0;
     end
@@ -4882,9 +4888,15 @@ function SCR_Get_HEAL_PWR(self)
     
     local byRateBuff = 0;
 
-    local byRateBuffTemp = TryGetProp(self, "HEAL_PWR_RATE_BM");    
+    local byRateBuffTemp = TryGetProp(self, "HEAL_PWR_RATE_BM"); 
     if byRateBuffTemp ~= nil then
         byRateBuff = byRateBuff + byRateBuffTemp;
+    end
+    
+    -- HealControl 레이드 체크
+    if IsHealControlMap(self) == 1 then
+        local by_rate_raid = GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self);
+        byRateBuff = byRateBuff + by_rate_raid;
     end
 
     byRateBuff = math.floor(value * byRateBuffTemp);
@@ -5099,4 +5111,49 @@ function SCR_GET_DEFAULT_ATK_COMPARE(self)
     local maxAtk = math.max(atkPatk, atkMatk)
 
     return maxAtk
+end
+
+-- ** [ 힐량 컨트롤 관련 기능 ] ** --
+-- RHP_BM
+function GET_HEAL_CTRL_RAID_RHP_BM(self, value)
+    if self == nil then return 0; end
+    if IsHealControlMap(self) == 0 then return 0; end
+
+    if IsServerSection() == 1 then
+        local cmd = GetMGameCmd(self);
+        if cmd == nil then return 0; end
+        local mgame_name = cmd:GetMGameName();
+        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
+            local add_rhp_bm = value * 0.9 * -1.0;
+            return add_rhp_bm;
+        end
+    else
+        local mgame_name = session.mgame.GetCurrentMGameName()
+        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
+            return -0.9; -- 90% 감소
+        end
+    end
+
+    
+    return 0;
+end
+
+-- HEAL_PWR_RATE_BM
+function GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self)
+    if self == nil then return 0; end
+    if IsHealControlMap(self) == 0 then return 0; end
+    if IsServerSection() == 1 then
+        local cmd = GetMGameCmd(self);
+        if cmd == nil then return 0; end
+        local mgame_name = cmd:GetMGameName();
+        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
+            return -0.9; -- 90% 감소
+        end
+    else
+        local mgame_name = session.mgame.GetCurrentMGameName()
+        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
+            return -0.9; -- 90% 감소
+        end
+    end
+    return 0;
 end

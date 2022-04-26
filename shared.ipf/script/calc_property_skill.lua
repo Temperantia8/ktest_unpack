@@ -18182,6 +18182,13 @@ function SCR_Get_SkillFactor_Sapper_SpikeShooter(skill)
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_SkillFactor_DarkMeteor(skill)
+    local pc = GetSkillOwner(skill)
+    local value = math.max(GetExProp(pc, 'heal_dark_sphere_470_factor'), 100)
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_IceBolt_Ratio2(skill)
     local pc = GetSkillOwner(skill);
     local value = 5
@@ -18241,6 +18248,140 @@ function SCR_Get_SkillFactor_Wrath(skill)
         local sklLV = TryGetProp(skl, "Level", 1)
         value = sklLV * 906
     end
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Lamapose_Ratio(skill)
+    local pc = GetSkillOwner(skill);
+    local value = 5 + skill.Level*0.5
+    
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Lama_SR_Ratio(skill)
+    local pc = GetSkillOwner(skill);
+    local value = 10
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Lama_SR2_Ratio(skill)
+    local pc = GetSkillOwner(skill);
+    local value = 5
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_SkillFactor_By_Other(skill, otherClassName)
+    local pc = GetSkillOwner(skill);
+    local sklclass = GetClass("Skill", otherClassName);
+    local value = SyncFloor(sklclass.SklFactor * 10) * 0.1 + SyncFloor(sklclass.SklFactorByLevel * 10) * 0.1 * (skill.Level - 1)
+
+    if IsInTOSHeroMap(pc) == true then
+        return math.floor(value)
+    end
+
+    local reinfabil = sklclass.ReinforceAbility
+    local abil = GetAbility(pc, reinfabil)-- 강화 특성
+    if abil ~= nil and TryGetProp(sklclass, "ReinforceAbility") ~= 'None' then
+        local abilLevel = TryGetProp(abil, "Level")
+        local masterAddValue = 0
+        if abilLevel == 100 then
+            masterAddValue = 0.1
+        end
+
+        value = value * (1 + ((abilLevel * 0.005) + masterAddValue))
+
+        local hidden_abil_cls = GetClass("HiddenAbility_Reinforce", sklclass.ClassName);
+        if abilLevel >= 65 and hidden_abil_cls ~= nil then
+        	local hidden_abil_name = TryGetProp(hidden_abil_cls, "HiddenReinforceAbil");
+        	local hidden_abil = GetAbility(pc, hidden_abil_name);
+        	if hidden_abil ~= nil then
+        		local abil_level = TryGetProp(hidden_abil, "Level");
+        		local add_factor = TryGetProp(hidden_abil_cls, "FactorByLevel", 0) * 0.01;
+        		local add_value = 0;
+        		if abil_level == 10 then
+        			add_value = TryGetProp(hidden_abil_cls, "AddFactor", 0) * 0.01
+        		end
+                value = value * (1 + (abil_level * add_factor) + add_value);
+        	end
+        end
+    end
+    
+    return math.floor(value)
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Strongfist_SkillFactor(skill)
+    if TryGetProp(skill, "ClassName", "None") ~= "Lama_StrongfistHanginglegs" then
+        local pc = GetSkillOwner(skill)
+        skill = GetSkill(pc, "Lama_StrongfistHanginglegs")
+    end
+    local value = SCR_GET_SkillFactor_By_Other(skill, "Lama_Strongfist");
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Hanginglegs_SkillFactor(skill)
+    if TryGetProp(skill, "ClassName", "None") ~= "Lama_StrongfistHanginglegs" then
+        local pc = GetSkillOwner(skill)
+        skill = GetSkill(pc, "Lama_StrongfistHanginglegs")
+    end
+    local value = SCR_GET_SkillFactor_By_Other(skill, "Lama_Hanginglegs");
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Pointkick_SkillFactor(skill)
+    if TryGetProp(skill, "ClassName", "None") ~= "Lama_PointkickEarthshock" then
+        local pc = GetSkillOwner(skill)
+        skill = GetSkill(pc, "Lama_PointkickEarthshock")
+    end
+    local value = SCR_GET_SkillFactor_By_Other(skill, "Lama_Pointkick");
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Earthshock_SkillFactor(skill)
+    if TryGetProp(skill, "ClassName", "None") ~= "Lama_PointkickEarthshock" then
+        local pc = GetSkillOwner(skill)
+        skill = GetSkill(pc, "Lama_PointkickEarthshock")
+    end
+    local value = SCR_GET_SkillFactor_By_Other(skill, "Lama_Earthshock");
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Flyingkick_SkillFactor(skill)
+    if TryGetProp(skill, "ClassName", "None") ~= "Lama_FlyingkickSuddenkick" then
+        local pc = GetSkillOwner(skill)
+        skill = GetSkill(pc, "Lama_FlyingkickSuddenkick")
+    end
+    local value = SCR_GET_SkillFactor_By_Other(skill, "Lama_Flyingkick");
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Suddenkick_SkillFactor(skill)
+    if TryGetProp(skill, "ClassName", "None") ~= "Lama_FlyingkickSuddenkick" then
+        local pc = GetSkillOwner(skill)
+        skill = GetSkill(pc, "Lama_FlyingkickSuddenkick")
+    end
+    local value = SCR_GET_SkillFactor_By_Other(skill, "Lama_Suddenkick");
 
     return value
 end

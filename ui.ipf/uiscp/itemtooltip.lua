@@ -22,41 +22,30 @@ function ON_REFRESH_ITEM_TOOLTIP()
 end
 
 
---장비 보관함 전용 아이템 툴팁 FUNC
---History--
---2022/03/17 : UpgradeAccountProperty에따른 성물젬 툴팁 변경 적용
---strarg  : char_belonging
---numarg1 : acc current_lv
---numarg2 : classid
-function UPDATE_ITEM_CABINET_TOOLTIP(tooltipframe, strarg,numarg1,numarg2)
+function UPDATE_ITEM_CABINET_TOOLTIP(tooltipframe, strarg,curLv,itemtype)
 	tolua.cast(tooltipframe, "ui::CTooltipFrame");
 	local itemObj, isReadObj = nil;	
-	
-	itemObj, isReadObj = GET_TOOLTIP_ITEM_OBJECT(strarg, 0, numarg2);
-	tooltipframe:SetUserValue('TOOLTIP_ITEM_GUID', numarg2);
+
+	itemObj, isReadObj = GET_TOOLTIP_ITEM_OBJECT(strarg, 0, itemtype);
 	--Main Info
 	tooltipframe:Resize(tooltipframe:GetOriginalWidth(), tooltipframe:GetOriginalHeight());
 	tooltipframe:CheckSize()
 	INIT_ITEMTOOLTIPFRAME_CHILDS(tooltipframe)
-	
+
+	local class = itemObj
+	local ToolTipScp = _G['ITEM_TOOLTIP_CABINET_GEM_RELIC'];
+	SetExProp_Str(itemObj, 'where', strarg); 
+	ToolTipScp(tooltipframe, class, strarg, "mainframe", curLv);	
+
 	if itemObj == nil then
 		return;
-	end	
-	-- 메인 프레임. 즉 주된 툴팁 표시.
-	if isReadObj == 1 then -- IES가 없는 아이템. 가령 제작서의 완성 아이템 표시 등
-		local class = itemObj
-		local ToolTipScp = _G['ITEM_TOOLTIP_' .. class.ToolTipScp];
-		ToolTipScp(tooltipframe, class, strarg, "mainframe", numarg1);	
 	end
 
 	if isReadObj == 1 then
 		DestroyIES(itemObj);
 	end
 
-	ITEMTOOLTIPFRAME_ARRANGE_CHILDS(tooltipframe, showAppraisalPic);
-	ITEMTOOLTIPFRAME_RESIZE(tooltipframe);  
-	
-	--UPDATE_ITEM_CABINET_TOOLTIP
+	ITEMTOOLTIPFRAME_RESIZE(tooltipframe); 
 end
 
 function UPDATE_ITEM_TOOLTIP(tooltipframe, strarg, numarg1, numarg2, userdata, tooltipobj, noTradeCnt)	
@@ -86,7 +75,6 @@ function UPDATE_ITEM_TOOLTIP(tooltipframe, strarg, numarg1, numarg2, userdata, t
 		itemObj.Transcend = strList[3]
 	end	
 	tooltipframe:SetUserValue('TOOLTIP_ITEM_GUID', numarg2);
-
 	local recipeitemobj = nil
 	local recipeid = IS_RECIPE_ITEM(itemObj)
 	-- 레시피 아이템 쪽
@@ -109,6 +97,7 @@ function UPDATE_ITEM_TOOLTIP(tooltipframe, strarg, numarg1, numarg2, userdata, t
 
 	if isReadObj == 0 then
 		if 1 == IS_DRAG_RECIPE_ITEM(itemObj) then
+		
 			local tabTxt = "";
 			tabTxt, numarg1 = GET_DRAG_RECIPE_INFO(itemObj);
 			isReadObj = 1;
@@ -150,8 +139,7 @@ function UPDATE_ITEM_TOOLTIP(tooltipframe, strarg, numarg1, numarg2, userdata, t
 			ToolTipScp(tooltipframe, class, strarg, "mainframe", isForgeryItem);
 		end		
 	else
-		local ToolTipScp = _G['ITEM_TOOLTIP_' .. itemObj.ToolTipScp];		
-		
+		local ToolTipScp = _G['ITEM_TOOLTIP_' .. itemObj.ToolTipScp];
 		if nil == noTradeCnt then
 			noTradeCnt = 0
 		end
@@ -365,7 +353,7 @@ function SHOW_REMAIN_LIFE_TIME(ctrl)
 	return 1;
 end
 
-function GET_ITEM_TOOLTIP_DESC(obj)
+function GET_ITEM_TOOLTIP_DESC(obj, desc)
 
 	local invDesc = GET_ITEM_DESC_BY_TOOLTIP_VALUE(obj);
 	local byDescColumn = obj.Desc;
@@ -378,6 +366,10 @@ function GET_ITEM_TOOLTIP_DESC(obj)
 	else
 		invDesc = invDesc .. "{nl}" .. byDescColumn;
 	end	
+
+	if desc ~= nil and desc ~= '' then		
+		invDesc = desc .. '{nl} {nl}' .. invDesc
+	end
 
 	return invDesc;
 end
@@ -722,6 +714,8 @@ function DRAW_EXTRACT_OPTION_RANDOM_OPTION(tooltipframe, invitem, mainframename,
 		    clientMessage = 'ItemRandomOptionGroupUTIL'
 		elseif invitem[propGroupName] == 'STAT' then
 		    clientMessage = 'ItemRandomOptionGroupSTAT'
+		elseif invitem[propGroupName] == 'SPECIAL' then
+			clientMessage = 'ItemRandomOptionGroupSPECIAL'		
 		end
 		
 		if invitem[propValue] ~= 0 and invitem[propName] ~= "None" then
@@ -813,4 +807,38 @@ function ITEM_TOOLTIP_ENCHANT_JEWELL(tooltipframe, invitem, mouseOverFrameName)
 	ypos = DRAW_EQUIP_TRADABILITY(tooltipframe, invitem, ypos, mainframename);
 	ypos = DRAW_EQUIP_DESC(tooltipframe, invitem, ypos, mainframename);
 	ypos = DRAW_SELL_PRICE(tooltipframe, invitem, ypos, mainframename);
+end
+
+
+function DRAW_SPECIAL_RANDOM_OPTION(item, desc)		
+	for i = 1, 4 do
+		local op_name = 'RandomOption_' .. i
+		local name = TryGetProp(item, op_name, 'None')
+		local cls = GetClass('goddess_special_option', name)
+		if cls ~= nil then
+			local type = TryGetProp(cls, 'Type', 'None')
+			if type == 'Invoke' then
+				local prop = TryGetProp(cls, 'Prop', 1)				
+				desc = desc .. ScpArgMsg(name .. '_desc', 'prop', prop)
+			elseif type == 'Using' then
+				local using_count = TryGetProp(cls, 'UsingCount', 0)
+				desc = desc .. ScpArgMsg(name .. '_desc', 'using', using_count)
+			else
+				desc = desc .. ClMsg(name .. '_desc')
+			end
+		end
+	end
+	
+	return desc
+end
+
+function DRAW_REROLL_INFOMATION(item, desc)		
+	local index = TryGetProp(item, 'RerollIndex', 0)
+	local count = TryGetProp(item, 'RerollCount', 0)
+	if index ~= 0 then
+		local msg = ScpArgMsg('reroll{count}', 'count', count)
+		desc = desc .. '{nl} {nl}' .. msg
+	end
+	
+	return desc
 end

@@ -12,6 +12,26 @@ function shuffle(tbl)
       local j = math.random(i)
       ret[i], ret[j] = ret[j], ret[i]
     end
+
+    return ret
+end
+
+function shuffle2(tbl)
+    local ret = {}
+    for k, v in pairs(tbl) do
+        table.insert(ret, v)
+    end
+
+    for i = #ret, 2, -1 do
+        local j = math.random(i)
+        ret[i], ret[j] = ret[j], ret[i]
+    end
+
+    for i = #ret, 2, -1 do
+        local j = math.random(i)
+        ret[i], ret[j] = ret[j], ret[i]
+    end
+    
     return ret
 end
 
@@ -3227,6 +3247,31 @@ function JOB_KERAUNOS_PRE_CHECK(pc, jobCount)
 end
 
 
+function JOB_LAMA_PRE_CHECK(pc, jobCount)
+    if jobCount == nil then
+        jobCount = GetTotalJobCount(pc);
+    end
+    if jobCount >= 2 then
+        local aObj
+        if IsServerSection() == 0 then
+            aObj = GetMyAccountObj();
+        else
+            aObj = GetAccountObj(pc);
+        end
+        
+        if aObj ~= nil then
+            local value = TryGetProp(aObj, 'UnlockQuest_Char4_22', 0)
+            if value == 1 or IS_KOR_TEST_SERVER() == true then
+                return 'YES'
+            end
+        end
+    end
+
+    return 'YES'
+end
+
+
+
 function JOB_RUNECASTER_PRE_CHECK(pc, jobCount)
     if jobCount == nil then
         jobCount = GetTotalJobCount(pc);
@@ -3791,6 +3836,10 @@ function GET_EQUIP_GROUP_NAME(item)
         return 'Earring'
     end
 
+    if name == 'BELT' then
+        return 'BELT'
+    end
+
     name = TryGetProp(item, 'DefaultEqpSlot', 'None')
 
     if name == 'NECK' or name == 'RING' then
@@ -4106,4 +4155,27 @@ function CONTENTS_ALERT_GET_CUTLINE(contentsID)
     end
 
     return gearScore, level
+end
+
+function JOB_LAMA_PRE_CHECK(pc, jobCount)
+    if jobCount == nil then
+        jobCount = GetTotalJobCount(pc);
+    end
+    if jobCount >= 2 then
+        local pcEtc
+        if IsServerSection() == 0 then
+            pcEtc = GetMyEtcObject();
+        else
+            pcEtc = GetETCObject(pc);
+        end
+
+        -- if pcEtc ~= nil then
+        --     local value = TryGetProp(pcEtc, 'HiddenJob_Char4_22', 0)
+        --     if value == 300 or IS_KOR_TEST_SERVER() == true then
+        --     end
+        -- end
+        return 'YES'
+    end
+
+    return 'NO';
 end

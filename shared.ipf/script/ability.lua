@@ -2868,11 +2868,11 @@ function SCR_ABIL_CRYOMANCER24_INACTIVE(self, ability)
 end
 
 function SCR_ABIL_Monk27_ACTIVE(self, ability)
-    AddBuff(self, self, "Monk27_Buff", 1, 0, 0, 1)
+    -- AddBuff(self, self, "Monk27_Buff", 1, 0, 0, 1)
 end
 
 function SCR_ABIL_Monk27_INACTIVE(self, ability)
-    RemoveBuff(self, "Monk27_Buff")
+    -- RemoveBuff(self, "Monk27_Buff")
 end
 
 function SCR_ABIL_ARQUEBUSIER12_ACTIVE(self, ability)
@@ -3580,4 +3580,14 @@ function SCR_ABIL_ALLCHANGE_CLERIC(self)
             end
         end
     end
+end
+
+function SCR_ABIL_Lama15_ACTIVE(self, ability)
+    if IsBuffApplied(self, "Lama15_Add_Buff") ~= "YES" then
+        AddBuff(self, self, "Lama15_Add_Buff", 99, 0, 0, 1);
+    end
+end
+
+function SCR_ABIL_Lama15_INACTIVE(self, ability)
+    RemoveBuff(self, "Lama15_Add_Buff")
 end

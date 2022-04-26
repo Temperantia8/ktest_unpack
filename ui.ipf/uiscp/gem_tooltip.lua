@@ -434,33 +434,26 @@ function _RELIC_GEM_RELEASE_OPTION(gBox, ypos, gem_class_id)
 	return ypos
 end
 
---TODO:DY 
---argStr2 : mainframeoption
---curlv : relicgem upgrade acc prop
-local acc_lv_prop = 0
+function ITEM_TOOLTIP_CABINET_GEM_RELIC(tooltipframe,invitem, argStr, argStr2, curlv)
+	
+end
+
 function ITEM_TOOLTIP_GEM_RELIC(tooltipframe, invitem, argStr, argStr2, curlv)
 	if invitem.GroupName ~= 'Gem_Relic' then
 		return
 	end
-	if curlv ~= 0 then
-		acc_lv_prop = curlv
-	else
-		acc_lv_prop = 0
-	end
-	--print(tooltipframe,invitem,argStr,argStr2,curlv)
 	tolua.cast(tooltipframe, 'ui::CTooltipFrame')
 	local mainframename = 'etc'
-	local ypos = DRAW_RELIC_GEM_COMMON_TOOLTIP(tooltipframe, invitem, mainframename, argStr) -- 공통적으로 그리는 툴팁들
-	ypos = DRAW_RELIC_GEM_LV(tooltipframe, invitem, ypos, mainframename) -- 레벨
-	ypos = DRAW_RELIC_GEM_OPTION(tooltipframe, invitem, ypos, mainframename) -- 옵션
-	ypos = DRAW_ETC_DESC_TOOLTIP(tooltipframe, invitem, ypos, mainframename) -- 아이템 설명
-	ypos = DRAW_EQUIP_TRADABILITY(tooltipframe, invitem, ypos, mainframename) -- 거래 속성
+	local ypos = DRAW_RELIC_GEM_COMMON_TOOLTIP(tooltipframe, invitem, mainframename, argStr)
+	ypos = DRAW_RELIC_GEM_LV(tooltipframe, invitem, ypos, mainframename)
+	ypos = DRAW_RELIC_GEM_OPTION(tooltipframe, invitem, ypos, mainframename)
+	ypos = DRAW_ETC_DESC_TOOLTIP(tooltipframe, invitem, ypos, mainframename)
+	ypos = DRAW_EQUIP_TRADABILITY(tooltipframe, invitem, ypos, mainframename)
 	
 	local gBox = GET_CHILD(tooltipframe, mainframename, 'ui::CGroupBox')
     gBox:Resize(gBox:GetWidth(), ypos)
 end
 
---item_cabinet.lua 장비보관함 생성탭 툴팁 전용
 function ITEM_TOOLTIP_GEM_RELIC_ONLY_FOR_CABINET(tooltipframe, invitem, mainframename,argStr,lv)
 	if invitem.GroupName ~= 'Gem_Relic' then
 		return
@@ -473,10 +466,10 @@ function ITEM_TOOLTIP_GEM_RELIC_ONLY_FOR_CABINET(tooltipframe, invitem, mainfram
 	class_name = replace(class_name, 'PVP_', '')
 	local gBox = GET_CHILD(tooltipframe, mainframename)
 	if gBox == nil then return end
-	-- 레벨 설정 start--
+
 	local CSet = gBox:CreateOrGetControlSet('tooltip_relic_gem_lv_cabinet', 'tooltip_relic_gem_lv', 0, ypos)
-	local _ypos = 74 -- offset
-	local curlv = lv
+	local _ypos = 74 
+	local curlv = tostring(lv)
 	local lvtext = GET_CHILD(CSet, 'lv', 'ui::CRichText')
 	lvtext:SetTextByKey('value', curlv)
 	local enablelv = curlv * 2
@@ -488,12 +481,12 @@ function ITEM_TOOLTIP_GEM_RELIC_ONLY_FOR_CABINET(tooltipframe, invitem, mainfram
 	CSet:Resize(CSet:GetWidth(), _ypos + margin)
 	
 	ypos = ypos + CSet:GetHeight() + margin
-	--레벨 설정 end --
-	--상세 옵션 start--
+
+
 	local CSet = gBox:CreateOrGetControlSet('item_tooltip_gem_cabinet', 'item_tooltip_gem_cabinet', 0, ypos)
-	local _ypos = 5 -- offset
+	local _ypos = 5 
 	
-	-- 성물해방
+	
 	local gem_id = TryGetProp(invitem, 'ClassID', 0)
 	local gem_type = relic_gem_type[TryGetProp(invitem, 'GemType', 'None')]
 	if gem_type == 0 then
@@ -604,13 +597,8 @@ function DRAW_RELIC_GEM_LV(tooltipframe, invitem, ypos, mainframename)
 	local CSet = gBox:CreateOrGetControlSet('tooltip_relic_gem_lv', 'tooltip_relic_gem_lv', 0, ypos)
 	-- 레벨 설정
 	local _ypos = 74 -- offset
-	local curlv =0 
-	
-	if acc_lv_prop ~=0 then
-		curlv = acc_lv_prop
-	else
-		curlv = _GET_RELIC_GEM_LEVEL_FOR_TOOLTIP(invitem)
-	end
+	local curlv = _GET_RELIC_GEM_LEVEL_FOR_TOOLTIP(invitem)
+
 	local lvtext = GET_CHILD(CSet, 'lv', 'ui::CRichText')
 	lvtext:SetTextByKey('value', curlv)
 
@@ -635,7 +623,7 @@ function DRAW_RELIC_GEM_LV(tooltipframe, invitem, ypos, mainframename)
 	return ypos
 end
 
---TODO:DY
+
 function DRAW_RELIC_GEM_OPTION(tooltipframe, invitem, ypos, mainframename)
 	local class_name = TryGetProp(invitem, 'ClassName', 'None')	
 	if class_name == 'None' then return end
