@@ -1,5 +1,5 @@
 ClassID,Level,Prop,Min_470,Max_470,UsingCount,ClassName,Type,Desc
-1,470,100,150,300,0,"normalatk_enhance_470","Passive","기본 공격 강화"
+1,470,100,75,150,0,"normalatk_enhance_470","Passive","기본 공격 강화"
 2,470,100,25000,40000,5,"heal_dark_sphere_470","Using","암흑 메테오"
 3,470,10,25000,50000,0,"chain_lightning_470","Invoke","체인 라이트닝"
 4,470,10,25000,40000,0,"meteor_470","Invoke","메테오"

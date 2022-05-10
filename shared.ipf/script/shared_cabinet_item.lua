@@ -337,7 +337,23 @@ function ITEM_CABINET_GET_RELICGEM_UPGRADE_ACC_PROP(frame,itemCls)
 	end
 	return 0
 end
-
+  
+function ITEM_CABINET_GET_RELICGEM_ACC_PROP(frame,itemCls)
+	local acc = GetMyAccountObj()
+	local category = ITEM_CABINET_GET_CATEGORY(frame)
+    if category~="Relicgem" then
+        return 0
+    end
+    local clsName  = TryGetProp(itemCls,"ClassName") 
+    local id_space = 'cabinet_'..string.lower(category)
+    local cabinet_itemCls  = GetClass(id_space,clsName)
+    local accountProp = TryGetProp(cabinet_itemCls,"AccountProperty","None")
+	if upgradeAccountProp~='None' then
+        local propVal  = TryGetProp(acc,accountProp)
+		return propVal
+	end
+	return 0
+end
 
 -- 클라에서 표기용
 function GET_CABINET_ITEM_NAME(cls, acc)
@@ -825,6 +841,7 @@ function IS_ACCOUNT_COIN(name)
         end
     end
 end
+
 function IS_STRING_COIN(name)
     local cls = GetClass('accountprop_inventory_list', name)
     if cls == nil then

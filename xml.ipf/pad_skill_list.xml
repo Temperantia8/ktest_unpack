@@ -15356,7 +15356,7 @@ return value"/>
             </ToolScp>
         </updateEvent>
     </PadSkill>
-    <PadSkill Name="Jellyzele_ConversionMarble" CheckerType="0" Range="25" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+    <PadSkill Name="Jellyzele_ConversionMarble" CheckerType="0" Range="20" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
         <createEvent>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
                 <Num Num="10000"/>
@@ -15392,7 +15392,7 @@ return value"/>
             </ToolScp>
             <ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
             <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-                <Str_Arg Str="F_cleric_Incineration_loop" Arg="0.80000001"/>
+                <Str_Arg Str="F_ground231_crack_blue" Arg="0.80000001"/>
                 <Pos Angle="0" Dist="0"/>
                 <Num Num="0"/>
                 <Str_Arg Str="None" Arg="1"/>
@@ -15429,7 +15429,7 @@ return value"/>
                 <Num Num="9999"/>
             </ToolScp>
             <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-                <Str_Arg Str="F_warrior_ShareBuff_ground_loop_1" Arg="1.5"/>
+                <Str_Arg Str="F_ground231_crack_red" Arg="0.80000001"/>
                 <Pos Angle="0" Dist="0"/>
                 <Num Num="0"/>
                 <Str_Arg Str="None" Arg="1"/>
@@ -15551,7 +15551,7 @@ return value"/>
             </ToolScp>
         </updateEvent>
     </PadSkill>
-    <PadSkill Name="Jellyzele_sticky_pad" CheckerType="0" Range="50" UpdateTerm="1000" AllowOverlap="1" EnableSearch="0">
+    <PadSkill Name="Jellyzele_sticky_pad" CheckerType="0" Range="65" UpdateTerm="1000" AllowOverlap="1" EnableSearch="0">
         <createEvent>
             <ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -20710,7 +20710,7 @@ return lv;"/>
 	<PadSkill Name="Paulius_Energy_Orb_Pad_Extreme" CheckerType="0" Dist="50" Angle="0" Range="60" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
         <createEvent>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-                <Num Num="130000"/>
+                <Num Num="100000"/>
                 <Num Num="1"/>
             </ToolScp>
             <ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>

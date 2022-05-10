@@ -1098,7 +1098,7 @@ function GET_FULL_NAME(item, useNewLine, isEquiped, timeImgSize)
 	local bonusReinf = TryGetProp(pc, 'BonusReinforce');
 	local ignoreReinf = TryGetProp(pc, 'IgnoreReinforce');
 	local overReinf = TryGetProp(pc, 'OverReinforce');
-	-- 오버 리인포스 비급이 적용되면 값이 음수로 들어오므로 양수로 바꿔줌
+	-- ?�버 리인?�스 비급???�용?�면 값이 ?�수�??�어?��?�??�수�?바꿔�?
 	local abil_flag = false;
 	if overReinf ~= nil and overReinf < 0 then
 		overReinf = -overReinf;
@@ -1522,7 +1522,7 @@ function SCR_EXEC_MONWANGGA(guid, x, y, z)
 end
 
 function GET_TOTAL_MONEY_STR() 
-	-- int로 잘리지 않고 싶으면 이걸 쓰도록하되, 밖에서 계산할 때는 tonumber하거나 BigNumber 전용 함수들 사용 권장
+	-- int�??�리지 ?�고 ?�으�??�걸 ?�도록하?? 밖에??계산???�는 tonumber?�거??BigNumber ?�용 ?�수???�용 권장
 	local silver = '0';
 	local invItem = session.GetInvItemByName('Vis');
 	if invItem ~= nil then
@@ -1726,7 +1726,7 @@ function ITEM_EQUIP_MSG(item, slotName)
 
 	if item_obj ~= nil and TryGetProp(item_obj, 'EquipActionType', 'None') ~= 'None' then
 		if TryGetProp(item_obj, 'EquipActionType', 'None') == 'EquipCharacterBelonging' and TryGetProp(item_obj, 'CharacterBelonging') == 0 then
-			-- 착용시 캐릭터 귀속
+			-- 착용??캐릭??귀??
 			local strscp = string.format("item.Equip(%d)", item.invIndex);
 			if slotName ~= nil then
 				strscp = string.format("item.Equip(\"%s\", %d)", slotName, item.invIndex);
@@ -1736,7 +1736,7 @@ function ITEM_EQUIP_MSG(item, slotName)
 			local msg = ScpArgMsg("WantToEquipCuzCharacterBelonging");
 			WARNINGMSGBOX_FRAME_OPEN_EQUIP_ITEM(msg, strscp, "None", guid, 'char')			
 		elseif TryGetProp(item_obj, 'EquipActionType', 'None') == 'EquipTeamBelonging' and TryGetProp(item_obj, 'TeamBelonging') == 0 then
-			-- 착용시 팀 귀속
+			-- 착용???� 귀??
 			local strscp = string.format("item.Equip(%d)", item.invIndex);
 			if slotName ~= nil then
 				strscp = string.format("item.Equip(\"%s\", %d)", slotName, item.invIndex);
@@ -2619,12 +2619,13 @@ function USE_ITEMTARGET_ICON(frame, itemobj, argNum)
 	end
 
 	if itemobj.GroupName == "Gem" then
+		if ui.IsFrameVisible("item_cabinet") ~= 1 then
 		local gemProp = geItemTable.GetProp(itemobj.ClassID);
 		local belonging = TryGetProp(itemobj,"CharacterBelonging",0)
 		local socketPenaltyProp = gemProp:GetSocketPropertyByLevel(0);
-		local propPenaltyAdd = socketPenaltyProp:GetPropPenaltyAddByIndex(0, 0); -- 스킬 젬인지 검사
+		local propPenaltyAdd = socketPenaltyProp:GetPropPenaltyAddByIndex(0, 0); -- ?�킬 ?�인지 검??
 		if propPenaltyAdd ~= nil and itemobj.GemRoastingLv < itemobj.GemLevel then
-			-- 젬 레벨이 로스팅 레벨보다 낮은 경우 경고창
+			-- ???�벨??로스???�벨보다 ??? 경우 경고�?
 			NOT_ROASTING_GEM_EQUIP_WARNINGMSGBOX_FRAME_OPEN(GetIESID(itemobj), argNum);
 		else
 			if tonumber(belonging)==1 then
@@ -2636,6 +2637,9 @@ function USE_ITEMTARGET_ICON(frame, itemobj, argNum)
 			end
 		end
 		return;		
+		else
+			return 
+		end
 	end
 	item.SelectTargetItem(argNum);
 end
@@ -2671,7 +2675,7 @@ function SCR_EVENT_2011_5TH_SCROLL_SELECT(targetItemIndex, useItemIndex, frameNa
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
 	if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
 	end
@@ -2683,7 +2687,7 @@ function SCR_EVENT_2011_5TH_SCROLL_SELECT(targetItemIndex, useItemIndex, frameNa
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -2693,27 +2697,27 @@ function SCR_EVENT_2011_5TH_SCROLL_SELECT(targetItemIndex, useItemIndex, frameNa
 		return RELEASE_ITEM_TARGET()
     end
 
-    -- 스크롤 체크
+    -- ?�크�?체크
 	if IS_TRANSCEND_SCROLL_ITEM_EVENT_2011_5TH_USABLE(useItemObj, targetItemObj) == 0 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
         return RELEASE_ITEM_TARGET()
     end
     
-    -- 대상 아이템 이벤트 체크
+    -- ?�???�이???�벤??체크
     local eventItem = TryGetProp(targetItemObj, "EventEquip", 0)
 	if eventItem == 0 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
         return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 레벨 체크
+    -- ?�???�이???�벨 체크
     local itemLevel = TryGetProp(targetItemObj, "UseLv", 0)
     if itemLevel ~= 440 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
 		return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 초월 체크
+    -- ?�???�이??초월 체크
     local itemTranscend = TryGetProp(targetItemObj, "Transcend", 0)
     if itemTranscend >= 8 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
@@ -2733,14 +2737,14 @@ function REQ_USE_EVENT_2011_5TH_SCROLL(useItemIndex, targetItemIndex, frameName)
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
     if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
     end
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -2777,7 +2781,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT(targetItemIndex, useItemIndex, fram
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
 	if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
 	end
@@ -2789,7 +2793,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT(targetItemIndex, useItemIndex, fram
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -2799,27 +2803,27 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT(targetItemIndex, useItemIndex, fram
 		return RELEASE_ITEM_TARGET()
     end
 	
-    -- 스크롤 체크
+    -- ?�크�?체크
 	if IS_TRANSCEND_SCROLL_ITEM_EP12_REWARD_USABLE(useItemObj, targetItemObj) == 0 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
         return RELEASE_ITEM_TARGET()
     end
     
-    -- 대상 아이템 이벤트 체크
+    -- ?�???�이???�벤??체크
     local eventItem = TryGetProp(targetItemObj, "EventEquip", 0)
 	if eventItem == 0 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
         return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 레벨 체크
+    -- ?�???�이???�벨 체크
     local itemLevel = TryGetProp(targetItemObj, "UseLv", 0)
     if itemLevel ~= 440 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
 		return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 초월 체크
+    -- ?�???�이??초월 체크
     local itemTranscend = TryGetProp(targetItemObj, "Transcend", 0)
     if itemTranscend >= 8 then
 		ui.MsgBox(ScpArgMsg("ThisItemIsNotAbleToTranscend"))
@@ -2839,14 +2843,14 @@ function REQ_USE_EVENT_EP12_REWARD_SCROLL(useItemIndex, targetItemIndex, frameNa
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
     if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
     end
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -2883,7 +2887,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_REINFORCE(targetItemIndex, useItemI
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
 	if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
 	end
@@ -2895,7 +2899,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_REINFORCE(targetItemIndex, useItemI
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -2905,27 +2909,27 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_REINFORCE(targetItemIndex, useItemI
 		return RELEASE_ITEM_TARGET()
     end
 	
-    -- 스크롤 체크
+    -- ?�크�?체크
 	if IS_REINFORCE_SCROLL_ITEM_EP12_REWARD_USABLE(useItemObj, targetItemObj) == 0 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable"))
         return RELEASE_ITEM_TARGET()
     end
     
-    -- 대상 아이템 이벤트 체크
+    -- ?�???�이???�벤??체크
     local eventItem = TryGetProp(targetItemObj, "EventEquip", 0)
 	if eventItem == 0 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable"))
         return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 레벨 체크
+    -- ?�???�이???�벨 체크
     local itemLevel = TryGetProp(targetItemObj, "UseLv", 0)
     if itemLevel ~= 440 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable"))
 		return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 강화 체크
+    -- ?�???�이??강화 체크
     local itemTranscend = TryGetProp(targetItemObj, "Reinforce_2", 0)
     if itemTranscend >= 11 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable"))
@@ -2945,14 +2949,14 @@ function REQ_USE_EVENT_EP12_REWARD_SCROLL_REINFORCE(useItemIndex, targetItemInde
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
     if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
     end
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -2991,7 +2995,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_ENCHANT(targetItemIndex, useItemInd
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
 	if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
 	end
@@ -3003,7 +3007,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_ENCHANT(targetItemIndex, useItemInd
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -3013,27 +3017,27 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_ENCHANT(targetItemIndex, useItemInd
 		return RELEASE_ITEM_TARGET()
     end
 	
-    -- 스크롤 체크
+    -- ?�크�?체크
 	if IS_ENCHANT_SCROLL_ITEM_EP12_REWARD_USABLE(useItemObj, targetItemObj) == 0 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable_vibora"))
         return RELEASE_ITEM_TARGET()
     end
     
-    -- 대상 아이템 이벤트 체크
+    -- ?�???�이???�벤??체크
     local eventItem = TryGetProp(targetItemObj, "EventEquip", 0)
 	if eventItem == 0 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable_vibora"))
         return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 레벨 체크
+    -- ?�???�이???�벨 체크
     local itemLevel = TryGetProp(targetItemObj, "UseLv", 0)
     if itemLevel ~= 440 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable_vibora"))
 		return RELEASE_ITEM_TARGET()
     end
 
-	-- 대상 아이템 중복사용 체크
+	-- ?�???�이??중복?�용 체크
 	local InheritanceItemName_Name = TryGetProp(targetItemObj, "InheritanceItemName", "None")
 	local StringArg_Name = TryGetProp(useItemObj, "StringArg", "None")
 	if InheritanceItemName_Name == StringArg_Name then
@@ -3055,14 +3059,14 @@ function REQ_USE_EVENT_EP12_REWARD_SCROLL_ENCHANT(useItemIndex, targetItemIndex,
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
     if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
     end
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -3101,7 +3105,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_SETOPTION(targetItemIndex, useItemI
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
 	if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
 	end
@@ -3113,7 +3117,7 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_SETOPTION(targetItemIndex, useItemI
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -3123,27 +3127,27 @@ function SCR_EVENT_EP12_REWARD_SCROLL_SELECT_SETOPTION(targetItemIndex, useItemI
 		return RELEASE_ITEM_TARGET()
     end
 	
-    -- 스크롤 체크
+    -- ?�크�?체크
 	if IS_SETOPTION_SCROLL_ITEM_EP12_REWARD_USABLE(useItemObj, targetItemObj) == 0 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable_SetOption"))
         return RELEASE_ITEM_TARGET()
     end
     
-    -- 대상 아이템 이벤트 체크
+    -- ?�???�이???�벤??체크
     local eventItem = TryGetProp(targetItemObj, "EventEquip", 0)
 	if eventItem == 0 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable_SetOption"))
         return RELEASE_ITEM_TARGET()
     end
 
-    -- 대상 아이템 레벨 체크
+    -- ?�???�이???�벨 체크
     local itemLevel = TryGetProp(targetItemObj, "UseLv", 0)
 	if itemLevel ~= 440 then
 		ui.MsgBox(ScpArgMsg("ItemIsNotEnchantable_SetOption"))
 		return RELEASE_ITEM_TARGET()
     end
 
-	-- 대상 아이템 중복사용 체크
+	-- ?�???�이??중복?�용 체크
 	local LegendPrefix_Name = TryGetProp(targetItemObj, "LegendPrefix", "None")
 	local StringArg_Name = TryGetProp(useItemObj, "StringArg", "None")
 	if LegendPrefix_Name == StringArg_Name then
@@ -3165,14 +3169,14 @@ function REQ_USE_EVENT_EP12_REWARD_SCROLL_SETOPTION(useItemIndex, targetItemInde
 		targetItem = session.GetEquipItemBySpot(targetItemIndex)
     end
 
-    -- 대상 아이템 체크
+    -- ?�???�이??체크
     if targetItem == nil then
 		return RELEASE_ITEM_TARGET()
     end
 
     local useItem = session.GetInvItem(useItemIndex)
 
-    -- 사용 아이템 체크
+    -- ?�용 ?�이??체크
     if useItem == nil then
         return RELEASE_ITEM_TARGET()
     end
@@ -3874,7 +3878,7 @@ function ON_RIDING_VEHICLE(onoff)
 		end
 	end
 	
-    --js: 현재 메르카바만 하드코딩 형태로 예외처리되어있다 위에 함수명만 봐도 알수있음, 해당 예외처리 추후 하기로 정수씨와 이야기함 (2.0끝나고)--
+    --js: ?�재 메르카바�??�드코딩 ?�태�??�외처리?�어?�다 ?�에 ?�수명만 봐도 ?�수?�음, ?�당 ?�외처리 추후 ?�기�??�수?��? ?�야기함 (2.0?�나�?--
 
 	if (control.HaveNearCompanionToRide() == true or isRidingOnly == 'YES') and cartHandle == 0 then
 		local fsmActor = GetMyActor();
@@ -4140,8 +4144,8 @@ function KEYBOARD_INPUT()
 	local quickFrame = ui.GetFrame('quickslotnexpbar')
 	local restquickslot = ui.GetFrame('restquickslot')
 	local joystickrestquickslot = ui.GetFrame('joystickrestquickslot')
-	local flutingFrame = ui.GetFrame('fluting_keyboard'); -- 파이드 파이퍼 - 피리 연주 퀵슬롯
-	local instrumentFrame = ui.GetFrame('instrument_keyboard'); -- 악기 장난감 연주 퀵슬롯
+	local flutingFrame = ui.GetFrame('fluting_keyboard'); -- ?�이???�이??- ?�리 ?�주 ?�슬�?
+	local instrumentFrame = ui.GetFrame('instrument_keyboard'); -- ?�기 ?�난�??�주 ?�슬�?
 	local monsterquickslot = ui.GetFrame('monsterquickslot')
 	local summoncontrol = ui.GetFrame('summoncontrol')
 	SetJoystickMode(0)

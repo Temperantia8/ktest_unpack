@@ -180,7 +180,7 @@ function GET_MORE_EVENT_EXP(pc)
 	end
 
 	if TryGetProp(pc, 'Lv', 0) >= 450 and TryGetProp(pc, 'Lv', 0) < 460 then
-		sumExp = sumExp + 3
+		sumExp = sumExp + 6
 	end
 
 	return sumExp; 

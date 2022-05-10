@@ -350,6 +350,35 @@ function GET_RELIC_GEM_NAME_WITH_FONT(item, font_size)
 	return name_str
 end
 
+function _RELIC_GEM_OPTION_BY_LV_FOR_CABINET(gBox, ypos, gem_type, step, class_name, curlv)
+	local margin = 5
+
+	local gem_class = GetClass('Item', class_name)
+	if gem_class == nil then
+		return ypos
+	end
+
+	local option_text_format = 'RelicOptionLongText%s'
+	local parent = gBox:GetParent()
+
+	local option_name = TryGetProp(gem_class, 'RelicGemOption', 'None')
+	local func_str = string.format('get_tooltip_%s_arg%d', option_name, step)
+	local tooltip_func = _G[func_str]
+	if tooltip_func ~= nil then
+		local value, name, interval, type = tooltip_func()
+		local total = value * math.floor(curlv / interval)
+		local msg = string.format(option_text_format, type)
+		local strInfo = ScpArgMsg(msg, 'name', ClMsg(name), 'total', total, 'interval', interval, 'value', value)
+		local infoText = gBox:CreateControl('richtext', 'infoText' .. gem_type .. '_' .. step, relic_gem_text_margin, ypos, gBox:GetWidth() - relic_gem_text_margin, 30)
+		infoText:SetTextFixWidth(1)
+		infoText:SetText(strInfo)
+		infoText:SetFontName('brown_16')
+		ypos = ypos + infoText:GetHeight() + margin
+	end
+
+	return ypos
+end
+
 function _RELIC_GEM_OPTION_BY_LV(gBox, ypos, gem_type, step, class_name, curlv)
 	local margin = 5
 
@@ -365,7 +394,6 @@ function _RELIC_GEM_OPTION_BY_LV(gBox, ypos, gem_type, step, class_name, curlv)
 	end
 
 	local option_name = TryGetProp(gem_class, 'RelicGemOption', 'None')
-
 	local func_str = string.format('get_tooltip_%s_arg%d', option_name, step)
 	local tooltip_func = _G[func_str]
 	if tooltip_func ~= nil then
@@ -454,59 +482,6 @@ function ITEM_TOOLTIP_GEM_RELIC(tooltipframe, invitem, argStr, argStr2, curlv)
     gBox:Resize(gBox:GetWidth(), ypos)
 end
 
-function ITEM_TOOLTIP_GEM_RELIC_ONLY_FOR_CABINET(tooltipframe, invitem, mainframename,argStr,lv)
-	if invitem.GroupName ~= 'Gem_Relic' then
-		return
-	end
-	tolua.cast(tooltipframe, 'ui::CTooltipFrame')
-	local ypos =0
-	local margin = 5
-	local class_name = TryGetProp(invitem, 'ClassName', 'None')	
-	if class_name == 'None' then return end
-	class_name = replace(class_name, 'PVP_', '')
-	local gBox = GET_CHILD(tooltipframe, mainframename)
-	if gBox == nil then return end
-
-	local CSet = gBox:CreateOrGetControlSet('tooltip_relic_gem_lv_cabinet', 'tooltip_relic_gem_lv', 0, ypos)
-	local _ypos = 74 
-	local curlv = tostring(lv)
-	local lvtext = GET_CHILD(CSet, 'lv', 'ui::CRichText')
-	lvtext:SetTextByKey('value', curlv)
-	local enablelv = curlv * 2
-	if curlv == 1 then
-		enablelv = 1		
-	end
-	local enable_lv_text = GET_CHILD(CSet, 'enable_lv', 'ui::CRichText')
-	enable_lv_text:SetTextByKey('value', enablelv)
-	CSet:Resize(CSet:GetWidth(), _ypos + margin)
-	
-	ypos = ypos + CSet:GetHeight() + margin
-
-
-	local CSet = gBox:CreateOrGetControlSet('item_tooltip_gem_cabinet', 'item_tooltip_gem_cabinet', 0, ypos)
-	local _ypos = 5 
-	
-	
-	local gem_id = TryGetProp(invitem, 'ClassID', 0)
-	local gem_type = relic_gem_type[TryGetProp(invitem, 'GemType', 'None')]
-	if gem_type == 0 then
-		_ypos = _RELIC_GEM_SPEND_RP_OPTION(CSet, _ypos, gem_id)
-		_ypos = _RELIC_GEM_RELEASE_OPTION(CSet, _ypos, gem_id)
-	elseif gem_type == 1 then
-		_ypos = _RELIC_GEM_SPEND_RP_OPTION(CSet, _ypos, gem_id)
-	end
-
-	-- 레벨에 의한 옵션
-	for i = 1, max_relic_option_count do
-		_ypos = _RELIC_GEM_OPTION_BY_LV(CSet, _ypos, 0, i, class_name, curlv)
-	end
-	CSet:Resize(CSet:GetWidth(), _ypos)
-
-	ypos = ypos + CSet:GetHeight() + 5
-
-	local gBox = GET_CHILD(tooltipframe, mainframename, 'ui::CGroupBox')
-    gBox:Resize(gBox:GetWidth(), ypos)
-end
 
 function DRAW_RELIC_GEM_COMMON_TOOLTIP(tooltipframe, invitem, mainframename, isForgery)
 	local gBox = GET_CHILD(tooltipframe, mainframename, 'ui::CGroupBox')
@@ -623,6 +598,61 @@ function DRAW_RELIC_GEM_LV(tooltipframe, invitem, ypos, mainframename)
 	return ypos
 end
 
+
+function ITEM_TOOLTIP_GEM_RELIC_ONLY_FOR_CABINET(tooltipframe, invitem, mainframename,argStr,lv)
+	
+	if invitem.GroupName ~= 'Gem_Relic' then
+		return
+	end
+	tolua.cast(tooltipframe, 'ui::CTooltipFrame')
+	local ypos =0
+	local margin = 5
+	local class_name = TryGetProp(invitem, 'ClassName', 'None')	
+	if class_name == 'None' then return end
+	class_name = replace(class_name, 'PVP_', '')
+	local gBox = GET_CHILD(tooltipframe, mainframename)
+	if gBox == nil then return end
+
+	local CSet = gBox:CreateOrGetControlSet('tooltip_relic_gem_lv_cabinet', 'tooltip_relic_gem_lv', 0, ypos)
+	local _ypos = 74 
+	local curlv = tostring(lv)
+	local lvtext = GET_CHILD(CSet, 'lv', 'ui::CRichText')
+	lvtext:SetTextByKey('value', curlv)
+	local enablelv = curlv * 2
+	if curlv == 1 then
+		enablelv = 1		
+	end
+	local enable_lv_text = GET_CHILD(CSet, 'enable_lv', 'ui::CRichText')
+	enable_lv_text:SetTextByKey('value', enablelv)
+	CSet:Resize(CSet:GetWidth(), _ypos + margin)
+	
+	ypos = ypos + CSet:GetHeight() + margin
+
+
+	local CSet = gBox:CreateOrGetControlSet('item_tooltip_gem_cabinet', 'item_tooltip_gem_cabinet', 0, ypos)
+	local _ypos = 5 
+	
+	
+	local gem_id = TryGetProp(invitem, 'ClassID', 0)
+	local gem_type = relic_gem_type[TryGetProp(invitem, 'GemType', 'None')]
+	if gem_type == 0 then
+		_ypos = _RELIC_GEM_SPEND_RP_OPTION(CSet, _ypos, gem_id)
+		_ypos = _RELIC_GEM_RELEASE_OPTION(CSet, _ypos, gem_id)
+	elseif gem_type == 1 then
+		_ypos = _RELIC_GEM_SPEND_RP_OPTION(CSet, _ypos, gem_id)
+	end
+
+	-- 레벨에 의한 옵션
+	for i = 1, max_relic_option_count do
+		_ypos = _RELIC_GEM_OPTION_BY_LV_FOR_CABINET(CSet, _ypos, 0, i, class_name, curlv)
+	end
+	CSet:Resize(CSet:GetWidth(), _ypos)
+
+	ypos = ypos + CSet:GetHeight() + 5
+
+	local gBox = GET_CHILD(tooltipframe, mainframename, 'ui::CGroupBox')
+    gBox:Resize(gBox:GetWidth(), ypos)
+end
 
 function DRAW_RELIC_GEM_OPTION(tooltipframe, invitem, ypos, mainframename)
 	local class_name = TryGetProp(invitem, 'ClassName', 'None')	

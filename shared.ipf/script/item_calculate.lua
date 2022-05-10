@@ -1893,7 +1893,7 @@ function SCR_GET_HP_COOLDOWN(item)
     --------------------------------------------
     local ret = IsHealControlMap(owner)
     if ret == 1 then
-        return 90000 -- 90초
+        return 100000 -- 100초
     end
 
     return item.ItemCoolDown;

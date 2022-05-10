@@ -12111,6 +12111,9 @@
 		<image name="Gabija_EarringRaid_emoticon_132" file="\icon\emoticon\Gabija_EarringRaid_emoticon_6.png" imgrect="0 0 128 128"/>
 		<image name="Gabija_EarringRaid_emoticon_133" file="\icon\emoticon\Gabija_EarringRaid_emoticon_7.png" imgrect="0 0 128 128"/>
 		<image name="Gabija_EarringRaid_emoticon_134" file="\icon\emoticon\Gabija_EarringRaid_emoticon_8.png" imgrect="0 0 128 128"/>
+		<image name="inesa_emoticon135" file="\icon\emoticon\inesa_emoticon01.png" imgrect="0 0 128 128"/>
+		<image name="inesa_emoticon136" file="\icon\emoticon\inesa_emoticon02.png" imgrect="0 0 128 128"/>
+		<image name="inesa_emoticon137" file="\icon\emoticon\inesa_emoticon03.png" imgrect="0 0 128 128"/>
 	</imagelist>
 	<imagelist category="itemtooltip_image">
 		<image name="circle_gem" file="\skin\tooltip_skin_3.tga" imgrect="805 228 30 30"/>
@@ -12660,6 +12663,7 @@
 		<image name="NOTICE_Dm_Shoptutorial" file="\icon\NOTICE_Dm_Shoptutorial.tga" imgrect="0 0 45 160"/>
 		<image name="key_SPACE" file="\icon\keycap_icon.tga" imgrect="576 128 128 64"/>
 		<image name="key_wheel" file="\icon\keycap_icon.tga" imgrect="960 128 64 64"/>
+		<image name="key_empty" file="\icon\keycap_icon.tga" imgrect="768 256 64 64"/>
 	</imagelist>
 	<imagelist category="social_icon">
 		<image name="icon_life_sell" file="\icon\system\icon_life_sell.tga" imgrect="0 0 80 80"/>

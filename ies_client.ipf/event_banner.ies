@@ -1,4 +1,9 @@
 ClassID,StartTimeYYYYMM,StartTimeDDHHMM,NewTimeYYYYMM,NewTimeDDHHMM,EndTimeYYYYMM,EndTimeDDHHMM,DeadlineTimeYYYYMM,DeadlineTimeDDHHMM,ExchangeTimeYYYYMM,ExchangeTimeDDHHMM,ClassName,Name,ImagePath,url,UserCommand1,UserCommand2,UserCommand3,ShowType
+996190,202204,280000,202205,30000,202205,260600,202205,210000,0,0,"event2205_Larma","라마 패키지","event2205_Larma","https://tos.nexon.com/News/Update/view?n4ArticleSN=2732","","","",""
+996200,202204,280000,202205,30000,202205,260600,202205,210000,0,0,"event2205_goddess","여신의 축복","event2205_goddess","https://tos.nexon.com/News/Update/view?n4ArticleSN=2734","","","",""
+996210,202204,280000,202205,30000,202206,90600,202206,40000,0,0,"event2205_Spring","봄 캠핑 이벤트","event2205_Spring","https://tos.nexon.com/news/events/view?n4ArticleSN=386","","","",""
+996220,202205,10000,202205,60000,202205,310600,202205,260000,0,0,"event2205_VaivoraReward","바이보라 출석 - 5월","event2205_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=385","","","",""
+996230,202205,10000,202205,60000,202205,310600,202205,260000,0,0,"event2205_Burning","주말 앤 버닝 - 5월","event2205_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=384","","","",""
 996240,202203,310000,202204,40000,202204,140600,202204,90000,0,0,"event2204_arborpackage","식목일 기념 신록 패키지","event2204_arborpackage","https://tos.nexon.com/News/update/view?n4ArticleSN=2709","","","",""
 996250,202204,10000,202204,60000,202205,10000,202204,260000,0,0,"event2204_Burning","주말 앤 버닝 - 4월","event2204_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=382","","","",""
 996260,202204,10000,202204,60000,202205,10000,202204,260000,0,0,"event2204_VaivoraReward","바이보라 출석 - 4월","event2204_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=383","","","",""

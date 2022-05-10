@@ -155,19 +155,19 @@
 					<Str Str="voice_cleric_m_lycanthropy_shot" />
 					<Str Str="voice_cleric_f_lycanthropy_shot" />
 				</Scp>
-                <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="750">
+                <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="400">
                     <Str_Arg Str="F_cleric_ShapeShifting_shot_smoke3" Arg="1"/>
 					<Pos Angle="0" Dist="0" Height="30" />
 					<Num Num="0" />
 					<Str Str="None" />
 				</Scp>
-                <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="750">
+                <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="400">
                     <Str_Arg Str="F_spread_out025_fether_blue" Arg="0.5"/>
 					<Pos Angle="0" Dist="0" Height="30" />
 					<Num Num="0" />
 					<Str Str="None" />
 				</Scp>
-                <Scp Scp="SKL_RUN_SCRIPT" Client="NO" UseSleep="NO" Time="1050">
+                <Scp Scp="SKL_RUN_SCRIPT" Client="NO" UseSleep="NO" Time="525">
 					<Str Str="TRANSFORM_TO_LYCANTHROPY" />
 				</Scp>
                 <Scp Scp="SKL_TGT_REMOVE_DEBUFF" Client="NO" UseSleep="NO" Time="110">

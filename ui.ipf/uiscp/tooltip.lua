@@ -594,10 +594,15 @@ function UPDATE_SKILL_TOOLTIP(frame, strarg, numarg1, numarg2, userData, obj)
             if from_type ~= nil then
                 local from_cls = GetClassByType("Skill", from_type);
                 if from_cls ~= nil then
-                    local from_skl = session.GetSkillByName(from_cls.ClassName);
-                    if from_skl ~= nil then
-                        local from_obj = GetIES(from_skl:GetObject());
-                        cloneObjLevel = from_obj.Level;
+                    local from_skill_class_name = TryGetProp(from_cls, "ClassName", "None");
+                    if from_skill_class_name ~= nil and from_skill_class_name ~= "None" then
+                        local from_skl = session.GetSkillByName(from_skill_class_name);
+                        if from_skl ~= nil then
+                            local from_obj = GetIES(from_skl:GetObject());
+                            if from_obj ~= nil then
+                                cloneObjLevel = from_obj.Level;
+                            end
+                        end
                     end
                 end
             end

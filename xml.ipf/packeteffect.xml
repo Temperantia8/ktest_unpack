@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by imc (imc) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <packeteffects>
     <Category ID="163">
         <Effect Name="F_archer_bodkinpoint_hit_explosion#Dummy001"/>
@@ -837,6 +837,7 @@
         <Effect Name="skl_ice_explosion_blow_finish"/>
         <Effect Name="skl_ice_cast_2"/>
         <Effect Name="skl_wiz_psy_finish_full"/>
+        <Effect Name="F_spin007_5_loop"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
@@ -1581,6 +1582,7 @@
         <Effect Name="master_Hackapell"/>
         <Effect Name="EARRING_RAID_Extreme"/>
         <Effect Name="master_Lama"/>
+        <Effect Name="EP14_2_DCASTLE1_MQ_7_MINI"/>
     </Category>
     <Category ID="144">
         <Effect Name="F_pc_CardBook_ground_dark"/>
@@ -3669,6 +3671,11 @@
         <Effect Name="F_explosion116_water_red"/>
         <Effect Name="F_ground228_rize_red"/>
         <Effect Name="EP14_2_DCASTLE1_MQ_2_MINI"/>
+        <Effect Name="I_force018_trail_water4_2_red#Bip001 Head"/>
+        <Effect Name="I_explosion002_red2"/>
+        <Effect Name="I_force018_trail_water4_2_red2#Bip001 Head"/>
+        <Effect Name="I_force018_trail_water4_2_red2_2#Bip001 Head"/>
+        <Effect Name="F_spread_out045_red"/>
     </Category>
     <Category ID="197">
         <Effect Name="F_burstup030_fire1"/>
@@ -26147,7 +26154,6 @@
         <Effect Name="F_spin033"/>
         <Effect Name="F_spread_out057"/>
         <Effect Name="Jellyzele_puddle_pad"/>
-        <Effect Name="Jellyzele_puddle_pad"/>
         <Effect Name="Bubble"/>
         <Effect Name="Jellyzele_BubbleBubble"/>
         <Effect Name="F_explosion115_water_blue_pink"/>
@@ -26155,12 +26161,23 @@
         <Effect Name="voice_luchador_announce_m_cheers"/>
         <Effect Name="F_ground228_water_loop"/>
         <Effect Name="Jellyzele_throw_pad"/>
-        <Effect Name="Jellyzele_throw_pad"/>
         <Effect Name="Jellyzele_sticky_pad"/>
         <Effect Name="GroundChange"/>
         <Effect Name="Jellyzele_ground_change_pad"/>
         <Effect Name="Raid_Jellyzele"/>
         <Effect Name="raid_jellyzele"/>
+        <Effect Name="F_light205_rize_bubble_loop_blue"/>
+        <Effect Name="F_light205_rize_bubble_loop_pink"/>
+        <Effect Name="F_light204_bubble_loop"/>
+        <Effect Name="F_ground231_crack_blue"/>
+        <Effect Name="F_ground231_crack_red"/>
+        <Effect Name="F_water001_lake_lightBottom"/>
+        <Effect Name="F_water010_blue"/>
+        <Effect Name="F_ground229_water_bubble_loop"/>
+        <Effect Name="F_levitation059_loop_red"/>
+        <Effect Name="F_light204_bubble2_loop"/>
+        <Effect Name="F_pose_magical_shot_heart_end2_red"/>
+        <Effect Name="F_pose_magical_shot_heart_end2_blue"/>
     </Category>
     <Category ID="170">
         <Effect Name="Linker_blue3"/>
