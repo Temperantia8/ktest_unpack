@@ -87,6 +87,5 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5273,5273,1,40,1,60000,1,2,0,0,0,0,0,"NPC_GM","가디스 재료 교환 도우미","","","","","","","EP13CARE_TRADE","","","NO","YES","NO","Netural","","","",""
 5284,5284,1,40,1,1,1,2,0,0,1,0,0,"npc_MasterHwarang","[화랑 마스터]{nl}사라함","","","","","","","MASTER_HWARANG_NPC","","","NO","YES","NO","Neutral","","","",""
 5286,5286,1,40,1,60000,1,0,0,0,0,0,0,"npc_rangdagirl_02","소녀의 환영","","","","","","StartLine3_TUTO_NPC_ALPHA","EP14_MULIA_NPC_3","","","NO","YES","NO","Neutral","","","",""
-5250,5250,1,40,1,60000,1,1,0,0,0,0,0,"orsha_m_1","리만타스","","","","","","","CHAR119_MSTEP3_3_1_NPC","","","NO","YES","NO","Neutral","","","",""
-5289,5289,1,60,1,60000,1,1,0,0,0,0,0,"gacha_machine","여신의 축복","","","","","","","BLESSED_CUBE","","","NO","YES","NO","Neutral","","","",""
 5288,5288,1,40,1,60000,1,1,0,0,0,0,0,"orsha_soldier_f_2","오르샤 입항 수속 담당자","","","","","","","EP14_F_CORAL_RAID_1_NPC_1","","","NO","YES","NO","Neutral","","","",""
+5289,5289,1,60,1,60000,1,1,0,0,0,0,0,"gacha_machine","여신의 축복","","","","","","","BLESSED_CUBE","","","NO","YES","NO","Neutral","","","",""

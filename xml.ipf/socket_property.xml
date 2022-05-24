@@ -3003,4 +3003,8 @@
 		<Level Level="0" PropList_TopLeg="OptDesc/만파능라격 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/만파능라격 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
 		<Level Level="1" PropList_TopLeg="OptDesc/만파능라격 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/만파능라격 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
 	</Item>
+	<Item Name="GEM_Kabbalist_Anagrama">
+		<Level Level="0" PropList_TopLeg="OptDesc/아나그라마 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/아나그라마 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+		<Level Level="1" PropList_TopLeg="OptDesc/아나그라마 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/아나그라마 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+	</Item>
 </SocketProperty>

@@ -936,15 +936,25 @@ end
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_SKL_COOLDOWN_KaguraDance(skill)
     local pc = GetSkillOwner(skill);
-    local basicCoolDown = skill.BasicCoolDown - ((TryGetProp(skill, "Level", 0) - 1) * 5000);
+
+    local level = TryGetProp(skill, "Level", 0) - 1
+    local basicCoolDown = skill.BasicCoolDown - (level * 5000);        
     local abilAddCoolDown = GetAbilityAddSpendValue(pc, skill.ClassName, "CoolDown");
-    basicCoolDown = basicCoolDown + abilAddCoolDown;
+    basicCoolDown = basicCoolDown + abilAddCoolDown;    
+    basicCoolDown = SCR_COMMON_COOLDOWN_DECREASE(pc, skill, basicCoolDown)    
+    local ret = math.floor(basicCoolDown) / 1000    
+    ret = math.floor(ret) * 1000;    
+
+    local abil = GetAbility(pc, "Miko18")
+    if abil ~= nil and TryGetProp(abil, 'ActiveState', 0) == 1 then
+        if ret < 20000 then
+            ret = 20000
+        end
+    end
     
-    basicCoolDown = SCR_COMMON_COOLDOWN_DECREASE(pc, skill, basicCoolDown)
-    
-    local ret = math.floor(basicCoolDown) / 1000
-    ret = math.floor(ret) * 1000;
-    return math.floor(ret);    
+    ret = math.floor(ret)    
+    ret = math.max(1000, ret)
+    return ret
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -5182,19 +5192,27 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_RevengedSevenfold_Time(skill)
-    local value = 60
+    local value = 15
     local pc = GetSkillOwner(skill)
     if IsPVPServer(pc) == 1 then
         value = 7
     end
+
+    local abil = GetAbility(pc, 'Kabbalist32')
+    if abil ~= nil and TryGetProp(abil, 'ActiveState', 0) == 1 then
+        value = skill.Level
+        if IsPVPServer(pc) == 1 then
+            value = value * 0.5;
+        end
+    end
+
     return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_RevengedSevenfold_Ratio(skill)
     local value = 3.5 * skill.Level
-  return value
-
+    return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -5239,6 +5257,11 @@ end
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_Ayin_sof_Ratio3(skill)
     return 3000 * skill.Level;
+end
+
+-- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Ayin_sof_Cri_Ratio(skill)
+    return skill.Level
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -6596,14 +6619,12 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_Nachash_Ratio(skill)
-
     local pc = GetSkillOwner(skill);
-    local abil = GetAbility(pc, "Kabbalist3") 
-    local value = 0
-    if abil ~= nil then 
-        return SCR_ABIL_ADD_SKILLFACTOR_TOOLTIP(abil);
+    local value = 10
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value - 2) ^ 0.5)) + math.min(2, value)
     end
-
+    return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -6757,7 +6778,11 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_StormCalling_Ratio(skill)
-    local value = skill.Level * 5
+    local pc = GetSkillOwner(skill)
+    local value = 8
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value - 2) ^ 0.5)) + math.min(2, value)
+    end
     return math.floor(value)
 end
 
@@ -6842,8 +6867,7 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_StormCalling_Time(skill)
-    local value = 3 + skill.Level
-    
+    local value = 10
     return value
 end
 
@@ -7042,19 +7066,18 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_KaguraDance_Time(skill)
-    local value = 10;
-    return math.floor(value)
+    local value = 15
+    local pc = GetSkillOwner(skill)
+    local abil = GetAbility(pc, 'Miko18')
+    if abil ~= nil and TryGetProp(abil, 'ActiveState', 0) == 1 then
+        value = 5
+    end
+    return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_KaguraDance_Ratio(skill)
-    local value = 70 + skill.Level * 2
-    local pc = GetSkillOwner(skill);
-    local abil = GetAbility(pc, "Miko8")
-    if abil ~= nil and abil.ActiveState == 1 then
-        value = value * 1.3
-    end
-    
+    local value = 12 + skill.Level * 3
     return math.floor(value)
 end
 
@@ -7127,7 +7150,7 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_KaguraDance_Ratio2(skill)
-    local value = 12 + skill.Level * 3
+    local value = 16 + skill.Level * 3
     return math.floor(value)
 end
 
@@ -8207,7 +8230,7 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_Sacrament_Bufftime(skill)
-    return 800 + skill.Level * 100;
+    return 15;
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -8219,6 +8242,19 @@ function SCR_GET_Sacrament_Ratio(skill)
     local value = baseDamageValue + mna_bonus    
     value = value * SCR_REINFORCEABILITY_TOOLTIP(skill)    
     return math.floor(value)
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Sacrament_Ratio2(skill)
+    local pc = GetSkillOwner(skill)
+    local value = 4 + skill.Level + math.floor(skill.Level / 4)
+    if value > 10 then
+        value = 10
+    end
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -8270,6 +8306,7 @@ end
 function SCR_GET_MassHeal_Ratio(skill)
     return SCR_GET_MassHeal_Ratio_Common(skill)
 end
+
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_MassHeal_Ratio_Common(skill)
     local value = 422.4 + (skill.Level - 1) * 202.56
@@ -8279,8 +8316,17 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_MassHeal_Ratio2(skill)
-    local pc = GetSkillOwner(skill);
-    local value = 100 + pc.INT + pc.MNA + (skill.Level - 1) * 35
+    local value = SCR_GET_SkillFactor_By_Other(skill, 'Priest_Luminosity')
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_MassHeal_Luminosity_Ratio(skill)
+    local pc = GetSkillOwner(skill)
+    local value = 10
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
     return value
 end
 
@@ -9997,7 +10043,11 @@ end
 function SCR_GET_SwashBuckling_Ratio2(skill)
     local value = 35
     return value;
+end
 
+-- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_SwashBuckling_Ratio3(skill)
+    return skill.Level * 4
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -10952,13 +11002,17 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Resurrection_Ratio2(skill)
-    local value = 1;
-    local pc = GetSkillOwner(skill);
-    local abil = GetAbility(pc, "Priest9");
-    if abil ~= nil and abil.ActiveState == 1 then
-        value = value + abil.Level;
+    local pc = GetSkillOwner(skill)
+    local value = 10
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
     end
-    
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_Resurrection_Ratio3(skill)
+    local value = SCR_GET_SkillFactor_By_Other(skill, 'Priest_Condemn')
     return value
 end
 
@@ -10969,45 +11023,34 @@ function SCR_Get_Resurrection_Time(skill)
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
-function SCR_Get_Monstrance_Bufftime(skill)
-    local pc = GetSkillOwner(skill);
-    local value = 20
-    
-    local abil = GetAbility(pc, "Priest22")
-    local ActiveState = TryGetProp(abil, "ActiveState")
-    if abil ~= nil and ActiveState == 1 then
-        value = value + (abil.Level * 60)
-    end
-    
-    return math.floor(value);
-end
-
--- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Monstrance_Debufftime(skill)
-    local pc = GetSkillOwner(skill);
-    local value = 30
-    
---    local abil = GetAbility(pc, "Priest22")
---    if abil ~= nil and abil.ActiveState == 1 then
---        value = value + abil.Level
---    end
-    
+    local value = 15
     return math.floor(value);
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Monstrance_Ratio2(skill)
-    local value = 5 + skill.Level * 3
-    value = value * SCR_REINFORCEABILITY_TOOLTIP(skill)
+    local value = 10 + skill.Level
+
+    local pc = GetSkillOwner(skill)
+    local addAbilRate = 1
+    local reinforceAbilName = TryGetProp(skill, "ReinforceAbility", "None")
+    if reinforceAbilName ~= "None" then
+        local reinforceAbil = GetAbility(pc, reinforceAbilName)
+        if reinforceAbil ~= nil then
+            local abilLevel = TryGetProp(reinforceAbil, "Level")
+            local masterAddValue = 0
+            if abilLevel == 100 then
+                masterAddValue = 0.1
+            end
+            addAbilRate = 1 + (reinforceAbil.Level * 0.001 + masterAddValue)
+        end
+    end
+
+    value = value * addAbilRate
+
     return value
 end
-
---function SCR_Get_Monstrance_Ratio3(skill)
---    local pc = GetSkillOwner(skill);
---    local value = skill.Level;
---    
---    return math.floor(value);
---end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Aspersion_Bufftime(skill)
@@ -11284,6 +11327,7 @@ end
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_JointPenalty_Ratio2(skill)
     local value = skill.Level * 10
+    local pc = GetSkillOwner(skill)
     if IsPVPField(pc) == 1 then
         value = value * 0.4
     end
@@ -13198,6 +13242,7 @@ end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_WaterShikigami_Ratio(skill)
+    local pc = GetSkillOwner(skill);
     local value = 12
     if IsPVPField(pc) == 1 and value > 2 then
         value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
@@ -13619,6 +13664,16 @@ end
 function SCR_GET_TheTreeofSepiroth_Ratio(skill)
     local value = 45 + (skill.Level - 1) * 21.1
     value = math.floor(value * SCR_REINFORCEABILITY_TOOLTIP(skill))
+    return value
+end
+
+-- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_TheTreeofSepiroth_Ratio2(skill)
+    local pc = GetSkillOwner(skill)
+    local value = 10
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
     return value
 end
 
@@ -18395,5 +18450,67 @@ function SCR_GET_Suddenkick_SkillFactor(skill)
     end
     local value = SCR_GET_SkillFactor_By_Other(skill, "Lama_Suddenkick");
 
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Anagrama_Time(skill)
+    return 15
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Anagrama_Ratio(skill)
+    local pc = GetSkillOwner(skill)
+    local value = 10
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_FlameRadiation_Ratio(skill)
+    local pc = GetSkillOwner(skill)
+    local value = 5
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value - 2) ^ 0.5)) + math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_FireCharm_Ratio(skill)
+    local pc = GetSkillOwner(skill)
+    local value = 10
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value - 2) ^ 0.5)) + math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_FireCharm_Time(skill)
+    local value = 13
+    return value
+end
+
+-- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_KaguraDance_Ratio3(skill)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value - 2) ^ 0.5)) + math.min(2, value)
+    end
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_RevengedSevenfold_Ratio2(skill)
+    local value = 7
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 or IsPVPServer(pc) == 1 then
+        value = 1
+    end
     return value
 end

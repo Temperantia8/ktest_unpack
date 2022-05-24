@@ -496,7 +496,7 @@ function GET_PLAYER_GEAR_SCORE(pc)
         before_score = score
 
         local missing_count = 0
-        local item_sub_lh = GetEquipItemIgnoreDur(pc, 'RH_SUB')        
+        local item_sub_lh = GetEquipItemIgnoreDur(pc, 'LH_SUB')        
         if TryGetProp(item_sub_lh, 'ClassName', 'None') == 'NoWeapon' or TryGetProp(item_sub_lh, 'ClassName', 'None') == 'None' then
             missing_count = missing_count + 1
         end

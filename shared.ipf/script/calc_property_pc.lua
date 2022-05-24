@@ -1231,6 +1231,10 @@ function SCR_Get_DEFAULT_MINMATK(self)
     local byLevel = lv * 1;
     
     local stat = TryGetProp(self, "INT");
+    local abilCleric37 = GetAbility(self, 'Cleric37');
+    if abilCleric37 ~= nil and TryGetProp(abilCleric37, 'ActiveState', 0) == 1 then
+        stat = TryGetProp(self, 'MNA');
+    end
     if stat == nil then
         stat = 1;
     end
@@ -1365,6 +1369,10 @@ function SCR_Get_DEFAULT_MAXMATK(self)
     local byLevel = lv * 1;
     
     local stat = TryGetProp(self, "INT");
+    local abilCleric37 = GetAbility(self, 'Cleric37');
+    if abilCleric37 ~= nil and TryGetProp(abilCleric37, 'ActiveState', 0) == 1 then
+        stat = TryGetProp(self, 'MNA');
+    end
     if stat == nil then
         stat = 1;
     end
@@ -2044,6 +2052,10 @@ function SCR_Get_CRTMATK(self)
     local byLevel = lv * 1.0;
 	
     local stat = TryGetProp(self, "MNA");
+    local abilCleric37 = GetAbility(self, 'Cleric37');
+    if abilCleric37 ~= nil and TryGetProp(abilCleric37, 'ActiveState', 0) == 1 then
+        stat = TryGetProp(self, 'INT');
+    end
     if stat == nil then
         stat = 1;
     end
@@ -4875,9 +4887,12 @@ function SCR_Get_HEAL_PWR(self)
     local byStat = stat * 1;
 
     local atk = SCR_GET_DEFAULT_ATK_COMPARE(self)
-    local byAttack = atk * 0.08
+    atk = atk / 3
+        
+    -- local byAttack = atk * 0.08
 
-    local value = math.floor(defaultValue + byLevel + byStat + byAttack)
+    -- local value = math.floor(defaultValue + byLevel + byStat + byAttack)
+    local value = math.floor(defaultValue + byLevel + byStat)
 
     local byBuff = 0;
     
@@ -4897,6 +4912,7 @@ function SCR_Get_HEAL_PWR(self)
     if IsHealControlMap(self) == 1 then
         local by_rate_raid = GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self);
         byRateBuff = byRateBuff + by_rate_raid;
+        atk = atk * (1 + by_rate_raid)
     end
 
     byRateBuff = math.floor(value * byRateBuffTemp);
@@ -4921,13 +4937,14 @@ function SCR_Get_HEAL_PWR(self)
         sum_of_heal_power = sum_of_heal_power + seal_option
     end
 
-    value = value * (1 + sum_of_heal_power) 
+    value = value * (1 + sum_of_heal_power)
 
-    if value < 1 then
-    	value = 1;
+    local sum_of_value_atk = math.floor((value * 0.4) + (atk * 0.6))
+    if sum_of_value_atk < 1 then
+    	sum_of_value_atk = 1;
     end
 
-    return math.floor(value);
+    return sum_of_value_atk;
 end
 
 function SCR_GET_Leather_Def(pc)

@@ -14171,6 +14171,8 @@
 		<image name="icon_Jellyzele_ground_change" file="\icon\buff_icon6.tga" imgrect="768 640 128 128" CMM_Caption="지면 변화 피해"/>
 		<image name="icon_Jellyzele_summon_red" file="\icon\buff_icon6.tga" imgrect="896 640 128 128" CMM_Caption="빨강 덤블아이"/>
 		<image name="icon_Jellyzele_summon_Blue" file="\icon\buff_icon6.tga" imgrect="0 768 128 128" CMM_Caption="파랑 덤블아이"/>
+		<image name="icon_buff_ridepet_ep14fivebird" file="\icon\buff_icon6.tga" imgrect="256 768 128 128" CMM_Caption="5월 테마 버프"/>
+		<image name="icon_cler_kabal_anagram" file="\icon\buff_icon6.tga" imgrect="384 768 128 128" CMM_Caption="게부라 버프 아이콘"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>
@@ -14924,6 +14926,7 @@
 		<image name="plate_achieve_Jellyzele_pilgrim" file="\skin\user_title_skin.tga" imgrect="860 1066 214 34"/>
 		<image name="plate_achieve_EVENT_2204_SPRING_TITLE" file="\skin\user_title_skin.tga" imgrect="1075 1066 214 34" CMM_Caption="캠핑 칭호"/>
 		<image name="plate_achieve_Lama_weekraid" file="\skin\user_title_skin.tga" imgrect="0 1101 214 34" CMM_Caption="라마 주보레 칭호"/>
+		<image name="plate_achieve_ignas_weekraid" file="\skin\user_title_skin.tga" imgrect="645 1101 214 34" CMM_Caption="이그나스 주보레 칭호"/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>
@@ -15070,6 +15073,7 @@
 		<image name="ridepet_YellowTiger" file="\icon\ridepet.tga" imgrect="560 0 80 80" CMM_Caption="황호"/>
 		<image name="ridepet_BlackmistTiger" file="\icon\ridepet.tga" imgrect="0 80 80 80" CMM_Caption="검은 안개 호랑이"/>
 		<image name="ridepet_ep13animal" file="\icon\ridepet.tga" imgrect="80 80 80 80" CMM_Caption="목마"/>
+		<image name="ridepet_ep14fivebird" file="\icon\ridepet.tga" imgrect="160 80 80 80" CMM_Caption="전투기"/>
 	</imagelist>
 	<effectimagelist category="effectlist">
 		<image name="blue_orb" file="\icon\blue_orb.tga" imgrect="0 0 256 256"/>

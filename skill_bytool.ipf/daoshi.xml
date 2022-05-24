@@ -81,7 +81,7 @@ return value"/>
                 <Num Num="0"/>
             </ToolScp>
             <ToolScp Scp="C_EFFECT" Client="YES" UseSleep="NO">
-                <Str_Arg Str="F_rize015_ground_loop2" Arg="3"/>
+                <Str_Arg Str="F_wizard_DivinePunishment_cast" Arg="1"/>
                 <Str Str="Dummy_emitter"/>
                 <Num Num="0"/>
             </ToolScp>
@@ -93,7 +93,7 @@ return value"/>
                 <Num Num="0.2"/>
             </ToolScp>
             <ToolScp Scp="C_EFFECT_DETACH" Client="YES" UseSleep="NO">
-                <Str_Arg Str="F_rize015_ground_loop2" Arg="1"/>
+                <Str_Arg Str="F_wizard_DivinePunishment_cast" Arg="1"/>
                 <Num Num="0.2"/>
             </ToolScp>
         </KeyInputEnd>
@@ -102,6 +102,10 @@ return value"/>
                 <Frame Type="FAN" Time="9799" HitCount="1" TermMin="0" TermMax="0" PosType="0" Dist="0" RandDist="0" RandomPerHit="0" Angle="0" AniTime="9999" RotAngle="0" ForceATK="0" ScriptIndex="0" ScriptName="" SkillType="0"/>
             </HitList>
             <EtcList>
+                <Scp Scp="SKL_TGT_EFFECT" Client="NO" UseSleep="NO" Time="100">
+                    <Str_Arg Str="F_smoke019_dark" Arg="0.30000001"/>
+                    <Num Num="0"/>
+                </Scp>
                 <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="200">
                     <Str Str="voice_cleric_m_DivinePunishment_cast"/>
                     <Str Str="voice_cleric_DivinePunishment_cast"/>
@@ -117,11 +121,7 @@ return value"/>
                 </Scp>
                 <Scp Scp="SKL_SET_TARGET_CLIENT_TARGETTING" Client="NO" UseSleep="NO" Time="300"/>
                 <Scp Scp="SKL_TGT_EFFECT" Client="NO" UseSleep="NO" Time="300">
-                    <Str_Arg Str="F_smoke019_dark" Arg="0.30000001"/>
-                    <Num Num="0"/>
-                </Scp>
-                <Scp Scp="SKL_TGT_EFFECT" Client="NO" UseSleep="NO" Time="600">
-                    <Str_Arg Str="F_rize015_1_drop" Arg="1.2"/>
+                    <Str_Arg Str="F_wizard_DivinePunishment_hit" Arg="1.3"/>
                     <Num Num="0"/>
                 </Scp>
                 <Scp Scp="C_SHOCKWAVE" Client="YES" UseSleep="NO" Time="600">
@@ -258,7 +258,8 @@ return obj.Level;"/>
                     <Pos Angle="0" Dist="0" PosType="5"/>
                     <Num Num="45"/>
                     <Num Num="150"/>
-                    <Num Num="5"/>
+                    <Num Num="5" UseFunc="1" FuncTxt="local value = SCR_GET_FlameRadiation_Ratio(obj)
+                    return value"/>
                     <Num Num="2"/>
                     <Num Num="0"/>
                     <Num Num="0"/>

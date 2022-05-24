@@ -19,3 +19,5 @@ ClassID,ClassName,DungeonType,SubType,RedButtonText,RedButtonScp,Button1Text,But
 19,"RaidPilgrimMode","Raid","Pilgrim","입장하기","REQ_RAID_PILGRIM_UI_OPEN","","","","","시련 정보","ON_RAID_PILGRIM_TRIBULATION_INDUNINFO_OPEN"
 20,"EarringRaidPilgrimMode","EarringRaid","Pilgrim","입장하기","REQ_RAID_PILGRIM_UI_OPEN","","","","","시련 정보","ON_RAID_PILGRIM_TRIBULATION_INDUNINFO_OPEN"
 22,"MythicSoloHardMode","MythicDungeon_Auto_Hard","Casual","입장하기","REQ_RAID_SOLO_UI_OPEN","","","","","",""
+23,"LevelDungeonFix","Indun","Level","입장하기","REQ_LEVEL_DUNGEON_UI_OPEN","","","","","",""
+24,"LevelDungeonPeriodic","MissionIndun","Level","입장하기","REQ_LEVEL_DUNGEON_UI_OPEN","","","","","",""

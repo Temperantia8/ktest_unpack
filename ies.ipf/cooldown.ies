@@ -1003,7 +1003,7 @@ ClassID,OverHeatResetTime,ClassName,IsOverHeat,ReducePlayOnly,ForceReset
 2273,15000,"StoneShot_OH","YES","FALSE","YES"
 2274,6000,"FluFlu_OH","YES","FALSE","YES"
 2275,20000,"Zaibas_OH","YES","FALSE","YES"
-2276,10000,"Heal_OH","YES","FALSE","YES"
+2276,15000,"Heal_OH","YES","FALSE","YES"
 2277,6000,"Bless_OH","YES","FALSE","YES"
 2278,6000,"MeteorSwarm_OH","YES","FALSE","YES"
 2279,6000,"MeteorSwarm","NO","FALSE","YES"
@@ -1492,3 +1492,4 @@ ClassID,OverHeatResetTime,ClassName,IsOverHeat,ReducePlayOnly,ForceReset
 4222,5000,"PointkickEarghshock","NO","FALSE","NO"
 4223,5000,"FlyingkickSuddenkick","NO","FALSE","NO"
 4224,5000,"Endlessattacks","NO","FALSE","NO"
+4225,20000,"Anagrama","NO","FALSE","NO"

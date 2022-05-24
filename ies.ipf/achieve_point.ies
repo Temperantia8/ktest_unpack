@@ -463,6 +463,7 @@ ClassID,ClassName,Name,UseDaily,UseWeekly,Country,StartTime,EndTime,DescTitle
 20017,"WeeklyRank_17","아시오 메이지 주간보스 랭킹","NO","YES","","","",""
 20018,"WeeklyRank_18","디에나 주간보스 랭킹","NO","YES","","","",""
 20019,"WeeklyRank_19","서큐버스 주간보스 랭킹","NO","YES","","","",""
+20020,"WeeklyRank_20","이그나스 주간보스 랭킹","NO","YES","","","",""
 21001,"Ancient_1","텔하르샤 4단계이상 40회 클리어","NO","NO","","","",""
 21002,"Ancient_2","분열 특이점 5단계 또는 자동 매칭 100회 클리어","NO","NO","","","",""
 21003,"Ancient_3","챌린지 모드 자동 매칭 300회 클리어","NO","NO","","","",""

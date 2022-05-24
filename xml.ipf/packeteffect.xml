@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <packeteffects>
+    <Category ID="128">
+        <Effect Name="F_archer_DetonateTraps_explosion2"/>
+        <Effect Name="F_explosion122"/>
+        <Effect Name="I_cleric_ProtectionOfGoddess_cylinder_mesh_start"/>
+        <Effect Name="F_cleric_zemina_shot_light"/>
+        <Effect Name="F_buff_cleric_blindfaith"/>
+        <Effect Name="F_cleric_Retaliation_ground_explosion"/>
+        <Effect Name="F_cleric_MassHeal_shot_line"/>
+        <Effect Name="EP14_2_DCASTLE2_MQ_7"/>
+        <Effect Name="F_cleric_Ayin_sof_active_ground"/>
+        <Effect Name="I_cleric_safetyzone_loop_mash2"/>
+        <Effect Name="F_cleric_elevate_magic_square_loop"/>
+    </Category>
     <Category ID="163">
         <Effect Name="F_archer_bodkinpoint_hit_explosion#Dummy001"/>
         <Effect Name="F_explosion026_rize#Dummy001"/>
@@ -838,6 +851,10 @@
         <Effect Name="skl_ice_cast_2"/>
         <Effect Name="skl_wiz_psy_finish_full"/>
         <Effect Name="F_spin007_5_loop"/>
+        <Effect Name="counterspell_abil_pad"/>
+        <Effect Name="TheTreeOfSepiroth_Abil_Pad"/>
+        <Effect Name="Cleric_Romuva_abil2"/>
+        <Effect Name="Cleric_Laima_abil"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
@@ -883,6 +900,7 @@
         <Effect Name="F_pattern002_wind"/>
         <Effect Name="F_buff_BasicMonster_Deffender"/>
         <Effect Name="F_light075_yellow_loop"/>
+        <Effect Name="F_cleric_Ayin_sof_active_ground"/>
         <Effect Name="I_warrior_shieldcharger_sphere_mesh2"/>
         <Effect Name="F_warrior_shield002"/>
         <Effect Name="E_pc_shield_square"/>
@@ -1583,6 +1601,15 @@
         <Effect Name="EARRING_RAID_Extreme"/>
         <Effect Name="master_Lama"/>
         <Effect Name="EP14_2_DCASTLE1_MQ_7_MINI"/>
+        <Effect Name="EP14_2_DCASTLE2_MQ_2_MINI"/>
+        <Effect Name="EP14_2_DCASTLE2_MQ_6_MINI"/>
+        <Effect Name="EP14_2_DCASTLE2_MQ_7_MINI"/>
+        <Effect Name="EP14_2_DCASTLE2_MQ_7"/>
+        <Effect Name="EP14_2_DCASTLE2_MQ_10_MINI"/>
+        <Effect Name="EP14_2_DCASTLE3_MQ_2_MINI"/>
+        <Effect Name="EP14_2_DCASTLE3_MQ_4_MINI"/>
+        <Effect Name="EP14_2_DCASTLE3_MQ_3_MINI"/>
+        <Effect Name="EP14_2_DCASTLE3_MQ_5_MINI"/>
     </Category>
     <Category ID="144">
         <Effect Name="F_pc_CardBook_ground_dark"/>
@@ -2219,6 +2246,7 @@
         <Effect Name="F_warrior_PainBarrier_buff2_swordman01_3"/>
         <Effect Name="F_bubble005_white"/>
         <Effect Name="F_cleric_MassHeal_shot_line_prist01_3"/>
+        <Effect Name="F_cleric_MassHeal_shot_line"/>
         <Effect Name="CASTLE102_MQ_04_MINI"/>
         <Effect Name="I_breath017"/>
         <Effect Name="I_breath017_1"/>
@@ -2436,6 +2464,7 @@
         <Effect Name="F_fire002"/>
         <Effect Name="F_fire002"/>
         <Effect Name="F_cleric_zemina_shot_light_green"/>
+        <Effect Name="F_cleric_zemina_shot_light"/>
         <Effect Name="F_3CMLAKE_86_MQ_11_MINI"/>
         <Effect Name="F_item_drop_line_loop_white"/>
         <Effect Name="F_item_drop_line_loop_unknown"/>
@@ -3676,6 +3705,7 @@
         <Effect Name="I_force018_trail_water4_2_red2#Bip001 Head"/>
         <Effect Name="I_force018_trail_water4_2_red2_2#Bip001 Head"/>
         <Effect Name="F_spread_out045_red"/>
+        <Effect Name="F_smoke150_blue_violet"/>
     </Category>
     <Category ID="197">
         <Effect Name="F_burstup030_fire1"/>
@@ -7114,6 +7144,7 @@
         <Effect Name="E_scout_ClownViboraDagger8"/>
         <Effect Name="E_scout_ClownViboraDagger9"/>
         <Effect Name="E_scout_ClownViboraDagger10"/>
+        <Effect Name="F_cleric_moksha_explosion"/>
     </Category>
     <Category ID="45">
         <Effect Name="Cleric_Barrier"/>
@@ -8561,6 +8592,9 @@
         <Effect Name="EP14_2_DCASTLE1_MQ_2_MINI"/>
         <Effect Name="F_smoke046_gray"/>
         <Effect Name="F_smoke046_gray2"/>
+        <Effect Name="EP14_2_DCASTLE2_MQ_7"/>
+        <Effect Name="skl_Impaler_arun"/>
+        <Effect Name="F_wizard_DivinePunishment_hit"/>
     </Category>
     <Category ID="27">
         <Effect Name="SAPPER_TRAP_Sapper_BroomTrap"/>
@@ -25700,9 +25734,11 @@
         <Effect Name="F_explosion98_water3_2"/>
         <Effect Name="F_warrior_earthwave_shot_ground2"/>
         <Effect Name="F_warrior_earthwave_shot_ground2"/>
+        <Effect Name="F_cleric_monstrance_ground"/>
         <Effect Name="I_archer_feint_shot"/>
         <Effect Name="I_force022_poison#Bip001 Head"/>
         <Effect Name="I_smoke013_dark3_up"/>
+        <Effect Name="F_cleric_Condemn_ground_loop_red"/>
         <Effect Name="F_ground108_smoke##0.5"/>
         <Effect Name="F_ground108_smoke##0.5"/>
         <Effect Name="F_smoke148_spread_out_white"/>
@@ -25726,6 +25762,7 @@
         <Effect Name="F_sys_target_boss##0l.5"/>
         <Effect Name="F_cleric_DoublePunch_shot_spread_in_orange"/>
         <Effect Name="F_cleric_DoublePunch_shot_spread_in_orange"/>
+        <Effect Name="F_archer_HakkaPalle_ground"/>
         <Effect Name="F_spread_out004_dark_drop"/>
         <Effect Name="TelHarsha_Fallow"/>
         <Effect Name="TelHarsha_Fallow"/>
@@ -26178,6 +26215,7 @@
         <Effect Name="F_light204_bubble2_loop"/>
         <Effect Name="F_pose_magical_shot_heart_end2_red"/>
         <Effect Name="F_pose_magical_shot_heart_end2_blue"/>
+        <Effect Name="boss_ignas_arrowrain_pad"/>
     </Category>
     <Category ID="170">
         <Effect Name="Linker_blue3"/>
