@@ -855,6 +855,10 @@
         <Effect Name="TheTreeOfSepiroth_Abil_Pad"/>
         <Effect Name="Cleric_Romuva_abil2"/>
         <Effect Name="Cleric_Laima_abil"/>
+        <Effect Name="F_cleric_Foretell_ground_missile"/>
+        <Effect Name="counterspell_aura_pad"/>
+        <Effect Name="Nachash_Vibora_Pad"/>
+        <Effect Name="F_spin003_orange2"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
@@ -1610,6 +1614,7 @@
         <Effect Name="EP14_2_DCASTLE3_MQ_4_MINI"/>
         <Effect Name="EP14_2_DCASTLE3_MQ_3_MINI"/>
         <Effect Name="EP14_2_DCASTLE3_MQ_5_MINI"/>
+        <Effect Name="F_wizard_dirtywall_shot_1"/>
     </Category>
     <Category ID="144">
         <Effect Name="F_pc_CardBook_ground_dark"/>
@@ -8595,6 +8600,10 @@
         <Effect Name="EP14_2_DCASTLE2_MQ_7"/>
         <Effect Name="skl_Impaler_arun"/>
         <Effect Name="F_wizard_DivinePunishment_hit"/>
+        <Effect Name="I_cleric_StormCalling_force3#Dummy_effect_darksight"/>
+        <Effect Name="Goddess_Raid_Spreader_Solo"/>
+        <Effect Name="Goddess_Raid_Spreader_Party"/>
+        <Effect Name="Goddess_Raid_Spreader_Auto"/>
     </Category>
     <Category ID="27">
         <Effect Name="SAPPER_TRAP_Sapper_BroomTrap"/>

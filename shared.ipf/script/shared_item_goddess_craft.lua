@@ -396,6 +396,10 @@ item_goddess_craft.is_able_to_unlock_vasilisa = function(scrollObj, itemObj)
 end
 -- 아크 스크롤 추출
 item_goddess_craft.is_able_to_decompose_ark = function(scrollObj, itemObj)
+	if IS_SEASON_SERVER() == 'YES' then
+		return false, 'cant_use_in_season_server'
+	end
+
 	if TryGetProp(itemObj, 'CharacterBelonging', 0) == 0 then		
 		return false, 'OnlyFromCabinetItemUsable'
 	end

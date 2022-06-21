@@ -2537,7 +2537,7 @@ function SCR_Get_MSPD(self)
     end
     
     local jobRate = SCR_GET_JOB_RATIO_STAT(self, "MOVE_SPEED");
-    local value = 30.0 * jobRate;
+    local value = 35.0 * jobRate;
     
     if self.ClassName == 'PC' then
         local byItem = GetSumOfEquipItem(self, 'MSPD');
@@ -4855,7 +4855,14 @@ function SCR_GET_LOOTINGCHANCE(self)
     return math.floor(value);
 end
 
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_HEAL_PWR(self)
+    local flag = 2
+    if flag == 1 then 
+        return SCR_Get_HEAL_PWR_VER1(self) -- 기존 연산식
+    elseif flag == 2 then 
+        return SCR_Get_HEAL_PWR_VER2(self) -- 신규 연산식
+    end
     
     -- 이전 치유력 계산식
     --local defaultValue = 20;
@@ -4947,6 +4954,118 @@ function SCR_Get_HEAL_PWR(self)
     return sum_of_value_atk;
 end
 
+-- 신규 연산식
+function SCR_Get_HEAL_PWR_VER2(self)
+    local defaultValue = 20;
+    
+    local lv = TryGetProp(self, "Lv", 1);
+    local byLevel = lv * 2.5;
+
+    local stat = TryGetProp(self, "MNA", 1);
+    local byStat = stat * 1;
+    
+    local value = math.floor(defaultValue + byLevel + byStat)
+    
+    local byBuff = TryGetProp(self, "HEAL_PWR_BM", 0);
+    value = value + byBuff;
+    
+    local atk = SCR_GET_DEFAULT_ATK_COMPARE(self)
+    local byAttack = atk / 4
+    value = math.floor((value * 0.4) + (byAttack * 0.6))
+    
+    local byRateBuff = TryGetProp(self, "HEAL_PWR_RATE_BM", 0); 
+    value = value * (1 + byRateBuff)
+    
+    local sum_of_heal_power = 0
+    local byAbil = GetExProp(self, "ABIL_MACE_ADDHEAL") -- 클레릭: 치유력 특성
+    if byAbil == nil then
+        byAbil = 0
+    end
+    sum_of_heal_power = sum_of_heal_power + byAbil
+
+    local seal_option = GetExProp(self, "ITEM_Cleric_PatronSaint_HwpRate") -- 보루타 인장 - 클레릭
+    if seal_option > 0 then
+        seal_option = seal_option / 1000
+        sum_of_heal_power = sum_of_heal_power + seal_option
+    end
+    if GetExProp(self, "ITEM_goddess_seal_lv1") > 0 then -- 보루타 인장 - 공용
+        seal_option = GetExProp(self, "ITEM_goddess_seal_lv1")
+        seal_option = seal_option / 1000
+        sum_of_heal_power = sum_of_heal_power + seal_option
+    end
+
+    value = value * (1 + sum_of_heal_power)
+
+    -- HealControl 레이드 체크
+    if IsHealControlMap(self) == 1 then
+        local by_rate_raid = GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self);
+        value = value * (1 + by_rate_raid)
+    end
+
+    if value < 1 then
+    	value = 1;
+    end
+    
+    return math.floor(value);
+end
+
+-- 기존 연산식
+function SCR_Get_HEAL_PWR_VER1(self)
+    
+    local defaultValue = 20;
+    
+    local lv = TryGetProp(self, "Lv");
+    if lv == nil then
+        lv = 1;
+    end
+
+    local byLevel = lv * 2.5;
+    
+    local stat = TryGetProp(self, "MNA");
+    if stat == nil then
+        stat = 1;
+    end
+
+    local byStat = stat * 1;
+
+    local atk = SCR_GET_DEFAULT_ATK_COMPARE(self)
+    local byAttack = atk * 0.08
+
+    local value = math.floor(defaultValue + byLevel + byStat + byAttack)
+
+    local byBuff = 0;
+    
+    local byBuffTemp = TryGetProp(self, "HEAL_PWR_BM");
+    if byBuffTemp ~= nil then
+        byBuff = byBuff + byBuffTemp;
+    end
+    
+    local byRateBuff = 0;
+
+    local byRateBuffTemp = TryGetProp(self, "HEAL_PWR_RATE_BM");    
+    if byRateBuffTemp ~= nil then
+        byRateBuff = byRateBuff + byRateBuffTemp;
+    end
+
+    byRateBuff = math.floor(value * byRateBuffTemp);
+    value = value + byBuff + byRateBuff;    
+    local byAbil = GetExProp(self, "ABIL_MACE_ADDHEAL")
+    if byAbil == nil then
+        byAbil = 0
+    end
+    
+    local seal_option = GetExProp(self, "ITEM_Cleric_PatronSaint_HwpRate")        
+    seal_option = seal_option / 1000 -- 치유력 증가 합연산으로 처리한다
+    value = value * (1 + byAbil + seal_option) 
+    
+    if value < 1 then
+    	value = 1;
+    end
+
+    return math.floor(value);
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_Leather_Def(pc)
     local byItem = GetSumOfEquipItem(pc, "Leather_Def");
     if byItem == nil then
