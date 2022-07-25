@@ -2709,7 +2709,7 @@ function SCR_Get_MSPD(self)
     end
     
     -- 최대 이속 제한 --
-    if value > PC_MAX_MSPD then
+    if value > PC_MAX_MSPD and GetExProp(self, 'ignore_max_mspd') == 0 then
         value = PC_MAX_MSPD;
         if GetExProp(self, 'RIDE_PET_MSPD_LIMIT_INCREASE') > 0 then
             value = value + GetExProp(self, 'RIDE_PET_MSPD_LIMIT_INCREASE')
@@ -3976,6 +3976,70 @@ function SCR_GET_MiddleSize_Def(pc)
     return math.floor(value);
 end
 
+function SCR_GET_AllMaterialType_Def(pc)
+    local byItem = GetSumOfEquipItem(pc, "AllMaterialType_Def");
+    if byItem == nil then
+        byItem = 0;
+    end
+    
+    local byBuff = TryGetProp(pc, "AllMaterialType_Def_BM");
+    if byBuff == nil then
+        byBuff = 0;
+    end
+
+    local value = byItem + byBuff;
+    return math.floor(value);
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_AllMaterialType_Atk(pc)
+    local byItem = GetSumOfEquipItem(pc, "AllMaterialType_Atk");
+    if byItem == nil then
+        byItem = 0;
+    end
+    
+    local byBuff = TryGetProp(pc, "AllMaterialType_Atk_BM");
+    if byBuff == nil then
+        byBuff = 0;
+    end
+
+    local value = byItem + byBuff;
+    return math.floor(value);
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_AllSize_Atk(pc)
+    local byItem = GetSumOfEquipItem(pc, "AllSize_Atk");
+    if byItem == nil then
+        byItem = 0;
+    end
+    
+    local byBuff = TryGetProp(pc, "AllSize_Atk_BM");
+    if byBuff == nil then
+        byBuff = 0;
+    end
+
+    local value = byItem + byBuff;
+    return math.floor(value);
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_AllRace_Atk(pc)
+    local byItem = GetSumOfEquipItem(pc, "AllRace_Atk");
+    if byItem == nil then
+        byItem = 0;
+    end
+    
+    local byBuff = TryGetProp(pc, "AllRace_Atk_BM");
+    if byBuff == nil then
+        byBuff = 0;
+    end
+
+    local value = byItem + byBuff;
+    return math.floor(value);
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_LargeSize_ATK(pc)
     local byItem = GetSumOfEquipItem(pc, "ADD_LARGESIZE");
     if byItem == nil then
@@ -5254,23 +5318,20 @@ end
 function GET_HEAL_CTRL_RAID_RHP_BM(self, value)
     if self == nil then return 0; end
     if IsHealControlMap(self) == 0 then return 0; end
-
     if IsServerSection() == 1 then
         local cmd = GetMGameCmd(self);
         if cmd == nil then return 0; end
         local mgame_name = cmd:GetMGameName();
-        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
+        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil or string.find(mgame_name, "Goddess_Raid_Spreader_") ~= nil then
             local add_rhp_bm = value * 0.9 * -1.0;
             return add_rhp_bm;
         end
     else
         local mgame_name = session.mgame.GetCurrentMGameName()
-        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
+        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil or string.find(mgame_name, "Goddess_Raid_Spreader_") ~= nil then
             return -0.9; -- 90% 감소
         end
     end
-
-    
     return 0;
 end
 
@@ -5278,18 +5339,16 @@ end
 function GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self)
     if self == nil then return 0; end
     if IsHealControlMap(self) == 0 then return 0; end
+    local mgame_name = "None";
     if IsServerSection() == 1 then
         local cmd = GetMGameCmd(self);
         if cmd == nil then return 0; end
-        local mgame_name = cmd:GetMGameName();
-        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
-            return -0.9; -- 90% 감소
-        end
+        mgame_name = cmd:GetMGameName();
     else
-        local mgame_name = session.mgame.GetCurrentMGameName()
-        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil then
-            return -0.9; -- 90% 감소
-        end
+        mgame_name = session.mgame.GetCurrentMGameName()
+    end
+    if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil or string.find(mgame_name, "Goddess_Raid_Spreader_") ~= nil then
+        return -0.9; -- 90% 감소
     end
     return 0;
 end

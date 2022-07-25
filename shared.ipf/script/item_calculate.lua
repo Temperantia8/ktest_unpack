@@ -114,6 +114,10 @@ function GET_COMMON_PROP_LIST()
         'Magic_Fire_Atk',
         'Magic_Lightning_Atk',
         'ALLSTAT',
+        'AllMaterialType_Def',
+        'AllMaterialType_Atk',
+        'AllSize_Atk',
+        'AllRace_Atk',
         'Magic_Holy_Atk',
     };
 end
@@ -516,7 +520,7 @@ function GET_BASIC_ATK(item)
         local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
         if cls ~= nil then
             itemATK = TryGetProp(cls, 'BasicAtk', 0)
-            if classType == 'Neck' or classType == 'Ring' then
+            if classType == 'Neck' or classType == 'Ring' then -- 장신구
                 itemATK = TryGetProp(cls, 'BasicAccAtk', 0)
             end
 
@@ -541,14 +545,23 @@ function GET_EVOLVED_ATK(item)
     end
 
     local evolvedAtkUp = 0
-    local basicAtk = 13128
-    if TryGetProp(item, 'ClassType', 'None') == 'Trinket' then
-        basicAtk = basicAtk * 0.15
-    elseif TryGetProp(item, 'EquipGroup', 'None') == 'THWeapon' then
-        basicAtk = basicAtk * 1.15
-    end
+    local lv = TryGetProp(item, "UseLv", 0)
+    local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
+    if cls ~= nil then
+        local EvolveAtk = TryGetProp(cls, 'EvolveAtk', 0)
+        if EvolveAtk > 0 then
+            return EvolveAtk
+        else
+        local basicAtk = TryGetProp(cls, 'BasicAtk', 0)
+        if TryGetProp(item, 'ClassType', 'None') == 'Trinket' then
+            basicAtk = basicAtk * 0.15
+        elseif TryGetProp(item, 'EquipGroup', 'None') == 'THWeapon' then
+            basicAtk = basicAtk * 1.15
+        end
 
-    evolvedAtkUp = basicAtk * 0.05
+        evolvedAtkUp = basicAtk * 0.05
+        end
+    end
     return evolvedAtkUp
 end
 
@@ -630,7 +643,7 @@ function GET_BASIC_MATK(item)
         local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
         if cls ~= nil then
             itemATK = TryGetProp(cls, 'BasicAtk', 0)
-            if classType == 'Neck' or classType == 'Ring' then
+            if classType == 'Neck' or classType == 'Ring' then -- 장신구
                 itemATK = TryGetProp(cls, 'BasicAccAtk', 0)
             end
 
@@ -891,12 +904,12 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
                 if TryGetProp(item, "EquipGroup", "None") == "SubWeapon" then
                     -- 방패
                     basicDef = TryGetProp(cls, 'BasicAtk', 0)
-                else
-                    -- 상,하,장,신
-                    basicDef = TryGetProp(cls, 'BasicDef', 0) * 0.25
-                    if classType == 'BELT' then
+                else                  
+                    if classType == 'BELT' then-- 벨트
                         basicDef = TryGetProp(cls, 'BasicDef', 0) * 0.5
                         basicDef = basicDef + TryGetProp(item, 'Additional_def', 0)                        
+                    else-- 상,하,장,신
+                        basicDef = TryGetProp(cls, 'BasicDef', 0) * 0.25
                     end
 
                     local armorMaterialRatio = GetClassByNameFromList(itemGradeClass,'armorMaterial_'..basicProp)
@@ -922,7 +935,6 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
 
         if basicProp ~= 'None' then
                 basicDef = math.floor(basicDef) * upgradeRatio + GET_REINFORCE_ADD_VALUE(basicProp, item, ignoreReinfAndTranscend, reinfBonusValue) + buffarg
-            
                 item[basicProp] = SyncFloor(basicDef);
         end
     end
@@ -1154,7 +1166,7 @@ function APPLY_RANDOM_OPTION(item)
         local propValue = "RandomOptionValue_"..i;
         local getProp = TryGetProp(item, propName);
         if getProp ~= nil and item[propValue] ~= 0 and item[propName] ~= "None" then            
-            if GetClass('goddess_special_option', item[propName]) == nil then
+            if GetClass('goddess_special_option', item[propName]) == nil and GetClass('goddess_atk_def_option', item[propName]) == nil then
                 local prop = item[propName];
                 local propData = item[prop]
                 local addValue = math.floor(item[propValue] * growth_rate);
@@ -1877,7 +1889,6 @@ function SCR_GET_HP_COOLDOWN(item)
     if owner == nil then
         return 30000
     end
-    
     ---GuildColony POTION_TP CoolTime Setting---
     local iscolonyzone = IsJoinColonyWarMap(owner)
     if iscolonyzone == 1 then
@@ -1893,7 +1904,10 @@ function SCR_GET_HP_COOLDOWN(item)
     --------------------------------------------
     local ret = IsHealControlMap(owner)
     if ret == 1 then
-        return 100000 -- 100초
+        local item_cool_down = item.ItemCoolDown;
+        if item_cool_down < 100000 then
+            return 100000 -- 100초
+        end
     end
 
     return item.ItemCoolDown;

@@ -3,6 +3,7 @@
 	<ReadXml Name="bonescale"/>
 	<ReadXml Name="item_goddess_reinforce"/>
 	<ReadXml Name="item_goddess_reinforce_470"/>
+	<ReadXml Name="item_goddess_reinforce_480"/>
 	<ReadXml Name="pharmacy_material_type"/>	
 	<ReadXml Name="skill_Simony"/>
 	<ReadXml Name="archeology_property"/>
@@ -378,6 +379,7 @@
 	<ReadXml Name="achieve_guidequest"/>
 	<ReadXml Name="goddess_special_option"/>	
 	<ReadXml Name="monster_obj_interaction"/>
+	<ReadXml Name="goddess_atk_def_option"/>
 	<ReadXml Name="ecs_system"/>
 	<ReadXml Name="rank_system_contents_list"/>
 	<ReadXml Name="tribulation_system_reward_list"/>
@@ -385,4 +387,6 @@
 	<ReadXml Name="guide_mission\guide_main"/>
 	<ReadXml Name="guide_mission\guide_submission"/>
 	<ReadXml Name="tpitem_season"/>		
+	<ReadXml Name="skill_attribute_mon"/>
+	<ReadXml Name="buff_attribute"/>
 </Category>

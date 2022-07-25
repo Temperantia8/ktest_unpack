@@ -11304,6 +11304,13 @@
             </ToolScp>
         </StartList>
     </AI>
+	<AI Name="SPREADER_TRANSITION_CRYSTAL_FRAGMENT_MON_AI" UpdateMS="100" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_SUMMON_MONSTER_AI"/>
+			</ToolScp>
+		</List>
+	</AI>
     <AI Name="GM_BK_Reigning_1" ActiveMessageMapInBattle="1">
         <List>
             <ToolScp Scp="S_AI_ATTACK_NEAR_MAXHATECOUNT_CHECK" Client="NO" UseSleep="NO">

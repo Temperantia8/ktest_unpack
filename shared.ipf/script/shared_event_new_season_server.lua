@@ -4,7 +4,6 @@ season_server_no_sell_item_list = {}
 
 -- 20.08 여름 시즌서버
 function IS_SEASON_SERVER(pc)
-
     local acc = nil
     if IsServerSection() == 1 and pc ~= nil then
         acc = GetAccountObj(pc)
@@ -15,7 +14,7 @@ function IS_SEASON_SERVER(pc)
     if acc ~= nil then
         local marker = TryGetProp(acc, 'SeasonServerMarker', 'None')
         if marker == '2022-06-09' then
-            return 'YES'
+            return --[[ 'YES' ]]"NO";
         end
     end
 
@@ -23,15 +22,15 @@ function IS_SEASON_SERVER(pc)
     
     -- qa 1006, 스테이지 8001/8002
     if (GetServerNation() == "KOR" and (groupid == 1006 or groupid == 8002)) then
-        return "YES";
+        return --[[ "YES" ]]"NO";
     end
 
     if (GetServerNation() == "KOR" and groupid == 3002) then
-        return "YES";
+        return --[[ "YES" ]]"NO";
     end
 
     if (GetServerNation() == "GLOBAL" and (groupid == 10001 or groupid == 10003 or groupid == 10004 or groupid == 10005)) then
-        return "YES";
+        return --[[ "YES" ]]"NO";
     end
 
     return "NO";
@@ -90,7 +89,7 @@ end
 ]]
 function GET_SPECIAL_CREATE_TICKET_INFO()
     local startTime = '2022-06-09 06:00:00'
-    local endTime = '2022-07-21 05:59:59'
+    local endTime = '2022-07-28 05:59:59'
     local setCount = '1'
 
     return startTime, endTime, setCount

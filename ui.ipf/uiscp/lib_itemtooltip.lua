@@ -71,7 +71,9 @@ function IS_NEED_DRAW_AETHER_GEM_TOOPTIP(item_obj)
 	local inv_item = GET_INV_ITEM_BY_ITEM_OBJ(item_obj);
 	if inv_item == nil then return false; end
 	if item_obj.ItemGrade < 6 then return false; end
-	if inv_item:IsAvailableSocket(item_obj.MaxSocket_COUNT) == false then return false; end
+	
+	local start_index, end_index = GET_AETHER_GEM_INDEX_RANGE(TryGetProp(item_obj, 'UseLv', 0))
+	if inv_item:IsAvailableSocket(start_index) == false then return false; end
 	return true;
 end
 

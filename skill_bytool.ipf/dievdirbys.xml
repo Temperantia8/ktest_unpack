@@ -235,8 +235,8 @@
         <ByCondSkills>
             <SubSkl>
                 <Cond>
-                    <ToolScp Client="NO" Scp="SKL_SELECT_BUFF" UseSleep="NO">
-                        <Str Str="Ausirine_Buff"/>
+                    <ToolScp Client="NO" Scp="SKL_SELECT_EXPROP" UseSleep="NO">
+                        <Str Str="SKILL_PASSIVE_Dievdirbys_CarveAusirine"/>
                     </ToolScp>
                 </Cond>
                 <Skill JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">

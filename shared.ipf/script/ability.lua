@@ -3226,11 +3226,17 @@ function SCR_ABIL_Schwarzereiter31_INACTIVE(self, ability)
 end
 
 function SCR_ABIL_Schwarzereiter18_ACTIVE(self, ability)
-    StartCoolTime(self, 'Schwarzereiter_Limacon')
+    local skill = GetSkill(self, 'Schwarzereiter_AssaultFire')
+    if skill ~= nil then
+        InvalidateSkill(self, 'Schwarzereiter_AssaultFire')
+    end
 end
 
 function SCR_ABIL_Schwarzereiter18_INACTIVE(self, ability)
-    StartCoolTime(self, 'Schwarzereiter_Limacon')
+    local skill = GetSkill(self, 'Schwarzereiter_AssaultFire')
+    if skill ~= nil then
+        InvalidateSkill(self, 'Schwarzereiter_AssaultFire')
+    end
 end
 
 function SCR_ABIL_Crusader22_ACTIVE(self, ability)
@@ -3843,7 +3849,7 @@ function SCR_ABIL_Dievdirbys32_ACTIVE(self, ability)
     if skill ~= nil then
         _SCR_CLERIC_SWAP_ABIL_ACTIVE(self, skill)
 
-        if GetExProp(self, 'MemoryLeap_Lv4') > 0 then
+        if GetExProp(self, 'ITEM_VIBORA_Dievdirbys_Lv4') > 0 then
             SetSkillOverHeat(self, skill.ClassName, 2, 1)
             RequestResetOverHeat(self, "CarveLaima_OH")
         end

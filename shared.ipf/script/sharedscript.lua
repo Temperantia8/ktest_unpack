@@ -2,6 +2,9 @@
 
 local json = require('json')
 
+SEASON_COIN_NAME = 'VakarineCertificate'
+SEASON_COIN_PREFIX_NAME = 'VakarineCertificateCoin'
+
 function shuffle(tbl)
     local ret = {}
     for k, v in pairs(tbl) do
@@ -192,6 +195,7 @@ local function init_random_option_range_table()
     init_random_option_range_table_for_lv(430)
     init_random_option_range_table_for_lv(440)
     init_random_option_range_table_for_lv(460)
+    init_random_option_range_table_for_lv(470)
     init_random_option_range_table_for_lv(490)
 end
 -- end of 초기 정보 (min, max) 세팅 함수 ----------------------------------------------
@@ -3566,6 +3570,11 @@ function CAN_COMPOSITION_SKILL_GEM(item)
         return false, 0
     end
 
+    local ret = IS_RANDOM_OPTION_SKILL_GEM(item)
+    if ret == true then
+        return false, 0
+    end
+
     local level = TryGetProp(item, 'NumberArg1', 0)
     local cls = GetClassByType('item_gem_composition', level)
     if cls == nil then
@@ -3898,6 +3907,22 @@ function TRIM_STRING_WITH_SPACING(str)
 	return str
 end
 
+function GET_CHAR_COUNT(str)
+    str = string.gsub(str," ","")
+    local function GetAsciiLen(str)
+        local chars = {}
+        for char in str:gmatch("[%w\0-\128]") do 
+            table.insert(chars, char) 
+        end
+    
+        return #chars
+    end
+    local asciiLen = GetAsciiLen(str)
+    local unicodeLen = (string.len(str) - asciiLen)/3
+
+    return asciiLen + unicodeLen
+end
+
 function UQ_GET_JOB_SETTING_JOB(JobClassName) -- job_unlockquest.xml에서 cls를 가져온다
     local JobNumLimt = 1000
     local list, cnt = GetClassList("job_unlockquest")
@@ -4173,4 +4198,67 @@ function IS_DESTROYABLE_COSTUME_ITEM(item)
     end
 
     return false
+end
+
+-- 통합 서버 & 시즌 서버 컨텐츠 시간 제한
+-- 낚시, 콜로니전
+function CHECK_FISHING_AND_COLONY_RESTRICT_TIME(self)
+    local time = nil;
+    if IsServerSection() == 1 then time = GetDBTime();
+    else time = geTime.GetServerSystemTime(); end
+    if time ~= nil then
+        local month = time.wMonth;
+        local day = time.wDay;
+        local hour = time.wHour;
+        if IS_SEASON_SERVER(self) == "YES" then
+            if month == 7 then
+                if day >= 18 and day < 28 then
+                    return true;
+                end
+                if day == 28 and hour < 12 then 
+                    return true;
+                end
+            end
+        else
+            if month == 7 then
+                if day >= 4 and day < 14 then
+                    return true;
+                end
+                if day == 14 and hour < 12 then 
+                    return true;
+                end
+            end
+        end
+    end
+    return false;
+end
+
+-- 봉쇄전, 베르니케, 영웅담, 주간 보스 레이드, 델무어 격전지 & 여신의 전언 순례자
+function CHECK_INDUN_CONTENTS_RESTRICT_TIME(self)
+    local time = nil;
+    if IsServerSection() == 1 then time = GetDBTime();
+    else time = geTime.GetServerSystemTime(); end
+    if time ~= nil then
+        local month = time.wMonth;
+        local day = time.wDay;
+        local hour = time.wHour;
+        if IS_SEASON_SERVER(self) == "YES" then
+            if day >= 25 and day < 28 then
+                return true;
+            end
+            if day == 28 and hour < 12 then
+                return true;
+            end
+        else
+            if month == 7 then
+                if day >= 11 and day < 14 then
+                    return true;
+                end
+                if day == 14 and hour < 12 then
+                    return true;
+                end
+            end
+        end
+    end
+    return false;
 end
