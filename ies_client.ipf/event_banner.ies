@@ -1,4 +1,7 @@
 ClassID,StartTimeYYYYMM,StartTimeDDHHMM,NewTimeYYYYMM,NewTimeDDHHMM,EndTimeYYYYMM,EndTimeDDHHMM,DeadlineTimeYYYYMM,DeadlineTimeDDHHMM,ExchangeTimeYYYYMM,ExchangeTimeDDHHMM,ClassName,Name,ImagePath,url,UserCommand1,UserCommand2,UserCommand3,ShowType
+996060,202207,280000,202208,20000,202209,80600,202209,30000,0,0,"event2207_Unity","화합의 트오세","event2207_Unity","https://tos.nexon.com/news/events/view?n4ArticleSN=396","","","",""
+996070,202208,10000,202208,60000,202209,10000,202208,270000,0,0,"event2208_VaivoraReward","바이보라의 날개 출석체크 - 8월","event2208_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=395","","","",""
+996080,202208,10000,202208,60000,202209,10000,202208,270000,0,0,"event2208_Burning","주말앤버닝 - 8월","event2208_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=394","","","",""
 996090,202206,230000,202206,280000,202208,110600,202208,60000,0,0,"event2207_goddess","여신의 축복 - 7월","event2207_goddess","https://tos.nexon.com/News/Update/view?n4ArticleSN=2796","","","",""
 996100,202207,10000,202207,60000,202208,10000,202207,260000,0,0,"event2207_VaivoraReward","바이보라의 날개 출석체크 - 7월","event2207_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=391","","","",""
 996110,202207,10000,202207,60000,202208,10000,202207,260000,0,0,"event2207_Burning","주말앤버닝 - 7월","event2207_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=390","","","",""

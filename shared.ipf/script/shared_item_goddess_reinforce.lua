@@ -867,7 +867,7 @@ function setting_lv_misc_material(mat_list_by_lv, lv, group)
 	mat_list_by_lv[lv][group][8][misc1] = 45
 	mat_list_by_lv[lv][group][8][misc2] = 11
 
-	mat_list_by_lv[lv][group][9][misc1] = 451
+	mat_list_by_lv[lv][group][9][misc1] = 45
 	mat_list_by_lv[lv][group][9][misc2] = 11
 
 	mat_list_by_lv[lv][group][10][misc1] = 67
@@ -879,10 +879,10 @@ function setting_lv_misc_material(mat_list_by_lv, lv, group)
 	mat_list_by_lv[lv][group][12][misc1] = 67
 	mat_list_by_lv[lv][group][12][misc2] = 16
 
-	mat_list_by_lv[lv][group][13][misc1] = 676
+	mat_list_by_lv[lv][group][13][misc1] = 67
 	mat_list_by_lv[lv][group][13][misc2] = 16
 
-	mat_list_by_lv[lv][group][14][misc1] = 676
+	mat_list_by_lv[lv][group][14][misc1] = 67
 	mat_list_by_lv[lv][group][14][misc2] = 16
 
 	mat_list_by_lv[lv][group][15][misc1] = 92
@@ -909,28 +909,28 @@ function setting_lv_misc_material(mat_list_by_lv, lv, group)
 	mat_list_by_lv[lv][group][22][misc1] = 258
 	mat_list_by_lv[lv][group][22][misc2] = 64
 
-	mat_list_by_lv[lv][group][23][misc1] = 258
+	mat_list_by_lv[lv][group][23][misc1] = 300
 	mat_list_by_lv[lv][group][23][misc2] = 64
 
-	mat_list_by_lv[lv][group][24][misc1] = 258
+	mat_list_by_lv[lv][group][24][misc1] = 300
 	mat_list_by_lv[lv][group][24][misc2] = 64
 
-	mat_list_by_lv[lv][group][25][misc1] = 258
+	mat_list_by_lv[lv][group][25][misc1] = 300
 	mat_list_by_lv[lv][group][25][misc2] = 64
 
-	mat_list_by_lv[lv][group][26][misc1] = 258
+	mat_list_by_lv[lv][group][26][misc1] = 300
 	mat_list_by_lv[lv][group][26][misc2] = 64
 
-	mat_list_by_lv[lv][group][27][misc1] = 258
+	mat_list_by_lv[lv][group][27][misc1] = 300
 	mat_list_by_lv[lv][group][27][misc2] = 64
 
-	mat_list_by_lv[lv][group][28][misc1] = 258
+	mat_list_by_lv[lv][group][28][misc1] = 300
 	mat_list_by_lv[lv][group][28][misc2] = 64
 
-	mat_list_by_lv[lv][group][29][misc1] = 258
+	mat_list_by_lv[lv][group][29][misc1] = 300
 	mat_list_by_lv[lv][group][29][misc2] = 64
 
-	mat_list_by_lv[lv][group][30][misc1] = 258
+	mat_list_by_lv[lv][group][30][misc1] = 300
 	mat_list_by_lv[lv][group][30][misc2] = 64
 end
 
@@ -983,7 +983,7 @@ function make_item_goddess_reinforce_material_list()
 	table.insert(classtype_list, 'Neck')
 
 	group_list['Ring'] = 'acc'
-	group_list['Neck'] = 'armor'
+	group_list['Neck'] = 'acc'
 
 	-- 무기 방어구
 	for lv, v1 in pairs(item_goddess_reinforce_material_list) do
@@ -1071,7 +1071,7 @@ item_goddess_reinforce.get_material_list = function(use_lv, class_type, goal_lv)
 	if item_goddess_reinforce_material_list[use_lv][class_type] == nil then
 		return nil
 	end
-
+	
 	return item_goddess_reinforce_material_list[use_lv][class_type][goal_lv]
 end
 

@@ -104,7 +104,7 @@ function make_item_goddess_icor_range()
     -- ATK
     local max
 
-    max = 642
+    max = 963
     local set_list = {'AllMaterialType_Atk', 'AllRace_Atk'}
     for k, v in pairs(set_list) do
         item_goddess_icor_range[480]['Armor'][v] = {}
@@ -112,7 +112,7 @@ function make_item_goddess_icor_range()
         item_goddess_icor_range[480]['Armor'][v]['HIGH'] = {math.floor(max), math.floor(max * 1.2)}
     end
 
-    max = 755
+    max = 1132
     set_list = {'ADD_CLOTH', 'ADD_LEATHER', 'ADD_IRON', 'ADD_SMALLSIZE', 'ADD_MIDDLESIZE', 'ADD_LARGESIZE', 'ADD_GHOST', 'ADD_FORESTER', 'ADD_WIDLING', 'ADD_VELIAS', 'ADD_PARAMUNE', 'ADD_KLAIDA'}
     for k, v in pairs(set_list) do
         item_goddess_icor_range[480]['Armor'][v] = {}
@@ -120,14 +120,14 @@ function make_item_goddess_icor_range()
         item_goddess_icor_range[480]['Armor'][v]['HIGH'] = {math.floor(max), math.floor(max * 1.2)}
     end
 
-    max = 1131
+    max = 1696
     item_goddess_icor_range[480]['Armor']['Add_Damage_Atk'] = {}
     item_goddess_icor_range[480]['Armor']['Add_Damage_Atk']['LOW'] = {math.floor(max *0.8), max}
     item_goddess_icor_range[480]['Armor']['Add_Damage_Atk']['HIGH'] = {math.floor(max), math.floor(max * 1.2)}
     -- end of ATK
 
     -- STAT
-    max = 113
+    max = 169
     set_list = {'STR', 'DEX', 'CON', 'INT', 'MNA'}
     for k, v in pairs(set_list) do
         item_goddess_icor_range[480]['Armor'][v] = {}
@@ -137,7 +137,7 @@ function make_item_goddess_icor_range()
     -- end of STAT
 
     -- UTIL_ARMOR
-    max = 377
+    max = 565
     set_list = {'CRTHR', 'BLK_BREAK', 'BLK', 'ADD_HR', 'ADD_DR', 'CRTDR', 'RHP'}
     for k, v in pairs(set_list) do
         item_goddess_icor_range[480]['Armor'][v] = {}
@@ -147,12 +147,12 @@ function make_item_goddess_icor_range()
     -- end of UTIL_ARMOR
 
     -- DEF
-    max = 1131
+    max = 1696
     item_goddess_icor_range[480]['Armor']['ResAdd_Damage'] = {}
     item_goddess_icor_range[480]['Armor']['ResAdd_Damage']['LOW'] = {math.floor(max *0.8), max}
     item_goddess_icor_range[480]['Armor']['ResAdd_Damage']['HIGH'] = {math.floor(max), math.floor(max * 1.2)}
 
-    max = 755
+    max = 1132
     set_list = {'Cloth_Def', 'Leather_Def', 'Iron_Def', 'MiddleSize_Def'}
     for k, v in pairs(set_list) do
         item_goddess_icor_range[480]['Armor'][v] = {}
@@ -357,7 +357,7 @@ shared_item_goddess_icor.get_cost = function(lv, count, grade, cost_list)
             local cost_count = 1 + math.floor(count / 5)
             cost_list['misc_BlessedStone'] = math.floor(cost_count)
 
-            cost_count = 2000 * math.pow(1.04, count)
+            cost_count = 300 * math.pow(1.04, count)
             cost_list['VakarineCertificate'] = math.floor(cost_count)
 
             cost_count = 100 * math.pow(1.04, count)
@@ -372,15 +372,15 @@ shared_item_goddess_icor.get_cost = function(lv, count, grade, cost_list)
             cost_count = cost_count * 1.5
             cost_list['misc_BlessedStone'] = math.floor(cost_count)
 
-            cost_count = 5000 * math.pow(1.04, count)
+            cost_count = 300 * math.pow(1.04, count)
             cost_count = cost_count * 1.3
             cost_list['VakarineCertificate'] = math.floor(cost_count)
 
-            cost_count = 500 * math.pow(1.04, count)
+            cost_count = 100 * math.pow(1.04, count)
             cost_count = cost_count * 1.5
             cost_list['misc_ore22'] = math.floor(cost_count) -- 뉴클
 
-            cost_count = 125 * math.pow(1.04, count)
+            cost_count = 25 * math.pow(1.04, count)
             cost_count = cost_count * 1.5
             cost_list['misc_ore23'] = math.floor(cost_count)
             return true

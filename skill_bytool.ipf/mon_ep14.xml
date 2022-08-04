@@ -807,7 +807,7 @@
                     <Num Num="0.0099999998"/>
                     <Num Num="0.2"/>
                     <Num Num="500"/>
-                    <Str_Arg Str="None" Arg="2.2"/>
+                    <Str_Arg Str="None" Arg="0.80000001"/>
                     <Num Num="20"/>
                     <Num Num="100"/>
                     <Num Num="0"/>
@@ -820,6 +820,16 @@
                     <Num Num="0"/>
                     <Num Num="100"/>
                 </Scp>
+                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="0">
+                    <Str_Arg Str="F_light055_orange4##0.5" Arg="2.5"/>
+                    <Str Str="Dummy_eff_Sword"/>
+                    <Num Num="0.80000001"/>
+                </Scp>
+                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="100">
+                    <Str_Arg Str="F_light055_orange4##0.5" Arg="2.5"/>
+                    <Str Str="Dummy_eff_Sword"/>
+                    <Num Num="0.80000001"/>
+                </Scp>
                 <Anim Time="600" Anim="skl1" Speed="1" StartTime="0.40000001"/>
             </EtcList>
         </MainSkl>
@@ -827,7 +837,7 @@
     <Skill Name="Mon_ep14_2_Bleakferret_Scout_Skill_2">
         <MainSkl ScrLock="None" JumpFlee="NO" MSPDToUsePos="0">
             <HitList>
-                <Frame Type="FAN" Time="9999" HitCount="1" TermMin="0" TermMax="0" PosType="0" Dist="0" RandDist="0" RandomPerHit="0" Angle="0" Width="30" Length="30" SklAngle="0.17453292" AniTime="10199" RotAngle="0" ForceATK="0"/>
+                <Frame Type="FAN" Time="9999" HitCount="1" TermMin="0" TermMax="0" PosType="0" Dist="0" RandDist="0" RandomPerHit="0" Angle="0" Width="30" Length="30" SklAngle="0.17453292" AniTime="10199" RotAngle="0" ForceATK="0"ScriptIndex="0" ScriptName="" SkillType="0"/>
             </HitList>
             <EtcList>
                 <Anim Time="0" Anim="skl1" Speed="1"/>
@@ -846,7 +856,7 @@
                     <Pos Angle="0" Dist="0" PosType="9"/>
                     <Str_Arg Str="None" Arg="1"/>
                     <Num Num="0"/>
-                    <Str_Arg Str="I_explosion002_green" Arg="1"/>
+                    <Str_Arg Str="F_explosion141_red" Arg="0.69999999"/>
                     <Num Num="20"/>
                     <Num Num="100"/>
                     <Num Num="0"/>
@@ -863,7 +873,7 @@
                     <Pos Angle="0" Dist="0" PosType="9"/>
                     <Str_Arg Str="None" Arg="1"/>
                     <Num Num="0"/>
-                    <Str_Arg Str="I_explosion002_green" Arg="1"/>
+                    <Str_Arg Str="F_explosion141_red" Arg="0.69999999"/>
                     <Num Num="20"/>
                     <Num Num="100"/>
                     <Num Num="0"/>
@@ -880,7 +890,7 @@
                     <Pos Angle="0" Dist="0" PosType="9"/>
                     <Str_Arg Str="None" Arg="1"/>
                     <Num Num="0"/>
-                    <Str_Arg Str="I_explosion002_green" Arg="1"/>
+                    <Str_Arg Str="F_explosion141_red" Arg="0.80000001"/>
                     <Num Num="20"/>
                     <Num Num="100"/>
                     <Num Num="0"/>
@@ -896,7 +906,7 @@
                     <Pos Angle="0" Dist="0" PosType="9"/>
                     <Str_Arg Str="None" Arg="1"/>
                     <Num Num="0"/>
-                    <Str_Arg Str="I_explosion002_green" Arg="1"/>
+                    <Str_Arg Str="F_explosion141_red" Arg="1"/>
                     <Num Num="20"/>
                     <Num Num="100"/>
                     <Num Num="0"/>
@@ -914,7 +924,7 @@
     <Skill Name="Mon_ep14_2_Bleakferret_Scout_Skill_1">
         <MainSkl ScrLock="None" JumpFlee="NO" MSPDToUsePos="0">
             <HitList>
-                <Frame Type="FAN" Time="9999" HitCount="1" TermMin="0" TermMax="0" PosType="0" Dist="0" RandDist="0" RandomPerHit="0" Angle="0" Width="30" Length="30" SklAngle="0.17453292" AniTime="10199" RotAngle="0" ForceATK="0"/>
+                <Frame Type="FAN" Time="9999" HitCount="1" TermMin="0" TermMax="0" PosType="0" Dist="0" RandDist="0" RandomPerHit="0" Angle="0" Width="30" Length="30" SklAngle="0.17453292" AniTime="10199" RotAngle="0" ForceATK="0"ScriptIndex="0" ScriptName="" SkillType="0"/>
             </HitList>
             <EtcList>
                 <Scp Scp="SKL_SET_TARGET_CIRCLE" Client="NO" UseSleep="NO" Time="0">
@@ -933,7 +943,7 @@
                     <Pos Angle="0" Dist="0" PosType="9"/>
                     <Str_Arg Str="None" Arg="1"/>
                     <Num Num="0"/>
-                    <Str_Arg Str="I_explosion002_green" Arg="1"/>
+                    <Str_Arg Str="F_explosion141_red" Arg="1"/>
                     <Num Num="20"/>
                     <Num Num="100"/>
                     <Num Num="0"/>

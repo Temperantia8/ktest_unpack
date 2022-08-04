@@ -110,21 +110,26 @@ function IS_ABLE_SPECIAL_CREATE_TICKET(pc)
         etcObj = GetMyEtcObject()
     end
 
-    if accObj == nil or TryGetProp(accObj, 'SPECIAL_CREATE_TICKET_COUNT', 0) <= 0 then
+    local ticket_count = TryGetProp(accObj, 'SPECIAL_CREATE_TICKET_COUNT', 0)
+    if accObj == nil or ticket_count <= 0 then
         if etcObj == nil or TryGetProp(etcObj, 'SettingProgressState', 0) == 0 or TryGetProp(etcObj, 'SettingProgressState', 0) >= 5 then
             return false, 'HaveNoSpecialCreateTicket'
         end
     end
 
-    local startTime, endTime = GET_SPECIAL_CREATE_TICKET_INFO()
-    local nowTime = date_time.get_lua_now_datetime_str()
-    if IsServerSection() == 0 then
-        local server_time = geTime.GetServerSystemTime()
-        nowTime = date_time.lua_datetime_to_str(date_time.get_lua_datetime(server_time.wYear, server_time.wMonth, server_time.wDay, server_time.wHour, server_time.wMinute, server_time.wSecond))
-    end
-
-    if date_time.is_later_than(startTime, nowTime) == true or date_time.is_later_than(nowTime, endTime) == true then
-        return false, 'SpecialCreateTicketExpired'
+    -- 카운트가 1이면 기간제로 무상 제공
+    -- 1보다 큰 양의 정수이면 아이템 사용해서 얻은 것
+    if ticket_count == 1 then
+        local startTime, endTime = GET_SPECIAL_CREATE_TICKET_INFO()
+        local nowTime = date_time.get_lua_now_datetime_str()
+        if IsServerSection() == 0 then
+            local server_time = geTime.GetServerSystemTime()
+            nowTime = date_time.lua_datetime_to_str(date_time.get_lua_datetime(server_time.wYear, server_time.wMonth, server_time.wDay, server_time.wHour, server_time.wMinute, server_time.wSecond))
+        end
+    
+        if date_time.is_later_than(startTime, nowTime) == true or date_time.is_later_than(nowTime, endTime) == true then
+            return false, 'SpecialCreateTicketExpired'
+        end
     end
 
     return true

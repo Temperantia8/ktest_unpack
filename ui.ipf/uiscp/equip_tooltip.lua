@@ -88,7 +88,7 @@ local function _CREATE_SEAL_OPTION_HIDE(box, ypos, step, drawLine, sealItemObj)
 				ypos = CreateLine(box, step, ypos);
 			end
 
-			ypos = _CREATE_SEAL_OPTION(box, ypos, step, optionName, optionValue, false, '{@st41b}{s18}{#bfbfbf}', true);
+			ypos = _CREATE_SEAL_OPTION(box, ypos, step, optionName, optionValue, false, '{@st41b}{s18}{#bfbfbf}', true, sealItemObj);
 		end
 	end
 

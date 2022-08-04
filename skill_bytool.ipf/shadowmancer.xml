@@ -352,7 +352,7 @@ return value"/>
 					<Num FuncTxt="local value = obj.Level * 500; 
 local abil = GetAbility(self, 'Shadowmancer16')
 if abil ~= nil then
-    value = 5000
+    value = obj.Level * 1000
 end
 return value" Num="0" UseFunc="1" />
 					<Num Num="1" />

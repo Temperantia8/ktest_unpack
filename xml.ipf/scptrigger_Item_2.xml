@@ -7422,6 +7422,24 @@
 			</Trigger>
 		</TriggerList>
 	</SpcItem>
+	<SpcItem Name="EP14_RAID_TRINKET">
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="equip_ep14_goddess_weapon" Client="NO" UseSleep="NO">
+          </ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="unequip_ep14_goddess_weapon" Client="NO" UseSleep="NO">
+          </ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
 	<SpcItem Name="EP14_RAID_CLOTH_TOP">
 		<TriggerList Act="Equip">
 			<Trigger>

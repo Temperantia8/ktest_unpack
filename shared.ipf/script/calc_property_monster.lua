@@ -238,11 +238,13 @@ function SCR_Get_MON_MHP(self)
     end
 
     local zone_name = GetZoneName(self)
-    local prefix = 'field_monster_status_' .. zone_name
-    local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
-        if TryGetProp(spec_cls, 'MHP', 0) > 0 then
-            return TryGetProp(spec_cls, 'MHP', 0) 
+    if zone_name ~= nil then
+        local prefix = 'field_monster_status_' .. zone_name
+        local spec_cls = GetClass(prefix, self.ClassName)
+        if spec_cls ~= nil then
+            if TryGetProp(spec_cls, 'MHP', 0) > 0 then
+                return TryGetProp(spec_cls, 'MHP', 0) 
+            end
         end
     end
 
