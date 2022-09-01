@@ -131,11 +131,6 @@ function IS_ABLE_TO_REINFORCE_GODDESS(item)
 		return false
 	end
 
-	local equip_group = TryGetProp(item, 'EquipGroup', 'None')
-	if TryGetProp(item, 'UseLv', 0) == 480 and (equip_group == 'SHIRT' or equip_group == 'PANTS' or equip_group == 'BOOTS' or equip_group == 'GLOVES') then
-		return false, 'LockReinforceState'
-	end
-
     local classType = TryGetProp(item, 'ClassType');
 	local enableClassType = {'Sword', 'THSword', 'Staff', 'THBow', 'Bow', 'Mace', 'THMace', 'Spear', 'THSpear', 'Dagger', 'THStaff', 'Pistol', 'Rapier', 'Cannon', 'Musket', 'Shirt', 'Pants', 'Boots', 'Gloves', 'Shield', 'Trinket', 'Ring', 'Neck'};
 	for i = 1, #enableClassType do

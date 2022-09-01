@@ -944,24 +944,22 @@ function SCR_GET_SKL_COOLDOWN_Bunshin_no_jutsu(skill)
 end
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_SKL_COOLDOWN_KaguraDance(skill)
-    local pc = GetSkillOwner(skill);
+    local pc = GetSkillOwner(skill)
 
-    local level = TryGetProp(skill, "Level", 0) - 1
-    local basicCoolDown = skill.BasicCoolDown - (level * 5000);        
-    local abilAddCoolDown = GetAbilityAddSpendValue(pc, skill.ClassName, "CoolDown");
-    basicCoolDown = basicCoolDown + abilAddCoolDown;    
-    basicCoolDown = SCR_COMMON_COOLDOWN_DECREASE(pc, skill, basicCoolDown)    
-    local ret = math.floor(basicCoolDown) / 1000    
-    ret = math.floor(ret) * 1000;    
-
+    local level = TryGetProp(skill, "Level", 0)
     local abil = GetAbility(pc, "Miko18")
     if abil ~= nil and TryGetProp(abil, 'ActiveState', 0) == 1 then
-        if ret < 20000 then
-            ret = 20000
+        if level > 5 then
+            level = 5
         end
     end
-    
-    ret = math.floor(ret)    
+
+    local basicCoolDown = skill.BasicCoolDown - ((level - 1) * 5000)
+    local abilAddCoolDown = GetAbilityAddSpendValue(pc, skill.ClassName, "CoolDown")
+    basicCoolDown = basicCoolDown + abilAddCoolDown
+    basicCoolDown = SCR_COMMON_COOLDOWN_DECREASE(pc, skill, basicCoolDown)    
+    local ret = math.floor(basicCoolDown) / 1000
+    ret = math.floor(ret) * 1000
     ret = math.max(1000, ret)
     return ret
 end
@@ -1468,7 +1466,7 @@ function SCR_Get_SkillFactor_Pheasant_Vibora(skill)
     local value = 100 
     local pheasantSkill = GetSkill(pc, 'Falconer_Pheasant');
     if pheasantSkill ~= nil then
-        value = TryGetProp(pheasantSkill, "SkillFactor", 100) * 0.15
+        value = TryGetProp(pheasantSkill, "SkillFactor", 100) * 0.10
     end
     
     return value
@@ -2699,10 +2697,8 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_BattleOrders_Ratio(skill)
-    local value = SCR_GET_BattleOrders_Ratio2(skill)
-    local addvalue = skill.Level * 1.5
-    value = value + addvalue
-    
+    local value = 1 + skill.Level * 0.2
+    value = value * SCR_REINFORCEABILITY_TOOLTIP(skill)
     return value
 end
 
@@ -2715,14 +2711,27 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_AdvancedOrders_Ratio(skill)
-    local value = skill.Level
+    local value = 5 + skill.Level * 0.7
+    value = value * SCR_REINFORCEABILITY_TOOLTIP(skill)
     return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_AdvancedOrders_Ratio2(skill)
     local value = skill.Level
+    if value > 5 then
+        value = 5
+    end
     
+    return value
+end
+
+function SCR_GET_AdvancedOrders_Ratio3(skill)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
     return value
 end
 
@@ -5525,10 +5534,12 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_Pandemic_Ratio(skill)
-
-  local value = 3 + skill.Level * 2
-  return value;
-  
+    local value = 3 + skill.Level * 2
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -18613,6 +18624,60 @@ function SCR_GET_RevengedSevenfold_Ratio2(skill)
     local pc = GetSkillOwner(skill)
     if IsPVPField(pc) == 1 or IsPVPServer(pc) == 1 then
         value = 1
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_MoraleBanner_Ratio(skill)
+    local value = 3 + skill.Level * 0.5
+    value = value * SCR_REINFORCEABILITY_TOOLTIP(skill)
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_VitalityBanner_Ratio(skill)
+    local value = skill.Level * 0.5
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_VitalityBanner_Time(skill)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 or IsPVPServer(pc) == 1 then
+        value = 5
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_RevengeBanner_Ratio(skill)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Retribution_Ratio(skill)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_SkillFactor_Retribution_Residue(skill)
+    local value = 100
+    local pc = GetSkillOwner(skill)
+    local retributionSkl = GetSkill(pc, 'Templer_Retribution')
+    if retributionSkl ~= nil then
+        value = math.floor(TryGetProp(retributionSkl, 'SkillFactor', 100) * 0.5) * 0.1
     end
     return value
 end

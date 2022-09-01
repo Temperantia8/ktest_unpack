@@ -863,6 +863,19 @@
         <Effect Name="F_pose_squardon_smoke_red"/>
         <Effect Name="F_pose_squadron_smoke_red"/>
         <Effect Name="I_force018_trail_rize_white2"/>
+        <Effect Name="Templer_MoraleBanner"/>
+        <Effect Name="Templer_VitalityBanner"/>
+        <Effect Name="Templer_RevengeBanner"/>
+        <Effect Name="F_warrior_AdvancedOrders_ground_loop"/>
+        <Effect Name="F_warrior_BattleOrders_ground_loop"/>
+        <Effect Name="skl_eff_pet_ep14rider_ride_on"/>
+        <Effect Name="skl_eff_pet_ep14rider_idl_2sec"/>
+        <Effect Name="skl_eff_pet_ep14rider_run_2sec"/>
+        <Effect Name="Templer_Retribution_Residue"/>
+        <Effect Name="Templer_AdvancedOrders_Debuff"/>
+        <Effect Name="F_warrior_MoralBanner_buff"/>
+        <Effect Name="F_warrior_RetributionBanner_buff"/>
+        <Effect Name="F_warrior_Vitalitybanner_buff"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
@@ -8630,6 +8643,9 @@
         <Effect Name="F_explosion141_violet"/>
         <Effect Name="F_smoke209"/>
         <Effect Name="F_explosion046_red2"/>
+        <Effect Name="F_ground190_circle_crack2_1"/>
+        <Effect Name="I_breath021_dark2"/>
+        <Effect Name="F_burstup063"/>
     </Category>
     <Category ID="27">
         <Effect Name="SAPPER_TRAP_Sapper_BroomTrap"/>
@@ -11123,6 +11139,14 @@
         <Effect Name="raid_tubulentcore"/>
         <Effect Name="raid_turbulentcore"/>
         <Effect Name="boss_spreader"/>
+        <Effect Name="Falouros_BlackWhiteThunderstroke_BlackPad"/>
+        <Effect Name="Falouros_BlackWhiteThunderstroke_DamagePad"/>
+        <Effect Name="Falouros_BlackWhiteThunderstroke_WhitePad"/>
+        <Effect Name="F_rize015_11_drop_white"/>
+        <Effect Name="Falouros_Sphere_Driving_Electric_Pad"/>
+        <Effect Name="Falouros_Sphere_Driving_TargetPoint_Pad"/>
+        <Effect Name="Falouros_Hoop_Pad"/>
+        <Effect Name="Falouros_Hoop_Near_Pad"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>
@@ -41585,7 +41609,35 @@
         	<Effect Name="F_light214_green"/>
         	<Effect Name="F_spread_in057_yello_loop"/>
         	<Effect Name="F_light214_yellow"/>
-	</Category>
+        <Effect Name="E_buff_Attacker"/>
+        <Effect Name="F_ground190_circle_crack2_1"/>
+        <Effect Name="F_ground190_circle_crack2_1"/>
+        <Effect Name="I_breath021_dark2"/>
+        <Effect Name="I_breath021_dark2"/>
+        <Effect Name="F_warrior_wedge_formation_active_ground2"/>
+        <Effect Name="F_burstup007_smoke_dark"/>
+        <Effect Name="F_smoke167_scatter"/>
+        <Effect Name="F_burstup007_smoke_dark"/>
+        <Effect Name="F_smoke167_scatter"/>
+	<Effect Name="boss_falouros"/>
+        <Effect Name="F_ground190_circle_crack3_2"/>
+        <Effect Name="I_stone005_explosion_mash_force_dark##0.7"/>
+        <Effect Name="F_burstup003_5"/>
+        <Effect Name="Falouros"/>
+        <Effect Name="Incarceration"/>
+        <Effect Name="WhiteBlackThunderstroke"/>
+        <Effect Name="DamageLink"/>
+        <Effect Name="F_rize004_dark_red"/>
+        <Effect Name="I_skillrange_270##1"/>
+        <Effect Name="F_skillrange_donut002##0.7"/>
+        <Effect Name="F_skillrange_circle001"/>
+        <Effect Name="Hoop"/>
+        <Effect Name="F_skillrange_circle001"/>
+        <Effect Name="F_ground226_lightning_dark"/>
+        <Effect Name="F_rize004_dark_redorange2"/>
+        <Effect Name="F_ground190_circle_crack3_3"/>
+		<Effect Name="F_rize004_dark_redorange"/>
+    </Category>
     <Category ID="170">
         <Effect Name="Linker_blue3"/>
         <Effect Name="Linker_cable_blue"/>

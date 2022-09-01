@@ -5321,16 +5321,10 @@ function GET_HEAL_CTRL_RAID_RHP_BM(self, value)
     if IsServerSection() == 1 then
         local cmd = GetMGameCmd(self);
         if cmd == nil then return 0; end
-        local mgame_name = cmd:GetMGameName();
-        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil or string.find(mgame_name, "Goddess_Raid_Spreader_") ~= nil then
-            local add_rhp_bm = value * 0.9 * -1.0;
-            return add_rhp_bm;
-        end
+        local add_rhp_bm = value * 0.9 * -1.0;
+        return add_rhp_bm;
     else
-        local mgame_name = session.mgame.GetCurrentMGameName()
-        if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil or string.find(mgame_name, "Goddess_Raid_Spreader_") ~= nil then
-            return -0.9; -- 90% 감소
-        end
+        return -0.9; -- 90% 감소
     end
     return 0;
 end
@@ -5339,15 +5333,11 @@ end
 function GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self)
     if self == nil then return 0; end
     if IsHealControlMap(self) == 0 then return 0; end
-    local mgame_name = "None";
     if IsServerSection() == 1 then
         local cmd = GetMGameCmd(self);
         if cmd == nil then return 0; end
-        mgame_name = cmd:GetMGameName();
+        return -0.9; -- 90% 감소
     else
-        mgame_name = session.mgame.GetCurrentMGameName()
-    end
-    if string.find(mgame_name, "Goddess_Raid_Jellyzele_") ~= nil or string.find(mgame_name, "Goddess_Raid_Spreader_") ~= nil then
         return -0.9; -- 90% 감소
     end
     return 0;

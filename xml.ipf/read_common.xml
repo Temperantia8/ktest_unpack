@@ -389,4 +389,6 @@
 	<ReadXml Name="tpitem_season"/>		
 	<ReadXml Name="skill_attribute_mon"/>
 	<ReadXml Name="buff_attribute"/>
+	<ReadXml Name="weekendevent_list_client"/>	
+	<ReadXml Name="job_damage_reduce"/>	
 </Category>

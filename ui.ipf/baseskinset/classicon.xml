@@ -17,7 +17,7 @@
 		<image name="c_warrior_fencer" file="\icon\class_warrior.tga" imgrect="100 200 100 100" CMM_Caption="펜서"/>
 		<image name="c_warrior_shinobi" file="\icon\class_warrior.tga" imgrect="200 200 100 100" CMM_Caption="시노비"/>
 		<image name="c_warrior_dragoon" file="\icon\class_warrior.tga" imgrect="300 200 100 100" CMM_Caption="드라군"/>
-		<image name="c_warrior_templar" file="\icon\class_warrior.tga" imgrect="400 200 100 100" CMM_Caption="템플러"/>
+		<image name="c_warrior_templar" file="\icon\class_warrior.tga" imgrect="200 400 100 100" CMM_Caption="템플러"/>
 		<image name="c_warrior_lancer" file="\icon\class_warrior.tga" imgrect="0 300 100 100" CMM_Caption="랜서"/>
 		<image name="c_warrior_murmillo" file="\icon\class_warrior.tga" imgrect="100 300 100 100" CMM_Caption="무르밀로"/>
 		<image name="c_warrior_Matador" file="\icon\class_warrior.tga" imgrect="200 300 100 100" CMM_Caption="마타도르"/>

@@ -7,6 +7,8 @@ ClassID,SavePoint,SoulCrystal,MainLayer,GuildTower,StartPoint,ClassName,Type,Ret
 6,1,1,0,0,1,"Goddess_Raid_Jellyzele_Solo","Raid",""
 7,1,1,0,0,1,"Goddess_Raid_Spreader_Solo","Raid",""
 8,1,1,0,0,1,"Goddess_Raid_Spreader_Auto","Raid",""
+9,1,1,0,0,1,"Goddess_Raid_Falouros_Auto","Raid",""
+10,1,1,0,0,1,"Goddess_Raid_Falouros_Solo","Raid",""
 101,0,0,0,0,0,"TOSHero_Straight","Contents","TOSHERO_RESURRECT_BUFF"
 102,0,0,0,0,0,"TOSHero_Wheel","Contents","TOSHERO_RESURRECT_BUFF"
 103,0,0,0,0,0,"TOSHero_Grid","Contents","TOSHERO_RESURRECT_BUFF"

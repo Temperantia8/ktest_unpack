@@ -786,7 +786,7 @@
 		<image name="icon_warri_horseriding" file="\icon\skill\warrior\icon_warri_horseriding.png" imgrect="0 0 128 128" CMM_Caption="승마"/>
 		<image name="icon_warri_AdvancedOrders" file="\icon\skill\warrior\icon_warri_AdvancedOrders.png" imgrect="0 0 128 128" CMM_Caption="어드밴스드 오더스"/>
 		<image name="icon_warri_flyingcolors" file="\icon\skill\warrior\icon_warri_flyingcolors.png" imgrect="0 0 128 128" CMM_Caption="플라잉 컬러즈"/>
-		<image name="icon_warri_BattleOrders" file="\icon\skill\warrior\icon_warri_BattleOrders.png" imgrect="0 0 128 128" CMM_Caption="배틀오더스"/>
+		<image name="icon_warri_BattleOrders" file="\icon\skill\warrior\icon_warri_BattleOrders.png" imgrect="0 0 128 128" CMM_Caption="배틀 오더스"/>
 		<image name="Icon_warri_Liberate" file="\icon\skill\warrior\Icon_warri_Liberate.png" imgrect="0 0 128 128" CMM_Caption="리버레이트"/>
 		<image name="Icon_warri_StartUp" file="\icon\skill\warrior\Icon_warri_StartUp.png" imgrect="0 0 128 128" CMM_Caption="기수식"/>
 		<image name="Icon_warri_Flowering" file="\icon\skill\warrior\Icon_warri_Flowering.png" imgrect="0 0 128 128" CMM_Caption="개화"/>
@@ -802,6 +802,14 @@
 		<image name="icon_warri_LuchaDeSilla" file="\icon\skill\warrior\icon_warri_LuchaDeSilla.png" imgrect="0 0 128 128" CMM_Caption="루차 데 시야"/>
 		<image name="icon_warri_Golpear" file="\icon\skill\warrior\icon_warri_Golpear.png" imgrect="0 0 128 128" CMM_Caption="골페아르"/>
 		<image name="icon_warri_defiance" file="\icon\skill\warrior\icon_warri_defiance.png" imgrect="0 0 128 128" CMM_Caption="디파이언스"/>
+		<image name="icon_warri_DefenceOrders" file="\icon\skill\warrior\icon_warri_DefenceOrders.png" imgrect="0 0 128 128" CMM_Caption="디펜스 오더스"/>
+		<image name="icon_warri_Retribution" file="\icon\skill\warrior\icon_warri_Retribution.png" imgrect="0 0 128 128" CMM_Caption="징벌"/>
+		<image name="icon_warri_VitalityBanner" file="\icon\skill\warrior\icon_warri_VitalityBanner.png" imgrect="0 0 128 128" CMM_Caption="활력의 깃발"/>
+		<image name="icon_warri_RetributionBanner" file="\icon\skill\warrior\icon_warri_RetributionBanner.png" imgrect="0 0 128 128" CMM_Caption="응징의 깃발"/>
+		<image name="icon_warri_Separating" file="\icon\skill\warrior\icon_warri_Separating.png" imgrect="0 0 128 128" CMM_Caption="지면 가르기"/>
+		<image name="icon_warri_Templarbuff" file="\icon\skill\warrior\icon_warri_Templarbuff.png" imgrect="0 0 128 128" CMM_Caption="고양감"/>
+		<image name="icon_warri_AdvancedOrders2" file="\icon\skill\warrior\icon_warri_AdvancedOrders2.png" imgrect="0 0 128 128" CMM_Caption="어드밴스 오더스 (활성)"/>
+		<image name="icon_warri_BattleOrders2" file="\icon\skill\warrior\icon_warri_BattleOrders2.png" imgrect="0 0 128 128" CMM_Caption="배틀 오더스 (활성)"/>
 	</imagelist>
 	<imagelist category="scout_skillicon">
 		<image name="icon_scout_aggress" file="\icon\skill\scout\icon_scout_aggress.png" imgrect="0 0 128 128" CMM_Caption="인법뇌둔술"/>
@@ -1640,6 +1648,28 @@
 		<image name="ability_Warrior_Luchador17" file="\icon\icon_ability_warrior10.tga" imgrect="0 256 128 128" CMM_Caption="[아츠] 마르티네테: 상급 강화"/>
 		<image name="ability_Warrior_NakMuay14" file="\icon\icon_ability_warrior10.tga" imgrect="128 256 128 128" CMM_Caption="낙무아이: 추가 대미지"/>
 		<image name="ability_Warrior_Highlander45" file="\icon\icon_ability_warrior10.tga" imgrect="256 256 128 128" CMM_Caption="디파이언스: 강화"/>
+		<image name="ability_Warrior_Templar16" file="\icon\icon_ability_warrior10.tga" imgrect="768 512 128 128" CMM_Caption="어드밴스드 오더스: 강화"/>
+		<image name="ability_Warrior_Templar17" file="\icon\icon_ability_warrior10.tga" imgrect="640 512 128 128" CMM_Caption="[아츠] 어드밴스드 오더스: 상급 강화"/>
+		<image name="ability_Warrior_Templar18" file="\icon\icon_ability_warrior10.tga" imgrect="512 512 128 128" CMM_Caption="[아츠] 배틀 오더스: 상급 강화"/>
+		<image name="ability_Warrior_Templar19" file="\icon\icon_ability_warrior10.tga" imgrect="384 512 128 128" CMM_Caption="디펜스 오더스: 강화"/>
+		<image name="ability_Warrior_Templar20" file="\icon\icon_ability_warrior10.tga" imgrect="256 512 128 128" CMM_Caption="[아츠] 디펜스 오더스: 상급 강화"/>
+		<image name="ability_Warrior_Templar21" file="\icon\icon_ability_warrior10.tga" imgrect="384 512 128 128" CMM_Caption="[아츠] 사기의 깃발: 상급 강화"/>
+		<image name="ability_Warrior_Templar22" file="\icon\icon_ability_warrior10.tga" imgrect="0 512 128 128" CMM_Caption="활력의 깃발: 강화"/>
+		<image name="ability_Warrior_Templar23" file="\icon\icon_ability_warrior10.tga" imgrect="896 384 128 128" CMM_Caption="[아츠] 활력의 깃발: 상급 강화"/>
+		<image name="ability_Warrior_Templar24" file="\icon\icon_ability_warrior10.tga" imgrect="768 384 128 128" CMM_Caption="응징의 깃발: 강화"/>
+		<image name="ability_Warrior_Templar25" file="\icon\icon_ability_warrior10.tga" imgrect="640 384 128 128" CMM_Caption="[아츠] 응징의 깃발: 상급 강화"/>
+		<image name="ability_Warrior_Templar26" file="\icon\icon_ability_warrior10.tga" imgrect="512 384 128 128" CMM_Caption="징벌: 강화"/>
+		<image name="ability_Warrior_Templar27" file="\icon\icon_ability_warrior10.tga" imgrect="384 384 128 128" CMM_Caption="[아츠] 징벌: 상급 강화"/>
+		<image name="ability_Warrior_Templar28" file="\icon\icon_ability_warrior10.tga" imgrect="640 256 128 128" CMM_Caption="[아츠] 어드밴스드 오더스: 기습"/>
+		<image name="ability_Warrior_Templar29" file="\icon\icon_ability_warrior10.tga" imgrect="128 384 128 128" CMM_Caption="배들 오더스: 결속"/>
+		<image name="ability_Warrior_Templar30" file="\icon\icon_ability_warrior10.tga" imgrect="0 384 128 128" CMM_Caption="디펜스 오더스: 철벽"/>
+		<image name="ability_Warrior_Templar31" file="\icon\icon_ability_warrior10.tga" imgrect="896 256 128 128" CMM_Caption="[아츠] 지면 가르기: 일격"/>
+		<image name="ability_Warrior_Templar32" file="\icon\icon_ability_warrior10.tga" imgrect="768 256 128 128" CMM_Caption="[아츠] 징벌: 잔해"/>
+		<image name="ability_Warrior_Templar33" file="\icon\icon_ability_warrior10.tga" imgrect="512 256 128 128" CMM_Caption="[아츠] 어드밴스드 오더스: 결속"/>
+		<image name="ability_Warrior_Templar34" file="\icon\icon_ability_warrior10.tga" imgrect="640 256 128 128" CMM_Caption="[아츠] 배틀 오더스: 기습"/>
+		<image name="ability_Warrior_Templar35" file="\icon\icon_ability_warrior10.tga" imgrect="384 256 128 128" CMM_Caption="[아츠] 디펜스 오더스: 철벽"/>
+		<image name="ability_Warrior_Templar36" file="\icon\icon_ability_warrior10.tga" imgrect="384 640 128 128" CMM_Caption="지면 가르기: 강화"/>
+		<image name="ability_Warrior_Templar37" file="\icon\icon_ability_warrior10.tga" imgrect="512 640 128 128" CMM_Caption="[아츠] 지면 가르기: 상급 강화"/>
 	</imagelist>
 	<imagelist category="abilityicon_wizard">
 		<image name="ability_Wizard_Wizard1" file="\icon\icon_ability_wizard01.tga" imgrect="0 0 128 128" CMM_Caption="슬리프-단잠"/>

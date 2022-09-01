@@ -191,6 +191,7 @@
 		<image name="boss_Jellyzele" file="\icon\monster\boss\boss_Jellyzele.png" imgrect="0 0 80 80"/>
 		<image name="boss_TransmutationSpreader" file="\icon\monster\boss\boss_TransmutationSpreader.png" imgrect="0 0 80 80"/>
 		<image name="boss_Bleakferret_prey" file="\icon\monster\boss\boss_Bleakferret_prey.png" imgrect="0 0 80 80"/>
+		<image name="boss_Falouros" file="\icon\monster\boss\boss_Falouros.png" imgrect="0 0 80 80"/>
 	</imagelist>
 	<imagelist category="Monster_icon_boss_01">
 		<image name="boss_FerretMarauder" file="\icon\monster\boss\boss_FerretMarauder.png" imgrect="0 0 80 80"/>

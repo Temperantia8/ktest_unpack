@@ -457,6 +457,7 @@ ClassID,ClassName,Name,UseDaily,UseWeekly,Country,StartTime,EndTime,DescTitle
 6300,"EVENT_2207_Unity_04","화합의 제스처","NO","NO","KOR","2022-07-28 09:00:00","2022-09-08 06:00:00",""
 6301,"EVENT_2207_Unity_05","We Are The One","NO","NO","KOR","2022-07-28 09:00:00","2022-09-08 06:00:00",""
 6302,"EVENT_The_Conqueror_Title","The Conqueror","NO","NO","KOR","","",""
+6303,"EVENT_5th_Best_Painter_Title","5th Best Painter","NO","NO","","","",""
 7001,"PardonerAbility","기부 레벨","NO","NO","","","",""
 7002,"TaxAbility","세금 납부 레벨","NO","NO","","","",""
 8001,"FreeDungeon_under_68_1","시카리오스 기믹","NO","NO","","","",""
