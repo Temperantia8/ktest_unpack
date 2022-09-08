@@ -986,7 +986,7 @@ return value"/>
 				<Angle Angle="0"/>
 				<Num Num="0"/>
 				<Num Num="15"/>
-				<MonProp/>
+                <MonProp List="HitProof#YES"/>
 				<Str_Arg Str="None" Arg="1"/>
 				<Num Num="1"/>
 				<Str Str="None"/>
@@ -11006,7 +11006,7 @@ return time;"/>
                 <Num Num="1"/>
             </ToolScp>
             <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-                <Str_Arg Str="F_circle007_dark_loop" Arg="8"/>
+                <Str_Arg Str="F_rize030_ground_dark_target_loop" Arg="2"/>
                 <Pos Angle="0" Dist="0"/>
                 <Num Num="0"/>
                 <Str_Arg Str="None" Arg="1"/>
@@ -11039,6 +11039,11 @@ return time;"/>
                 <Num Num="1"/>
             </ToolScp>
         </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_FALOUROS_THUNDERSTROKE_DAMAGE_PAD_DESTROY"/>
+            </ToolScp>
+        </destroyEvent>
         <updateEvent>
             <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
                 <Str Str="SCR_FALOUROS_THUNDERSTROKE_DAMAGE_PAD_UPDATE"/>
@@ -11049,15 +11054,15 @@ return time;"/>
             </ToolScp>
         </updateEvent>
     </PadSkill>
-    <PadSkill Name="Falouros_BlackWhiteThunderstroke_WhitePad" CheckerType="0" Range="40" UpdateTerm="1000" AutoPos="1" AutoDir="1" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+    <PadSkill Name="Falouros_BlackWhiteThunderstroke_WhitePad" CheckerType="0" Range="60" UpdateTerm="1000" AutoPos="1" AutoDir="1" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
         <createEvent>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-                <Num Num="3000"/>
+                <Num Num="5000"/>
                 <Num Num="1"/>
             </ToolScp>
             <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-                <Str_Arg Str="I_circle001" Arg="2"/>
-                <Pos Angle="0" Dist="-3.1938605e+34"/>
+                <Str_Arg Str="F_rize030_ground_white_target_loop" Arg="1.5"/>
+                <Pos Angle="0" Dist="-0"/>
                 <Num Num="0"/>
                 <Str_Arg Str="None" Arg="1"/>
                 <Num Num="1"/>
@@ -11124,6 +11129,30 @@ return time;"/>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
                 <Num Num="-500"/>
                 <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Falouros_ThunderCloud_Damage_Pad" CheckerType="0" Range="60" UpdateTerm="1000" AutoPos="0" AutoDir="0" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="60000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_circle007_dark_loop" Arg="8"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_FALOUROS_THUNDERCLOUD_DAMGE_UPDATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="1"/>
             </ToolScp>
         </updateEvent>
     </PadSkill>
@@ -23850,13 +23879,12 @@ return 30000 + obj.Level * 5000"/>
 				<Num Num="0"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
-				<Num Num="10" UseFunc="1" FuncTxt="local value = 10
-                if IsPVPField(self) == 1 and value &gt; 2 then
-                value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
-                end
-                return value"/>
+                <Num Num="10" UseFunc="1" FuncTxt="return SCR_GET_HoleOfDarkness_Ratio(obj)"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="PAD_ENTER_HOLEOFDARKNESS_PAD_SKILL"/>
+            </ToolScp>
 		</createEvent>
 		<destroyEvent>
 			<ToolScp Scp="C_PAD_DESTROY_EFFECT_POS" Client="YES" UseSleep="NO">
@@ -27727,11 +27755,7 @@ end"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
 			<ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
-				<Num Num="10" UseFunc="1" FuncTxt="local value = 10
-                if IsPVPField(self) == 1 and value &gt; 2 then
-                value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
-                end
-                return value"/>
+                <Num Num="10" UseFunc="1" FuncTxt="return SCR_GET_HornOfGolem_Ratio(obj)"/>
 			</ToolScp>
 			<ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
 				<Str_Arg Str="I_smoke014_dark3" Arg="0.60000002"/>
@@ -27763,7 +27787,7 @@ end"/>
 				<Num Num="99990"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
-				<Num Num="10"/>
+                <Num Num="10" UseFunc="1" FuncTxt="return SCR_GET_HornOfGolem_Ratio(obj)"/>
 			</ToolScp>
 			<ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
 				<Str_Arg Str="F_ground045_smoke" Arg="1.5"/>

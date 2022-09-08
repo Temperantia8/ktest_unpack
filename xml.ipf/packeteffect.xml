@@ -11147,6 +11147,17 @@
         <Effect Name="Falouros_Sphere_Driving_TargetPoint_Pad"/>
         <Effect Name="Falouros_Hoop_Pad"/>
         <Effect Name="Falouros_Hoop_Near_Pad"/>
+        <Effect Name="Falouros"/>
+        <Effect Name="Incarceration"/>
+        <Effect Name="WhiteBlackThunderstroke"/>
+        <Effect Name="DamageLink"/>
+        <Effect Name="Hoop"/>
+        <Effect Name="SKL_HEADBUTT"/>
+        <Effect Name="F_ground236_line_dark_loop"/>
+        <Effect Name="F_rize030_ground_dark_loop"/>
+        <Effect Name="F_rize030_ground_white"/>
+        <Effect Name="F_rize030_ground_white_loop"/>
+        <Effect Name="Falouros_ThunderCloud_Damage_Pad"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>

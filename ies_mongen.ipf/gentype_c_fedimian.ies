@@ -66,4 +66,4 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5259,5259,1,1,1,1,1,2,0,0,0,0,0,"Hiddennpc_BountyHunt_Start_B","[바운티 헌트]{nl}지명수배 게시판","","","","MON_DUMMY","","","BOUNTY_HUNT_START","","","NO","YES","NO","Neutral","","","",""
 5260,5260,1,40,1,60000,1,2,0,0,0,0,0,"NPC_GM","가디스 재료 교환 도우미","","","","","","","EP13CARE_TRADE","","","NO","YES","NO","Netural","","","",""
 5261,5261,1,60,1,60000,1,1,0,0,0,0,0,"gacha_machine","여신의 축복","","","","","","","BLESSED_CUBE","","","NO","YES","NO","Neutral","","","",""
-5262,5262,1,40,1,1,1,2,0,0,0,0,0,"event_2207_npc_kupole","[이벤트]{nl}화합의 도우미","","","","","","","EVENT_2207_UNITY","","","NO","YES","NO","Neutral","","","",""
+5263,5263,1,40,1,1,1,1,0,0,0,0,0,"event_fullmoon_lapindion2","[이벤트]{nl}소원을 이뤄주는 달토끼","","","","","","","EVENT_2109_MOON_RABBIT_NPC","","","NO","YES","NO","Netual","","","",""

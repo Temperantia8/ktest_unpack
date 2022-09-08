@@ -28,3 +28,5 @@ ClassID,TotalNumberDays,ClassName,Name,AttendancePass,StartTime,EndTime
 127,7,"SeasonServerAttendance","[시즌 서버] 출석 보상","NO","2022-06-08 06:00:00","2022-07-28 12:00:00"
 128,7,"SeasonIntegAttendance","시즌 서버 정착 보상","NO","2022-07-28 06:00:00","2022-08-25 12:00:00"
 129,7,"ServerIntegAttendance","서버 통합 기념 보상","NO","2022-07-14 06:00:00","2022-08-11 12:00:00"
+130,1,"Event2209Attendance","한가위 접속 이벤트","NO","2022-09-09 06:00:00","2022-09-12 12:00:00"
+131,7,"Event2209GmAttendance","GM 깜짝 선물 상자 이벤트","NO","2022-09-13 00:00:00","2022-09-20 00:00:00"

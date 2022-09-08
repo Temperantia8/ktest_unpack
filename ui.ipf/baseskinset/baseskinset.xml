@@ -12554,6 +12554,8 @@
 		<image name="Unity_emotion147" file="\icon\emoticon\Unity_emotion04.png" imgrect="0 0 202 128"/>
 		<image name="Spreader_moticon01" file="\icon\emoticon\Spreader_moticon_01.png" imgrect="0 0 128 128"/>
 		<image name="Spreader_moticon02" file="\icon\emoticon\Spreader_moticon_02.png" imgrect="0 0 128 128"/>
+		<image name="Falouros_moticon01" file="\icon\emoticon\Falouros_moticon_01.png" imgrect="0 0 128 128"/>
+		<image name="Falouros_moticon02" file="\icon\emoticon\Falouros_moticon_02.png" imgrect="0 0 128 128"/>
 	</imagelist>
 	<imagelist category="itemtooltip_image">
 		<image name="circle_gem" file="\skin\tooltip_skin_3.tga" imgrect="805 228 30 30"/>
@@ -15083,6 +15085,7 @@
 		<image name="165_boss_RevivalPaulius" file="\skin\bosscard\165_boss_RevivalPaulius.tga" imgrect="0 0 330 440"/>
 		<image name="166_boss_Jellyzele" file="\skin\bosscard\166_boss_Jellyzele.tga" imgrect="0 0 330 440"/>
 		<image name="167_boss_TransmutationSpreader" file="\skin\bosscard\167_boss_TransmutationSpreader.tga" imgrect="0 0 330 440"/>
+		<image name="168_boss_Falouros" file="\skin\bosscard\168_boss_Falouros.tga" imgrect="0 0 330 440"/>
 	</imagelist>
 	<imagelist category="sub_card3">
 		<image name="legend_card_fragment_lv1" file="\skin\bosscard\legend_card_fragment_lv1.tga" imgrect="0 0 330 440"/>
@@ -15410,6 +15413,9 @@
 		<image name="plate_achieve_Spreader_silver" file="\skin\user_title_skin.tga" imgrect="430 1136 214 36"/>
 		<image name="plate_achieve_Spreader_bronze" file="\skin\user_title_skin.tga" imgrect="645 1136 214 36"/>
 		<image name="plate_achieve_ep14_2_raid_achivement" file="\skin\user_title_skin.tga" imgrect="860 1136 214 36"/>
+		<image name="plate_achieve_Falouros_gold" file="\skin\user_title_skin.tga" imgrect="0 1173 214 36"/>
+		<image name="plate_achieve_Falouros_silver" file="\skin\user_title_skin.tga" imgrect="215 1173 214 36"/>
+		<image name="plate_achieve_Falouros_bronze" file="\skin\user_title_skin.tga" imgrect="430 1173 214 36"/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>

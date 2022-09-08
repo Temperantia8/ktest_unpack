@@ -2111,12 +2111,6 @@ function SCR_Get_RHP(self)
         value = value / 2
     end
     
-    -- HealControl 레이드 체크
-    if IsHealControlMap(self) == 1 then
-        local add_rhp_bm = GET_HEAL_CTRL_RAID_RHP_BM(self, value);
-        value = value + add_rhp_bm;
-    end
-
     if value < 0 then
         value = 0;
     end
@@ -4980,11 +4974,11 @@ function SCR_Get_HEAL_PWR(self)
     end
     
     -- HealControl 레이드 체크
-    if IsHealControlMap(self) == 1 then
-        local by_rate_raid = GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self);
-        byRateBuff = byRateBuff + by_rate_raid;
-        atk = atk * (1 + by_rate_raid)
-    end
+    -- if IsHealControlMap(self) == 1 then
+    --     local by_rate_raid = GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self);
+    --     byRateBuff = byRateBuff + by_rate_raid;
+    --     atk = atk * (1 + by_rate_raid)
+    -- end
 
     byRateBuff = math.floor(value * byRateBuffTemp);
     value = value + byBuff + byRateBuff;    
@@ -5061,10 +5055,10 @@ function SCR_Get_HEAL_PWR_VER2(self)
     value = value * (1 + sum_of_heal_power)
 
     -- HealControl 레이드 체크
-    if IsHealControlMap(self) == 1 then
-        local by_rate_raid = GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self);
-        value = value * (1 + by_rate_raid)
-    end
+    -- if IsHealControlMap(self) == 1 then
+    --     local by_rate_raid = GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self);
+    --     value = value * (1 + by_rate_raid)
+    -- end
 
     if value < 1 then
     	value = 1;

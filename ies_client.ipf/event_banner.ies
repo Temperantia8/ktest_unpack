@@ -1,4 +1,6 @@
 ClassID,StartTimeYYYYMM,StartTimeDDHHMM,NewTimeYYYYMM,NewTimeDDHHMM,EndTimeYYYYMM,EndTimeDDHHMM,DeadlineTimeYYYYMM,DeadlineTimeDDHHMM,ExchangeTimeYYYYMM,ExchangeTimeDDHHMM,ClassName,Name,ImagePath,url,UserCommand1,UserCommand2,UserCommand3,ShowType
+996010,202209,80000,202209,130000,202209,220600,202209,170000,0,0,"2209_MoonPackage","한가위 특판 패키지","2209_MoonPackage","https://tos.nexon.com/News/Update/view?n4ArticleSN=2871","","","",""
+996020,202209,80000,202209,130000,202210,200600,202210,150000,0,0,"event2209_Moon","소원을 이뤄주는 달토끼","event2209_Moon","https://tos.nexon.com/news/events/view?n4ArticleSN=400","","","",""
 996030,202209,10000,202209,60000,202210,10000,202209,260000,0,0,"event2209_VaivoraReward","바이보라의 날개 출석체크 - 9월","event2209_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=399","","","",""
 996040,202209,10000,202209,60000,202210,10000,202209,260000,0,0,"event2209_Burning","주말앤버닝 - 9월","event2209_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=398","","","",""
 996050,202208,110000,202208,160000,202209,220600,202209,170000,0,0,"event2208_goddess","여신의 축복 - 8월","event2208_goddess","https://tos.nexon.com/News/TosNotice/view?n4ArticleSN=2849","","","",""

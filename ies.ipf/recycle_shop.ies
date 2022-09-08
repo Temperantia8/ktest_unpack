@@ -76,6 +76,7 @@ ClassID,BuyPrice,SellPrice,ClassName,Category,SubCategory,PackageList
 816,350,0,"extract_ticket_cabinet_goddess_Recycle","Recyle_Shop_Buy","Recyle_Shop_Reset",""
 817,200,0,"unlock_acc_belonging_scroll_470_Recycle","Recyle_Shop_Buy","Recyle_Shop_Reset",""
 818,375,0,"unlock_acc_belonging_scroll_470_Recycle_3ea","Recyle_Shop_Buy","Recyle_Shop_Reset",""
+819,75,0,"unlock_belt_team_belonging_scroll_470_Recycle","Recyle_Shop_Buy","Recyle_Shop_Reset",""
 901,190,0,"recycle_WoodCarviig_Core","Recyle_Shop_Buy","Recyle_Shop_Etc",""
 902,60,0,"Premium_Carviig_Core","Recyle_Shop_Buy","Recyle_Shop_Etc",""
 903,78,0,"emoticonItem_24_46_recycle","Recyle_Shop_Buy","Recyle_Shop_Etc",""
