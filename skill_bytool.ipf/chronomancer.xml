@@ -227,7 +227,8 @@
                     <Str Str="None" />
                 </Scp>
                 <Scp Client="NO" Scp="BACKMASKING_START" Time="800" UseSleep="NO">
-                    <Num FuncTxt=" return 50 +  obj.Level * 10;" Num="100" UseFunc="1" />
+                    <Num FuncTxt=" return 50 + obj.Level * 10;" Num="100" UseFunc="1"/>
+                    <Num Num="40"/>
                 </Scp>
                 <Scp Client="NO" Scp="SKL_TGT_REMOVE_DEBUFF" Time="110" UseSleep="NO">
                 <Str FuncTxt="local func_name = 'get_remove_debuff_tooltip_' .. TryGetProp(obj, 'ClassName', 'None')
@@ -277,7 +278,8 @@
                             <Str Str="None" />
                         </Scp>
                         <Scp Client="NO" Scp="BACKMASKING_START" Time="800" UseSleep="NO">
-                            <Num Num="200" />
+                            <Num Num="200"/>
+                            <Num Num="40"/>
                         </Scp>
                         <Scp Client="NO" Scp="SKL_SET_TARGET_CIRCLE" Time="800" UseSleep="NO">
                             <Pos Angle="0" Dist="0" />

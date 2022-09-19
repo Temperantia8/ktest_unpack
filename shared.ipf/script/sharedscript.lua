@@ -3855,6 +3855,10 @@ function GET_EQUIP_GROUP_NAME(item)
         return 'BELT'
     end
 
+    if name == 'SHOULDER' then
+        return 'SHOULDER'
+    end
+
     name = TryGetProp(item, 'DefaultEqpSlot', 'None')
 
     if name == 'NECK' or name == 'RING' then

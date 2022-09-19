@@ -924,7 +924,16 @@ function SCR_Get_MINPATK(self)
     	value = 1;
     end
 
-    return math.floor(value);
+    local equip_list = { 'RH', 'LH', 'RH_SUB', 'LH_SUB' }
+    local evolve_value = 0
+    for k, v in pairs(equip_list) do
+        local item = GetEquipItemForPropCalc(self, v)
+        if item ~= nil then
+            evolve_value = evolve_value + GET_EVOLVED_ATK(item)
+        end
+    end
+
+    return math.floor(value) + evolve_value;
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -1049,8 +1058,17 @@ function SCR_Get_MAXPATK(self)
     if value < 1 then
     	value = 1;
     end
+    
+    local equip_list = { 'RH', 'LH', 'RH_SUB', 'LH_SUB' }
+    local evolve_value = 0
+    for k, v in pairs(equip_list) do
+        local item = GetEquipItemForPropCalc(self, v)
+        if item ~= nil then
+            evolve_value = evolve_value + GET_EVOLVED_ATK(item)
+        end
+    end
 
-    return math.floor(value);
+    return math.floor(value) + evolve_value;
 end
 
 function SCR_Get_DEFAULT_MINPATK_SUB(self)
@@ -1354,7 +1372,16 @@ function SCR_Get_MINMATK(self)
     	value = 1;
     end
     
-    return math.floor(value);
+    local equip_list = { 'RH', 'LH', 'RH_SUB', 'LH_SUB' }
+    local evolve_value = 0
+    for k, v in pairs(equip_list) do
+        local item = GetEquipItemForPropCalc(self, v)
+        if item ~= nil then
+            evolve_value = evolve_value + GET_EVOLVED_ATK(item)
+        end
+    end
+
+    return math.floor(value) + evolve_value;
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -1497,8 +1524,17 @@ function SCR_Get_MAXMATK(self)
     if value < 1 then
     	value = 1;
     end
-    
-    return math.floor(value);
+
+    local equip_list = { 'RH', 'LH', 'RH_SUB', 'LH_SUB' }
+    local evolve_value = 0
+    for k, v in pairs(equip_list) do
+        local item = GetEquipItemForPropCalc(self, v)
+        if item ~= nil then
+            evolve_value = evolve_value + GET_EVOLVED_ATK(item)
+        end
+    end
+
+    return math.floor(value) + evolve_value;
 end
 
 function SCR_Get_DEF(self)

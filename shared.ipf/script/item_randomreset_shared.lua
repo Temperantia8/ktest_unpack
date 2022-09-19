@@ -221,7 +221,7 @@ function IS_ENABLE_APPLY_JEWELL_TOOLTIPTEXT(targetItem)
 	end
 		
     local classType = TryGetProp(targetItem, 'ClassType');
-    local classList = {'Seal', 'Ark','Ring' , 'Neck', 'Earring', 'BELT'}
+    local classList = {'Seal', 'Ark','Ring' , 'Neck', 'Earring', 'BELT', 'SHOULDER'}
     for i = 1, #classList do
         if classList[i] == classType then
 	        return false, 'Type';

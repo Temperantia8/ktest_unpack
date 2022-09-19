@@ -709,8 +709,10 @@ function SCR_REFRESH_WEAPON(item, enchantUpdate, ignoreReinfAndTranscend, reinfB
                     damageRange = 0 
                 end
 
+                if TryGetProp(item, 'UseLv', 0) < 480 then
                 evolvedMaxAtkUp = GET_EVOLVED_ATK(item) * damageRange
                 evolvedMinAtkUp = GET_EVOLVED_ATK(item) * (2 - damageRange)
+            end
             end
 
             item.MAXATK = SyncFloor((item.MAXATK * upgradeRatio) + buffarg + reinforceAddValueAtk + evolvedMaxAtkUp);
@@ -729,7 +731,9 @@ function SCR_REFRESH_WEAPON(item, enchantUpdate, ignoreReinfAndTranscend, reinfB
             local reinfAddValueAtk = GET_REINFORCE_ADD_VALUE_ATK(item, ignoreReinfAndTranscend, reinfBonusValue, basicProp);
             local evolvedAtkUp = 0
             if TryGetProp(item, 'ItemGrade', 0) == 6 and TryGetProp(item, 'EvolvedItemLv', 0) > TryGetProp(item, 'UseLv', 0) then
+                if TryGetProp(item, 'UseLv', 0) < 480 then
                 evolvedAtkUp = GET_EVOLVED_ATK(item)
+            end
             end
 
             item.MATK = SyncFloor((item.MATK * upgradeRatio) + buffarg + reinfAddValueAtk + evolvedAtkUp);
@@ -860,7 +864,7 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
         return 0;
     end
     
-    if classType == 'BELT' then
+    if classType == 'BELT' or classType == 'SHOULDER' then
         equipMaterial = 'Leather'
     end
 
@@ -905,7 +909,7 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
                     -- 방패
                     basicDef = TryGetProp(cls, 'BasicAtk', 0)
                 else                  
-                    if classType == 'BELT' then-- 벨트
+                        if classType == 'BELT' or classType == 'SHOULDER' then-- 벨트
                         basicDef = TryGetProp(cls, 'BasicDef', 0) * 0.5
                         basicDef = basicDef + TryGetProp(item, 'Additional_def', 0)                        
                     else-- 상,하,장,신
@@ -948,9 +952,12 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
         local weaponDamageClass = GetClassByNameFromList(itemGradeClass,'WeaponDamageRange')
         local damageRange = weaponDamageClass[classType]
 
+        if TryGetProp(item, 'UseLv', 0) < 480 then
         evolvedMaxAtkUp = GET_EVOLVED_ATK(item) * damageRange
         evolvedMinAtkUp = GET_EVOLVED_ATK(item) * (2 - damageRange)
         evolvedAtkUp = GET_EVOLVED_ATK(item)
+        end
+        
 
         item.MAXATK = item.MAXATK + SyncFloor(evolvedMaxAtkUp)
         item.MINATK = item.MINATK + SyncFloor(evolvedMinAtkUp)
@@ -1615,7 +1622,7 @@ function GET_REPAIR_PRICE(item, fillValue, taxRate)
     elseif equipGruop == 'SHIRT' or equipGruop == 'PANTS' or equipGruop == 'GLOVES' or equipGruop == 'BOOTS'then
         local stat_weapon = GetClassByType("Stat_Weapon", lv)
         value = (stat_weapon.RepairPrice_SHIRT + stat_weapon.RepairPrice_PANTS + stat_weapon.RepairPrice_GLOVES + stat_weapon.RepairPrice_BOOTS) / 4
-    elseif defEqpSlot == 'NECK' or defEqpSlot == 'RING' or defEqpSlot == 'BELT' then
+    elseif defEqpSlot == 'NECK' or defEqpSlot == 'RING' or defEqpSlot == 'BELT' or defEqpSlot == 'SHOULDER' then
         local stat_weapon = GetClassByType("Stat_Weapon", lv)
         value = stat_weapon['RepairPrice_' .. defEqpSlot]
     end

@@ -3584,6 +3584,9 @@
 		<image name="icon_item_misc_high_falouros" file="\icon\item\icon_item_misc_high_falouros.png" imgrect="0 0 128 128"/>
 		<image name="icon_item_misc_falouros_NoTrade" file="\icon\item\icon_item_misc_falouros_NoTrade.png" imgrect="0 0 128 128"/>
 		<image name="icon_item_misc_high_falouros_NoTrade" file="\icon\item\icon_item_misc_high_falouros_NoTrade.png" imgrect="0 0 128 128"/>
+		<image name="icon_item_ep14egypt_cannon" file="\icon\weapon\icon_item_ep14egypt_cannon.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep14egypt_dagger" file="\icon\weapon\icon_item_ep14egypt_dagger.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep14egypt_spear" file="\icon\weapon\icon_item_ep14egypt_spear.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="acc_item">
 		<image name="item_necklace_01" file="\icon\acc\item_necklace_1.png" imgrect="0 0 256 256" CMM_Caption="목걸이"/>
@@ -4412,6 +4415,10 @@
 		<image name="icon_item_accessory_ep14rider01" file="\icon\hairacc\icon_item_accessory_ep14rider01.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_accessory_ep14rider02" file="\icon\hairacc\icon_item_accessory_ep14rider02.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_accessory_ep14rider03" file="\icon\hairacc\icon_item_accessory_ep14rider03.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_accessory_m_ep14egypt01" file="\icon\hairacc\icon_item_accessory_m_ep14egypt01.png" imgrect="0 0 256 256" CMM_Caption="2022.09테마_4종"/>
+		<image name="icon_item_accessory_f_ep14egypt01" file="\icon\hairacc\icon_item_accessory_f_ep14egypt01.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_accessory_m_ep14egypt02" file="\icon\hairacc\icon_item_accessory_m_ep14egypt02.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_accessory_f_ep14egypt02" file="\icon\hairacc\icon_item_accessory_f_ep14egypt02.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="collection_item">
 		<image name="icon_collitem_collection" file="\icon\colletion\icon_item_collection.tga" imgrect="0 0 673 419" CMM_Caption="월계수"/>
@@ -6984,6 +6991,15 @@
 		<image name="icon_item_TurbulentCore_Party_Enter" file="\icon\item\icon_item_TurbulentCore_Party_Enter.png" imgrect="0 0 256 256" CMM_Caption="격동의 핵 레이드 파티 입장권"/>
 		<image name="icon_item_MultipleToken_Raid_Ep14_2" file="\icon\item\icon_item_MultipleToken_Raid_Ep14_2.png" imgrect="0 0 256 256" CMM_Caption="격동의 핵 레이드 토큰"/>
 		<image name="icon_item_toy_laima_flag" file="\icon\item\icon_item_toy_laima_flag.png" imgrect="0 0 256 256" CMM_Caption="라이마 깃발"/>
+		<image name="icon_item_piece_shoulder" file="\icon\item\icon_item_piece_shoulder.png" imgrect="0 0 256 256" CMM_Caption=""/>
+		<image name="icon_item_shoulder_480" file="\icon\item\icon_item_shoulder_480.png" imgrect="0 0 256 256" CMM_Caption=""/>
+		<image name="icon_item_shoulder_high_480" file="\icon\item\icon_item_shoulder_high_480.png" imgrect="0 0 256 256" CMM_Caption=""/>
+		<image name="icon_item_ep14_2_collect_1" file="\icon\item\icon_item_ep14_2_collect_1.png" imgrect="0 0 128 128"/>
+		<image name="icon_item_ep14_2_collect_2" file="\icon\item\icon_item_ep14_2_collect_2.png" imgrect="0 0 128 128"/>
+		<image name="icon_item_ep14_2_collect_3" file="\icon\item\icon_item_ep14_2_collect_3.png" imgrect="0 0 128 128"/>
+		<image name="icon_item_ep14_2_collect_4" file="\icon\item\icon_item_ep14_2_collect_4.png" imgrect="0 0 128 128"/>
+		<image name="icon_item_ep14_2_collect_5" file="\icon\item\icon_item_ep14_2_collect_5.png" imgrect="0 0 128 128"/>
+		<image name="icon_item_ep14_2_collect_6" file="\icon\item\icon_item_ep14_2_collect_6.png" imgrect="0 0 128 128"/>
 	</imagelist>
 	<imagelist category="housing">
 		<image name="icon_item_housing_craft_bronze_1" file="\icon\item\icon_item_housing_craft_bronze_1.png" imgrect="0 0 256 256" CMM_Caption="[하우징 공방] 쿠폰"/>
@@ -8589,6 +8605,7 @@
 		<image name="icon_item_ep12wedding03_f" file="\icon\payment\icon_item_ep12wedding03_f.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_wing_ep12wedding" file="\icon\payment\icon_item_wing_ep12wedding.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_F_pc_effectitem_ep12wedding" file="\icon\payment\icon_item_F_pc_effectitem_ep12wedding.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_F_pc_effectitem_ep12wedding_violet" file="\icon\payment\icon_item_F_pc_effectitem_ep12wedding_violet.png" imgrect="0 0 256 256"/>
 		<image name="item_icon_selectbox_ep12wedding01" file="\icon\payment\item_icon_selectbox_ep12wedding01.png" imgrect="0 0 256 256"/>
 		<image name="item_icon_selectbox_ep12wedding02" file="\icon\payment\item_icon_selectbox_ep12wedding02.png" imgrect="0 0 256 256"/>
 		<image name="item_icon_selectbox_ep12wedding03" file="\icon\payment\item_icon_selectbox_ep12wedding03.png" imgrect="0 0 256 256"/>
@@ -8750,6 +8767,7 @@
 		<image name="icon_item_box_effect_ep12demonlord" file="\icon\payment\icon_item_box_effect_ep12demonlord.png" imgrect="0 0 256 256" CMM_Caption="2020_11월 마신의 유혹"/>
 		<image name="icon_item_box_wing_ep12demonlord" file="\icon\payment\icon_item_box_wing_ep12demonlord.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_effect_ep12demonlord" file="\icon\payment\icon_item_effect_ep12demonlord.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_effect_ep12demonlord_violet" file="\icon\payment\icon_item_effect_ep12demonlord_violet.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep12demonlord01_1_f" file="\icon\payment\icon_item_ep12demonlord01_1_f.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep12demonlord01_1_m" file="\icon\payment\icon_item_ep12demonlord01_1_m.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep12demonlord01_2_f" file="\icon\payment\icon_item_ep12demonlord01_2_f.png" imgrect="0 0 256 256"/>
@@ -9399,6 +9417,13 @@
 		<image name="icon_item_selectbox_ep14rider01" file="\icon\payment\icon_item_selectbox_ep14rider01.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_selectbox_ep14rider02" file="\icon\payment\icon_item_selectbox_ep14rider02.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_toy_ep14rider" file="\icon\payment\icon_item_toy_ep14rider.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_wing_ep14egypt" file="\icon\payment\icon_item_wing_ep14egypt.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep14egypt01_f" file="\icon\payment\icon_item_ep14egypt01_f.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep14egypt01_m" file="\icon\payment\icon_item_ep14egypt01_m.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep14egypt02_f" file="\icon\payment\icon_item_ep14egypt02_f.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_ep14egypt02_m" file="\icon\payment\icon_item_ep14egypt02_m.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_selectbox_ep14egypt01" file="\icon\payment\icon_item_selectbox_ep14egypt01.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_selectbox_ep14egypt02" file="\icon\payment\icon_item_selectbox_ep14egypt02.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="seal">
 		<image name="icon_seal_yellow_cc_A1" file="\icon\seal\seal_yellow_cc_A1.tga" imgrect="0 0 80 80"/>

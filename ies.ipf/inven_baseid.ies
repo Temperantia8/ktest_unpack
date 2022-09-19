@@ -157,3 +157,4 @@ ClassID,BaseID,ClassName,TreeGroup,TreeGroupCaption,TreeSSetTitle,InvenTabName,M
 156,780001,"Armor_Belt","EquipGroup","장비","방어구","Equip","Armor"
 157,785001,"OPTMisc_GoddessIcorWeapon","Material","재료","아이커","Etc","Icor"
 158,790001,"OPTMisc_GoddessIcorArmor","Material","재료","아이커","Etc","Icor"
+159,795001,"Armor_Shoulder","EquipGroup","장비","방어구","Equip","Armor"

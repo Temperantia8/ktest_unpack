@@ -201,7 +201,9 @@ shared_item_earring.get_fragmentation_count = function(item)
         end
 
         return grade
-    elseif TryGetProp(item, 'GroupName', 'None') == 'BELT' or shared_item_goddess_icor.get_goddess_icor_grade(item) > 0 then
+    elseif TryGetProp(item, 'GroupName', 'None') == 'BELT' or 
+        TryGetProp(item, 'GroupName', 'None') == 'SHOULDER' or
+        shared_item_goddess_icor.get_goddess_icor_grade(item) > 0 then
         return TryGetProp(item, 'NumberArg1', 1)
     elseif IS_RANDOM_OPTION_SKILL_GEM(item) then
         return 1
@@ -223,7 +225,7 @@ shared_item_earring.is_able_to_fragmetation = function(item)
         return false
     end
 
-    if TryGetProp(item, 'GroupName', 'None') ~= 'Earring' and TryGetProp(item, 'GroupName', 'None') ~= 'BELT' 
+    if TryGetProp(item, 'GroupName', 'None') ~= 'Earring' and TryGetProp(item, 'GroupName', 'None') ~= 'BELT' and TryGetProp(item, 'GroupName', 'None') ~= 'SHOULDER'
         and shared_item_goddess_icor.get_goddess_icor_grade(item) == 0
     then
         return false
@@ -234,7 +236,10 @@ end
 
 -- 지급할 아이템
 shared_item_earring.get_give_item_name = function(item)
-    if TryGetProp(item, 'GroupName', 'None') == 'Earring' or TryGetProp(item, 'GroupName', 'None') == 'BELT' or shared_item_goddess_icor.get_goddess_icor_grade(item) > 0 then
+    if TryGetProp(item, 'GroupName', 'None') == 'Earring' or 
+        TryGetProp(item, 'GroupName', 'None') == 'BELT' or 
+        TryGetProp(item, 'GroupName', 'None') == 'SHOULDER' or
+        shared_item_goddess_icor.get_goddess_icor_grade(item) > 0 then
         return TryGetProp(item, 'StringArg', 'None')
     elseif IS_RANDOM_OPTION_SKILL_GEM(item) then
         local name = 'piece_random_skill_gem_'

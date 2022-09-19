@@ -8762,6 +8762,12 @@
 			<img name="cooltime" imgrect="1565 804 54 54"/>
 			<img name="selected" imgrect="1565 804 54 54"/>
 		</skin>
+		<skin name="shoulder_slot" texture="\skin\pip_test_item.tga">
+			<img name="slot" imgrect="1334 1025 50 51"/>
+			<img name="mouseon" imgrect="1565 804 54 54"/>
+			<img name="cooltime" imgrect="1565 804 54 54"/>
+			<img name="selected" imgrect="1565 804 54 54"/>
+		</skin>
 	</skinlist>
 	<imagelist category="wearing_weapon">
 		<image name="weapon_OHS" file="\icon\wearing_weapon.tga" imgrect="0 0 20 20" CMM_Caption="한손검"/>
@@ -14648,6 +14654,7 @@
 		<image name="icon_superpoison_attribute" file="\icon\buff_icon6.tga" imgrect="896 1152 128 128" CMM_Caption="중독"/>
 		<image name="icon_superbleeding_attribute" file="\icon\buff_icon6.tga" imgrect="0 1280 128 128" CMM_Caption="출혈"/>
 		<image name="icon_superstun_attribute" file="\icon\buff_icon6.tga" imgrect="128 1280 128 128" CMM_Caption="혼절"/>
+		<image name="icon_buff_ridepet_ep14egypt" file="\icon\buff_icon6.tga" imgrect="256 1280 128 128" CMM_Caption="9월 테마 버프"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>
@@ -15564,6 +15571,7 @@
 		<image name="ridepet_ep13animal" file="\icon\ridepet.tga" imgrect="80 80 80 80" CMM_Caption="목마"/>
 		<image name="ridepet_ep14fivebird" file="\icon\ridepet.tga" imgrect="160 80 80 80" CMM_Caption="전투기"/>
 		<image name="ridepet_ep14rider" file="\icon\ridepet.tga" imgrect="240 80 80 80" CMM_Caption="토스 데이비슨"/>
+		<image name="ridepet_ep14egypt" file="\icon\ridepet.tga" imgrect="320 80 80 80" CMM_Caption="태양의 배"/>
 	</imagelist>
 	<effectimagelist category="effectlist">
 		<image name="blue_orb" file="\icon\blue_orb.tga" imgrect="0 0 256 256"/>

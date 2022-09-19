@@ -876,6 +876,7 @@
         <Effect Name="F_warrior_MoralBanner_buff"/>
         <Effect Name="F_warrior_RetributionBanner_buff"/>
         <Effect Name="F_warrior_Vitalitybanner_buff"/>
+        <Effect Name="artefact_ep14egypt_paddle"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
