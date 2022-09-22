@@ -6086,6 +6086,7 @@
 		<controls>
 			<groupbox name="bg_slot" margin="0 0 0 0" rect="0 0 55 55" hittestbox="false" LBtnDownScp="" changecursor="true" skin="" layout_gravity="left top" scrollbar="false"/>
 			<slot name="slot" margin="0 0 0 0" layout_gravity="left top" rect="0 0 55 55" stretch="true" skin="slot_empty" oversound="button_over" enabledrag="false" enableselect="false" enablepop="false" RBtnUpScp="ON_CLICK_DRESS_ROOM_MAKE_ITEM"/>
+			<button name="btn" margin="0 0 0 0" rect="0 0 55 55" layout_gravity="left top" LBtnUpScp="OPEN_DRESS_ROOM_REGISTER" texttooltip="{@st59}코스튬 등록 창을 엽니다.{/}" image="itemcraft_btn" clicksound="button_click_big_2" oversound="button_cursor_over_3"/>
 		</controls>
 	</controlset>
 	<controlset name="item_point_price" hittest="true" hittestset="false" draw="false" width="400" height="55" skin="">
