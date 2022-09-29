@@ -128,9 +128,9 @@
 		</Layer>
 	</ItemList>
 	<ItemList ItemClassName="Artefact_634155">
-		<Layer effect="F_hit_halloween" TargetNode="Dummy_tsp_atk_weapon" scale="1.0" offset="0;0">
+		<Layer effect="F_hit_halloween" TargetNode="Dummy_tsp_atk_weapon" scale="0.5" offset="0;0">
 			<Creation>
-				<Property PlayMoment="GiveAttackFrom">
+				<Property PlayMoment="GiveAttackSelf">
 					<Option ReinforceValue="0" UseAttach="NO" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO"/>
 					<Sound SoundName="None" SoundVolume="1"/>
 				</Property>
@@ -3866,6 +3866,24 @@
 			<Creation>
 				<Property PlayMoment="None">
 					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="NO" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
+	<ItemList ItemClassName="wing_baubas">
+		<Layer effect="I_smoke013_dark_glow2_red_dark1_loop" TargetNode="Dummy_root" scale="2" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="I_feather001_dark_red" TargetNode="Dummy_root" scale="1.5" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
 					<Sound SoundName="None" SoundVolume="1"/>
 				</Property>
 			</Creation>

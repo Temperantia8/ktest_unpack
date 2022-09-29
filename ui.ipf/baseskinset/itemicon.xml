@@ -3587,6 +3587,8 @@
 		<image name="icon_item_ep14egypt_cannon" file="\icon\weapon\icon_item_ep14egypt_cannon.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep14egypt_dagger" file="\icon\weapon\icon_item_ep14egypt_dagger.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep14egypt_spear" file="\icon\weapon\icon_item_ep14egypt_spear.png" imgrect="0 0 256 256"/>
+		<image name="item_icon_baubas_sword" file="\icon\weapon\warrior_f_sword_baubas.png" imgrect="0 0 256 256"/>
+		<image name="item_icon_baubas_thsword" file="\icon\weapon\warrior_f_thsword_baubas.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="acc_item">
 		<image name="item_necklace_01" file="\icon\acc\item_necklace_1.png" imgrect="0 0 256 256" CMM_Caption="목걸이"/>
@@ -6839,7 +6841,7 @@
 		<image name="icon_item_coin_package" file="\icon\item\icon_item_coin_package.png" imgrect="0 0 256 256" CMM_Caption="증표 꾸러미"/>
 		<image name="icon_item_coin_package_480" file="\icon\item\icon_item_coin_package_480.png" imgrect="0 0 256 256" CMM_Caption="증표 꾸러미"/>
 		<image name="icon_item_ran_sklgem_cube_recycle" file="\icon\item\icon_item_ran_sklgem_cube_recycle.png" imgrect="0 0 128 128" CMM_Caption="랜덤 스킬 젬"/>
-		<image name="icon_item_GoddessCard_Reinforce_package" file="\icon\item\icon_item_GoddessCard_Reinforce_package.png" imgrect="0 0 128 128" CMM_Caption="여신 카드 강화 패키지"/>
+		<image name="icon_item_GoddessCard_Reinforce_package" file="\icon\item\icon_item_GoddessCard_Reinforce_package.png" imgrect="0 0 128 128" CMM_Caption="가디스 카드 강화 패키지"/>
 		<image name="icon_item_misc_pvp_mine2_NotLimit_10000" file="\icon\item\icon_item_misc_pvp_mine2_NotLimit_10000.png" imgrect="0 0 128 128" CMM_Caption="용병단 증표: 10,000"/>
 		<image name="icon_item_reputation_relief_gold" file="\icon\item\icon_item_reputation_relief_gold.png" imgrect="0 0 256 256" CMM_Caption="[증정용] 전체 명성도 증가 쿠폰(ep13): 500"/>
 		<image name="icon_item_magnifier_free" file="\icon\item\icon_item_magnifier_free.png" imgrect="0 0 256 256" CMM_Caption="산드라의 무료 감정 돋보기"/>
@@ -9424,6 +9426,11 @@
 		<image name="icon_item_ep14egypt02_m" file="\icon\payment\icon_item_ep14egypt02_m.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_selectbox_ep14egypt01" file="\icon\payment\icon_item_selectbox_ep14egypt01.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_selectbox_ep14egypt02" file="\icon\payment\icon_item_selectbox_ep14egypt02.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_MultipleToken_Auto_Raid_Ep14_2" file="\icon\item\icon_item_MultipleToken_Auto_Raid_Ep14_2.png" imgrect="0 0 256 256" />
+		<image name="icon_item_MultipleToken_earring_raid" file="\icon\item\icon_item_MultipleToken_earring_raid.png" imgrect="0 0 256 256" />
+		<image name="icon_item_MultipleToken_Challenge" file="\icon\item\icon_item_MultipleToken_Challenge.png" imgrect="0 0 256 256" />
+		<image name="icon_item_MultipleToken_Auto_Raid_Jellyzele" file="\icon\item\icon_item_MultipleToken_Auto_Raid_Jellyzele.png" imgrect="0 0 256 256" />
+		<image name="icon_item_MultipleToken_Auto_Raid_RevivalPaulius" file="\icon\item\icon_item_MultipleToken_Auto_Raid_RevivalPaulius.png" imgrect="0 0 256 256" />
 	</imagelist>
 	<imagelist category="seal">
 		<image name="icon_seal_yellow_cc_A1" file="\icon\seal\seal_yellow_cc_A1.tga" imgrect="0 0 80 80"/>

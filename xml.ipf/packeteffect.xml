@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <packeteffects>
+	<Category ID="181">
+		<Effect Name="Baubas_Guild_Raid"/>
+		<Effect Name="master_Jaguar"/>
+	</Category>
     <Category ID="128">
         <Effect Name="F_archer_DetonateTraps_explosion2"/>
         <Effect Name="F_explosion122"/>
@@ -877,6 +881,7 @@
         <Effect Name="F_warrior_RetributionBanner_buff"/>
         <Effect Name="F_warrior_Vitalitybanner_buff"/>
         <Effect Name="artefact_ep14egypt_paddle"/>
+        <Effect Name="Shootpad_WildThorn"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
@@ -892,6 +897,10 @@
         <Effect Name="F_spread_out059_yellow"/>
         <Effect Name="EARRING_RAID_Hard"/>
         <Effect Name="EARRING_RAID_Normal"/>
+        <Effect Name="F_line023_red"/>
+        <Effect Name="F_archer_FocusFire_spin_light3"/>
+        <Effect Name="I_pc_effectitem_gabia_cylinder_mesh_for_emitter"/>
+        <Effect Name="F_pc_effectitem_gabia_for_emitter"/>
     </Category>
     <Category ID="14">
         <Effect Name="GUILD_COLONY_F_REMAINS_37_1"/>
@@ -8647,6 +8656,7 @@
         <Effect Name="F_ground190_circle_crack2_1"/>
         <Effect Name="I_breath021_dark2"/>
         <Effect Name="F_burstup063"/>
+        <Effect Name="Baubas_Guild_Raid"/>
     </Category>
     <Category ID="27">
         <Effect Name="SAPPER_TRAP_Sapper_BroomTrap"/>
@@ -11159,6 +11169,9 @@
         <Effect Name="F_rize030_ground_white"/>
         <Effect Name="F_rize030_ground_white_loop"/>
         <Effect Name="Falouros_ThunderCloud_Damage_Pad"/>
+        <Effect Name="Baubas_Guild_Raid"/>
+        <Effect Name="StageManager"/>
+        <Effect Name="raid_baubas"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>
@@ -41649,6 +41662,7 @@
         <Effect Name="F_rize004_dark_redorange2"/>
         <Effect Name="F_ground190_circle_crack3_3"/>
 		<Effect Name="F_rize004_dark_redorange"/>
+		<Effect Name="raid_baubas"/>
     </Category>
     <Category ID="170">
         <Effect Name="Linker_blue3"/>

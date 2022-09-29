@@ -68,7 +68,7 @@ ClassID,BaseID,ClassName,TreeGroup,TreeGroupCaption,TreeSSetTitle,InvenTabName,M
 67,335001,"Gem_GemSkill","Gem","젬","스킬 젬","Gem","NO"
 68,340001,"Card_Summon","Card","카드","카드첩","Card","NO"
 69,345001,"Card_CardAddExp","Card","카드","강화용 카드","Card","NO"
-70,350001,"Card_CardGoddess","Card","카드","여신 카드","Card","NO"
+70,350001,"Card_CardGoddess","Card","카드","가디스 카드","Card","NO"
 71,355001,"Card_CardLeg","Card","카드","레전드 카드","Card","NO"
 72,360001,"Card_CardGreen","Card","카드","그린 카드","Card","NO"
 73,365001,"Card_CardRed","Card","카드","레드 카드","Card","NO"

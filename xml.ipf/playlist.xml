@@ -162,6 +162,7 @@
 	<BGM PlayListName="raid_earring" Volume="130" FileName1="tos_SFA_Perseguir_la_cola.mp3"/>
 	<BGM PlayListName="raid_jellyzele" Volume="130" FileName1="tos_SFA_Jelly_beenie_flight.mp3"/>
 	<BGM PlayListName="raid_turbulentcore" Volume="130" FileName1="tos_Gaudium_Searching.mp3"/>
+	<BGM PlayListName="raid_baubas" Volume="130" FileName1="tos_Cinenote_Action4_Baubas.mp3"/>
 	<BGM PlayListName="boss_spreader" Volume="130" FileName1="tos_Cinenote_Action7_Spreader.mp3"/>
 	<BGM PlayListName="boss_falouros" Volume="130" FileName1="tos_Cinenote_Battle3_Falouros.mp3"/>
 	<BGM PlayListName="track" Volume="90" FileName1="track.mp3"/>

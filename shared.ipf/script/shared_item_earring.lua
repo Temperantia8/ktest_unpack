@@ -19,7 +19,7 @@ local item_earring_option_range = nil
 item_earring_base_option_list = {'STR', 'DEX', 'CON', 'INT', 'MNA'}
 item_earring_max_stats_option_count = 3 -- 최대 3개
 
-iten_earring_base_ctrl_list = {'Warrior', 'Wizard', 'Archer', 'Cleric', 'Scout'}
+item_earring_base_ctrl_list = {'Warrior', 'Wizard', 'Archer', 'Cleric', 'Scout'}
 local item_earring_max_special_option_count = nil 
 item_earring_ctrl_tree = nil
 
@@ -31,7 +31,7 @@ local function make_item_earring_option_range()
     end
     
     item_earring_ctrl_tree = {}
-    for _, ctrl in pairs(iten_earring_base_ctrl_list) do
+    for _, ctrl in pairs(item_earring_base_ctrl_list) do
         item_earring_ctrl_tree[ctrl] = {}        
     end
 

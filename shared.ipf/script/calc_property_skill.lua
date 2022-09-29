@@ -16091,6 +16091,19 @@ function SCR_Get_SkillFactor_EP13_Card_Vakarine(skill)
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+-- 바우바스 카드
+function SCR_Get_SkillFactor_Baubas_fire(skill)
+    local pc = GetSkillOwner(skill)
+
+    local value = 30000
+    if IsPVPField(pc) == 1 then
+        value = math.floor(value * 0.5)
+    end
+    
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_SkillFactor_Vibora_DragonFall(skill)
     local pc = GetSkillOwner(skill)
     local fall = GetSkill(pc, "Dragoon_DragonFall")
