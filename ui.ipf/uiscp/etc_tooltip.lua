@@ -246,15 +246,16 @@ function DRAW_ETC_DESC_TOOLTIP(tooltipframe, invitem, yPos, mainframename)
 		Desc = invitem.Desc		
 	end
 
-	if config.GetServiceNation() == "KOR" then
+	if config.GetServiceNation() ~= "TAIWAN" then
 		local name = TryGetProp(invitem, 'ClassName', 'None')
 		local cls = GetClass('recycle_shop', name)
 		if cls ~= nil  then
 			local sell = TryGetProp(cls, 'SellPrice', 0)
 			if sell > 0 then				
-				Desc = replace(Desc, ClMsg('ExchangeRecycleMedal_1'), '')
-				Desc = replace(Desc, ClMsg('ExchangeRecycleMedal_2'), '')
-	
+				Desc = dic.getTranslatedStr(Desc)
+				Desc = replace(Desc, dic.getTranslatedStr(ClMsg('ExchangeRecycleMedal_1')), '')
+				Desc = replace(Desc, dic.getTranslatedStr(ClMsg('ExchangeRecycleMedal_2')), '')
+
 				if TryGetProp(invitem, 'TeamBelonging', 0) == 0 and TryGetProp(invitem, 'CharacterBelonging', 0) == 0 then
 					local suffix = '{nl}' .. ScpArgMsg('ExchangeRecycleMedal', 'value', sell)
 					Desc = Desc .. suffix
@@ -262,7 +263,6 @@ function DRAW_ETC_DESC_TOOLTIP(tooltipframe, invitem, yPos, mainframename)
 			end
 		end
 	end
-
 	Desc = DRAW_COLLECTION_INFO(invitem, Desc)
 	Desc = DRAW_USAGEDESC_INFO(invitem, Desc)
 	

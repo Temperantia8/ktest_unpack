@@ -31,3 +31,4 @@ ClassID,TotalNumberDays,ClassName,Name,AttendancePass,StartTime,EndTime
 130,1,"Event2209Attendance","한가위 접속 이벤트","NO","2022-09-09 06:00:00","2022-09-12 12:00:00"
 131,7,"Event2209GmAttendance","GM 깜짝 선물 상자 이벤트","NO","2022-09-13 00:00:00","2022-09-20 00:00:00"
 132,7,"Event2210GmAttendance","GM 깜짝 선물 상자 이벤트(대만)","NO","2022-09-13 00:00:00","2022-09-20 00:00:00"
+133,14,"OcelotPackage","오셀롯 패키지","NO","",""

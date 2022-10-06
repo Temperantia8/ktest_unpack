@@ -124,7 +124,7 @@ ClassID,Grade_Ratio,Count,NeedCoin,ClassName,Grade,Limit_Level,CoinType,CoinName
 10122,1,1,50000,"motion_popocon3_2","C","","AccountProp","VakarineCertificate","NO","2021-11-01 09:00:00","2023-11-01 09:00:00"
 10123,5,1,70000,"Nyang_Piano_Box_Do_White_2","S","25","AccountProp","VakarineCertificate","NO","2021-11-01 09:00:00","2023-11-01 09:00:00"
 10124,1,1,50000,"motion_medeinacon2_2","C","","AccountProp","VakarineCertificate","NO","2021-11-01 09:00:00","2023-11-01 09:00:00"
-10125,1,1,50000,"motion_bakarinecon1_1","C","","AccountProp","VakarineCertificate","NO","2021-11-01 09:00:00","2023-11-01 09:00:00"
+10125,1,1,50000,"motion_bakarinecon1_2","C","","AccountProp","VakarineCertificate","NO","2021-11-01 09:00:00","2023-11-01 09:00:00"
 10126,10,50,20000,"misc_reinforce_percentUp_470_NoTrade","B","15","AccountProp","VakarineCertificate","YES","2022-07-28 09:00:00","2023-11-11 09:00:00"
 10127,10,200,10000,"Relic_Reinforce_100000coupon","B","","AccountProp","VakarineCertificate","YES","2022-07-28 09:00:00","2023-11-11 09:00:00"
 10128,1,1,50000,"motion_kupole_emotion02_2","C","","AccountProp","VakarineCertificate","NO","2021-11-01 09:00:00","2023-11-01 09:00:00"
