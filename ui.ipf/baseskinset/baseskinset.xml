@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Kim TaekBin (IMCGames Co., Ltd) -->
 <!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by MintPC (Mi) -->
 <skinset name="Base">
 	<skinlist category="frames">
@@ -13900,6 +13900,7 @@
 		<image name="Dlg_port_Ramin" file="\npcimg\Ramin.png" imgrect="0 0 800 1000" CMM_Caption="라민"/>
 		<image name="Dlg_port_Veliuona" file="\npcimg\Veliuona.png" imgrect="0 0 950 1000" CMM_Caption="벨리우오나"/>
 		<image name="Dlg_port_Lama" file="\npcimg\Lama.png" imgrect="0 0 700 800" CMM_Caption="라마"/>
+		<image name="Dlg_port_Jaguar" file="\npcimg\Jaguar.png" imgrect="0 0 700 800" CMM_Caption="재규어"/>
 	</imagelist>
 	<imagelist category="Dlg_boss">
 		<image name="balloon_Skiaclipse" file="\skin\monster_Dlg.tga" imgrect="0 0 220 260" CMM_Caption="스키아클립스"/>
@@ -15423,6 +15424,8 @@
 		<image name="plate_achieve_Falouros_gold" file="\skin\user_title_skin.tga" imgrect="0 1173 214 36"/>
 		<image name="plate_achieve_Falouros_silver" file="\skin\user_title_skin.tga" imgrect="215 1173 214 36"/>
 		<image name="plate_achieve_Falouros_bronze" file="\skin\user_title_skin.tga" imgrect="430 1173 214 36"/>
+		<image name="plate_achieve_jaguar_weekraid" file="\skin\user_title_skin.tga" imgrect="0 1210 214 34" CMM_Caption="재규어 주보레 칭호"/>
+		<image name="plate_achieve_Jaguar" file="\skin\user_title_skin.tga" imgrect="215 1210 214 34" CMM_Caption="재규어 업적 칭호"/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>

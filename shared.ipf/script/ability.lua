@@ -3961,3 +3961,19 @@ end
 function SCR_ABIL_ReduceDamageIncome_INACTIVE(self, ability)
     RemoveBuff(self, 'ReduceDmgCommonAbil_Buff')
 end
+
+function SCR_ABIL_Jaguar4_ACTIVE(self, ability)
+    AddBuff(self, self, 'WildHowling_Hidden_Buff', 1, 0, 0, 1)
+end
+
+function SCR_ABIL_Jaguar4_INACTIVE(self, ability)
+    RemoveBuff(self, 'WildHowling_Hidden_Buff')
+end
+
+function SCR_ABIL_Jaguar22_ACTIVE(self, ability)
+    AddBuff(self, self, 'Jaguar22_Hidden_Buff', 1, 0, 0, 1)
+end
+
+function SCR_ABIL_Jaguar22_INACTIVE(self, ability)
+    RemoveBuff(self, 'Jaguar22_Hidden_Buff')
+end

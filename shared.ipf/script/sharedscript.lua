@@ -3274,7 +3274,28 @@ function JOB_LAMA_PRE_CHECK(pc, jobCount)
     return 'NO'
 end
 
+function JOB_JAGUAR_PRE_CHECK(pc, jobCount)
+    if jobCount == nil then
+        jobCount = GetTotalJobCount(pc);
+    end
+    if jobCount >= 2 then
+        local aObj
+        if IsServerSection() == 0 then
+            aObj = GetMyAccountObj();
+        else
+            aObj = GetAccountObj(pc);
+        end
+        
+        if aObj ~= nil then
+            local value = TryGetProp(aObj, 'UnlockQuest_Char5_18', 0)
+            if value == 1 or IS_KOR_TEST_SERVER() == true then
+                return 'YES'
+            end
+        end 
+    end
 
+    return 'YES'
+end
 
 function JOB_RUNECASTER_PRE_CHECK(pc, jobCount)
     if jobCount == nil then

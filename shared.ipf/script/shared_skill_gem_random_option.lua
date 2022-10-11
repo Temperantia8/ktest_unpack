@@ -230,9 +230,9 @@ function IS_CONVERTABLE_RANDOM_OPTION_SKILL_GEM(gem, scroll)
         return false
     end
 
-    local gem_arg = TryGetProp(gem, 'StringArg', 'None')
+    local gem_arg = TryGetProp(gem, 'StringArg2', 'None')
     local scroll_arg = TryGetProp(scroll, 'StringArg', 'None')
-    if gem_arg == 'SkillGem' then
+    if gem_arg == nil or gem_arg == 'None' then
         return false
     end
 
@@ -257,7 +257,10 @@ function IS_CONVERTABLE_RANDOM_OPTION_SKILL_GEM(gem, scroll)
 end
 
 function GET_CONVERTABLE_SKILLGEM_LIST(gem)
-    local job_cls = GetClassByStrProp('Job', 'JobName', TryGetProp(gem, 'StringArg', 'None'))
+    local gem_arg = TryGetProp(gem, 'StringArg2', 'None')
+    if gem_arg == nil or gem_arg == 'None' then return end
+
+    local job_cls = GetClassByStrProp('Job', 'JobName', gem_arg)
 	if job_cls == nil then return end
 
 	local available_list = {}

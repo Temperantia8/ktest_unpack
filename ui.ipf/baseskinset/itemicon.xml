@@ -920,6 +920,10 @@
 		<image name="icon_item_falouros_leather_gloves" file="\icon\equip\icon_item_falouros_leather_gloves.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_falouros_leather_pants" file="\icon\equip\icon_item_falouros_leather_pants.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_falouros_leather_shoes" file="\icon\equip\icon_item_falouros_leather_shoes.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_scoutCos_jaguar_m" file="\icon\equip\icon_item_scout_jaguar_m.png" imgrect="0 0 256 256" CMM_Caption="재규어 코스튬"/>
+		<image name="icon_item_scoutCos_jaguar_f" file="\icon\equip\icon_item_scout_jaguar_f.png" imgrect="0 0 256 256" CMM_Caption="재규어 코스튬"/>
+		<image name="icon_item_scoutCos_jaguar01_m" file="\icon\equip\icon_item_scout_jaguar01_m.png" imgrect="0 0 256 256" CMM_Caption="재규어 팬서 코스튬"/>
+		<image name="icon_item_scoutCos_jaguar01_f" file="\icon\equip\icon_item_scout_jaguar01_f.png" imgrect="0 0 256 256" CMM_Caption="재규어 팬서 코스튬"/>
 	</imagelist>
 	<imagelist category="256_costume_icons">
 		<image name="icon_item_Alchemist_f" file="\icon\equip\Alchemist_f_icon.png" imgrect="0 0 256 256" CMM_Caption="알케미스트"/>
@@ -6996,6 +7000,9 @@
 		<image name="icon_item_piece_shoulder" file="\icon\item\icon_item_piece_shoulder.png" imgrect="0 0 256 256" CMM_Caption=""/>
 		<image name="icon_item_shoulder_480" file="\icon\item\icon_item_shoulder_480.png" imgrect="0 0 256 256" CMM_Caption=""/>
 		<image name="icon_item_shoulder_high_480" file="\icon\item\icon_item_shoulder_high_480.png" imgrect="0 0 256 256" CMM_Caption=""/>
+		<image name="icon_item_honormedal_Jaguar_Costume" file="\icon\item\icon_item_honormedal_Jaguar_Costume.png" imgrect="0 0 256 256" CMM_Caption="재규어 명예훈장 3종"/>
+		<image name="icon_item_honormedal_Jaguar_Job" file="\icon\item\icon_item_honormedal_Jaguar_Job.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_Unlock_Jaguar" file="\icon\item\icon_item_Unlock_Jaguar.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_ep14_2_collect_1" file="\icon\item\icon_item_ep14_2_collect_1.png" imgrect="0 0 128 128"/>
 		<image name="icon_item_ep14_2_collect_2" file="\icon\item\icon_item_ep14_2_collect_2.png" imgrect="0 0 128 128"/>
 		<image name="icon_item_ep14_2_collect_3" file="\icon\item\icon_item_ep14_2_collect_3.png" imgrect="0 0 128 128"/>
@@ -9426,6 +9433,9 @@
 		<image name="icon_item_ep14egypt02_m" file="\icon\payment\icon_item_ep14egypt02_m.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_selectbox_ep14egypt01" file="\icon\payment\icon_item_selectbox_ep14egypt01.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_selectbox_ep14egypt02" file="\icon\payment\icon_item_selectbox_ep14egypt02.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_Ticket_vibora_vision_jaguar" file="\icon\payment\icon_item_Ticket_vibora_vision_jaguar.png" imgrect="0 0 256 256" CMM_Caption="바이보라 지급권 재규어"/>
+		<image name="icon_item_jaguar_standard_class_pack" file="\icon\payment\icon_item_jaguar_standard_class_pack.png" imgrect="0 0 256 256" CMM_Caption="재규어 스탠다드 패키지"/>
+		<image name="icon_item_jaguar_complete_class_pack" file="\icon\payment\icon_item_jaguar_complete_class_pack.png" imgrect="0 0 256 256" CMM_Caption="재규어 컴플리트 패키지"/>
 		<image name="icon_item_MultipleToken_Auto_Raid_Ep14_2" file="\icon\item\icon_item_MultipleToken_Auto_Raid_Ep14_2.png" imgrect="0 0 256 256" />
 		<image name="icon_item_MultipleToken_earring_raid" file="\icon\item\icon_item_MultipleToken_earring_raid.png" imgrect="0 0 256 256" />
 		<image name="icon_item_MultipleToken_Challenge" file="\icon\item\icon_item_MultipleToken_Challenge.png" imgrect="0 0 256 256" />

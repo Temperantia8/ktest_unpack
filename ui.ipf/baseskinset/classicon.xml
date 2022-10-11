@@ -98,5 +98,6 @@
 		<image name="c_scout_hackapell" file="\icon\class_scout.tga" imgrect="200 100 100 100" CMM_Caption="하카펠_스카우트"/>
 		<image name="c_wizard_keraunos" file="\icon\class_wizard.tga" imgrect="0 400 100 100" CMM_Caption="케라우노스"/>
 		<image name="c_cleric_lama" file="\icon\class_cleric.tga" imgrect="0 400 100 100" CMM_Caption="라마"/>
+		<image name="c_scout_jaguar" file="\icon\class_scout.tga" imgrect="304 105 100 100" CMM_Caption="재규어"/>
 	</imagelist>
 </skinset>

@@ -882,6 +882,10 @@
         <Effect Name="F_warrior_Vitalitybanner_buff"/>
         <Effect Name="artefact_ep14egypt_paddle"/>
         <Effect Name="Shootpad_WildThorn"/>
+        <Effect Name="Sapper_LegHoldTrap_Mine"/>
+        <Effect Name="Sapper_LegHoldTrap_Pad"/>
+        <Effect Name="Sapper_Vibora_Pad"/>
+        <Effect Name="F_scout_JaguarStance2_1_loop"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
@@ -3892,6 +3896,7 @@
         <Effect Name="MYTHIC_CASTLE_MINI_AUTO_SOLO"/>
         <Effect Name="MYTHIC_FIRETOWER_MINI_AUTO_SOLO"/>
         <Effect Name="skl_eff_troopercharge_art_shot"/>
+        <Effect Name="Baubas_Guild_Raid"/>
     </Category>
     <Category ID="171">
         <Effect Name="MISSION_UPHILL_DEFFENSE_EVENT2"/>
