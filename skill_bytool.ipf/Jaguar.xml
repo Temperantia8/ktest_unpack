@@ -14,30 +14,35 @@
             <EtcList>
                 <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="0">
                     <Str Str="SKL_JAGUARSTANCE"/>
-                    <Num Num="1"/>
+                    <Num Num="2"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="200">
+                <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="0">
+                    <Str Str="skl_eff_jaguar_jaguarstance"/>
+                </Scp>
+                <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="100">
                     <Str Str="voice_war_atk_medium"/>
                     <Str Str="voice_atk_medium_war_f"/>
                 </Scp>
-					<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="0">
-                    <Str Str="skl_eff_jaguar_jaguarstance"/>
-                </Scp>
-                <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="400">
+                <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="200">
                     <Str_Arg Str="F_scout_JaguarStance2_1" Arg="0.7"/>
                     <Pos Angle="0" Dist="0" Height="20"/>
                     <Num Num="0"/>
                     <Str Str="None"/>
                 </Scp>
-				<Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="400">
-                        <Str_Arg Str="F_scout_JaguarStance" Arg="0.5"/>
-                        <Pos Angle="0" Dist="0" Height="0"/>
-                        <Num Num="0"/>
-                        <Str Str="None"/>
+				<Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="200">
+                    <Str_Arg Str="F_scout_JaguarStance" Arg="0.5"/>
+                    <Pos Angle="0" Dist="0" Height="0"/>
+                    <Num Num="0"/>
+                    <Str Str="None"/>
                 </Scp>	
-                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="450">
+                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="300">
+                    <Str_Arg Str="F_scout_Jaguar_symbole" Arg="2"/>
+                    <Str Str="Dummy_bufficon"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="350">
                     <Str Str="JaguarStance_Buff"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
@@ -48,13 +53,8 @@
                     <Num Num="100"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_BUFF_REMOVE" Client="NO" UseSleep="NO" Time="450">
+                <Scp Scp="SKL_BUFF_REMOVE" Client="NO" UseSleep="NO" Time="350">
                     <Str Str="Jaguar_Wild_Buff"/>
-                </Scp>
-                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="550">
-                    <Str_Arg Str="F_scout_Jaguar_symbole" Arg="2"/>
-                    <Str Str="Dummy_bufficon"/>
-                    <Num Num="0"/>
                 </Scp>
             </EtcList>
         </MainSkl>
@@ -72,30 +72,35 @@
                     <EtcList>
                         <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="0">
                             <Str Str="SKL_JAGUARSTANCE"/>
-                            <Num Num="1"/>
+                            <Num Num="2"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="0">
+                        <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="0">
+                            <Str Str="skl_eff_jaguar_jaguarstance"/>
+                        </Scp>
+                        <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="100">
                     		<Str Str="voice_war_atk_medium"/>
                     		<Str Str="voice_atk_medium_war_f"/>
                         </Scp>
-                        <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="50">
-                            <Str Str="skl_eff_luchador_enmascarado_on"/>
-                        </Scp>
-                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="400">
+                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="200">
                             <Str_Arg Str="F_scout_JaguarStance2_1" Arg="1"/>
                             <Pos Angle="0" Dist="0" Height="30"/>
                             <Num Num="0"/>
                             <Str Str="None"/>
                         </Scp>
-                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="400">
+                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="200">
                             <Str_Arg Str="F_warrior_upeerslash_shot_ground_violet" Arg="0.5"/>
                             <Pos Angle="0" Dist="0" Height="0"/>
                             <Num Num="0"/>
                             <Str Str="None"/>
-                        </Scp>						
-                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="450">
+                        </Scp>
+                        <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="300">
+                            <Str_Arg Str="F_scout_Jaguar_symbole2" Arg="1.5"/>
+                            <Str Str="Dummy_bufficon"/>
+                            <Num Num="0"/>
+                        </Scp>
+                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="350">
                             <Str Str="JaguarStance_Buff"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
@@ -106,10 +111,10 @@
                             <Num Num="100"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_BUFF_REMOVE" Client="NO" UseSleep="NO" Time="450">
+                        <Scp Scp="SKL_BUFF_REMOVE" Client="NO" UseSleep="NO" Time="350">
                             <Str Str="Jaguar_Wild_Buff"/>
                         </Scp>
-                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="450">
+                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="350">
                             <Str Str="Jaguar_Fierce_Buff"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
@@ -118,18 +123,13 @@
                             <Num Num="100"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="450">
+                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="350">
                             <Str Str="Jaguar_Hide_Buff"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
                             <Num Num="10000"/>
                             <Num Num="1"/>
                             <Num Num="100"/>
-                            <Num Num="0"/>
-                        </Scp>
-                        <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="550">
-                            <Str_Arg Str="F_scout_Jaguar_symbole2" Arg="1.5"/>
-                            <Str Str="Dummy_bufficon"/>
                             <Num Num="0"/>
                         </Scp>
                     </EtcList>
@@ -169,16 +169,7 @@
                     <Str Str="voice_war_atk_medium"/>
                     <Str Str="voice_atk_medium_war_f"/>
                 </Scp>
-                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="400">
-                    <Str Str="Jaguar_Wild_Buff"/>
-                    <Num Num="1"/>
-                    <Num Num="0"/>
-                    <Num Num="0"/>
-                    <Num Num="1"/>
-                    <Num Num="100"/>
-                    <Num Num="0"/>
-                </Scp>
-                <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="600">
+                <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="550">
                     <Pos Angle="0" Dist="0" PosType="5"/>
                     <Num Num="0"/>
                     <Num Num="80"/>
@@ -189,9 +180,18 @@
                     <Num Num="0"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="600">
+                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="550">
                     <Num Num="1"/>
                     <Num Num="0"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="550">
+                    <Str Str="Jaguar_Wild_Buff"/>
+                    <Num Num="1"/>
+                    <Num Num="0"/>
+                    <Num Num="0"/>
+                    <Num Num="1"/>
+                    <Num Num="100"/>
                     <Num Num="0"/>
                 </Scp>
             </EtcList>
@@ -258,7 +258,7 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="550">
                             <Pos Angle="0" Dist="0" PosType="5"/>
                             <Num Num="0"/>
                             <Num Num="80"/>
@@ -269,12 +269,12 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="550">
                             <Num Num="1"/>
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_BUFF" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_TGT_BUFF" Client="NO" UseSleep="NO" Time="550">
                             <Str Str="Stun"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
@@ -319,15 +319,6 @@
                             <Str Str="voice_scout_m_instantaneousacceleration_cast"/>
                             <Str Str="voice_scout_f_instantaneousacceleration_cast"/>
                         </Scp>						
-                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="400">
-                            <Str Str="Jaguar_Wild_Buff"/>
-                            <Num Num="1"/>
-                            <Num Num="0"/>
-                            <Num Num="0"/>
-                            <Num Num="1"/>
-                            <Num Num="100"/>
-                            <Num Num="0"/>
-                        </Scp>
                         <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="450">
                             <Pos Angle="0" Dist="0"/>
                             <Num Num="0"/>
@@ -344,7 +335,7 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="550">
                             <Pos Angle="0" Dist="0" PosType="5"/>
                             <Num Num="0"/>
                             <Num Num="80"/>
@@ -355,9 +346,18 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="550">
                             <Num Num="1"/>
                             <Num Num="0"/>
+                            <Num Num="0"/>
+                        </Scp>
+                        <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="550">
+                            <Str Str="Jaguar_Wild_Buff"/>
+                            <Num Num="1"/>
+                            <Num Num="0"/>
+                            <Num Num="0"/>
+                            <Num Num="1"/>
+                            <Num Num="100"/>
                             <Num Num="0"/>
                         </Scp>
                     </EtcList>
@@ -403,7 +403,7 @@
 							<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="200">
                     		<Str Str="skl_eff_jaguar_atk"/>
                 		</Scp>		
-                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="550">
                             <Pos Angle="0" Dist="0" PosType="5"/>
                             <Num Num="0"/>
                             <Num Num="80"/>
@@ -414,12 +414,12 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="550">
                             <Num Num="1"/>
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_BUFF" Client="NO" UseSleep="NO" Time="600">
+                        <Scp Scp="SKL_TGT_BUFF" Client="NO" UseSleep="NO" Time="550">
                             <Str Str="Stun"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
@@ -458,15 +458,15 @@
                     <Num Num="1"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="50">
+                <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="0">
                     <Str Str="skl_eff_jaguar_wildhowling"/>
                 </Scp>
-                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="550">
+                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="500">
                     <Str_Arg Str="F_scout_Jaguar_symbole_red" Arg="2"/>
                     <Str Str="Dummy_bufficon"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="550">
+                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="500">
                     <Str_Arg Str="F_scout_WildHowling_ground" UseFunc="1" FuncTxt="local name = &quot;F_scout_WildHowling_ground&quot;
 					local scale = 1.7
 					local abilBuff = info.GetBuffByName(self:GetHandleVal(), &quot;WildHowling_Hidden_Buff&quot;)
@@ -477,7 +477,7 @@
                     <Str Str="None"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="550">
+                <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="500">
                     <Num Num="1"/>
                     <Num Num="1"/>
                     <Num Num="0.2"/>
@@ -486,13 +486,13 @@
                     <Num Num="0"/>
                     <Num Num="1"/>
                 </Scp>
-                <Scp Scp="C_SHOCKWAVE" Client="YES" UseSleep="NO" Time="550">
+                <Scp Scp="C_SHOCKWAVE" Client="YES" UseSleep="NO" Time="500">
                     <Num Num="1.5"/>
                     <Num Num="1.5"/>
                     <Num Num="130"/>
                     <Num Num="999"/>
                 </Scp>
-                <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="950">
+                <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="900">
                     <Num Num="1"/>
                     <Num Num="0"/>
                     <Num Num="0.1"/>
@@ -501,7 +501,7 @@
                     <Num Num="0"/>
                     <Num Num="1"/>
                 </Scp>
-                <Scp Scp="SKL_SET_TARGET_CIRCLE" Client="NO" UseSleep="NO" Time="1000">
+                <Scp Scp="SKL_SET_TARGET_CIRCLE" Client="NO" UseSleep="NO" Time="950">
                     <Pos Angle="0" Dist="0"/>
                     <Num Num="80" UseFunc="1" FuncTxt="local value = 80
 					local abil = GetAbility(self, &quot;Jaguar4&quot;)
@@ -515,12 +515,12 @@
                     <Num Num="0"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="1000">
+                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="950">
                     <Num Num="1"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="1000">
+                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="950">
                     <Str Str="Jaguar_Wild_Buff"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
@@ -529,7 +529,7 @@
                     <Num Num="100"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="1000">
+                <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="950">
                     <Str Str="Jaguar4"/>
                     <Str Str="WildHowling_Slow_Debeff"/>
                     <Num Num="1"/>
@@ -539,7 +539,7 @@
                     <Num Num="1"/>
                     <Num Num="100"/>
                 </Scp>
-                <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="1000">
+                <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="950">
                     <Str Str="Jaguar13"/>
                     <Str Str="WildHowling_Fear_Debeff"/>
                     <Num Num="1"/>
@@ -569,15 +569,15 @@
                             <Num Num="1"/>
                             <Num Num="0"/>
                         </Scp>
-                			<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="50">
+                			<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="0">
                     		<Str Str="skl_eff_jaguar_wildhowling"/>
                 		</Scp>
-                        <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="550">
+                        <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="500">
                             <Str_Arg Str="F_scout_Jaguar_symbole_red" Arg="2"/>
                             <Str Str="Dummy_bufficon"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="550">
+                        <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="500">
                             <Str_Arg Str="F_scout_WildHowling_ground" UseFunc="1" FuncTxt="local name = &quot;F_scout_WildHowling_ground&quot;
 							local scale = 2.2
 							local abilBuff = info.GetBuffByName(self:GetHandleVal(), &quot;WildHowling_Hidden_Buff&quot;)
@@ -588,7 +588,7 @@
                             <Str Str="None"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="550">
+                        <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="500">
                             <Num Num="1"/>
                             <Num Num="1"/>
                             <Num Num="0.2"/>
@@ -597,13 +597,13 @@
                             <Num Num="0"/>
                             <Num Num="1"/>
                         </Scp>
-                        <Scp Scp="C_SHOCKWAVE" Client="YES" UseSleep="NO" Time="550">
+                        <Scp Scp="C_SHOCKWAVE" Client="YES" UseSleep="NO" Time="500">
                             <Num Num="1.5"/>
                             <Num Num="1.5"/>
                             <Num Num="130"/>
                             <Num Num="999"/>
                         </Scp>
-                        <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="950">
+                        <Scp Scp="C_COLORBLEND_ACTOR" Client="YES" UseSleep="NO" Time="900">
                             <Num Num="1"/>
                             <Num Num="0"/>
                             <Num Num="0.1"/>
@@ -612,7 +612,7 @@
                             <Num Num="0"/>
                             <Num Num="1"/>
                         </Scp>
-                        <Scp Scp="SKL_SET_TARGET_CIRCLE" Client="NO" UseSleep="NO" Time="1000">
+                        <Scp Scp="SKL_SET_TARGET_CIRCLE" Client="NO" UseSleep="NO" Time="950">
                             <Pos Angle="0" Dist="0"/>
                             <Num Num="100" UseFunc="1" FuncTxt="local value = 100
 							local abil = GetAbility(self, &quot;Jaguar4&quot;)
@@ -626,12 +626,12 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="1000">
+                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="950">
                             <Num Num="1"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="1000">
+                        <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="950">
                             <Str Str="Jaguar4"/>
                             <Str Str="WildHowling_Slow_Debeff"/>
                             <Num Num="1"/>
@@ -641,7 +641,7 @@
                             <Num Num="1"/>
                             <Num Num="100"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="1000">
+                        <Scp Scp="SKL_TGT_BUFF_ABIL" Client="NO" UseSleep="NO" Time="950">
                             <Str Str="Jaguar13"/>
                             <Str Str="WildHowling_Fear_Debeff"/>
                             <Num Num="1"/>
@@ -675,7 +675,7 @@
                     <Str Str="voice_war_atk_short"/>
                     <Str Str="voice_atk_short_war_f"/>
                 </Scp>
-                <Scp Scp="MONSKL_PAD_FRONT_MSL" Client="NO" UseSleep="YES" Time="500">
+                <Scp Scp="MONSKL_PAD_FRONT_MSL" Client="NO" UseSleep="YES" Time="550">
                     <Pos Angle="0" Dist="10"/>
                     <Str Str="Shootpad_WildThorn"/>
                     <Num Num="140"/>
@@ -685,7 +685,7 @@
                     <Num Num="100"/>
                     <Num Num="1"/>
                 </Scp>
-                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="700">
+                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="550">
                     <Str Str="Jaguar_Wild_Buff"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
@@ -710,7 +710,7 @@
                     <EtcList>
                         <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="0">
                             <Str Str="SKL_JAGUAR_WILDTHORN"/>
-                            <Num Num="1.5"/>
+                            <Num Num="2.5"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
                         </Scp>
@@ -718,9 +718,9 @@
                     		<Str Str="voice_war_atk_short"/>
                     		<Str Str="voice_atk_short_war_f"/>
                         </Scp>
-                			<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="100">
+                			<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="0">
                     		<Str Str="skl_eff_jaguar_wildthorn_t"/>
-                		</Scp>						
+                		</Scp>
                         <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="0">
                             <Pos Angle="0" Dist="0"/>
                             <Num Num="0"/>
@@ -731,37 +731,37 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="200">
+                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="50">
                             <Str_Arg Str="F_burstup063_violet" Arg="0.69999999"/>
                             <Pos Angle="0" Dist="20"/>
                             <Num Num="0"/>
                             <Str Str="None"/>
                         </Scp>
-                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="300">
+                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="150">
                             <Str_Arg Str="F_burstup063_violet" Arg="0.80000001"/>
                             <Pos Angle="0" Dist="50"/>
                             <Num Num="0"/>
                             <Str Str="None"/>
                         </Scp>
-                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="400">
+                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="250">
                             <Str_Arg Str="F_burstup063_violet" Arg="0.89999998"/>
                             <Pos Angle="0" Dist="80"/>
                             <Num Num="0"/>
                             <Str Str="None"/>
                         </Scp>
-                        <Scp Scp="C_SHOCKWAVE" Client="YES" UseSleep="NO" Time="400">
+                        <Scp Scp="C_SHOCKWAVE" Client="YES" UseSleep="NO" Time="250">
                             <Num Num="5"/>
                             <Num Num="1"/>
                             <Num Num="45"/>
                             <Num Num="999"/>
                         </Scp>
-                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="500">
+                        <Scp Scp="C_EFFECT_POS" Client="YES" UseSleep="NO" Time="350">
                             <Str_Arg Str="F_burstup063_violet" Arg="1"/>
                             <Pos Angle="0" Dist="110"/>
                             <Num Num="0"/>
                             <Str Str="None"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="700">
+                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="550">
                             <Num Num="1"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
@@ -779,7 +779,7 @@
             <EtcList>
                 <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="0">
                     <Str Str="SKL_WILDCLAW"/>
-                    <Num Num="1.5"/>
+                    <Num Num="2"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
                 </Scp>
@@ -788,9 +788,9 @@
                     <Num Num="60"/>
                     <Num Num="0"/>
                     <Num Num="0"/>
-                    <Num Num="0.33000001"/>
+                    <Num Num="0.22"/>
                     <Num Num="1"/>
-                    <Num Num="0.33000001"/>
+                    <Num Num="0.22"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
                 </Scp>
@@ -801,7 +801,7 @@
                 <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="200">
                     <Str Str="skl_eff_jaguar_wildclaw_n"/>
                 </Scp>
-                <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="200">
+                <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="150">
                     <Pos Angle="0" Dist="-40"/>
                     <Num Num="0"/>
                     <Num Num="170"/>
@@ -811,32 +811,21 @@
                     <Num Num="0"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="700">
+                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="500">
                     <Num Num="1"/>
                     <Num Num="0"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="800">
+                <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="550">
                     <Str Str="SKL_WILDCLAW"/>
-                    <Num Num="1.5"/>
+                    <Num Num="2"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_TGT_MOVE" Client="NO" UseSleep="YES" Time="1100">
-                    <Num Num="0"/>
-                    <Num Num="100"/>
-                    <Num Num="0"/>
-                    <Num Num="0"/>
-                    <Num Num="0.33000001"/>
-                    <Num Num="1"/>
-                    <Num Num="0.33000001"/>
-                    <Num Num="1"/>
-                    <Num Num="0"/>
-                </Scp>
-                <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="900">
+                <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="750">
                     <Str Str="skl_eff_jaguar_wildclaw_n"/>
                 </Scp>
-                <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="1000">
+                <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="750">
                     <Pos Angle="0" Dist="20"/>
                     <Num Num="0"/>
                     <Num Num="170"/>
@@ -846,12 +835,23 @@
                     <Num Num="0"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="1600">
+                <Scp Scp="SKL_TGT_MOVE" Client="NO" UseSleep="YES" Time="850">
+                    <Num Num="0"/>
+                    <Num Num="100"/>
+                    <Num Num="0"/>
+                    <Num Num="0"/>
+                    <Num Num="0.22"/>
+                    <Num Num="1"/>
+                    <Num Num="0.22"/>
+                    <Num Num="1"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="1200">
                     <Num Num="1"/>
                     <Num Num="0"/>
                     <Num Num="0"/>
                 </Scp>
-                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="1600">
+                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="1200">
                     <Str Str="Jaguar_Wild_Buff"/>
                     <Num Num="1"/>
                     <Num Num="0"/>
@@ -876,7 +876,7 @@
                     <EtcList>
                         <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="0">
                             <Str Str="SKL_JAGUAR_WILDCLAW"/>
-                            <Num Num="1.5"/>
+                            <Num Num="2"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
                         </Scp>
@@ -885,9 +885,9 @@
                             <Num Num="60"/>
                             <Num Num="0"/>
                             <Num Num="0"/>
-                            <Num Num="0.33000001"/>
+                            <Num Num="0.22"/>
                             <Num Num="1"/>
-                            <Num Num="0.33000001"/>
+                            <Num Num="0.22"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
                         </Scp>
@@ -895,13 +895,10 @@
                             <Str Str="voice_scout_m_behead_cast"/>
                             <Str Str="voice_scout_f_behead_cast"/>
                         </Scp>
-                			<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="200">
+                        <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="200">
                     		<Str Str="skl_eff_jaguar_wildclaw_t"/>
                 		</Scp>
-							<Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="1000">
-                    		<Str Str="skl_eff_jaguar_wildclaw_t"/>
-                		</Scp>							
-                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="200">
+                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="150">
                             <Pos Angle="0" Dist="-40"/>
                             <Num Num="0"/>
                             <Num Num="170"/>
@@ -911,33 +908,25 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="700">
+                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="500">
                             <Num Num="1"/>
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="800">
+                        <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="550">
                             <Str Str="SKL_JAGUAR_WILDCLAW"/>
-                            <Num Num="1.5"/>
+                            <Num Num="2"/>
                             <Num Num="1"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_MOVE" Client="NO" UseSleep="YES" Time="1100">
-                            <Num Num="0"/>
-                            <Num Num="100"/>
-                            <Num Num="0"/>
-                            <Num Num="0"/>
-                            <Num Num="0.33000001"/>
-                            <Num Num="1"/>
-                            <Num Num="0.33000001"/>
-                            <Num Num="1"/>
-                            <Num Num="0"/>
-                        </Scp>
-                        <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="900">
+                        <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="650">
                             <Str Str="voice_scout_m_behead_cast"/>
                             <Str Str="voice_scout_f_behead_cast"/>
                         </Scp>
-                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="1000">
+                        <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="750">
+                            <Str Str="skl_eff_jaguar_wildclaw_t"/>
+                        </Scp>
+                        <Scp Scp="SKL_SET_TARGET_SQUARE" Client="NO" UseSleep="NO" Time="750">
                             <Pos Angle="0" Dist="20"/>
                             <Num Num="0"/>
                             <Num Num="170"/>
@@ -947,7 +936,18 @@
                             <Num Num="0"/>
                             <Num Num="0"/>
                         </Scp>
-                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="1600">
+                        <Scp Scp="SKL_TGT_MOVE" Client="NO" UseSleep="YES" Time="850">
+                            <Num Num="0"/>
+                            <Num Num="100"/>
+                            <Num Num="0"/>
+                            <Num Num="0"/>
+                            <Num Num="0.22"/>
+                            <Num Num="1"/>
+                            <Num Num="0.22"/>
+                            <Num Num="1"/>
+                            <Num Num="0"/>
+                        </Scp>
+                        <Scp Scp="SKL_TGT_DMG" Client="NO" UseSleep="NO" Time="1200">
                             <Num Num="1"/>
                             <Num Num="0"/>
                             <Num Num="0"/>

@@ -934,7 +934,7 @@ return value"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
-	<PadSkill Name="Archer_SpikeShooter" CheckerType="5" UpdateTerm="1500" ApplyFlyMon="1" Relation="2" IsMagicType="0">
+    <PadSkill Name="Archer_SpikeShooter" CheckerType="5" UpdateTerm="1000" ApplyFlyMon="1" Relation="2" IsMagicType="0">
 		<createEvent>
 			<ToolScp Scp="PAD_SET_ARG_NUMBER" Client="NO" UseSleep="NO">
 				<Num Num="0" UseFunc="1" FuncTxt="return obj.Level"/>
@@ -945,7 +945,7 @@ return value"/>
 				<Str Str="CREATE_SPIKE_SHOOTER"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="40000"/>
+                <Num Num="20000"/>
 				<Num Num="99999"/>
 			</ToolScp>
 		</createEvent>
@@ -956,7 +956,7 @@ return value"/>
 		</destroyEvent>
 		<updateEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="-1500"/>
+                <Num Num="-1000"/>
 				<Num Num="0"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
@@ -24325,7 +24325,7 @@ return 30000 + obj.Level * 5000"/>
 	<PadSkill Name="Sapper_SpringTrap" CheckerType="0" Range="10" UpdateTerm="100" ApplyFlyMon="1" Relation="2" AllowOverlap="1" IsMagicType="0">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="35000"/>
+                <Num Num="25000"/>
 				<Num Num="99999"/>
 			</ToolScp>
             <ToolScp Scp="PAD_ATTACH_MON" Client="NO" UseSleep="NO">
@@ -24358,7 +24358,7 @@ return 30000 + obj.Level * 5000"/>
 				<Str Str="SpringTrap_Debuff"/>
 				<Num Num="1"/>
 				<Num Num="0"/>
-				<Num Num="35000"/>
+                <Num Num="25000"/>
 				<Num Num="1"/>
 				<Num Num="100"/>
 				<Num Num="0"/>
@@ -35378,9 +35378,7 @@ end"/>
 		<createEvent>
 			<ToolScp Scp="PAD_SAVE_CREATE_TIME" Client="NO" UseSleep="NO"/>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="30000" UseFunc="1" FuncTxt="if IsPVPServer(self) == 1 then return 900000 
-                else return 30000 + obj.Level * 5000
-                end"/>
+                <Num Num="20000" UseFunc="1" FuncTxt="return SCR_GET_PunjiStake_Ratio2(obj) * 1000"/>
 				<Num Num="2"/>
 			</ToolScp>
             <ToolScp Scp="PAD_ATTACH_MON" Client="NO" UseSleep="NO">

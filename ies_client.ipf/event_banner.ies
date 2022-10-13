@@ -1,4 +1,5 @@
 ClassID,StartTimeYYYYMM,StartTimeDDHHMM,NewTimeYYYYMM,NewTimeDDHHMM,EndTimeYYYYMM,EndTimeDDHHMM,DeadlineTimeYYYYMM,DeadlineTimeDDHHMM,ExchangeTimeYYYYMM,ExchangeTimeDDHHMM,ClassName,Name,ImagePath,url,UserCommand1,UserCommand2,UserCommand3,ShowType
+995970,202210,130000,202210,180000,202211,100600,202211,50000,0,0,"event2210_jaguar","재규어 패키지","event2210_jaguar","https://tos.nexon.com/News/Update/view?n4ArticleSN=2896","","","",""
 995980,202209,220000,202209,270000,202211,30600,202210,290000,0,0,"event2210_goddess","여신의 축복 - 10월","event2210_goddess","https://tos.nexon.com/News/TosNotice/view?n4ArticleSN=2881","","","",""
 995990,202210,10000,202210,60000,202211,10000,202210,260000,0,0,"event2210_VaivoraReward","바이보라의 날개 출석체크 - 10월","event2210_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=402","","","",""
 996000,202210,10000,202210,60000,202211,10000,202210,260000,0,0,"event2210_Burning","주말앤버닝 - 10월","event2210_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=401","","","",""
