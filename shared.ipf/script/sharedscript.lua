@@ -566,7 +566,7 @@ function make_skill_gem_list()
         for idx = 0, count - 1 do
             local cls = GetClassByIndexFromList(clsList, idx)            
             if cls ~= nil then                
-                if TryGetProp(cls, 'StringArg', 'None') == 'SkillGem' and TryGetProp(cls, 'SkillName', 'None') ~= 'None' then                   
+                if TryGetProp(cls, 'StringArg', 'None') == 'SkillGem' and TryGetProp(cls, 'SkillName', 'None') ~= 'None' and TryGetProp(cls, 'StringArg2', 'None')=='None' then                   
 
                     local gem_job = TryGetProp(GetClass('Skill', TryGetProp(cls, 'SkillName', 'None')), 'Job', 'None')
                     local gem_ctrlType = TryGetProp(GetClassByStrProp('Job', 'JobName', gem_job), 'CtrlType', "None")
@@ -595,9 +595,9 @@ make_skill_gem_list()
          for idx = 0, count - 1 do
              local cls = GetClassByIndexFromList(clsList, idx)            
              if cls ~= nil then                
-                 if TryGetProp(cls, 'StringArg', 'None') == 'SkillGem' and TryGetProp(cls, 'SkillName', 'None') ~= 'None' then                 
+                 if TryGetProp(cls, 'StringArg', 'None') == 'SkillGem' and TryGetProp(cls, 'SkillName', 'None') ~= 'None' and TryGetProp(cls, 'StringArg2', 'None')=='None' then                 
                     table.insert(skill_gem_list_cube, TryGetProp(cls, 'ClassName', 'None'))
-                 end
+                end
              end
          end
      end

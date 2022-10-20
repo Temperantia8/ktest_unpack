@@ -17385,6 +17385,7 @@ ClassID,ClassName,Mesh,Path,ArmbandInfo,UseAlpha,IsJiggleBoneHair
 1301002,"monster_pet_box_sled","char_hi\monster\monster_Pet_box_sled_set.xac","char_texture\monster\pet_box_Sled\","L;Dummy_LU_armband","NO",""
 1301003,"Pet_Sled","char_hi\monster\pet_sled_set.xac","char_texture\monster\pet_sled\","","NO",""
 1301004,"Pet_Sled_blue","char_hi\monster\pet_sled_set.xac","char_texture\monster\pet_sled\blue\","","NO",""
+1301005,"Pet_Sled_skyblue","char_hi\monster\pet_sled_set.xac","char_texture\monster\pet_sled\skyblue\","","NO",""
 1400001,"hair_f_default","char_hi\pc\3DHair\hair_f_default.xac","char_texture\pc\3DHair\hair_f_default\","L;Dummy_LU_armband","NO",""
 1400002,"hair_f_twinhair","char_hi\pc\3DHair\hair_f_twinhair.xac","char_texture\pc\3DHair\hair_f_twinhair\","L;Dummy_LU_armband","NO",""
 1400003,"hair_f_gm2","char_hi\pc\3DHair\hair_f_gm2.xac","char_texture\pc\3DHair\hair_f_gm2\","L;Dummy_LU_armband","NO",""

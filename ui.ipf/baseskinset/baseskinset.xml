@@ -11880,6 +11880,7 @@
 		<image name="companion_pet_twn6th_TI" file="\icon\companion_Velhider.tga" imgrect="560 160 80 80"/>
 		<image name="companion_twnocelot_white" file="\icon\companion_Velhider.tga" imgrect="560 240 80 80"/>
 		<image name="companion_twnocelot_black" file="\icon\companion_Velhider.tga" imgrect="560 320 80 80"/>
+		<image name="companion_pet_sled_skyblue" file="\icon\companion_Velhider.tga" imgrect="560 400 80 80"/>
 		<image name="bg_w" file="\skin\button.tga" imgrect="252 974 50 50"/>
 		<image name="barrack_signboard" file="\skin\barrack.tga" imgrect="356 0 257 192"/>
 		<image name="barrack_attack_icon" file="\skin\barrack.tga" imgrect="59 720 55 61"/>

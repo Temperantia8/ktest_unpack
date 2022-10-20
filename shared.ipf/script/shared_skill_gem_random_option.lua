@@ -110,7 +110,7 @@ function make_skill_gem_random_option()
     local list, cnt = GetClassList('Item')
     for i = 0, cnt - 1 do
         local cls = GetClassByIndexFromList(list, i);
-        if TryGetProp(cls, 'StringArg', 'None') == 'SkillGem' then
+        if TryGetProp(cls, 'StringArg', 'None') == 'SkillGem' and TryGetProp(cls, 'StringArg2', 'None')=='None' then
             local class_name = TryGetProp(cls, 'ClassName', 'None')
             if class_name ~= 'None' then
                 local skill_name = TryGetProp(cls, 'SkillName', 'None')
@@ -120,7 +120,6 @@ function make_skill_gem_random_option()
                         local job = TryGetProp(skl_cls, 'Job', 'None')
                         local _list, _cnt = GetClassListByProp('Job', 'JobName', job)
                         if _cnt > 0 then
-                            -- print(_cnt)
                             local job_cls = _list[1]                
                             local ctrl_type = TryGetProp(job_cls, 'CtrlType', 'None')
                             skill_gem_list_with_ctrl_type[class_name] = ctrl_type
