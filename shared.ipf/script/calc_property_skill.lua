@@ -17938,14 +17938,27 @@ function SCR_GET_GroovingMuzzle_Ratio(skill)
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+
 function SCR_GET_DesperateDefens_Ratio(skill)
     local level = TryGetProp(skill, "Level", 1)
-    local value = 20 + level * 1
-    if value >= 50 then
-        value = 50
-    end
+    local ability_add_val = SCR_REINFORCEABILITY_TOOLTIP(skill)
+    -- Damage Reduction
+    local base = TryGetProp(skill, 'SklFactor', 0)
+    local per = TryGetProp(skill, 'SklFactorByLevel', 0)
+    local val = base + (level * per)
+    val = val * ability_add_val
+    return val
+end
 
-    return value
+function SCR_GET_DesperateDefens_Ratio2(skill)
+    local level = TryGetProp(skill, "Level", 1)
+    local ability_add_val = SCR_REINFORCEABILITY_TOOLTIP(skill)
+    
+    --CRTDR & BLK rate increse
+    local val = 5 + 1.5 * level
+    val = val * ability_add_val
+
+    return val
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.

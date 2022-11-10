@@ -8662,6 +8662,7 @@
         <Effect Name="I_breath021_dark2"/>
         <Effect Name="F_burstup063"/>
         <Effect Name="Baubas_Guild_Raid"/>
+        <Effect Name="EP15_1_ABBEY_1_3_MINI"/>
     </Category>
     <Category ID="27">
         <Effect Name="SAPPER_TRAP_Sapper_BroomTrap"/>

@@ -480,7 +480,7 @@ end
 
 -- 세번째 옵션 낙뢰 계수는 5레벨당 x씩 오른다. 총 10회, 5250 + (10 * 1050) = 15750%
 function get_tooltip_Ark_thunderbolt_arg3()
-    return 3, 'ARK_THUNDERBOLT_ATTACK', 5, 504, 2520
+    return 3, 'ARK_THUNDERBOLT_ATTACK', 5, 840, 4200
 end
 
 function get_Ark_thunderbolt_option_active_lv()
@@ -500,7 +500,7 @@ end
 
 -- 세번째 옵션 폭풍 계수는 5레벨당 x씩 오른다. 총 16회, 2400 + (10 * 490) = 7300%
 function get_tooltip_Ark_storm_arg3()
-    return 3, 'ARK_STORM_ATTACK', 5, 392, 1920
+    return 3, 'ARK_STORM_ATTACK', 5, 653, 3200
 end
 
 function get_Ark_storm_option_active_lv()

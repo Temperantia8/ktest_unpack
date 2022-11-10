@@ -7,6 +7,7 @@ ClassID,UnlockArgNum,MaxLevel,Price1,Time1,Price2,Time2,Price3,Time3,Price4,Time
 107,200,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Arquebusier20","UNLOCK_BASE_LEVEL","Arquebusier_LuckyStrike","캐릭터 200 레벨 이상","ABIL_COMMON_PRICE_200LV"
 109,350,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Arquebusier15","UNLOCK_BASE_LEVEL","Arquebusier_Salute","캐릭터 350 레벨 이상","ABIL_COMMON_PRICE_350LV"
 110,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Arquebusier21","UNLOCK_ABIL_SKILL","Arquebusier_ArquebusBarrage","아퀴버스 배라지 1레벨 이상","ABIL_REINFORCE_PRICE"
+111,1,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Arquebusier24","UNLOCK_ABIL_SKILL","Arquebusier_DesperateDefense","데스퍼레이트 디펜스 1레벨 이상","ABIL_REINFORCE_PRICE"
 202,45,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Arquebusier22","UNLOCK_ABIL_JOB_LEVEL","Char3_21","아퀴버지어 클래스 45레벨 달성","HIDDENABIL_PRICE_COND_JOBLEVEL"
 203,45,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Arquebusier23","UNLOCK_ABIL_JOB_LEVEL","Char3_21","아퀴버지어 클래스 45레벨 달성","HIDDENABIL_PRICE_COND_JOBLEVEL"
 302,65,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Arquebusier8","UNLOCK_ABIL_OTHERABILITY","Arquebusier3","[리니어 슈팅: 강화] 특성 65 레벨 달성","HIDDENABIL_PRICE_COND_REINFORCE"
