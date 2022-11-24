@@ -7728,15 +7728,19 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Praise_Bufftime(skill)
-    return 60 + 10 * (skill.Level - 1)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 then
+        value = 5
+    end
+    return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Praise_Ratio(skill)
-    local pc = GetSkillOwner(skill);
-    local value = 25 + 5 * (skill.Level - 1)
+    local value = 10 + skill.Level * 2
     
-    return value;
+    return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -7754,13 +7758,26 @@ end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Growling_Ratio(skill)
-    local value = skill.Level * 1.5
+    local value = 10
+    local pc = GetSkillOwner(skill);
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
     return value
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_Get_Growling_Ratio2(skill)
     local value = 3 + (skill.Level - 1) * 1
+    return value
+end
+
+-- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_Growling_Time(skill)
+    local value = 5 - (skill.Level - 1) * 0.5
+    if value < 3 then
+        value = 3
+    end
     return value
 end
 
@@ -14204,6 +14221,22 @@ function SCR_Get_Howling_Ratio(skill)
 end
 
 -- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_Howling_Ratio2(skill)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_Howling_Time(skill)
+    local value = 10
+    return value
+end
+
+-- done , 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function SCR_GET_Immolation_Ratio(skill)
     local value = 0
     local pc = GetSkillOwner(skill)
@@ -18887,4 +18920,97 @@ function SCR_GET_Sapper_Vibora_Ratio(skill)
         value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
     end
     return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_Bolas_Time(skill)
+    return 5
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Bolas_Ratio(skill)
+    local value = 8
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_BleedingPierce_Time(skill)
+    return 10
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_BleedingPierce_Ratio(skill)
+    local value = 8
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_SkillFactor_BleedingPierce_Atk(skill)
+    local value = 100
+    local pc = GetSkillOwner(skill)
+    local skl = GetSkill(pc, 'Hunter_BleedingPierce')
+    if skl ~= nil then
+        value = math.floor(TryGetProp(skl, 'SkillFactor', 100)) * 0.5
+    else
+        local cls = GetClass('Skill', 'Hunter_BleedingPierce')
+        if cls ~= nil then
+            value = math.floor(TryGetProp(cls, 'SklFactor', 100) + TryGetProp(cls, 'SklFactorByLevel', 0)) * 0.5
+        end
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_SkillFactor_BleedingPierce_DOT(skill)
+    local value = 100
+    local pc = GetSkillOwner(skill)
+    local skl = GetSkill(pc, 'Hunter_BleedingPierce')
+    if skl ~= nil then
+        value = math.floor(TryGetProp(skl, 'SkillFactor', 100)) * 0.1
+    else
+        local cls = GetClass('Skill', 'Hunter_BleedingPierce')
+        if cls ~= nil then
+            value = math.floor(TryGetProp(cls, 'SklFactor', 100) + TryGetProp(cls, 'SklFactorByLevel', 0)) * 0.1
+        end
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Brawl_Ratio(skill)
+    local value = 10
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_PetAttack_Ratio(skill)
+    local value = 5
+    local pc = GetSkillOwner(skill)
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_CommonRecovery_Bufftime(skill)
+    local pc = GetSkillOwner(skill)
+
+    if IsPvPField(pc) == 1 then
+        return 7
+    end
+
+    return 1
 end

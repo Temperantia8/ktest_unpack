@@ -49,3 +49,4 @@ ClassID,Sleep,FeedCreateTimeMS,FeedDist,ClassName,ComName,Type,PCAnim,ComAnim,Fe
 49,1500,0,0,"49","pet_twn6th_TI","Normal","FEED3","FEED","","artefact_tomato_set","artefact_tomato_pc.xsm",""
 50,1500,0,0,"50","pet_twnocelot_black","Normal","FEED_SIT","FEED","","artefact_ham_set","artefact_ham_std.xsm",""
 51,1500,0,0,"51","pet_twnocelot_white","Normal","FEED_SIT","FEED","","artefact_ham_set","artefact_ham_std.xsm",""
+52,1500,0,0,"52","pet_jpn3th_fox","Normal","FEED_SIT","FEED","","artefact_ham_set","artefact_ham_std.xsm",""

@@ -1,4 +1,6 @@
 ClassID,StartTimeYYYYMM,StartTimeDDHHMM,NewTimeYYYYMM,NewTimeDDHHMM,EndTimeYYYYMM,EndTimeDDHHMM,DeadlineTimeYYYYMM,DeadlineTimeDDHHMM,ExchangeTimeYYYYMM,ExchangeTimeDDHHMM,ClassName,Name,ImagePath,url,UserCommand1,UserCommand2,UserCommand3,ShowType
+995910,202212,10000,202212,60000,202301,10000,202212,270000,0,0,"event2212_VaivoraReward","바이보라의 날개 출석체크 - 12월","event2212_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=407","","","",""
+995920,202212,10000,202212,60000,202301,10000,202212,270000,0,0,"event2212_Burning","주말앤버닝 - 12월","event2212_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=406","","","",""
 995930,202211,100000,202211,160000,202212,150600,202212,100000,0,0,"event2211_goddess","여신의 축복 - 11월","event2211_goddess","https://tos.nexon.com/News/Update/view?n4ArticleSN=2917","","","",""
 995940,202211,10000,202211,60000,202212,10000,202211,270000,0,0,"event2211_VaivoraReward","바이보라의 날개 출석체크 - 11월","event2211_VaivoraReward","https://tos.nexon.com/news/events/view?n4ArticleSN=404","","","",""
 995950,202211,10000,202211,60000,202212,10000,202211,270000,0,0,"event2211_Burning","주말앤버닝 - 11월","event2211_Burning","https://tos.nexon.com/news/events/view?n4ArticleSN=403","","","",""

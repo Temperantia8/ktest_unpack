@@ -11881,6 +11881,7 @@
 		<image name="companion_twnocelot_white" file="\icon\companion_Velhider.tga" imgrect="560 240 80 80"/>
 		<image name="companion_twnocelot_black" file="\icon\companion_Velhider.tga" imgrect="560 320 80 80"/>
 		<image name="companion_pet_sled_skyblue" file="\icon\companion_Velhider.tga" imgrect="560 400 80 80"/>
+		<image name="companion_pet_jpn3th_fox" file="\icon\companion_Velhider02.tga" imgrect="0 0 80 80"/>
 		<image name="bg_w" file="\skin\button.tga" imgrect="252 974 50 50"/>
 		<image name="barrack_signboard" file="\skin\barrack.tga" imgrect="356 0 257 192"/>
 		<image name="barrack_attack_icon" file="\skin\barrack.tga" imgrect="59 720 55 61"/>
@@ -14657,6 +14658,7 @@
 		<image name="icon_superbleeding_attribute" file="\icon\buff_icon6.tga" imgrect="0 1280 128 128" CMM_Caption="출혈"/>
 		<image name="icon_superstun_attribute" file="\icon\buff_icon6.tga" imgrect="128 1280 128 128" CMM_Caption="혼절"/>
 		<image name="icon_buff_ridepet_ep14egypt" file="\icon\buff_icon6.tga" imgrect="256 1280 128 128" CMM_Caption="9월 테마 버프"/>
+		<image name="icon_pet_jpn3th_fox" file="\icon\buff_icon6.tga" imgrect="384 1280 128 128" CMM_Caption="여우 버프"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>

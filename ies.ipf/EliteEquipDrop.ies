@@ -86,3 +86,4 @@ ClassID,minLv,maxLv,dropRatio,ClassName,Name,ServerMsg,EventCompositon,Dropable,
 85,420,450,2,"DAG04_123_11","바이보라 비전 - 약육강식","NO","NO","YES","Jaguar"
 86,420,450,2,"BOW04_126_2","바이보라 비전 - 전멸","NO","NO","YES","Sapper"
 87,420,450,2,"SHD04_122_3","바이보라 비전 - 철벽","NO","NO","YES","NOJOB"
+88,420,450,2,"TBW04_126_6","바이보라 비전 - 컴패니언 애호가","NO","NO","YES","Hunter"

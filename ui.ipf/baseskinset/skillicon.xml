@@ -407,6 +407,11 @@
 		<image name="icon_arch_StrafingShot" file="\icon\skill\archer\icon_arch_StrafingShot.png" imgrect="0 0 128 128" CMM_Caption="스트레이프"/>
 		<image name="icon_arch_DoubleTake" file="\icon\skill\archer\icon_arch_DoubleTake.png" imgrect="0 0 128 128" CMM_Caption="더블 테이크"/>
 		<image name="icon_arch_BlazingArrow" file="\icon\skill\archer\icon_arch_BlazingArrow.png" imgrect="0 0 128 128" CMM_Caption="블레이징 애로우"/>
+
+		<image name="icon_arch_Bolas" file="\icon\skill\archer\icon_arch_Juggling.png" imgrect="0 0 128 128" CMM_Caption="볼라스"/>
+		<image name="icon_arch_BleedingPierce" file="\icon\skill\archer\icon_arch_bleedingpierce.png" imgrect="0 0 128 128" CMM_Caption="블리딩 피어스"/>
+		<image name="icon_arch_Brawl" file="\icon\skill\archer\icon_arch_scrum.png" imgrect="0 0 128 128" CMM_Caption="우당탕탕!"/>
+		<image name="icon_arch_PetComeBack" file="\icon\skill\archer\icon_arch_comeback.png" imgrect="0 0 128 128" CMM_Caption="돌아와!"/>
 	</imagelist>
 	<imagelist category="cleric_skillicon">
 		<image name="icon_cler_Heal" file="\icon\skill\cleric\icon_cler_Heal.png" imgrect="0 0 128 128" CMM_Caption="힐"/>
@@ -2855,6 +2860,25 @@
 		<image name="ability_archer_Arquebusier22" file="\icon\icon_ability_archer10.tga" imgrect="896 384 128 128" CMM_Caption="[아츠] 성형작약탄"/>
 		<image name="ability_archer_Arquebusier23" file="\icon\icon_ability_archer10.tga" imgrect="0 512 128 128" CMM_Caption="[아츠] 프리딕션: 원근 왜곡"/>
 		<image name="ability_archer_Cannoneer34" file="\icon\icon_ability_archer10.tga" imgrect="128 512 128 128" CMM_Caption="연막탄: 강화"/>
+
+		<image name="ability_archer_Hunter28" file="\icon\icon_ability_scout05.tga" imgrect="896 256 128 128" CMM_Caption="볼라스: 강화"/>
+		<image name="ability_archer_Hunter36" file="\icon\icon_ability_scout05.tga" imgrect="0 384 128 128" CMM_Caption="[아츠] 볼라스: 상급 강화"/>
+		<image name="ability_archer_Hunter29" file="\icon\icon_ability_scout05.tga" imgrect="128 384 128 128" CMM_Caption="블리딩 피어스: 강화"/>
+		<image name="ability_archer_Hunter37" file="\icon\icon_ability_scout05.tga" imgrect="256 384 128 128" CMM_Caption="[아츠] 블리딩 피어스: 상급 강화"/>
+		<image name="ability_archer_Hunter30" file="\icon\icon_ability_scout05.tga" imgrect="384 384 128 128" CMM_Caption="우당탕탕!: 강화"/>
+		<image name="ability_archer_Hunter38" file="\icon\icon_ability_scout05.tga" imgrect="512 384 128 128" CMM_Caption="[아츠] 우당탕탕!: 상급 강화"/>
+		<image name="ability_archer_Hunter27" file="\icon\icon_ability_scout05.tga" imgrect="640 384 128 128" CMM_Caption="공격!: 강화"/>
+		<image name="ability_archer_Hunter34" file="\icon\icon_ability_scout05.tga" imgrect="768 384 128 128" CMM_Caption="[아츠] 공격!: 상급 강화"/>
+		<image name="ability_archer_Hunter31" file="\icon\icon_ability_scout05.tga" imgrect="896 384 128 128" CMM_Caption="프레이즈: 강화"/>
+		<image name="ability_archer_Hunter39" file="\icon\icon_ability_scout05.tga" imgrect="254 638 128 128" CMM_Caption="그로울링: 강화"/>
+		<image name="ability_archer_Hunter40" file="\icon\icon_ability_scout05.tga" imgrect="381 641 128 128" CMM_Caption="[아츠] 그로울링: 상급 강화"/>
+		<image name="ability_common_CompMastery5" file="\icon\icon_ability_scout05.tga" imgrect="384 512 128 128" CMM_Caption="컴패니언 마스터리: 송곳니"/>
+		<image name="ability_common_CompMastery6" file="\icon\icon_ability_scout05.tga" imgrect="512 512 128 128" CMM_Caption="컴패니언 마스터리: 두꺼운 가죽"/>
+		<image name="ability_common_CompMastery7" file="\icon\icon_ability_scout05.tga" imgrect="640 512 128 128" CMM_Caption="컴패니언 마스터리: 총명함"/>
+		<image name="ability_archer_Hunter25" file="\icon\icon_ability_scout05.tga" imgrect="768 512 128 128" CMM_Caption="블리딩 피어스: 상처 감염"/>
+		<image name="ability_archer_Hunter22" file="\icon\icon_ability_scout05.tga" imgrect="894 511 128 128" CMM_Caption="돌아와!: 귀소본능"/>
+		<image name="ability_archer_Hunter24" file="\icon\icon_ability_scout05.tga" imgrect="0 640 128 128" CMM_Caption="그로울링: 비활성"/>
+		<image name="ability_archer_Hunter26" file="\icon\icon_ability_scout05.tga" imgrect="128 640 128 128" CMM_Caption="프레이즈: 무아지경"/>
 	</imagelist>
 	<imagelist category="abilityicon_cleric">
 		<image name="ability_cleric_Cleric1" file="\icon\icon_ability_cleric01.tga" imgrect="0 0 128 128" CMM_Caption="큐어-도트시간감소"/>
@@ -3692,27 +3716,27 @@
 		<image name="ability_scout_Linker29" file="\icon\icon_ability_scout04.tga" imgrect="896 896 128 128" CMM_Caption="[아츠] 행맨스 낫: 상급 강화"/>
 		<image name="ability_archer_Bulletmarker26" file="\icon\icon_ability_scout05.tga" imgrect="0 0 128 128" CMM_Caption="더블 건 스탠스: 강화"/>
 		<image name="ability_archer_Bulletmarker27" file="\icon\icon_ability_scout05.tga" imgrect="128 0 128 128" CMM_Caption="[아츠]더블 건 스탠스: 상급 강화"/>
-		<image name="ability_scout_Jaguar1" file="\icon\icon_ability_scout05.tga" imgrect="257 130 128 128" CMM_Caption="재규어 스탠스: 탈출"/>
-		<image name="ability_scout_Jaguar2" file="\icon\icon_ability_scout05.tga" imgrect="385 130 128 128" CMM_Caption="재규어 스탠스: 야성"/>
-		<image name="ability_scout_Jaguar3" file="\icon\icon_ability_scout05.tga" imgrect="257 258 128 128" CMM_Caption="사냥 표적: 올가미"/>
-		<image name="ability_scout_Jaguar4" file="\icon\icon_ability_scout05.tga" imgrect="641 130 128 128" CMM_Caption="와일드 하울링: 갈망"/>
-		<image name="ability_scout_Jaguar5" file="\icon\icon_ability_scout05.tga" imgrect="897 130 128 128" CMM_Caption="야생의 적응력: 극한"/>
-		<image name="ability_scout_Jaguar6" file="\icon\icon_ability_scout05.tga" imgrect="1 258 128 128" CMM_Caption="야생의 적응력: 강인함"/>
-		<image name="ability_scout_Jaguar7" file="\icon\icon_ability_scout05.tga" imgrect="385 258 128 128" CMM_Caption="사냥 표적: 강화"/>
-		<image name="ability_scout_Jaguar8" file="\icon\icon_ability_scout05.tga" imgrect="257 2 128 128" CMM_Caption="와일드 러시: 강화"/>
-		<image name="ability_scout_Jaguar9" file="\icon\icon_ability_scout05.tga" imgrect="769 2 128 128" CMM_Caption="와일드 하울링: 강화"/>
-		<image name="ability_scout_Jaguar10" file="\icon\icon_ability_scout05.tga" imgrect="513 2 128 128" CMM_Caption="와일드 쏜: 강화"/>
-		<image name="ability_scout_Jaguar11" file="\icon\icon_ability_scout05.tga" imgrect="1 130 128 128" CMM_Caption="와일드 클로: 강화"/>
-		<image name="ability_scout_Jaguar12" file="\icon\icon_ability_scout05.tga" imgrect="513 128 128 128" CMM_Caption="[아츠] 와일드 러시: 휩쓸기"/>
-		<image name="ability_scout_Jaguar13" file="\icon\icon_ability_scout05.tga" imgrect="769 128 128 128" CMM_Caption="[아츠] 와일드 하울링: 공포"/>
-		<image name="ability_scout_Jaguar14" file="\icon\icon_ability_scout05.tga" imgrect="129 258 128 128" CMM_Caption="[아츠] 야생의 적응력: 초월"/>
-		<image name="ability_scout_Jaguar15" file="\icon\icon_ability_scout05.tga" imgrect="513 256 128 128" CMM_Caption="[아츠] 사냥 표적: 상급 강화"/>
-		<image name="ability_scout_Jaguar16" file="\icon\icon_ability_scout05.tga" imgrect="385 0 128 128" CMM_Caption="[아츠] 와일드 러시: 상급 강화"/>
-		<image name="ability_scout_Jaguar17" file="\icon\icon_ability_scout05.tga" imgrect="897 0 128 128" CMM_Caption="[아츠] 와일드 하울링: 상급 강화"/>
-		<image name="ability_scout_Jaguar18" file="\icon\icon_ability_scout05.tga" imgrect="641 0 128 128" CMM_Caption="[아츠] 와일드 쏜: 상급 강화"/>
-		<image name="ability_scout_Jaguar19" file="\icon\icon_ability_scout05.tga" imgrect="129 128 128 128" CMM_Caption="[아츠] 와일드 클로: 상급 강화"/>
-		<image name="ability_scout_Jaguar20" file="\icon\icon_ability_scout05.tga" imgrect="642 258 128 128" CMM_Caption="재규어 스탠스: 강화"/>
-		<image name="ability_scout_Jaguar21" file="\icon\icon_ability_scout05.tga" imgrect="770 256 128 128" CMM_Caption="[아츠] 재규어 스탠스: 상급 강화"/>		
+		<image name="ability_scout_Jaguar1" file="\icon\icon_ability_scout05.tga" imgrect="256 128 128 128" CMM_Caption="재규어 스탠스: 탈출"/>
+		<image name="ability_scout_Jaguar2" file="\icon\icon_ability_scout05.tga" imgrect="384 128 128 128" CMM_Caption="재규어 스탠스: 야성"/>
+		<image name="ability_scout_Jaguar3" file="\icon\icon_ability_scout05.tga" imgrect="256 256 128 128" CMM_Caption="사냥 표적: 올가미"/>
+		<image name="ability_scout_Jaguar4" file="\icon\icon_ability_scout05.tga" imgrect="640 128 128 128" CMM_Caption="와일드 하울링: 갈망"/>
+		<image name="ability_scout_Jaguar5" file="\icon\icon_ability_scout05.tga" imgrect="896 128 128 128" CMM_Caption="야생의 적응력: 극한"/>
+		<image name="ability_scout_Jaguar6" file="\icon\icon_ability_scout05.tga" imgrect="0 256 128 128" CMM_Caption="야생의 적응력: 강인함"/>
+		<image name="ability_scout_Jaguar7" file="\icon\icon_ability_scout05.tga" imgrect="384 256 128 128" CMM_Caption="사냥 표적: 강화"/>
+		<image name="ability_scout_Jaguar8" file="\icon\icon_ability_scout05.tga" imgrect="256 0 128 128" CMM_Caption="와일드 러시: 강화"/>
+		<image name="ability_scout_Jaguar9" file="\icon\icon_ability_scout05.tga" imgrect="768 0 128 128" CMM_Caption="와일드 하울링: 강화"/>
+		<image name="ability_scout_Jaguar10" file="\icon\icon_ability_scout05.tga" imgrect="512 0 128 128" CMM_Caption="와일드 쏜: 강화"/>
+		<image name="ability_scout_Jaguar11" file="\icon\icon_ability_scout05.tga" imgrect="0 128 128 128" CMM_Caption="와일드 클로: 강화"/>
+		<image name="ability_scout_Jaguar12" file="\icon\icon_ability_scout05.tga" imgrect="512 128 128 128" CMM_Caption="[아츠] 와일드 러시: 휩쓸기"/>
+		<image name="ability_scout_Jaguar13" file="\icon\icon_ability_scout05.tga" imgrect="768 128 128 128" CMM_Caption="[아츠] 와일드 하울링: 공포"/>
+		<image name="ability_scout_Jaguar14" file="\icon\icon_ability_scout05.tga" imgrect="128 256 128 128" CMM_Caption="[아츠] 야생의 적응력: 초월"/>
+		<image name="ability_scout_Jaguar15" file="\icon\icon_ability_scout05.tga" imgrect="512 256 128 128" CMM_Caption="[아츠] 사냥 표적: 상급 강화"/>
+		<image name="ability_scout_Jaguar16" file="\icon\icon_ability_scout05.tga" imgrect="384 0 128 128" CMM_Caption="[아츠] 와일드 러시: 상급 강화"/>
+		<image name="ability_scout_Jaguar17" file="\icon\icon_ability_scout05.tga" imgrect="896 0 128 128" CMM_Caption="[아츠] 와일드 하울링: 상급 강화"/>
+		<image name="ability_scout_Jaguar18" file="\icon\icon_ability_scout05.tga" imgrect="640 0 128 128" CMM_Caption="[아츠] 와일드 쏜: 상급 강화"/>
+		<image name="ability_scout_Jaguar19" file="\icon\icon_ability_scout05.tga" imgrect="128 128 128 128" CMM_Caption="[아츠] 와일드 클로: 상급 강화"/>
+		<image name="ability_scout_Jaguar20" file="\icon\icon_ability_scout05.tga" imgrect="640 256 128 128" CMM_Caption="재규어 스탠스: 강화"/>
+		<image name="ability_scout_Jaguar21" file="\icon\icon_ability_scout05.tga" imgrect="768 256 128 128" CMM_Caption="[아츠] 재규어 스탠스: 상급 강화"/>
 	</imagelist>
 	<imagelist category="abilityicon">
 		<image name="icon_abil_1_1" file="\icon\ability_icon.tga" imgrect="0 0 64 64" CMM_Caption="절단"/>

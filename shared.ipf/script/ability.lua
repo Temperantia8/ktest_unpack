@@ -3977,3 +3977,40 @@ end
 function SCR_ABIL_Jaguar22_INACTIVE(self, ability)
     RemoveBuff(self, 'Jaguar22_Hidden_Buff')
 end
+
+function SCR_ABIL_Hunter24_ACTIVE(self, ability)
+    SetExProp(self, 'Hunter24_FLAG', 1)
+end
+
+function SCR_ABIL_Hunter24_INACTIVE(self, ability)
+    SetExProp(self, 'Hunter24_FLAG', 0)
+end
+
+-- todo: self가 아니라 컴패니언으로 바꿔야 함
+function SCR_ABIL_CompMastery6_ACTIVE(self, ability)
+    local pet = GetSummonedPet(self, PET_COMMON_JOBID)
+    if pet ~= nil then
+        SetExProp(pet, 'CompanionMeleeDefence', 1)
+    end
+end
+
+function SCR_ABIL_CompMastery6_INACTIVE(self, ability)
+    local pet = GetSummonedPet(self, PET_COMMON_JOBID)
+    if pet ~= nil then
+        SetExProp(pet, 'CompanionMeleeDefence', 0)
+    end
+end
+
+function SCR_ABIL_CompMastery7_ACTIVE(self, ability)
+    local pet = GetSummonedPet(self, PET_COMMON_JOBID)
+    if pet ~= nil then
+        SetExProp(pet, 'CompanionMagicDefence', 1)
+    end
+end
+
+function SCR_ABIL_CompMastery7_INACTIVE(self, ability)
+    local pet = GetSummonedPet(self, PET_COMMON_JOBID)
+    if pet ~= nil then
+        SetExProp(pet, 'CompanionMagicDefence', 0)
+    end
+end

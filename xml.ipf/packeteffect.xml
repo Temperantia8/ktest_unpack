@@ -886,6 +886,15 @@
         <Effect Name="Sapper_LegHoldTrap_Pad"/>
         <Effect Name="Sapper_Vibora_Pad"/>
         <Effect Name="F_scout_JaguarStance2_1_loop"/>
+        <Effect Name="Shootpad_Bolas"/>
+        <Effect Name="shootpad_BleedingPierce"/>
+        <Effect Name="Hunter_Brawl"/>
+        <Effect Name="F_pc_welldone_Effect_jpn3th_leaf"/>
+        <Effect Name="F_hit029_red"/>
+        <Effect Name="I_warrior_chage_dash_white"/>
+        <Effect Name="F_archer_howling_symbol"/>
+        <Effect Name="F_archer_howling_ground"/>
+        <Effect Name="F_archer_Prarise_symbol"/>
     </Category>
     <Category ID="187">
         <Effect Name="F_bg_boil002"/>
@@ -8663,6 +8672,11 @@
         <Effect Name="F_burstup063"/>
         <Effect Name="Baubas_Guild_Raid"/>
         <Effect Name="EP15_1_ABBEY_1_3_MINI"/>
+        <Effect Name="I_force018_trail_chain#Bip01 R Hand"/>
+        <Effect Name="I_scratch002_mesh"/>
+        <Effect Name="I_bolas_mesh#Bip01 R Hand"/>
+        <Effect Name="F_spread_out020_alpha"/>
+        <Effect Name="I_dash037"/>
     </Category>
     <Category ID="27">
         <Effect Name="SAPPER_TRAP_Sapper_BroomTrap"/>
