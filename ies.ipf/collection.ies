@@ -219,3 +219,4 @@ ClassID,ClassName,Name,ItemName_1,ItemName_2,ItemName_3,ItemName_4,ItemName_5,It
 319,"COLLECT_319","컬렉션: 달토끼 이벤트","Event_2109_Gold_coin","Event_2109_Gold_coin","Event_2109_Gold_coin","Event_2109_Gold_coin","","","","","","STR_BM/20/DEX_BM/20/INT_BM/20/MNA_BM/20/CON_BM/20","","","TRUE"
 320,"COLLECT_320","컬렉션: 페릿이 남긴 것","misc_collect_ep14_2_1","misc_collect_ep14_2_2","misc_collect_ep14_2_3","misc_collect_ep14_2_4","","","","","","MHP_BM/6000","","","TRUE"
 321,"COLLECT_321","컬렉션: 그레스미가 남긴 것","misc_collect_ep14_2_5","misc_collect_ep14_2_6","","","","","","","","MHP_BM/4000","","","TRUE"
+322,"COLLECT_322","컬렉션: 크리스마스 이벤트","Event_2212_Gold_Key","Event_2212_Gold_Key","Event_2212_Gold_Key","","","","","","","STR_BM/20/DEX_BM/20/INT_BM/20/MNA_BM/20/CON_BM/20","","","TRUE"

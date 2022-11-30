@@ -35824,7 +35824,7 @@ return time"/>
                 <Num Num="0"/>
                 <Num Num="-1"/>
                 <Str Str="BleedingPierce_Debuff" UseFunc="1" FuncTxt="local name = &quot;BleedingPierce_Debuff&quot;
-                local abil = GetAbility(self, &quot;Hunter27&quot;)
+                local abil = GetAbility(self, &quot;Hunter25&quot;)
                 if abil ~= nil and TryGetProp(abil, &quot;ActiveState&quot;, 0) == 1 then
                     name = &quot;BleedingPierce_Abil_Debuff&quot;
                 end

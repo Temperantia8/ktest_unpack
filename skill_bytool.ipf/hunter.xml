@@ -707,7 +707,6 @@
                 <Scp Client="NO" Scp="COMPANION_REMOVE_SKILL_BUFF" Time="0" UseSleep="NO">
                     <Num Num="0"/>
                 </Scp>
-                <Scp Client="NO" Scp="SKL_RECOVER_COOLDOWN_SP" Time="0" TimeSync="0" UseSleep="NO"/>
                 <Scp Client="NO" Scp="SKL_SET_TARGET_CIRCLE" Time="0" UseSleep="NO">
                     <Pos Angle="0" Dist="0" PosType="3"/>
                     <Num Num="50"/>
