@@ -1510,7 +1510,7 @@ ClassID,OverHeatResetTime,ClassName,IsOverHeat,ReducePlayOnly,ForceReset
 4239,6000,"AdaptabilityOfWildness","NO","FALSE","YES"
 4241,25000,"Bolas","NO","FALSE","YES"
 4242,25000,"BleedingPierce","NO","FALSE","YES"
-4243,25000,"BleedingPierce_OH","NO","FALSE","YES"
+4243,25000,"BleedingPierce_OH","YES","FALSE","YES"
 4244,30000,"Brawl","NO","FALSE","YES"
 4245,20000,"PetAttack","NO","FALSE","YES"
 4246,1000,"PetComeBack","NO","FALSE","YES"
