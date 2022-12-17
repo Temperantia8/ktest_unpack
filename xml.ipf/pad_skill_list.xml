@@ -35819,12 +35819,6 @@ return time"/>
             <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
         </createEvent>
         <enterEvent>
-            <ToolScp Scp="PAD_TGT_DAMAGE" Client="NO" UseSleep="NO">
-                <Str Str="ENEMY"/>
-                <Num Num="1"/>
-                <Num Num="0"/>
-                <Num Num="0"/>
-            </ToolScp>
             <ToolScp Scp="PAD_TGT_BUFF" Client="NO" UseSleep="NO">
                 <Str Str="ENEMY"/>
                 <Num Num="0"/>
